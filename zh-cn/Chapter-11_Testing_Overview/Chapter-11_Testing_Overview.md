@@ -73,7 +73,7 @@ At Google, we have determined that testing cannot be an afterthought. Focusing o
 
 In Google’s early days, engineer-driven testing was often assumed to be of little importance. Teams regularly relied on smart people to get the software right. A few systems ran large integration tests, but mostly it was the Wild West. One product in particular seemed to suffer the worst: it was called the Google Web Server, also known as GWS.
 
-在谷歌的早期，工程師驅動的測試往往被認為是不重要的。團隊經常依靠牛人來使軟體正常。有幾個系統進行了大規模的整合測試，但大多數情況下，這是一個狂野的美國西部。有一個產品似乎受到了最嚴重的影響：它被稱為谷歌網路伺服器，也被稱為GWS。
+在谷歌的早期，工程師驅動的測試往往被認為是不重要的。團隊經常依靠智者來使軟體正常。有幾個系統進行了大規模的整合測試，但大多數情況下，這是一個狂野的美國西部。有一個產品似乎受到了最嚴重的影響：它被稱為谷歌網路伺服器，也被稱為GWS。
 
 GWS is the web server responsible for serving Google Search queries and is as important to Google Search as air traffic control is to an airport. Back in 2005, as the project swelled in size and complexity, productivity had slowed dramatically. Releases were becoming buggier, and it was taking longer and longer to push them out. Team members had little confidence when making changes to the service, and often found out something was wrong only when features stopped working in production. (At one point, more than 80% of production pushes contained user-affecting bugs that had to be rolled back.)
 

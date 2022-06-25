@@ -53,7 +53,7 @@ Imagine being a student at the university around the turn of the century. If you
 
 ​	[Running the task] is a logistical, time-consuming nightmare. It currently requires getting a list of 50+ machines, starting up a process on each of these 50+ machines, and monitoring its progress on each of the 50+ machines. There is no support for automatically migrating the computation to another machine if one of the machines dies, and monitoring the progress of the jobs is done in an ad hoc manner [...] Furthermore, since processes can interfere with each other, there is a complicated, human- implemented “sign up” file to throttle the use of machines, which results in less-than- optimal scheduling, and increased contention for the scarce machine resources
 
-想象一下，在世紀之交的時候，你是一個大學的學生。如果你想部署一些新的、牛逼的程式碼，你會把程式碼從SFTP複製到大學計算機實驗室的一臺機器上，SSH進入機器，編譯並執行程式碼。這是一個簡單而誘人的解決方案，但隨著時間的推移和規模的擴大，它遇到了相當多的問題。然而，因為這大概是許多專案開始時的情況，多個組織最終採用的流程在某種程度上是這個系統的流程演變，至少對於某些任務來說是這樣的--機器的數量增加了（所以你SFTP和SSH進入其中許多機器），但底層技術仍然存在。例如，2002年，谷歌最資深的工程師之一傑夫·迪恩（Jeff Dean）寫了以下關於在發佈過程中執行自動資料處理任務的文章：
+想象一下，在世紀之交的時候，你是一個大學的學生。如果你想部署一些新的、優秀的程式碼，你會把程式碼從SFTP複製到大學計算機實驗室的一臺機器上，SSH進入機器，編譯並執行程式碼。這是一個簡單而誘人的解決方案，但隨著時間的推移和規模的擴大，它遇到了相當多的問題。然而，因為這大概是許多專案開始時的情況，多個組織最終採用的流程在某種程度上是這個系統的流程演變，至少對於某些任務來說是這樣的--機器的數量增加了（所以你SFTP和SSH進入其中許多機器），但底層技術仍然存在。例如，2002年，谷歌最資深的工程師之一傑夫·迪恩（Jeff Dean）寫了以下關於在發佈過程中執行自動資料處理任務的文章：
 
 ​		[執行任務]是一個組織管理的、耗時的噩夢。目前，它需要獲得一個50多臺機器的列表，在這50多臺機器上各啟動一個程序，並在這50多臺機器上各監控其進度。如果其中一臺機器宕機了，不支援自動將計算遷移到另一臺機器上，而且監測工作的進展是以臨時的方式進行的[......]此外，由於程序可以相互干擾，有一個複雜的、人工實現的 "註冊 "檔案來節制機器的使用，這導致了非最優排程，增加了對稀缺機器資源的爭奪。	
 

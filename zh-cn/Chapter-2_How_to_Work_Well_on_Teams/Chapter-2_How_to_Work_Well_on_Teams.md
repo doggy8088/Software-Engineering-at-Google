@@ -13,7 +13,7 @@ Because this chapter is about the cultural and social aspects of software engine
 
 People are inherently imperfect—we like to say that humans are mostly a collection of intermittent bugs. But before you can understand the bugs in your coworkers, you need to understand the bugs in yourself. We’re going to ask you to think about your own reactions, behaviors, and attitudes—and in return, we hope you gain some real insight into how to become a more efficient and successful software engineer who spends less energy dealing with people-related problems and more time writing great code.
 
-人天生是不完美的——我們常說，人類大多是一個個不同缺點的組成集合。但是，在你瞭解同事身上的缺點之前，你需要了解自己身上的缺點。我們將要求你反思自己的反應、行為和態度——作為回報，我們希望你能夠真正瞭解如何成為一名更高效、更成功的軟體工程師，減少處理與人相關的問題的精力，花更多的時間編寫牛逼的程式碼。
+人天生是不完美的——我們常說，人類大多是一個個不同缺點的組成集合。但是，在你瞭解同事身上的缺點之前，你需要了解自己身上的缺點。我們將要求你反思自己的反應、行為和態度——作為回報，我們希望你能夠真正瞭解如何成為一名更高效、更成功的軟體工程師，減少處理與人相關的問題的精力，花更多的時間編寫更優秀的程式碼。
 
 The critical idea in this chapter is that software development is a team endeavor. And to succeed on an engineering team—or in any other creative collaboration—you need to reorganize your behaviors around the core principles of humility, respect, and trust.
 
@@ -65,7 +65,7 @@ And what about Michael Jordan?
 
 It’s the same story. We idolized him, but the fact is that he didn’t win every basketball game by himself. His true genius was in the way he worked with his team. The team’s coach, Phil Jackson, was extremely clever, and his coaching techniques are legendary.
 
-這是同一個故事。我們崇拜他，但事實是他並不是一個人贏得每一場籃球比賽的。他真正的牛逼在於他與團隊合作的方式。這支球隊的教練Phil Jackson非常聰明，他的教練技術堪稱傳奇。
+這是同一個故事。我們崇拜他，但事實是他並不是一個人贏得每一場籃球比賽的。他厲害的地方在於他與團隊合作的方式。這支球隊的教練Phil Jackson非常聰明，他的教練技術堪稱傳奇。
 
 He recognized that one player alone never wins a championship, and so he assembled an entire “dream team” around MJ. This team was a well-oiled machine—at least as impressive as Michael himself.
 
@@ -141,7 +141,7 @@ First of all, how do you even know whether you’re on the right track?
 
 Imagine you’re a bicycledesign enthusiast, and one day you get a brilliant idea for a completely new way to design a gear shifter. You order parts and proceed to spend weeks holed up in your garage trying to build a prototype. When your neighbor— also a bike advocate—asks you what’s up, you decide not to talk about it. You don’t want anyone to know about your project until it’s absolutely perfect. Another few months go by and you’re having trouble making your prototype work correctly. But because you’re working in secrecy, it’s impossible to solicit advice from your mechanically inclined friends.
 
-想象一下，你是一個自行車設計愛好者，有一天你有了一個牛逼的想法，可以用一種全新的方式來設計變速器。你訂購零件，然後花數週時間躲在車庫裡，嘗試製造一個原型。當你的鄰居——也是自行車倡導者——問你怎麼了，你決定閉口不談。你不想讓任何人知道你的專案，直到它絕對完美。又過幾個月，你在讓原型執行時遇到了麻煩。但因為你是在保密的情況下工作，所以不可能徵求你那些有機械專家朋友的意見。
+想象一下，你是一個自行車設計愛好者，有一天你有了一個完美的構思，可以用一種全新的方式來設計變速器。你訂購零件，然後花數週時間躲在車庫裡，嘗試製造一個原型。當你的鄰居——也是自行車倡導者——問你怎麼了，你決定閉口不談。你不想讓任何人知道你的專案，直到它絕對完美。又過幾個月，你在讓原型執行時遇到了麻煩。但因為你是在保密的情況下工作，所以不可能徵求你那些有機械專家朋友的意見。
 
 Then, one day your neighbor pulls his bike out of his garage with a radical new gear- shifting mechanism. Turns out he’s been building something very similar to your invention, but with the help of some friends down at the bike shop. At this point, you’re exasperated. You show him your work. He points out that your design had some simple flaws—ones that might have been fixed in the first week if you had shown him. There are a number of lessons to learn here.
 
@@ -151,7 +151,7 @@ Then, one day your neighbor pulls his bike out of his garage with a radical new 
 
 If you keep your great idea hidden from the world and refuse to show anyone anything until the implementation is polished, you’re taking a huge gamble. It’s easy to make fundamental design mistakes early on. You risk reinventing wheels.2 And you forfeit the benefits of collaboration, too: notice how much faster your neighbor moved by working with others? This is why people dip their toes in the water before jumping in the deep end: you need to make sure that you’re working on the right thing, you’re doing it correctly, and it hasn’t been done before. The chances of an early misstep are high. The more feedback you solicit early on, the more you lower this risk.3 Remember the tried-and-true mantra of “Fail early, fail fast, fail often.”
 
-如果你對世界隱瞞你的牛逼想法，並在未完美之前拒絕向任何人展示，那麼你就是在進行一場下注巨大的賭博。早期很容易犯基本的設計錯誤。你冒著重新發明輪子的風險。2而且你也失去了協作的好處：注意到你的鄰居透過與他人合作而效率有多高？這就是人們在跳入深水區之前將腳趾浸入水中的原因：你需要確保你在做正確的事情，你在做正確的事情，而且以前從未做過。早期失誤的可能性很高。你越早徵求反饋，這種風險就越低。3記住“早失敗、快失敗、經常失敗”這句經得起考驗的至理名言。
+如果你對世界隱瞞你的優秀的想法，並在未完美之前拒絕向任何人展示，那麼你就是在進行一場下注巨大的賭博。早期很容易犯基本的設計錯誤。你冒著重新發明輪子的風險。2而且你也失去了協作的好處：注意到你的鄰居透過與他人合作而效率有多高？這就是人們在跳入深水區之前將腳趾浸入水中的原因：你需要確保你在做正確的事情，你在做正確的事情，而且以前從未做過。早期失誤的可能性很高。你越早徵求反饋，這種風險就越低。3記住“早失敗、快失敗、經常失敗”這句經得起考驗的至理名言。
 
 Early sharing isn’t just about preventing personal missteps and getting your ideas vetted. It’s also important to strengthen what we call the bus factor of your project.
 
@@ -336,7 +336,7 @@ Ego manifests itself in many ways, and a lot of the time, it can get in the way 
     John Tukey almost always dressed very casually. He would go into an important office and it would take a long time before the other fellow realized that this is a first-class man and he had better listen. For a long time, John has had to overcome this kind of hostility. It’s wasted effort! I didn’t say you should conform; I said, “The appearance of conforming gets you a long way.” If you chose to assert your ego in any number of ways, “I am going to do it my way,” you pay a small steady price throughout the whole of your professional career. And this, over a whole lifetime, adds up to an enormous amount of needless trouble. […] By realizing you have to use the system and studying how to get the system to do your work, you learn how to adapt the system to your desires. Or you can fight it steadily, as a small, undeclared war, for the whole of your life.
 
 自我表現在很多方面，很多時候，它會妨礙你的生產力，拖累你。下面是Hamming演講中的另一個精彩故事，完美地說明了這一點（重點是我們的）：
-	*John Tukey 幾乎總是穿得很隨便。他會走進一個重要會議，過了很長一段時間，另一個人才意識到這是一個牛逼的人，他最好聽從。長期以來，約翰不得不克服這種敵意。這是白費力氣！我沒說你應該服從；我說，“順從的外表讓你走得更遠。”如果你選擇以任何一種方式來主張你的自我，"我要用我的方式來做"，你就會在整個職業生涯中付出確定的小代價。而這，在整個一生中，加起來就是一個大量的不必要的麻煩。[…]透過意識到你必須使用這個系統並研究如何讓這個系統完成你的工作，你學會了如何讓這個系統適應你的願望。或者你可以在你的一生中，作為一場小型的、不宣而戰的戰爭，穩紮穩打。*
+	*John Tukey 幾乎總是穿得很隨便。他會走進一個重要會議，過了很長一段時間，另一個人才意識到這是一個厲害的人，他最好聽從。長期以來，約翰不得不克服這種敵意。這是白費力氣！我沒說你應該服從；我說，“順從的外表讓你走得更遠。”如果你選擇以任何一種方式來主張你的自我，"我要用我的方式來做"，你就會在整個職業生涯中付出確定的小代價。而這，在整個一生中，加起來就是一個大量的不必要的麻煩。[…]透過意識到你必須使用這個系統並研究如何讓這個系統完成你的工作，你學會了如何讓這個系統適應你的願望。或者你可以在你的一生中，作為一場小型的、不宣而戰的戰爭，穩紮穩打。*
 
 #### Learn to give and take criticism 學會給出和接受批評
 
