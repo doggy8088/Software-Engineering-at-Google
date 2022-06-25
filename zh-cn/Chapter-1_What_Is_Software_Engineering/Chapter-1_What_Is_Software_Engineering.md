@@ -178,7 +178,7 @@ Some languages specifically randomize hash ordering between library versions or 
 
 Thinking over the differences between code written with a “works now” and a “works indefinitely” mentality, we can extract some clear relationships. Looking at code as an artifact with a (highly) variable lifetime requirement, we can begin to categorize programming styles: code that depends on brittle and unpublished features of its dependencies is likely to be described as “hacky” or “clever,” whereas code that follows best practices and has planned for the future is more likely to be described as “clean” and “maintainable.” Both have their purposes, but which one you select depends crucially on the expected life span of the code in question. We’ve taken to saying, “It’s programming if ‘clever’ is a compliment, but it’s software engineering if ‘clever’ is an accusation.” 
 
-思考一下用“現在工作”和“不限期工作”心態編寫的程式碼之間的差異，我們可以提取出一些明確的關係。將程式碼視為具有（高度）可變生命週期需求的構件，我們可以開始對程式設計風格進行分類：依賴其依賴性的脆弱和未發佈特性的程式碼可能被描述為“黑客”或“聰明”而遵循最佳實踐並為未來規劃的程式碼更可能被描述為“乾淨”和“可維護”。兩者都有其目的，但你選擇哪一個關鍵取決於所討論程式碼的預期生命週期。我們常說，“如果‘聰明’是一種恭維，那就是程式，如果‘聰明’是一種指責，那就是軟體工程。”  
+思考一下用“現在工作”和“不限期工作”心態編寫的程式碼之間的差異，我們可以提取出一些明確的關係。將程式碼視為具有（高度）可變生命週期需求的構件，我們可以開始對程式設計風格進行分類：依賴其依賴性的脆弱和未發佈特性的程式碼可能被描述為“駭客”或“聰明”而遵循最佳實踐並為未來規劃的程式碼更可能被描述為“乾淨”和“可維護”。兩者都有其目的，但你選擇哪一個關鍵取決於所討論程式碼的預期生命週期。我們常說，“如果‘聰明’是一種恭維，那就是程式，如果‘聰明’是一種指責，那就是軟體工程。”  
 
 ### Why Not Just Aim for “Nothing Changes”? 為什麼不以“無變化”為目標？
 Implicit in all of this discussion of time and the need to react to change is the assumption that change might be necessary. Is it?

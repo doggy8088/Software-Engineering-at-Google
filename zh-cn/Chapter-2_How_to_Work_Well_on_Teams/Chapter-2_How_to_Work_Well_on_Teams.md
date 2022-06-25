@@ -256,7 +256,7 @@ Let’s put this idea into simpler words: software engineering is a team endeavo
 
 This concept directly contradicts the inner Genius Programmer fantasy so many of us hold, but it’s not enough to be brilliant when you’re alone in your hacker’s lair. You’re not going to change the world or delight millions of computer users by hiding and preparing your secret invention. You need to work with other people. Share your vision. Divide the labor. Learn from others. Create a brilliant team.
 
-這個概念直接與我們許多人幻想的天才程式設計師幻想相矛盾，但當你獨自一人在黑客的巢穴中時，這也是不夠聰明。你不能透過隱藏和準備你的祕密發明來改變世界或取悅數百萬計的使用者。你需要和其他人一起工作。分享你的願景，分工，向別人學習，建立一個出色的團隊。
+這個概念直接與我們許多人幻想的天才程式設計師幻想相矛盾，但當你獨自一人在駭客的巢穴中時，這也是不夠聰明。你不能透過隱藏和準備你的祕密發明來改變世界或取悅數百萬計的使用者。你需要和其他人一起工作。分享你的願景，分工，向別人學習，建立一個出色的團隊。
 
 Consider this: how many pieces of widely used, successful software can you name that were truly written by a single person? (Some people might say “LaTeX,” but it’s hardly “widely used,” unless you consider the number of people writing scientific papers to be a statistically significant portion of all computer users!)
 

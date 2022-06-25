@@ -681,7 +681,7 @@ Finally, adopting a serverless solution implies a certain loss of control over y
 
 To take one specific instance of that, the Google Code Jam team (running a programming contest for thousands of participants, with a frontend running on Google AppEngine) had a custom-made script to hit the contest webpage with an artificial traffic spike several minutes before the contest start, in order to warm up enough instances of the app to serve the actual traffic that happened when the contest started. This worked, but it’s the sort of hand-tweaking (and also hacking) that one would hope to get away from by choosing a serverless solution.
 
-舉個具體的例子，谷歌Code Jam團隊（為數千名參賽者舉辦的程式設計比賽，其前端執行在谷歌AppEngine上）有一個訂製的指令碼，在比賽開始前幾分鐘給比賽網頁帶來了人為的流量高峰，以便為應用程式的足夠實例預熱，為比賽開始時的實際流量提供服務。這很有效，但這是人們希望透過選擇無伺服器解決方案來擺脫的那種手工調整（也是黑客科技）。
+舉個具體的例子，谷歌Code Jam團隊（為數千名參賽者舉辦的程式設計比賽，其前端執行在谷歌AppEngine上）有一個訂製的指令碼，在比賽開始前幾分鐘給比賽網頁帶來了人為的流量高峰，以便為應用程式的足夠實例預熱，為比賽開始時的實際流量提供服務。這很有效，但這是人們希望透過選擇無伺服器解決方案來擺脫的那種手工調整（也是駭客科技）。
 
 #### The trade-off 權衡
 
