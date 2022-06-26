@@ -137,7 +137,7 @@ Hyrum’s Law represents the practical knowledge that—even with the best of in
 
 Consider the example of hash iteration ordering. If we insert five elements into a hash-based set, in what order do we get them out?
 
-考慮雜湊迭代排序的例子。如果我們在一個基於雜湊的集合中插入五個元素，我們將以什麼順序將它們取出？
+考慮雜湊迭代排序的例子。如果我們在一個基於雜湊的集合中插入五個元素，元素將以什麼順序被取出？
 
 ```python
 >>> for i in {"apple", "banana", "carrot", "durian", "eggplant"}: print(i)
@@ -150,22 +150,22 @@ banana
 ```
 
 Most programmers know that hash tables are non-obviously ordered. Few know the specifics of whether the particular hash table they are using is intending to provide that particular ordering forever. This might seem unremarkable, but over the past decade or two, the computing industry’s experience using such types has evolved:  
-- Hash flooding10 attacks provide an increased incentive for nondeterministic hash iteration.
+- Hash flooding[10] attacks provide an increased incentive for nondeterministic hash iteration.
 - Potential efficiency gains from research into improved hash algorithms or hash containers require changes to hash iteration order.
 - Per Hyrum’s Law, programmers will write programs that depend on the order in which a hash table is traversed, if they have the ability to do so.
 
-大多數程式設計師都知道雜湊表是無序的。很少有人知道他們使用的特定雜湊表是否打算永遠提供特定的排序。這似乎不起眼，但在過去的一二十年中，計算行業使用這類別型別的經驗不斷髮展：
-- 雜湊洪水10次攻擊增加了非確定性雜湊迭代的動力。
-- 研究改進的雜湊演算法或雜湊容器的潛在效率收益需要更改雜湊迭代順序。
-- 根據海勒姆定律，如有能力程式設計師可根據雜湊表的遍歷順序編寫程式。
+大多數程式設計師都知道雜湊表是無序的。很少有人知道他們使用的特定雜湊表是否打算永遠提供特定的排序。這似乎不起眼，但在過去的一二十年中，計算行業使用這類別型別的經驗不斷發展：
+- 雜湊洪水[10]攻擊增加了非確定性雜湊迭代的動力。
+- 雜湊演算法或雜湊容器的改進潛在研究顯示增進效率需要更改雜湊迭代順序。
+- 根據海勒姆定律，程式設計師會寫出依賴於雜湊表的遍歷順序的程式。
 
 As a result, if you ask any expert “Can I assume a particular output sequence for my hash container?” that expert will presumably say “No.” By and large that is correct, but perhaps simplistic. A more nuanced answer is, “If your code is short-lived, with no changes to your hardware, language runtime, or choice of data structure, such an assumption is fine. If you don’t know how long your code will live, or you cannot promise that nothing you depend upon will ever change, such an assumption is incorrect.” Moreover, even if your own implementation does not depend on hash container order, it might be used by other code that implicitly creates such a dependency. For example, if your library serializes values into a Remote Procedure Call (RPC) response, the RPC caller might wind up depending on the order of those values.
 
-因此，如果你問任何一位專家“我能為我的雜湊容器設定一個的輸出序列嗎？”這位專家大概會說“不”。總的來說，這是正確的，但過於簡單。一個更微妙的回答是，“如果你的程式碼是短期的，沒有對硬體、語言執行時或資料結構的選擇進行任何更改，那麼這樣的假設是正確的。如果你不知道程式碼的生命週期，或者你不能保證你所依賴的任何東西都不會改變，那麼這樣的假設是不正確的。”，即使你自己的實現不依賴於雜湊容器順序，也可能被隱式建立這種依賴關係的其他程式碼使用。例如，如果函式庫將值序列化為遠端過程呼叫（RPC）響應，則RPC呼叫程式可能會根據這些值的順序結束。
+因此，如果你問任何一位專家“我的雜湊容器一定會有一個固定的輸出序列嗎？”這位專家大概會說“不”。總的來說，這是正確的，但這個回答可能過於簡單。一個更微妙的回答是，“如果你的程式碼是短期的，沒有對硬體、語言執行時或資料結構的選擇進行任何更改，那麼你可以假設雜湊容器一定會有一個固定的輸出序列。如果你不知道你的程式會使用多久，或者你不能保證你所依賴的任何東西都維持不變，那麼這樣的假設是不正確的。”，即使你自己的實現不依賴於雜湊容器順序，但你的程式可能隱性的被其他程式建立這種依賴關係。例如，如果函式庫將值序列化做為遠端過程呼叫（RPC）的回應，則RPC的呼叫端可能最終會變得依賴這些值的順序。
 
 This is a very basic example of the difference between “it works” and “it is correct.” For a short-lived program, depending on the iteration order of your containers will not cause any technical problems. For a software engineering project, on the other hand, such reliance on a defined order is a risk—given enough time, something will make it valuable to change that iteration order. That value can manifest in a number of ways, be it efficiency, security, or merely future-proofing the data structure to allow for future changes. When that value becomes clear, you will need to weigh the trade- offs between that value and the pain of breaking your developers or customers.
 
-這是“有效”和“正確”之間區別的一個非常基本的例子。對於一個短期的程式，取決於容器的迭代順序不會導致任何技術問題。另一方面，對於一個軟體工程專案來說，如果有足夠的時間，這種對已定義順序的依賴是一種風險使更改迭代順序變得有價值。這種價值可以透過多種方式體現出來，無論是效率、安全性，還是僅僅是資料結構的未來驗證，以允許將來的更改。當這一價值變得清晰時，你需要權衡這一價值與破壞開發人員或客戶的痛苦之間的平衡。
+這是“程式能運作”和“程式運作正確”之間區別的一個非常基本的例子。對於一個短期的程式，取決於容器的迭代順序不會導致任何技術問題。另一方面，對於一個軟體工程專案來說，這種對特定順序的依賴是一種風險，只要有足夠的時間，總有些例子會讓人發現改動雜湊迭代的順序使其變得有序是非常有價值的。這種價值可以透過多種方式體現出來，無論是效率、安全性，或僅僅是將資料結構修改以符合將來可能的更改。當這些價值逐漸變得清晰時，你需要在這些價值與破壞開發人員或客戶能夠正常運行的程式的痛苦之間取得平衡。
 
 ```
 10：A type of Denial-of-Service (DoS) attack in which an untrusted user knows the structure of a hash table and the hash function and provides data in such a way as to degrade the algorithmic performance of operations on the table.
@@ -174,11 +174,11 @@ This is a very basic example of the difference between “it works” and “it 
 
 Some languages specifically randomize hash ordering between library versions or even between execution of the same program in an attempt to prevent dependencies. But even this still allows for some Hyrum’s Law surprises: there is code that uses hash iteration ordering as an inefficient random-number generator. Removing such randomness now would break those users. Just as entropy increases in every thermodynamic system, Hyrum’s Law applies to every observable behavior.  
 
-一些語言專門在函式庫版本之間，甚至在執行相同程式的隨機雜湊排序，以防止依賴關係。但即使這樣，也會出現一些令人驚訝的海勒姆定律：有些程式碼使用雜湊迭代排序作為一個低效的隨機數產生器。現在消除這種隨機性將破壞這些使用者原使用方式。正如熵在每個熱力學系統中增加一樣，海勒姆定律適用於所有可觀察到的行為。
+一些語言專門在函式庫版本之間，甚至在執行相同程式時刻意隨機雜湊排序，以防止依賴關係。但即使這樣，也會出現一些令人驚訝的海勒姆定律：有些程式碼使用雜湊迭代排序作為一個低效的隨機數產生器。現在消除這種隨機性將破壞這些使用者的使用方式。正如熵在每個熱力學系統中增加一樣，海勒姆定律適用於所有可觀察到的行為。
 
 Thinking over the differences between code written with a “works now” and a “works indefinitely” mentality, we can extract some clear relationships. Looking at code as an artifact with a (highly) variable lifetime requirement, we can begin to categorize programming styles: code that depends on brittle and unpublished features of its dependencies is likely to be described as “hacky” or “clever,” whereas code that follows best practices and has planned for the future is more likely to be described as “clean” and “maintainable.” Both have their purposes, but which one you select depends crucially on the expected life span of the code in question. We’ve taken to saying, “It’s programming if ‘clever’ is a compliment, but it’s software engineering if ‘clever’ is an accusation.” 
 
-思考一下用“現在工作”和“不限期工作”心態編寫的程式碼之間的差異，我們可以提取出一些明確的關係。將程式碼視為具有（高度）可變生命週期需求的構件，我們可以開始對程式設計風格進行分類：依賴其依賴性的脆弱和未發佈特性的程式碼可能被描述為"hacky"(小聰明)或“聰明”而遵循最佳實踐並為未來規劃的程式碼更可能被描述為“乾淨”和“可維護”。兩者都有其目的，但你選擇哪一個關鍵取決於所討論程式碼的預期生命週期。我們常說，“如果‘聰明’是一種恭維，那就是程式，如果‘聰明’是一種指責，那就是軟體工程。”  
+思考一下用“程式現在能正確運行”和“程式能永遠的正確運行”心態編寫的程式碼之間的差異，我們可以提取出一些明確的關係。將程式碼視為具有（高度）可變生命週期需求的構件，我們可以開始對程式設計風格進行分類：依賴其依賴性的脆弱和未發佈特性的程式碼可能被描述為"hacky"(小聰明)或“聰明”，而遵循最佳實踐並為未來規劃的程式碼更可能被描述為“乾淨”和“可維護”。兩者都有其目的，但你選擇哪一個關鍵取決於所討論程式碼的預期生命週期。我們常說，“如果對象是一個程式，‘聰明’是一種恭維，如果對象是軟體工程，‘聰明’是一種指責。”  
 
 ### Why Not Just Aim for “Nothing Changes”? 為什麼不以“無變化”為目標？
 Implicit in all of this discussion of time and the need to react to change is the assumption that change might be necessary. Is it?
