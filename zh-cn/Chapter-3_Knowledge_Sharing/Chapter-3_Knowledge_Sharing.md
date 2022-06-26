@@ -14,45 +14,45 @@ Your organization understands your problem domain better than some random person
 
 ## Challenges to Learning 學習的挑戰
 Sharing expertise across an organization is not an easy task. Without a strong culture of learning, challenges can emerge. Google has experienced a number of these challenges, especially as the company has scaled:    
-*Lack of psychological safety*  
+* *Lack of psychological safety*  
 	An environment in which people are afraid to take risks or make mistakes in front of others because they fear being punished for it. This often manifests as a culture of fear or a tendency to avoid transparency. 
-*Information islands*  
+* *Information islands*  
 	Knowledge fragmentation that occurs in different parts of an organization that don’t communicate with one another or use shared resources. In such anenvironment, each group develops its own way of doing things.1 This often leads to the following:  
-  **Information fragmentation**   
-  Each island has an incomplete picture of the bigger whole.  
-  **Information duplication**   
-  Each island has reinvented its own way of doing something.  
-  **Information skew**   
-  Each island has its own ways of doing the same thing, and these might or might not conflict.   
-*Single point of failure (SPOF)*   
+	* **Information fragmentation**   
+	  Each island has an incomplete picture of the bigger whole.  
+	* **Information duplication**   
+	  Each island has reinvented its own way of doing something.  
+	* **Information skew**   
+	  Each island has its own ways of doing the same thing, and these might or might not conflict.   
+* *Single point of failure (SPOF)*   
 	A bottleneck that occurs when critical information is available from only a single person. This is related to bus factor, which is discussed in more detail in Chapter 2.  
 	SPOFs can arise out of good intentions: it can be easy to fall into a habit of “Let me take care of that for you.” But this approach optimizes for short-term efficiency (“It’s faster for me to do it”) at the cost of poor long-term scalability (the team never learns how to do whatever it is that needs to be done). This mindset also tends to lead to all-or-nothing expertise.  
-*All-or-nothing expertise*   
+* *All-or-nothing expertise*   
 	A group of people that is split between people who know “everything” and novices, with little middle ground. This problem often reinforces itself if experts always do everything themselves and don’t take the time to develop new experts through mentoring or documentation. In this scenario, knowledge and responsibilities continue to accumulate on those who already have expertise, and new team members or novices are left to fend for themselves and ramp up more slowly.  
-*Parroting*   
+* *Parroting*   
 	Mimicry without understanding. This is typically characterized by mindlessly copying patterns or code without understanding their purpose, often under the assumption that said code is needed for unknown reasons.
-*Haunted graveyards*   
+* *Haunted graveyards*   
 	Places, often in code, that people avoid touching or changing because they are afraid that something might go wrong. Unlike the aforementioned parroting, haunted graveyards are characterized by people avoiding action because of fear and superstition.  
 
 在一個組織內共享專業知識並非易事。沒有強大的學習文化，挑戰隨時出現。谷歌經歷了許多這樣的挑戰，尤其是隨著公司規模的擴大：  
-*缺乏安全感*。
-	一個環境中，人們不敢在別人面前冒險或犯錯，因為他們害怕因此受到懲罰。這通常表現為一種恐懼文化或避免透明的傾向。
-*資訊孤島*
-	在一個組織的不同部分發生的知識碎片，這些部分沒有相互溝通或使用共享資源。在這樣的環境中，每個小組都形成了自己的做事方式。這往往導致以下情況：
-​	**資訊碎片化**
-	每個孤島對整體都有一個不完整的描述。
-​	**資訊重複**
-	每個孤島都重新發明了自己的做事方式。
-​	**資訊偏移**
-	每個孤島都有自己做同一件事的方法，這些方法在一起協作可能會或可能不會發生衝突。
-*單點故障（SPOF）*
+* *缺乏安全感*  
+	一個環境中，人們不敢在別人面前冒險或犯錯，因為他們害怕因此受到懲罰。這通常表現為一種恐懼文化或避免透明的傾向。  
+* *資訊孤島*  
+	在一個組織的不同部分發生的知識碎片，這些部分沒有相互溝通或使用共享資源。在這樣的環境中，每個小組都形成了自己的做事方式。這往往導致以下情況：  
+    * **資訊碎片化**  
+    	每個孤島對整體都有一個不完整的描述。
+    * **資訊重複**  
+    	每個孤島都重新發明了自己的做事方式。
+    * **資訊偏移**  
+    	每個孤島都有自己做同一件事的方法，這些方法在一起協作可能會或可能不會發生衝突。
+* *單點故障（SPOF）*  
 	當關鍵資訊只能從一個人那裡獲得時，就會出現瓶頸。這與巴士因子有關，在第二章有詳細討論。
-	SPOF可能是出於良好的意圖：我們很容易陷入 "讓我來幫你解決 "的習慣。但這種方法提高了短期效率（"我做起來更快"），但代價是長期可擴充套件性差（團隊從未學會如何做需要做的事）。這種心態也往往導致失敗，組員要麼全會或要麼都不會某方面的知識。
-*要麼全會要麼都不會*
-	一群人被分成了 "什麼都懂 "的老人和什麼都不會的新手，幾乎沒有中間地帶。如果專家總是自己做所有的事情，而不花時間透過指導或編寫文件來培養新的專家，這個問題往往會加劇。在這種情況下，知識和責任繼續在那些已經擁有專業知識的人身上積累，而新的團隊成員或新手則只能自生自滅，提升速度更慢。
-*鸚鵡學舌*
-	模仿而不理解。這典型的特徵是在不瞭解其目的的情況下無意識地複製模式或程式碼，通常是在假設上述程式碼是出於未知原因而需要的情況下。
-*鬧鬼墓地*
+	SPOF可能是出於良好的意圖：我們很容易陷入 "讓我來幫你解決 "的習慣。但這種方法提高了短期效率（"我做起來更快"），但代價是長期可擴充套件性差（團隊從未學會如何做需要做的事）。這種心態也往往導致失敗，組員要麼全會或要麼都不會某方面的知識。  
+* *要麼全會要麼都不會*  
+	一群人被分成了 "什麼都懂 "的老人和什麼都不會的新手，幾乎沒有中間地帶。如果專家總是自己做所有的事情，而不花時間透過指導或編寫文件來培養新的專家，這個問題往往會加劇。在這種情況下，知識和責任繼續在那些已經擁有專業知識的人身上積累，而新的團隊成員或新手則只能自生自滅，提升速度更慢。  
+* *鸚鵡學舌*  
+	模仿而不理解。這典型的特徵是在不瞭解其目的的情況下無意識地複製模式或程式碼，通常是在假設上述程式碼是出於未知原因而需要的情況下。  
+* *鬧鬼墓地*  
 	人們避免接觸或改變的地方，通常在程式碼中，因為他們擔心會出問題。與前面提到的鸚鵡學舌不同，鬧鬼墓地的特點是人們因為恐懼和迷信而避免行動。
 
 In the rest of this chapter, we dive into strategies that Google’s engineering organizations have found to be successful in addressing these challenges.
