@@ -476,7 +476,7 @@ Google eventually fixed the problem by explicitly defining a rubric for what we 
 *Does the right thing*
     Has a strong sense of ethics about everything they do; willing to make difficult or inconvenient decisions to protect the integrity of the team and product.
 
-谷歌最終解決了這個問題，明確定義了我們所說的“谷歌特質”（Googleynes）——我們所尋找的一套屬性和行為，代表了強大的領導力，體現了 "謙遜、尊重和信任"：
+谷歌最終解決了這個問題，明確定義了我們所說的“谷歌特質”（Googleyness）——我們所尋找的一套屬性和行為，代表了強大的領導力，體現了 "謙遜、尊重和信任"：
 *在模稜兩可中茁壯成長*
 	即使在環境不斷變化的情況下，也能處理相互衝突的資訊或方向，建立共識，並對問題做出改進。
 *重視反饋*
