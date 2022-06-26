@@ -32,7 +32,7 @@ This distinction is at the core of what we call sustainability for software. You
 
 Another way to look at software engineering is to consider scale. How many people are involved? What part do they play in the development and maintenance over time? A programming task is often an act of individual creation, but a software engineering task is a team effort. An early attempt to define software engineering produced a good definition for this viewpoint: “The multiperson development of multiversion programs.”4 This suggests the difference between software engineering and programming is one of both time and people. Team collaboration presents new problems, but also provides more potential to produce valuable systems than any single programmer could.
 
-另一種看待軟體工程的方法是考慮規模。有多少人蔘與？隨著時間的推移，他們在開發和維護中扮演什麼角色？程式設計任務通常是個人建立的行為，但軟體工程任務是團隊的工作。早期定義軟體工程的嘗試為這一觀點提供了一個很好的定義：“多人開發的多版本程式”。這表明軟體工程和程式設計之間的區別是時間和人的區別。團隊協作帶來了新的問題，但也提供了比任任何單個程式設計師更多的潛力來產生有價值的系統。
+另一種看待軟體工程的方法是考慮規模。有多少人參與？隨著時間的推移，他們在開發和維護中扮演什麼角色？程式設計任務通常是個人建立的行為，但軟體工程任務是團隊的工作。早期定義軟體工程的嘗試為這一觀點提供了一個很好的定義：“多人開發的多版本程式”。這表明軟體工程和程式設計之間的區別是時間和人的區別。團隊協作帶來了新的問題，但也提供了比任任何單個程式設計師更多的潛力來產生有價值的系統。
 
 ```
 2:This is perhaps a reasonable hand-wavy definition of technical debt: things that “should” be done, but aren’t yet—the delta between our code and what we wish it was.
@@ -51,7 +51,7 @@ We can also say that software engineering is different from programming in terms
 
 Rarely is there a one-size-fits-all solution in software engineering, and the same applies to this book. Given a factor of 100,000 for reasonable answers on “How long will this software live,” a range of perhaps a factor of 10,000 for “How many engineers are in your organization,” and who-knows-how-much for “How many compute resources are available for your project,” Google’s experience will probably not match yours. In this book, we aim to present what we’ve found that works for us in the construction and maintenance of software that we expect to last for decades, with tens of thousands of engineers, and world-spanning compute resources. Most of the practices that we find are necessary at that scale will also work well for smaller endeavors: consider this a report on one engineering ecosystem that we think could be good as you scale up. In a few places, super-large scale comes with its own costs, and we’d be happier to not be paying extra overhead. We call those out as a warning. Hopefully if your organization grows large enough to be worried about those costs, you can find a better answer.
 
-在軟體工程中很少有一刀切的解決方案，這本書也是如此。考慮到“這個軟體能使用多久”的合理答案是100000倍，而“你的組織中有多少工程師”的範圍可能是10000，誰知道“你的專案有多少計算資源可用”的範圍是多少，谷歌的經驗可能與你的經驗不一致。在本書中，我們的目標是介紹我們在建構和維護軟體方面的發現，這些軟體預計將持續數十年，擁有數萬計的工程師和遍佈世界的計算資源。我們發現在這種規模下所需要的大多數做法也能很好地適用於複雜度較小的系統：考慮一下這是一個我們認為在你們擴大的時候可以做的很好的工程生態系統的報告。在一些地方，超大規模有其自身的成本，我們更傾向於不付出額外的管理成本。我們發出警告。希望如果你的組織發展到足以擔心這些成本，你可以找到更好的答案。
+在軟體工程中很少有一刀切的解決方案，這本書也是如此。考慮到“這個軟體能使用多久”的合理答案是100,000倍，而“你的組織中有多少工程師”的範圍可能是10,000，誰知道“你的專案有多少計算資源可用”的範圍是多少，谷歌的經驗可能與你的經驗不一致。在本書中，我們的目標是介紹我們在建構和維護軟體方面的發現，這些軟體預計將持續數十年，擁有數萬計的工程師和遍佈世界的計算資源。我們發現在這種規模下所需要的大多數做法也能很好地適用於複雜度較小的系統：考慮一下這是一個我們認為在你們擴大的時候可以做的很好的工程生態系統的報告。在一些地方，超大規模有其自身的成本，我們更傾向於不付出額外的管理成本。我們發出警告。希望如果你的組織發展到足以擔心這些成本，你可以找到更好的答案。
 
 Before we get to specifics about teamwork, culture, policies, and tools, let’s first elaborate on these primary themes of time, scale, and trade-offs.
 
