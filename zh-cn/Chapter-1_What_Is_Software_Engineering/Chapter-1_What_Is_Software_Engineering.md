@@ -64,7 +64,7 @@ When a novice is learning to program, the life span of the resulting code is usu
 
 We also find developers of short-lived code in common industry settings. Mobile apps often have a fairly short life span,[6](#_bookmark19) and for better or worse, full rewrites are relatively common. Engineers at an early-stage startup might rightly choose to focus on immediate goals over long-term investments: the company might not live long enough to reap the benefits of an infrastructure investment that pays off slowly. A serial startup developer could very reasonably have 10 years of development experience and little or no experience maintaining any piece of software expected to exist for longer than a year or two.
 
-我們還在常見的行業環境中找到短期程式碼的開發人員。移動應用程式的生命週期通常很短，而且無論好壞，完全重寫都是相對常見的。初創初期的工程師可能會正確地選擇關注眼前目標而不是長期投資：公司可能活得不夠長，無法從回報緩慢的基礎設施投資中獲益。一個連續工作多年的開發人員可能有10年的開發經驗，並且幾乎有或根本沒有維護任何預期存在超過一年或兩年的軟體的經驗。
+我們還在常見的行業環境中找到短期程式碼的開發人員。移動應用程式的生命週期通常很短，而且無論好壞，完全重寫都是相對常見的。初創初期的工程師可能會正確地選擇關注眼前目標而不是長期投資：公司可能活得不夠長，無法從回報緩慢的基礎設施投資中獲益。一個連續工作多年的開發人員可能有10年的開發經驗，並且鮮少或根本沒有維護任何預期存在超過一年或兩年的軟體的經驗。
 
 On the other end of the spectrum, some successful projects have an effectively unbounded life span: we can’t reasonably predict an endpoint for Google Search, the Linux kernel, or the Apache HTTP Server project. For most Google projects, we must assume that they will live indefinitely—we cannot predict when we won’t need to upgrade our dependencies, language versions, and so on. As their lifetimes grow, these long-lived projects *eventually* have a different feel to them than programming assignments or startup development.
 
@@ -115,7 +115,7 @@ If you are maintaining a project that is used by other engineers, the most impor
 	*With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviors of your system will be depended on by somebody.*
 
 如果你正在維護一個由其他工程師使用的專案，那麼關於“有效”與“可維護”最重要的一課就是我們所說的海勒姆定律：   
-	​*當一個 API 有足夠多的使用者的時候，在約定中你承諾的什麼都無所謂，所有在你係統裡面被觀察到的行為都會被一些使用者直接依賴。*
+	​*當一個 API 有足夠多的使用者的時候，在你文件的承諾什麼都無所謂，所有在你系統裡面被觀察到的行為都會被一些使用者直接依賴。*
 
 In our experience, this axiom is a dominant factor in any discussion of changing software over time. It is conceptually akin to entropy: discussions of change and maintenance over time must be aware of Hyrum’s Law8 just as discussions of efficiency or thermodynamics must be mindful of entropy. Just because entropy never decreases doesn’t mean we shouldn’t try to be efficient. Just because Hyrum’s Law will apply when maintaining software doesn’t mean we can’t plan for it or try to better understand it. We can mitigate it, but we know that it can never be eradicated.
 
