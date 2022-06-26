@@ -3,61 +3,61 @@
 
 # Measuring Engineering Productivity 
 
-# 第七章  测量工程效率
+# 第七章  測量工程效率
 
 ​																			**Written by  Ciera Jaspan Edited by Riona Macnamara**
 
 
 Google is a data-driven company. We back up most of our products and design decisions with hard data. The culture of data-driven decision making, using appropriate metrics, has some drawbacks, but overall, relying on data tends to make most decisions objective rather than subjective, which is often a good thing. Collecting and analyzing data on the human side of things, however, has its own challenges. Specifically, within software engineering, Google has found that having a team of specialists focus on engineering productivity itself to be very valuable and important as the company scales and can leverage insights from such a team.
 
-谷歌是一家数据驱动型公司。我们的大部分产品和设计决策都有可靠的数据支持。数据驱动的决策文化，使用适当的指标，有一些缺点，但总的来说，依靠数据往往使大多数决策变得客观而不是主观，这往往是一件好事。然而，收集和分析人类方面的数据，有其自身的挑战。具体来说，在软件工程领域，谷歌发现，随着公司规模的扩大，拥有一支专注于工程生产效率的专家团队本身是非常有价值和重要的，可以利用这样一支团队的洞察力。
+谷歌是一家資料驅動型公司。我們的大部分產品和設計決策都有可靠的資料支援。資料驅動的決策文化，使用適當的指標，有一些缺點，但總的來說，依靠資料往往使大多數決策變得客觀而不是主觀，這往往是一件好事。然而，收集和分析人類方面的資料，有其自身的挑戰。具體來說，在軟體工程領域，谷歌發現，隨著公司規模的擴大，擁有一支專注於工程生產效率的專家團隊本身是非常有價值和重要的，可以利用這樣一支團隊的洞察力。
 
-## Why Should We Measure Engineering Productivity? 我们为什么要测量工程效率
+## Why Should We Measure Engineering Productivity? 我們為什麼要測量工程效率
 
 Let’s presume that you have a thriving business (e.g., you run an online search engine), and you want to increase your business’s scope (enter into the enterprise application market, or the cloud market, or the mobile market). Presumably, to increase the scope of your business, you’ll need to also increase the size of your engineering organization. However, as organizations grow in size linearly, communication costs grow quadratically.[1](#_bookmark526) Adding more people will be necessary to increase the scope of your business, but the communication overhead costs will not scale linearly as you add additional personnel. As a result, you won’t be able to scale the scope of your business linearly to the size of your engineering organization.
 
-让我们假设你有一个蓬勃发展的业务（例如，你经营一个在线搜索引擎），并且你想扩大你的业务范围（进入企业应用市场，或云市场，或移动市场）。据推测，为了增加你的业务范围，你也需要增加你的工程组织的规模。然而，随着组织规模的线性增长，沟通成本也呈二次曲线增长。增加人员对扩大业务范围是必要的，但沟通成本不会随着你增加人员而线性扩展。因此，你将无法根据你的工程组织的规模线性地扩大你的业务范围。
+讓我們假設你有一個蓬勃發展的業務（例如，你經營一個線上搜尋引擎），並且你想擴大你的業務範圍（進入企業應用市場，或雲市場，或移動市場）。據推測，為了增加你的業務範圍，你也需要增加你的工程組織的規模。然而，隨著組織規模的線性增長，溝通成本也呈二次曲線增長。增加人員對擴大業務範圍是必要的，但溝通成本不會隨著你增加人員而線性擴充套件。因此，你將無法根據你的工程組織的規模線性地擴大你的業務範圍。
 
 
 There is another way to address our scaling problem, though: *we could make each individual more productive*. If we can increase the productivity of individual engineers in the organization, we can increase the scope of our business without the commensurate increase in communication overhead.
 
-不过，还有一种方法可以解决我们的规模问题：*我们可以使每个人的生产效率提高*。如果我们能提高组织中单个工程师的生产效率，我们就能增加我们的业务范围，而不会相应地增加沟通成本。
+不過，還有一種方法可以解決我們的規模問題：*我們可以使每個人的生產效率提高*。如果我們能提高組織中單個工程師的生產效率，我們就能增加我們的業務範圍，而不會相應地增加溝通成本。
 
 Google has had to grow quickly into new businesses, which has meant learning how to make our engineers more productive. To do this, we needed to understand what makes them productive, identify inefficiencies in our engineering processes, and fix the identified problems. Then, we would repeat the cycle as needed in a continuous improvement loop. By doing this, we would be able to scale our engineering organization with the increased demand on it.
 
-谷歌不得不迅速发展新业务，这意味着要学习如何让我们的工程师更有效率。要做到这一点，我们需要了解是什么让他们富有成效，找出我们工程流程中的低效之处，并解决所发现的问题。然后，我们将根据需要在一个持续改进的循环中重复这个循环。通过这样做，我们将能够在需求增加的情况下扩大我们的工程组织。
+谷歌不得不迅速發展新業務，這意味著要學習如何讓我們的工程師更有效率。要做到這一點，我們需要了解是什麼讓他們富有成效，找出我們工程流程中的低效之處，並解決所發現的問題。然後，我們將根據需要在一個持續改進的迴圈中重複這個迴圈。透過這樣做，我們將能夠在需求增加的情況下擴大我們的工程組織。
 
 However, this improvement cycle *also* takes human resources. It would not be worthwhile to improve the productivity of your engineering organization by the equivalent of 10 engineers per year if it took 50 engineers per year to understand and fix productivity blockers. *Therefore, our goal is to not only improve software engineering productivity, but to do so efficiently.*
 
-然而，这个改进周期*也*需要人力资源。如果每年需要50个工程师来了解和解决生产力的障碍，那么以每年10名工程师的数量来提高工程组织的生产率是不值得的。*因此，我们的目标是不仅要提高软件工程的生产效率，而且要有效地做到这一点。*
+然而，這個改進週期*也*需要人力資源。如果每年需要50個工程師來了解和解決生產力的障礙，那麼以每年10名工程師的數量來提高工程組織的生產力是不值得的。*因此，我們的目標是不僅要提高軟體工程的生產效率，而且要有效地做到這一點。*
 
 At Google, we addressed these trade-offs by creating a team of researchers dedicated to understanding engineering productivity. Our research team includes people from the software engineering research field and generalist software engineers, but we also include social scientists from a variety of fields, including cognitive psychology and behavioral economics. The addition of people from the social sciences allows us to not only study the software artifacts that engineers produce, but to also understand the human side of software development, including personal motivations, incentive structures, and strategies for managing complex tasks. The goal of the team is to take a data-driven approach to measuring and improving engineering productivity.
 
-在谷歌，我们通过创建一个致力于了解工程生产效率的研究团队来解决这些权衡问题。我们的研究团队包括来自软件工程研究领域的人员和普通的软件工程师，但我们也包括来自不同领域的社会科学家，包括认知心理学和行为经济学。来自社会科学的人员的加入使我们不仅可以研究工程师生产的软件工件，还可以了解软件开发中人的一面，包括个人动机、激励结构和管理复杂任务的策略。该团队的目标是采用数据驱动的方法来衡量和提高工程生产效率。
+在谷歌，我們透過建立一個致力於瞭解工程生產效率的研究團隊來解決這些權衡問題。我們的研究團隊包括來自軟體工程研究領域的人員和普通的軟體工程師，但我們也包括來自不同領域的社會科學家，包括認知心理學和行為經濟學。來自社會科學的人員的加入使我們不僅可以研究工程師生產的軟體工件，還可以瞭解軟體開發中人的一面，包括個人動機、激勵結構和管理複雜任務的策略。該團隊的目標是採用資料驅動的方法來衡量和提高工程生產效率。
 
 In this chapter, we walk through how our research team achieves this goal. This begins with the triage process: there are many parts of software development that we *can* measure, but what *should* we measure? After a project is selected, we walk through how the research team identifies meaningful metrics that will identify the problematic parts of the process. Finally, we look at how Google uses these metrics to track improvements to productivity.
 
-在本章中，我们将介绍我们的研究团队是如何实现这一目标的。这从分类过程开始：我们对软件开发的许多部分*可以*进行测量，但是我们应该测量什么呢？在一个项目被选中后，我们将介绍研究团队如何确定有意义的指标，以确定该过程中存在问题的部分。最后，我们看一下谷歌是如何使用这些指标来跟踪生产效率的改进。
+在本章中，我們將介紹我們的研究團隊是如何實現這一目標的。這從分類過程開始：我們對軟體開發的許多部分*可以*進行測量，但是我們應該測量什麼呢？在一個專案被選中後，我們將介紹研究團隊如何確定有意義的指標，以確定該過程中存在問題的部分。最後，我們看一下谷歌是如何使用這些指標來追蹤生產效率的改進。
 
 For this chapter, we follow one concrete example posed by the C++ and Java language teams at Google: readability. For most of Google’s existence, these teams have managed the readability process at Google. (For more on readability, see [Chapter 3](#_bookmark182).) The readability process was put in place in the early days of Google, before automatic formatters ([Chapter 8](#_bookmark580)) and linters that block submission were commonplace ([Chap‐](#_bookmark664) [ter 9](#_bookmark664)). The process itself is expensive to run because it requires hundreds of engineers performing readability reviews for other engineers in order to grant readability to them. Some engineers viewed it as an archaic hazing process that no longer held utility, and it was a favorite topic to argue about around the lunch table. The concrete question from the language teams was this: is the time spent on the readability process worthwhile?
 
-在本章中，我们遵循谷歌的C++和Java语言团队提出的一个具体例子：可读性。在谷歌存在的大部分时间里，这些团队一直在管理谷歌的可读性过程。(关于可读性的更多信息，请参见第三章）。可读性过程是在谷歌的早期建立的，当时自动格式化工具（第8章）和阻止提交的锁定还没有普及（第9章）。这个过程本身运行成本很高，因为它需要数以百计的工程师为其他工程师进行可读性审查，以便授予他们可读性。一些工程师认为这是一个古老的自欺欺人过程，不再具有实用性，这也是午餐桌上最喜欢争论的话题。来自语言团队的具体问题是：花在可读性过程上的时间是值得的吗？
+在本章中，我們遵循谷歌的C++和Java語言團隊提出的一個具體例子：可讀性。在谷歌存在的大部分時間裡，這些團隊一直在管理谷歌的可讀性過程。(關於可讀性的更多資訊，請參見第三章）。可讀性過程是在谷歌的早期建立的，當時自動格式化工具（第8章）和阻止提交的鎖定還沒有普及（第9章）。這個過程本身執行成本很高，因為它需要數以百計的工程師為其他工程師進行可讀性審查，以便授予他們可讀性。一些工程師認為這是一個古老的自欺欺人過程，不再具有實用性，這也是午餐桌上最喜歡爭論的話題。來自語言團隊的具體問題是：花在可讀性過程上的時間是值得的嗎？
 
 ```
 1	Frederick P. Brooks, The Mythical Man-Month: Essays on Software Engineering (New York: Addison-Wesley, 1995).
 
-1   Frederick P.Brooks，《人月深化：软件工程随笔》（纽约：Addison Wesley，1995）。
+1   Frederick P.Brooks，《人月深化：軟體工程隨筆》（紐約：Addison Wesley，1995）。
 ```
 
-## Triage: Is It Even Worth Measuring? 分类：是否值得测量？
+## Triage: Is It Even Worth Measuring? 分類：是否值得測量？
 
 Before we decide how to measure the productivity of engineers, we need to know when a metric is even worth measuring. The measurement itself is expensive: it takes people to measure the process, analyze the results, and disseminate them to the rest of the company. Furthermore, the measurement process itself might be onerous and slow down the rest of the engineering organization. Even if it is not slow, tracking progress might change engineers’ behavior, possibly in ways that mask the underlying issues. We need to measure and estimate smartly; although we don’t want to guess, we shouldn’t waste time and resources measuring unnecessarily.
 
-在我们决定如何测量工程师的生产效率之前，我们需要知道什么时候使用哪个指标甚至值得测量。测量本身是昂贵的：它需要人去测量过程，分析结果，并将其传播给公司的其他部门。此外，测量过程本身可能是繁琐的，会拖累工程组织的其他部门。即使它不慢，跟踪进度也可能改变工程师的行为，可能会掩盖潜在的问题。我们需要聪明地测量和估计；虽然我们不想猜测，但我们不应该浪费时间和资源进行不必要的测量。
+在我們決定如何測量工程師的生產效率之前，我們需要知道什麼時候使用哪個指標甚至值得測量。測量本身是昂貴的：它需要人去測量過程，分析結果，並將其傳播給公司的其他部門。此外，測量過程本身可能是繁瑣的，會拖累工程組織的其他部門。即使它不慢，追蹤進度也可能改變工程師的行為，可能會掩蓋潛在的問題。我們需要聰明地測量和估計；雖然我們不想猜測，但我們不應該浪費時間和資源進行不必要的測量。
 
 At Google, we’ve come up with a series of questions to help teams determine whether it’s even worth measuring productivity in the first place. We first ask people to describe what they want to measure in the form of a concrete question; we find that the more concrete people can make this question, the more likely they are to derive benefit from the process. When the readability team approached us, its question was simple: are the costs of an engineer going through the readability process worth the benefits they might be deriving for the company?
 
-在谷歌，我们想出了一系列的问题来帮助团队确定是否值得优先测量生产效率。我们首先要求人们以具体问题的形式描述他们想要测量的东西；我们发现，人们提出这个问题越具体，他们就越有可能从这个过程中获益。当可读性团队与我们接触时，其问题很简单：工程师在可读性过程中的成本是否值得他们为公司带来的好处？
+在谷歌，我們想出了一系列的問題來幫助團隊確定是否值得優先測量生產效率。我們首先要求人們以具體問題的形式描述他們想要測量的東西；我們發現，人們提出這個問題越具體，他們就越有可能從這個過程中獲益。當可讀性團隊與我們接觸時，其問題很簡單：工程師在可讀性過程中的成本是否值得他們為公司帶來的好處？
 
 We then ask them to consider the following aspects of their question:
 
@@ -85,31 +85,31 @@ We then ask them to consider the following aspects of their question:
 
 	In the case of readability, we had a clear decision maker for each programming language. Two language teams, Java and C++, actively reached out to us for assistance, and the others were waiting to see what happened with those languages first.[3](#_bookmark532) The decision makers trusted engineers’ self-reported experiences for understanding happiness and learning, but the decision makers wanted to see “hard numbers” based on logs data for velocity and code quality. This meant that we needed to include both qualitative and quantitative analysis for these metrics. There was not a hard deadline for this work, but there was an internal conference that would make for a useful time for an announcement if there was going to be a change. That deadline gave us several months in which to complete the work.
 
-然后我们要求他们考虑以下问题：
+然後我們要求他們考慮以下問題：
 
-*你期望的结果是什么？为什么？*
+*你期望的結果是什麼？為什麼？*
 
-	尽管我们可能想假装我们是中立的调查人员，但事实并非如此。我们确实对应该发生什么有先入为主的观念。通过一开始就承认这一点，我们可以尝试解决这些偏见，防止对结果进行事后解释。
+	儘管我們可能想假裝我們是中立的調查人員，但事實並非如此。我們確實對應該發生什麼有先入為主的觀念。透過一開始就承認這一點，我們可以嘗試解決這些偏見，防止對結果進行事後解釋。
 
-	当这个问题被提给可读性小组时，该小组指出，它并不确定。人们确信在某个时间点上的成本是值得的，但是随着自动格式化和静态分析工具的出现，没有人完全确定。越来越多的人认为，这个过程现在成了一种自欺欺人的仪式。虽然它可能仍然为工程师提供了好处（他们有调查数据显示人们确实声称有这些好处），但不清楚它是否值得作者或代码审查员投入时间。
+	當這個問題被提給可讀性小組時，該小組指出，它並不確定。人們確信在某個時間點上的成本是值得的，但是隨著自動格式化和靜態分析工具的出現，沒有人完全確定。越來越多的人認為，這個過程現在成了一種自欺欺人的儀式。雖然它可能仍然為工程師提供了好處（他們有調查資料顯示人們確實聲稱有這些好處），但不清楚它是否值得作者或程式碼審查員投入時間。
 
-*如果数据支持你的预期结果，将采取什么行动*
+*如果資料支援你的預期結果，將採取什麼行動*
 
-	我们这样问是因为如果不采取任何行动，那么测量就没有意义了。请注意，如果没有这一结果，就会发生计划变更，那么行动实际上可能是“维持现状”。
+	我們這樣問是因為如果不採取任何行動，那麼測量就沒有意義了。請注意，如果沒有這一結果，就會發生計劃變更，那麼行動實際上可能是“維持現狀”。
 
-	当被问及这个问题时，可读性团队的回答很直截了当：如果好处足以证明这个过程的成本是合理的，他们会链接到关于可读性的FAQ上的研究和数据，并进行宣传以设定期望。
+	當被問及這個問題時，可讀性團隊的回答很直截了當：如果好處足以證明這個過程的成本是合理的，他們會連結到關於可讀性的FAQ上的研究和資料，並進行宣傳以設定期望。
 
-*如果我们得到一个负面的结果，是否会采取适当的行动？*
+*如果我們得到一個負面的結果，是否會採取適當的行動？*
 
-	我们问这个问题是因为在许多情况下，我们发现负面结果不会改变决策。决策中可能会有其他的投入，而这些投入将取代任何负面的结果。如果是这样的话，可能一开始就不值得测量。这也是阻止我们研究团队所做的大多数项目的问题；我们了解到决策者对了解结果感兴趣，但由于其他原因，他们不会选择改变方向。
+	我們問這個問題是因為在許多情況下，我們發現負面結果不會改變決策。決策中可能會有其他的投入，而這些投入將取代任何負面的結果。如果是這樣的話，可能一開始就不值得測量。這也是阻止我們研究團隊所做的大多數專案的問題；我們瞭解到決策者對了解結果感興趣，但由於其他原因，他們不會選擇改變方向。
 
-	然而，在可读性的案例中，我们有一个来自团队的强有力的行动声明。它承诺，如果我们的分析显示成本大于收益，或者收益可以忽略不计，团队将放弃这个项目。由于不同的编程语言在格式化和静态分析方面有不同的成熟度，因此该评估将基于每种语言进行。
+	然而，在可讀性的案例中，我們有一個來自團隊的強有力的行動宣告。它承諾，如果我們的分析顯示成本大於收益，或者收益可以忽略不計，團隊將放棄這個專案。由於不同的程式語言在格式化和靜態分析方面有不同的成熟度，因此該評估將基於每種語言進行。
 
-*谁将决定对结果采取行动，以及他们何时采取行动？*
+*誰將決定對結果採取行動，以及他們何時採取行動？*
 
-	我们这样问是为了确保要求测量的人是被授权采取行动的人（或直接代表他们采取行动）。归根结底，测量我们的软件流程的目的是帮助人们做出业务决策。了解这个人是谁很重要，包括什么形式的数据能说服他们。尽管最好的研究包括各种方法（从结构化访谈到日志的统计分析等各种方法），但为决策者提供他们需要的数据的时间可能有限。在这些情况下，最好的办法是迎合决策者的要求。他们是否倾向于通过访谈中可以获取到的故事来做出决策？他们是否信任调查结果或日志数据？他们对复杂的统计分析感到满意吗？如果决策者压根就不相信结果的形式，那么测量过程又没有意义。
+	我們這樣問是為了確保要求測量的人是被授權採取行動的人（或直接代表他們採取行動）。歸根結底，測量我們的軟體流程的目的是幫助人們做出業務決策。瞭解這個人是誰很重要，包括什麼形式的資料能說服他們。儘管最好的研究包括各種方法（從結構化訪談到日誌的統計分析等各種方法），但為決策者提供他們需要的資料的時間可能有限。在這些情況下，最好的辦法是迎合決策者的要求。他們是否傾向於透過訪談中可以獲取到的故事來做出決策？他們是否信任調查結果或日誌資料？他們對複雜的統計分析感到滿意嗎？如果決策者壓根就不相信結果的形式，那麼測量過程又沒有意義。
 
-	在可读性方面，我们对每种编程语言都有一个明确的决策者。有两个语言团队，即Java和C++，积极向我们寻求帮助，而其他团队则在等待，看这些语言先发生什么。决策者相信工程师自我报告的经验，以了解快乐和学习，但决策者希望看到基于日志数据的速度和代码质量的 "硬数字"。这意味着，我们需要对这些指标进行定性和定量分析。这项工作没有一个硬性的截止日期，但有一个内部会议，如果有变化的话，这个会议将宣布一个新的时间点。这个期限给了我们几个月的时间来完成这项工作。
+	在可讀性方面，我們對每種程式語言都有一個明確的決策者。有兩個語言團隊，即Java和C++，積極向我們尋求幫助，而其他團隊則在等待，看這些語言先發生什麼。決策者相信工程師自我報告的經驗，以瞭解快樂和學習，但決策者希望看到基於日誌資料的速度和程式碼品質的 "硬數字"。這意味著，我們需要對這些指標進行定性和定量分析。這項工作沒有一個硬性的截止日期，但有一個內部會議，如果有變化的話，這個會議將宣佈一個新的時間點。這個期限給了我們幾個月的時間來完成這項工作。
 
 By asking these questions, we find that in many cases, measurement is simply not worthwhile…and that’s OK! There are many good reasons to not measure the impact of a tool or process on productivity. Here are some examples that we’ve seen:
 
@@ -133,99 +133,99 @@ By asking these questions, we find that in many cases, measurement is simply not
 
 	In some cases, the metrics needed (see the upcoming section on how to identify metrics) are simply unavailable. In these cases, it can be tempting to measure using other metrics that are less precise (lines of code written, for example). However, any results from these metrics will be uninterpretable. If the metric confirms the stakeholders’ preexisting beliefs, they might end up proceeding with their plan without consideration that the metric is not an accurate measure. If it does not confirm their beliefs, the imprecision of the metric itself provides an easy explanation, and the stakeholder might, again, proceed with their plan.
 
-通过问这些问题，我们发现在许多情况下，测量根本不值得……这没有关系！有许多很好的理由不测量一个工具或过程对生产效率的影响。以下是我们看到的一些例子：
+透過問這些問題，我們發現在許多情況下，測量根本不值得……這沒有關係！有許多很好的理由不測量一個工具或過程對生產效率的影響。以下是我們看到的一些例子：
 
-*你现在没有能力改变这个过程/工具*
+*你現在沒有能力改變這個過程/工具*
 
-	可能有时间上的限制或资金上的制约，使之无法进行。例如，你可能确定，只要你切换到一个更快的构建工具，每周就能节省几个小时的时间。然而，转换意味着在每个人都转换的时候暂停开发，而且有一个重要的资金期限即将到来，这样你就无法承受这种中断。工程权衡不是在真空中评估的——在这样的情况下，重要的是要意识到，更广泛的背景完全可以证明推迟对结果采取行动是合理的。
+	可能有時間上的限制或資金上的制約，使之無法進行。例如，你可能確定，只要你切換到一個更快的建構工具，每週就能節省幾個小時的時間。然而，轉換意味著在每個人都轉換的時候暫停開發，而且有一個重要的資金期限即將到來，這樣你就無法承受這種中斷。工程權衡不是在真空中評估的——在這樣的情況下，重要的是要意識到，更廣泛的背景完全可以證明推遲對結果採取行動是合理的。
 
-*任何结果很快就会因其他因素而失效*
+*任何結果很快就會因其他因素而失效*
 
-	这里的例子可能包括在计划重组之前测量一个组织的软件流程。或者测量一个被废弃的系统的技术债务的数量。
+	這裡的例子可能包括在計劃重組之前測量一個組織的軟體流程。或者測量一個被廢棄的系統的技術債務的數量。
 
-	决策者有强烈的意见，而你不太可能提供足够多的正确类型的证据，来改变他们的信念。
+	決策者有強烈的意見，而你不太可能提供足夠多的正確型別的證據，來改變他們的信念。
 	
-	这就需要了解你的受众。即使在谷歌，我们有时也会发现一些人由于他们过去的经验而对某一主题有坚定的信念。我们曾发现一些利益相关者从不相信调查数据，因为他们不相信自我观念。我们也发现一些利益相关者，他们最容易被由少量访谈得出的令人信服的叙述所动摇。当然，也有一些利益相关者只被日志分析所动摇。在所有情况下，我们都试图用混合方法对真相进行三角分析，但如果利益相关者只限于相信不适合问题的方法，那么做这项工作就没有意义。
+	這就需要了解你的受眾。即使在谷歌，我們有時也會發現一些人由於他們過去的經驗而對某一主題有堅定的信念。我們曾發現一些利益相關者從不相信調查資料，因為他們不相信自我觀念。我們也發現一些利益相關者，他們最容易被由少量訪談得出的令人信服的敘述所動搖。當然，也有一些利益相關者只被日誌分析所動搖。在所有情況下，我們都試圖用混合方法對真相進行三角分析，但如果利益相關者只限於相信不適合問題的方法，那麼做這項工作就沒有意義。
 
-*结果只能作为虚荣的指标，以来支持你一定要做的事情*
+*結果只能作為虛榮的指標，以來支援你一定要做的事情*
 
-	这也许是我们在谷歌告诉人们不要测量软件过程的最常见的原因。很多时候，人们已经为多个原因规划了一个决策，而改进软件开发过程只是这些决策的一个好处。例如，谷歌的发布工具团队曾经要求对发布工作流程系统的计划变更进行测量。由于变化的性质，很明显，这个变化不会比目前的状态差，但他们不知道这是一个小的改进还是一个大的改进。我们问团队：如果结果只是一个小的改进，无论如何你会花资源来实现这个功能，即使它看起来不值得投资？答案是肯定的! 这个功能碰巧提高了生产效率，但这是一个副作用：它也更具有性能，降低了发布工具团队的维护负担。
+	這也許是我們在谷歌告訴人們不要測量軟體過程的最常見的原因。很多時候，人們已經為多個原因規劃了一個決策，而改進軟體開發過程只是這些決策的一個好處。例如，谷歌的發佈工具團隊曾經要求對發佈工作流程系統的計劃變更進行測量。由於變化的性質，很明顯，這個變化不會比目前的狀態差，但他們不知道這是一個小的改進還是一個大的改進。我們問團隊：如果結果只是一個小的改進，無論如何你會花資源來實現這個功能，即使它看起來不值得投資？答案是肯定的! 這個功能碰巧提高了生產效率，但這是一個副作用：它也更具有效能，降低了發佈工具團隊的維護負擔。
 
-*唯一可用的指标不够精确，无法衡量问题，而且会被其他因素所干扰*
+*唯一可用的指標不夠精確，無法衡量問題，而且會被其他因素所幹擾*
 
-	在某些情况下，所需的指标（见即将到来的关于如何识别指标的章节）根本无法获得。在这些情况下，使用其他不那么精确的指标（例如，编写的代码行）进行测量是很诱人的。然而，这些指标的任何结果都是无法解释的。如果这个指标证实了利益相关者预先存在的观念，他们最终可能会继续执行他们的计划，而不考虑这个指标不是一个准确的衡量标准。如果它没有证实他们的观念，那么指标本身的不精确性就提供了一个简单的解释，利益相关者可能再次继续他们的计划。
+	在某些情況下，所需的指標（見即將到來的關於如何識別指標的章節）根本無法獲得。在這些情況下，使用其他不那麼精確的指標（例如，編寫的程式碼行）進行測量是很誘人的。然而，這些指標的任何結果都是無法解釋的。如果這個指標證實了利益相關者預先存在的觀念，他們最終可能會繼續執行他們的計劃，而不考慮這個指標不是一個準確的衡量標準。如果它沒有證實他們的觀念，那麼指標本身的不精確性就提供了一個簡單的解釋，利益相關者可能再次繼續他們的計劃。
 
 When you are successful at measuring your software process, you aren’t setting out to prove a hypothesis correct or incorrect; *success means giving a stakeholder the data they need to make a decision*. If that stakeholder won’t use the data, the project is always a failure. We should only measure a software process when a concrete decision will be made based on the outcome. For the readability team, there was a clear decision to be made. If the metrics showed the process to be beneficial, they would publicize the result. If not, the process would be abolished. Most important, the readability team had the authority to make this decision.
 
-当你成功地测量你的软件过程时，你并不是为了证明一个假设的正确与否；*成功意味着给利益相关者提供他们做出决定所需的数据*。如果这个利益相关者不使用这些数据，那么这个项目就是失败的。我们只应该在根据结果做出具体决定的时候才去衡量一个软件过程。对于可读性团队来说，有一个明确的决定要做。如果衡量标准显示这个过程是有益的，他们将公布这个结果。如果没有，这个过程就会被废除。最重要的是，可读性小组有权力做出这个决定。
+當你成功地測量你的軟體過程時，你並不是為了證明一個假設的正確與否；*成功意味著給利益相關者提供他們做出決定所需的資料*。如果這個利益相關者不使用這些資料，那麼這個專案就是失敗的。我們只應該在根據結果做出具體決定的時候才去衡量一個軟體過程。對於可讀性團隊來說，有一個明確的決定要做。如果衡量標準顯示這個過程是有益的，他們將公佈這個結果。如果沒有，這個過程就會被廢除。最重要的是，可讀性小組有權力做出這個決定。
 
 ```
 2	It’s worth pointing out here that our industry currently disparages “anecdata,” and everyone has a goal of being “data driven.” Yet anecdotes continue to exist because they are powerful. An anecdote can provide context and narrative that raw numbers cannot; it can provide a deep explanation that resonates with others because it mirrors personal experience. Although our researchers do not make decisions on anecdotes, we do use and encourage techniques such as structured interviews and case studies to deeply understand phenomena and provide context to quantitative data.
 
 3	Java and C++ have the greatest amount of tooling support. Both have mature formatters and static analysis tools that catch common mistakes. Both are also heavily funded internally. Even though other language teams, like Python, were interested in the results, clearly there was not going to be a benefit for Python to remove readability if we couldn’t even show the same benefit for Java or C++.
 
-2 在此值得指出的是，我们的行业目前贬低 "轶事数据"，而每个人都有一个 "数据驱动 "的目标。然而，轶事仍然存在，因为它们是强大的。轶事可以提供原始数字无法提供的背景和叙述；它可以提供一个深刻的解释，因为它反映了个人的经验，所以能引起别人的共鸣。虽然我们的研究人员不会根据轶事做出决定，但我们确实使用并鼓励结构化访谈和案例研究等技术，以深入理解现象，并为定量数据提供背景。
+2 在此值得指出的是，我們的行業目前貶低 "軼事資料"，而每個人都有一個 "資料驅動 "的目標。然而，軼事仍然存在，因為它們是強大的。軼事可以提供原始數字無法提供的背景和敘述；它可以提供一個深刻的解釋，因為它反映了個人的經驗，所以能引起別人的共鳴。雖然我們的研究人員不會根據軼事做出決定，但我們確實使用並鼓勵結構化訪談和案例研究等技術，以深入理解現象，並為定量資料提供背景。
 
-3 Java和C++拥有最大量的工具支持。两者都有成熟的格式化工具和静态分析工具，可以捕捉常见的错误。两者也都有大量的内部资金。即使其他语言团队，如Python，对结果感兴趣，但显然，如果我们连Java或C++都不能显示出同样的好处，那么Python就不会有删除可读性的好处。
+3 Java和C++擁有最大量的工具支援。兩者都有成熟的格式化工具和靜態分析工具，可以捕捉常見的錯誤。兩者也都有大量的內部資金。即使其他語言團隊，如Python，對結果感興趣，但顯然，如果我們連Java或C++都不能顯示出同樣的好處，那麼Python就不會有刪除可讀性的好處。
 ```
 
-## Selecting Meaningful Metrics with Goals and Signals  用目标和信号来选择有意义的衡量标准
+## Selecting Meaningful Metrics with Goals and Signals  用目標和訊號來選擇有意義的衡量標準
 
 After we decide to measure a software process, we need to determine what metrics to use. Clearly, lines of code (LOC) won’t do,[4](#_bookmark542) but how do we actually measure engineering productivity?
 
-在我们决定测量一个软件过程之后，我们需要确定使用什么指标。显然，代码行（LOC）是不行的，但我们究竟该如何测量工程生产效率呢？
+在我們決定測量一個軟體過程之後，我們需要確定使用什麼指標。顯然，程式碼行（LOC）是不行的，但我們究竟該如何測量工程生產效率呢？
 
 At Google, we use the Goals/Signals/Metrics (GSM) framework to guide metrics creation.
 
-在谷歌，我们使用目标/信号/指标（GSM）框架来指导指标创建。
+在谷歌，我們使用目標/訊號/指標（GSM）框架來指導指標建立。
 
 - A *goal* is a desired end result. It’s phrased in terms of what you want to understand at a high level and should not contain references to specific ways to measure it.
 - A signal is how you might know that you’ve achieved the end result. Signals are things we would *like* to measure, but they might not be measurable themselves.
 - A *metric* is proxy for a signal. It is the thing we actually can measure. It might not be the ideal measurement, but it is something that we believe is close enough.
 
-- *目标*是一个期望的最终结果。它是根据你希望在高层次上理解的内容来表述的，不应包含对具体测量方法的引用。。
-- *信号*是你如何知道你已经实现了最终结果。信号是我们*想要*衡量的东西，但它们本身可能是不可测量的。
-- *指标*是信号的代表。它是我们实际上可以测量的东西。它可能不是理想的测量，但它是我们认为足够接近的东西。
+- *目標*是一個期望的最終結果。它是根據你希望在高層次上理解的內容來表述的，不應包含對具體測量方法的參考。。
+- *訊號*是你如何知道你已經實現了最終結果。訊號是我們*想要*衡量的東西，但它們本身可能是不可測量的。
+- *指標*是訊號的代表。它是我們實際上可以測量的東西。它可能不是理想的測量，但它是我們認為足夠接近的東西。
 
 The GSM framework encourages several desirable properties when creating metrics. First, by creating goals first, then signals, and finally metrics, it prevents the *streetlight* *effect*. The term comes from the full phrase “looking for your keys under the streetlight”: if you look only where you can see, you might not be looking in the right place. With metrics, this occurs when we use the metrics that we have easily accessible and that are easy to measure, regardless of whether those metrics suit our needs. Instead, GSM forces us to think about which metrics will actually help us achieve our goals, rather than simply what we have readily available.
 
-GSM框架在创建指标时鼓励几个理想的属性。首先，通过首先创建目标，然后是信号，最后是指标，它可以防止*路灯*效应。这个词来自于 "在路灯下找你的钥匙 "这个完整的短语：如果你只看你能看到的地方，你可能没有找对地方。对于指标来说，当我们使用我们容易获得的、容易测量的指标时，就会出现这种情况，不管这些指标是否适合我们的需求。相反，GSM迫使我们思考哪些指标能真正帮助我们实现目标，而不是简单地考虑我们有哪些现成的指标。
+GSM框架在建立指標時鼓勵幾個理想的屬性。首先，透過首先建立目標，然後是訊號，最後是指標，它可以防止*路燈*效應。這個詞來自於 "在路燈下找你的鑰匙 "這個完整的短語：如果你只看你能看到的地方，你可能沒有找對地方。對於指標來說，當我們使用我們容易獲得的、容易測量的指標時，就會出現這種情況，不管這些指標是否適合我們的需求。相反，GSM迫使我們思考哪些指標能真正幫助我們實現目標，而不是簡單地考慮我們有哪些現成的指標。
 
 Second, GSM helps prevent both metrics creep and metrics bias by encouraging us to come up with the appropriate set of metrics, using a principled approach, *in advance* of actually measuring the result. Consider the case in which we select metrics without a principled approach and then the results do not meet our stakeholders’ expectations. At that point, we run the risk that stakeholders will propose that we use different metrics that they believe will produce the desired result. And because we didn’t select based on a principled approach at the start, there’s no reason to say that they’re wrong! Instead, GSM encourages us to select metrics based on their ability to measure the original goals. Stakeholders can easily see that these metrics map to their original goals and agree, in advance, that this is the best set of metrics for measuring the outcomes.
 
-第二，GSM通过鼓励我们使用原则性的方法提出适当的指标集，从而有助于防止指标蠕变和指标偏差，从而有助于实际测量结果。考虑这样一种情况，我们在没有原则性方法的情况下选择指标，然后结果不符合我们的利益相关者的期望。在这一点上，我们面临着利益相关者建议我们使用他们认为会产生预期结果的不同指标的风险。而且因为我们一开始并没有基于原则性的方法进行选择，所以没有理由说他们错了！相反，GSM鼓励我们根据衡量原始目标的能力选择指标。利益相关者可以很容易地看到这些指标映射到他们的 最初的目标，并提前同意这是衡量结果的最佳指标集。
+第二，GSM透過鼓勵我們使用原則性的方法提出適當的指標集，從而有助於防止指標蠕變和指標偏差，從而有助於實際測量結果。考慮這樣一種情況，我們在沒有原則性方法的情況下選擇指標，然後結果不符合我們的利益相關者的期望。在這一點上，我們面臨著利益相關者建議我們使用他們認為會產生預期結果的不同指標的風險。而且因為我們一開始並沒有基於原則性的方法進行選擇，所以沒有理由說他們錯了！相反，GSM鼓勵我們根據衡量原始目標的能力選擇指標。利益相關者可以很容易地看到這些指標對映到他們的 最初的目標，並提前同意這是衡量結果的最佳指標集。
 
 Finally, GSM can show us where we have measurement coverage and where we do not. When we run through the GSM process, we list all our goals and create signals for each one. As we will see in the examples, not all signals are going to be measurable and that’s OK! With GSM, at least we have identified what is not measurable. By identifying these missing metrics, we can assess whether it is worth creating new metrics or even worth measuring at all.
 
-最后，GSM可以告诉我们哪里有测量覆盖，哪里没有。当我们运行GSM流程时，我们列出所有的目标，并为每个目标创建信号。正如我们在例子中所看到的，并不是所有的信号都是可测量的，这没关系！通过GSM，至少我们已经确定了什么是可测量的。通过GSM，至少我们已经确定了哪些是不可测量的。通过识别这些缺失的指标，我们可以评估是否值得创建新的指标，甚至是否值得测量。
+最後，GSM可以告訴我們哪裡有測量覆蓋，哪裡沒有。當我們執行GSM流程時，我們列出所有的目標，並為每個目標建立訊號。正如我們在例子中所看到的，並不是所有的訊號都是可測量的，這沒關係！透過GSM，至少我們已經確定了什麼是可測量的。透過GSM，至少我們已經確定了哪些是不可測量的。透過識別這些缺失的指標，我們可以評估是否值得建立新的指標，甚至是否值得測量。
 
 The important thing is to maintain *traceability*. For each metric, we should be able to trace back to the signal that it is meant to be a proxy for and to the goal it is trying to measure. This ensures that we know which metrics we are measuring and why we are measuring them.
 
-重要的是要保持*可追溯性*。对于每个指标，我们应该能够追溯到它所要代表的信号，以及它所要测量的目标。这可以确保我们知道我们正在测量哪些指标，以及为什么我们要测量它们。
+重要的是要保持*可追溯性*。對於每個指標，我們應該能夠追溯到它所要代表的訊號，以及它所要測量的目標。這可以確保我們知道我們正在測量哪些指標，以及為什麼我們要測量它們。
 
 ```
 4	“From there it is only a small step to measuring ‘programmer productivity’ in terms of ‘number of lines of code produced per month.’ This is a very costly measuring unit because it encourages the writing of insipid code, but today I am less interested in how foolish a unit it is from even a pure business point of view. My point today is that, if we wish to count lines of code, we should not regard them as ‘lines produced’ but as ‘lines spent’: the current conventional wisdom is so foolish as to book that count on the wrong side of the ledger.” Edsger Dijkstra, on the cruelty of really teaching computing science, EWD Manuscript 1036.
 
-4   “从那时起，用‘每月产生的代码行数’来衡量‘程序员生产效率’只需一小步。这是一个非常昂贵的测量单位，因为它鼓励编写平淡的代码，但今天我对这个单位的愚蠢程度不感兴趣，甚至从纯商业的角度来看也是如此。我今天的观点是，如果我们希望计算代码的行数，我们不应该将它们视为“生产的行数”，而应该视为“花费的行数”：当前的传统智慧愚蠢到将这些行数记在账本的错误一侧。”Edsger Dijkstra，关于真正教给计算机科学的残酷性，EWD手稿1036。
+4   “從那時起，用‘每月產生的程式碼行數’來衡量‘程式設計師生產效率’只需一小步。這是一個非常昂貴的測量單位，因為它鼓勵編寫平淡的程式碼，但今天我對這個單位的愚蠢程度不感興趣，甚至從純商業的角度來看也是如此。我今天的觀點是，如果我們希望計算程式碼的行數，我們不應該將它們視為“生產的行數”，而應該視為“花費的行數”：當前的傳統智慧愚蠢到將這些行數記在賬本的錯誤一側。”Edsger Dijkstra，關於真正教給電腦科學的殘酷性，EWD手稿1036。
 ```
 
-## Goals  目标
+## Goals  目標
 
 A goal should be written in terms of a desired property, without reference to any metric. By themselves, these goals are not measurable, but a good set of goals is something that everyone can agree on before proceeding onto signals and then metrics.
 
-目标应该根据所需的属性来编写，而不需要参考任何指标。就其本身而言，这些目标是无法衡量的，但一组好的目标是每个人都可以在继续进行信号和衡量指标之前达成一致的。
+目標應該根據所需的屬性來編寫，而不需要參考任何指標。就其本身而言，這些目標是無法衡量的，但一組好的目標是每個人都可以在繼續進行訊號和衡量指標之前達成一致的。
 
 To make this work, we need to have identified the correct set of goals to measure in the first place. This would seem straightforward: surely the team knows the goals of their work! However, our research team has found that in many cases, people forget to include all the possible *trade-offs within productivity*, which could lead to mismeasurement.
 
-为了使其发挥作用，我们首先需要确定一套正确的目标来测量。这看起来很简单：团队肯定知道他们工作的目标！但是，我们的研究团队发现，在许多情况下，人们忘记了将所有可能的*权衡因素包括在生产效率中*。然而，我们的研究团队发现，在许多情况下，人们忘记了将所有可能的*生产力内的权衡因素包括在内*，这可能导致错误的衡量。
+為了使其發揮作用，我們首先需要確定一套正確的目標來測量。這看起來很簡單：團隊肯定知道他們工作的目標！但是，我們的研究團隊發現，在許多情況下，人們忘記了將所有可能的*權衡因素包括在生產效率中*。然而，我們的研究團隊發現，在許多情況下，人們忘記了將所有可能的*生產力內的權衡因素包括在內*，這可能導致錯誤的衡量。
 
 Taking the readability example, let’s assume that the team was so focused on making the readability process fast and easy that it had forgotten the goal about code quality. The team set up tracking measurements for how long it takes to get through the review process and how happy engineers are with the process. One of our teammates proposes the following:
 
 	I can make your review velocity very fast: just remove code reviews entirely.
 
-以可读性为例，我们假设团队太专注于使可读性过程快速和简单，以至于忘记了关于代码质量的目标。团队设置了跟踪测量，以了解通过审查过程需要多长时间，以及工程师对该过程的满意程度。我们的一个队友提出以下建议：
+以可讀性為例，我們假設團隊太專注於使可讀性過程快速和簡單，以至於忘記了關於程式碼品質的目標。團隊設定了追蹤測量，以瞭解透過審查過程需要多長時間，以及工程師對該過程的滿意程度。我們的一個隊友提出以下建議：
 
-	我可以让你的审查速度变得非常快：只要完全取消代码审查。
+	我可以讓你的審查速度變得非常快：只要完全取消程式碼審查。
 
 Although this is obviously an extreme example, teams forget core trade-offs all the time when measuring: they become so focused on improving velocity that they forget to measure quality (or vice versa). To combat this, our research team divides productivity into five core components. These five components are in trade-off with one another, and we encourage teams to consider goals in each of these components to ensure that they are not inadvertently improving one while driving others downward. To help people remember all five components, we use the mnemonic “QUANTS”:
 
@@ -249,27 +249,27 @@ Although this is obviously an extreme example, teams forget core trade-offs all 
 
 	How happy are engineers with their tools? How well does a tool meet engineers’ needs? How satisfied are they with their work and their end product? Are engineers feeling burned out?
 
-虽然这显然是一个极端的例子，但团队在测量时总是忘记了核心的权衡：他们太专注于提高速度而忘记了测量质量（或者反过来）。为了解决这个问题，我们的研究团队将生产效率分为五个核心部分。这五个部分是相互权衡的，我们鼓励团队考虑每一个部分的目标，以确保他们不会在无意中提高一个部分而使其他部分下降。为了帮助人们记住所有五个组成部分，我们使用了 "QUANTS "的记忆法：
+雖然這顯然是一個極端的例子，但團隊在測量時總是忘記了核心的權衡：他們太專注於提高速度而忘記了測量品質（或者反過來）。為了解決這個問題，我們的研究團隊將生產效率分為五個核心部分。這五個部分是相互權衡的，我們鼓勵團隊考慮每一個部分的目標，以確保他們不會在無意中提高一個部分而使其他部分下降。為了幫助人們記住所有五個組成部分，我們使用了 "QUANTS "的記憶法：
 
-代码的***质量***
+程式碼的***品質***
 
-	产生的代码的质量如何？测试用例是否足以预防回归？架构在减轻风险和变化方面的能力如何？
+	產生的程式碼的品質如何？測試用例是否足以預防迴歸？架構在減輕風險和變化方面的能力如何？
 
-工程师的***关注度***
+工程師的***關注度***
 
-	工程师达到流动状态的频率如何？他们在多大程度上被通知分散了注意力？工具是否鼓励工程师进行状态切换？
+	工程師達到流動狀態的頻率如何？他們在多大程度上被通知分散了注意力？工具是否鼓勵工程師進行狀態切換？
 
-*知识的复杂性*
+*知識的複雜性*
 
-	完成一项任务需要多大的认知负荷？正在解决的问题的内在复杂性是什么？工程师是否需要处理不必要的复杂性？
+	完成一項任務需要多大的認知負荷？正在解決的問題的內在複雜性是什麼？工程師是否需要處理不必要的複雜性？
 
-*节奏和速度*
+*節奏和速度*
 
-	工程师能多快地完成他们的任务？他们能以多快的速度把他们的版本推出去？他们在给定的时间范围内能完成多少任务？
+	工程師能多快地完成他們的任務？他們能以多快的速度把他們的版本推出去？他們在給定的時間範圍內能完成多少任務？
 
-*满意程度*
+*滿意程度*
 
-	工程师对他们的工具有多满意？工具能在多大程度上满足工程师的需求？他们对自己的工作和最终产品的满意度如何？工程师是否感到筋疲力尽？
+	工程師對他們的工具有多滿意？工具能在多大程度上滿足工程師的需求？他們對自己的工作和最終產品的滿意度如何？工程師是否感到筋疲力盡？
 
 
 Going back to the readability example, our research team worked with the readability team to identify several productivity goals of the readability process:
@@ -294,36 +294,36 @@ Going back to the readability example, our research team worked with the readabi
 
 	Engineers see the benefit of the readability process and have positive feelings about participating in it.
 
-回到可读性的例子，我们的研究团队与可读性团队合作，确定了可读性过程中的几个生产力目标。
+回到可讀性的例子，我們的研究團隊與可讀性團隊合作，確定了可讀性過程中的幾個生產力目標。
 
-*代码的质量*
+*程式碼的品質*
 
-	由于可读性过程，工程师们写出了更高质量的代码；由于可读性过程，他们写出了更一致的代码；由于可读性过程，他们为代码的健康文化做出了贡献。
+	由於可讀性過程，工程師們寫出了更高品質的程式碼；由於可讀性過程，他們寫出了更一致的程式碼；由於可讀性過程，他們為程式碼的健康文化做出了貢獻。
 
-*来自工程师的关注*
+*來自工程師的關注*
 
-	我们没有为可读性制定任何关注目标。这是可以的! 并非所有关于工程生产力的问题都涉及所有五个领域的权衡。
+	我們沒有為可讀性制定任何關注目標。這是可以的! 並非所有關於工程生產力的問題都涉及所有五個領域的權衡。
 
-*知识复杂性*
+*知識複雜性*
 
-	工程师们通过可读性过程了解谷歌代码库和最佳编码实践，他们在可读性过程中接受指导。
+	工程師們透過可讀性過程瞭解谷歌程式碼函式庫和最佳編碼實踐，他們在可讀性過程中接受指導。
 
-*节奏和速度*
+*節奏和速度*
 
-	由于可读性过程，工程师更快、更有效地完成工作任务。
+	由於可讀性過程，工程師更快、更有效地完成工作任務。
 
-*满意度*
+*滿意度*
 
-	工程师们看到了可读性过程的好处，对参与该过程有积极的感受。
+	工程師們看到了可讀性過程的好處，對參與該過程有積極的感受。
 
 
-## Signals  信号
+## Signals  訊號
 
 A signal is the way in which we will know we’ve achieved our goal. Not all signals are measurable, but that’s acceptable at this stage. There is not a 1:1 relationship between signals and goals. Every goal should have at least one signal, but they might have more. Some goals might also share a signal. [Table 7-1 ](#_bookmark557)shows some example signals for the goals of the readability process measurement.
 
-信号是我们将知道我们已经实现了目标的方式。并非所有的信号都是可衡量的，但这在现阶段是可以接受的。信号和目标之间不是1:1的关系。每个目标应该至少有一个信号，但它们可能有更多的信号。有些目标也可能共享一个信号。表7-1显示了可读性过程测量的目标的一些信号示例。
+訊號是我們將知道我們已經實現了目標的方式。並非所有的訊號都是可衡量的，但這在現階段是可以接受的。訊號和目標之間不是1:1的關係。每個目標應該至少有一個訊號，但它們可能有更多的訊號。有些目標也可能共享一個訊號。表7-1顯示了可讀性過程測量的目標的一些訊號示例。
 
-*Table 7-1. Signals and goals*  *表7-1. 信号和目标 *
+*Table 7-1. Signals and goals*  *表7-1. 訊號和目標 *
 
 | Goals                                                        | Signals                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -332,58 +332,58 @@ A signal is the way in which we will know we’ve achieved our goal. Not all sig
 | Engineers receive mentoring during the readability process.  | Engineers report positive interactions with experienced Google engineers who serve as reviewers during the readability process. |
 | Engineers receive mentoring during the readability process.<br/>Engineers complete work tasks faster and more efficiently as a result of the readability process.<br/><br/><br/>Engineers see the benefit of the readability process and have positive feelings about participating in it. | Engineers who have been granted readability judge themselves to be more productive than engineers who have not been granted readability. Changes written by engineers who have been granted readability are faster to review than changes written by engineers who have not been granted readability.<br/>Engineers view the readability process as being worthwhile. |
 
-| 目标                                                         | 信号                                                         |
+| 目標                                                         | 訊號                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 由于可读性过程，工程师们会写出更高质量的代码。               | 被授予可读性的工程师判断他们的代码比没有被授予可读性的工程师的质量更高。可读性过程对代码质量有积极影响。 |
-| 工程师们通过可读性过程了解谷歌的代码库和最佳编码实践。       | 工程师们报告了从可读性过程中的学习情况。                     |
-| 工程师在可读性过程中接受指导。                               | 工程师们报告了与经验丰富的谷歌工程师的积极互动，他们在可读性过程中担任审查员。 |
-| 工程师在可读性过程中得到指导。<br/><br/>由于可读性过程，工程师们更快、更有效地完成工作任务。<br/><br/>工程师们看到了可读性过程的好处，并对参与这一过程有积极的感受。 | 被授予可读性的工程师判断自己比没有被授予可读性的工程师更有生产效率。被授予可读性的工程师所写的修改比未被授予可读性的工程师所写的修改审查得更快。<br/><br/>工程师认为可读性过程是值得的。 |
+| 由於可讀性過程，工程師們會寫出更高品質的程式碼。               | 被授予可讀性的工程師判斷他們的程式碼比沒有被授予可讀性的工程師的品質更高。可讀性過程對程式碼品質有積極影響。 |
+| 工程師們透過可讀性過程瞭解谷歌的程式碼函式庫和最佳編碼實踐。       | 工程師們報告了從可讀性過程中的學習情況。                     |
+| 工程師在可讀性過程中接受指導。                               | 工程師們報告了與經驗豐富的谷歌工程師的積極互動，他們在可讀性過程中擔任審查員。 |
+| 工程師在可讀性過程中得到指導。<br/><br/>由於可讀性過程，工程師們更快、更有效地完成工作任務。<br/><br/>工程師們看到了可讀性過程的好處，並對參與這一過程有積極的感受。 | 被授予可讀性的工程師判斷自己比沒有被授予可讀性的工程師更有生產效率。被授予可讀性的工程師所寫的修改比未被授予可讀性的工程師所寫的修改審查得更快。<br/><br/>工程師認為可讀性過程是值得的。 |
 
 
 
-## Metrics  指标
+## Metrics  指標
 
 Metrics are where we finally determine how we will measure the signal. Metrics are not the signal themselves; they are the measurable proxy of the signal. Because they are a proxy, they might not be a perfect measurement. For this reason, some signals might have multiple metrics as we try to triangulate on the underlying signal.
 
-指标是我们最终确定如何测量信号的标准。指标不是信号本身；它们是信号的可测量的代表。因为它们是一个代表，所以它们可能不是一个完美的测量。出于这个原因，一些信号可能有多个指标，因为我们试图对基本信号进行三角测量分析。
+指標是我們最終確定如何測量訊號的標準。指標不是訊號本身；它們是訊號的可測量的代表。因為它們是一個代表，所以它們可能不是一個完美的測量。出於這個原因，一些訊號可能有多個指標，因為我們試圖對基本訊號進行三角測量分析。
 
 For example, to measure whether engineers’ code is reviewed faster after readability, we might use a combination of both survey data and logs data. Neither of these metrics really provide the underlying truth. (Human perceptions are fallible, and logs metrics might not be measuring the entire picture of the time an engineer spends reviewing a piece of code or can be confounded by factors unknown at the time, like the size or difficulty of a code change.) However, if these metrics show different results, it signals that possibly one of them is incorrect and we need to explore further. If they are the same, we have more confidence that we have reached some kind of truth.
 
-例如，为了测量工程师的代码在可读性之后是否审查得更快，我们可能会同时使用调查数据和日志数据。这两个指标都没有真正提供基本的事实。(人类的感知是易变的，而日志指标可能没有测量出工程师审查一段代码所花时间的全貌，或者可能被当时未知的因素所混淆，比如代码修改的大小或难度)。然而，如果这些指标显示出不同的结果，就表明可能其中一个指标是不正确的，我们需要进一步探索。如果它们是一样的，我们就更有信心，我们已经达到了某种真相。
+例如，為了測量工程師的程式碼在可讀性之後是否審查得更快，我們可能會同時使用調查資料和日誌資料。這兩個指標都沒有真正提供基本的事實。(人類的感知是易變的，而日誌指標可能沒有測量出工程師審查一段程式碼所花時間的全貌，或者可能被當時未知的因素所混淆，比如程式碼修改的大小或難度)。然而，如果這些指標顯示出不同的結果，就表明可能其中一個指標是不正確的，我們需要進一步探索。如果它們是一樣的，我們就更有信心，我們已經達到了某種真相。
 
 Additionally, some signals might not have any associated metric because the signal might simply be unmeasurable at this time. Consider, for example, measuring code quality. Although academic literature has proposed many proxies for code quality, none of them have truly captured it. For readability, we had a decision of either using a poor proxy and possibly making a decision based on it, or simply acknowledging that this is a point that cannot currently be measured. Ultimately, we decided not to capture this as a quantitative measure, though we did ask engineers to self-rate their code quality.
 
-此外，一些信号可能没有任何相关的指标，因为信号可能在这个时候根本无法测量。例如，考虑测量代码质量。尽管学术文献已经提出了许多代码质量的代用指标，但没有一个能真正抓住它。对于可读性，我们必须做出决定，要么使用一个糟糕的代表，并可能根据它做出决定，要么干脆承认这是一个目前无法测量的点。最终，我们决定不把它作为一个量化的指标，尽管我们确实要求工程师对他们的代码质量进行自我评价。
+此外，一些訊號可能沒有任何相關的指標，因為訊號可能在這個時候根本無法測量。例如，考慮測量程式碼品質。儘管學術文獻已經提出了許多程式碼品質的代用指標，但沒有一個能真正抓住它。對於可讀性，我們必須做出決定，要麼使用一個糟糕的代表，並可能根據它做出決定，要麼乾脆承認這是一個目前無法測量的點。最終，我們決定不把它作為一個量化的指標，儘管我們確實要求工程師對他們的程式碼品質進行自我評價。
 
 Following the GSM framework is a great way to clarify the goals for why you are measuring your software process and how it will actually be measured. However, it’s still possible that the metrics selected are not telling the complete story because they are not capturing the desired signal. At Google, we use qualitative data to validate our metrics and ensure that they are capturing the intended signal.
 
-遵循GSM框架是一个很好的方法，可以明确你为什么要测量你的软件过程的目标，以及它将如何被实际测量。然而，仍然有可能选择的指标没有说明全部情况，因为它们没有捕获所需的信号。在谷歌，我们使用定性数据来验证我们的指标，并确保它们捕捉到了预期的信号。
+遵循GSM框架是一個很好的方法，可以明確你為什麼要測量你的軟體過程的目標，以及它將如何被實際測量。然而，仍然有可能選擇的指標沒有說明全部情況，因為它們沒有捕獲所需的訊號。在谷歌，我們使用定性資料來驗證我們的指標，並確保它們捕捉到了預期的訊號。
 
-## Using Data to Validate Metrics  使用数据验证指标
+## Using Data to Validate Metrics  使用資料驗證指標
 
 As an example, we once created a metric for measuring each engineer’s median build latency; the goal was to capture the “typical experience” of engineers’ build latencies. We then ran an *experience sampling study*. In this style of study, engineers are interrupted in context of doing a task of interest to answer a few questions. After an engineer started a build, we automatically sent them a small survey about their experiences and expectations of build latency. However, in a few cases, the engineers responded that they had not started a build! It turned out that automated tools were starting up builds, but the engineers were not blocked on these results and so it didn’t “count” toward their “typical experience.” We then adjusted the metric to exclude such builds.[5](#_bookmark564)
 
-举个例子，我们曾经创建了一个衡量每个工程师平均构建延迟中位数的指标；目的是为了捕捉工程师构建延迟的 "典型经验"。然后我们进行了一个*经验抽样研究*。在这种研究方式中，工程师在做一项感兴趣的任务时被打断，以回答一些问题。在工程师开始构建后，我们自动向他们发送了一份小型调查，了解他们对构建延迟的经验和期望。然而，在少数情况下，工程师们回答说他们没有开始构建！结果发现，自动化工具正在启动。事实证明，自动化工具正在启动构建，但工程师们并没有被这些结果所阻碍，因此它并没有“计入”他们的“典型经验”。然后我们调整了指标，排除了这种构建。
+舉個例子，我們曾經建立了一個衡量每個工程師平均建構延遲中位數的指標；目的是為了捕捉工程師建構延遲的 "典型經驗"。然後我們進行了一個*經驗抽樣研究*。在這種研究方式中，工程師在做一項感興趣的任務時被打斷，以回答一些問題。在工程師開始建構後，我們自動向他們傳送了一份小型調查，瞭解他們對建構延遲的經驗和期望。然而，在少數情況下，工程師們回答說他們沒有開始建構！結果發現，自動化工具正在啟動。事實證明，自動化工具正在啟動建構，但工程師們並沒有被這些結果所阻礙，因此它並沒有“計入”他們的“典型經驗”。然後我們調整了指標，排除了這種建構。
 
 Quantitative metrics are useful because they give you power and scale. You can measure the experience of engineers across the entire company over a large period of time and have confidence in the results. However, they don’t provide any context or narrative. Quantitative metrics don’t explain why an engineer chose to use an antiquated tool to accomplish their task, or why they took an unusual workflow, or why they circumvented a standard process. Only qualitative studies can provide this information, and only qualitative studies can then provide insight on the next steps to improve a process.
 
-定量指标是有用的，因为它们给你能力和规模。你可以在很长一段时间内测量整个公司的工程师的经验，并对结果有信心。然而，它们并不提供任何背景或叙述。定量指标不能解释为什么一个工程师选择使用一个过时的工具来完成他们的任务，或者为什么他们采取了一个不寻常的工作流程，或者为什么他们绕过了一个标准流程。只有定性研究才能提供这些信息，也只有定性研究才能为改进流程的下一步提供洞察力。
+定量指標是有用的，因為它們給你能力和規模。你可以在很長一段時間內測量整個公司的工程師的經驗，並對結果有信心。然而，它們並不提供任何背景或敘述。定量指標不能解釋為什麼一個工程師選擇使用一個過時的工具來完成他們的任務，或者為什麼他們採取了一個不尋常的工作流程，或者為什麼他們繞過了一個標準流程。只有定性研究才能提供這些資訊，也只有定性研究才能為改進流程的下一步提供洞察力。
 
 ```
 5	It has routinely been our experience at Google that when the quantitative and qualitative metrics disagree, it was because the quantitative metrics were not capturing the expected result.
 
-5 我们在谷歌的常规经验是，当定量指标和定性指标不一致时，是因为定量指标没有捕捉到预期的结果。
+5 我們在谷歌的常規經驗是，當定量指標和定性指標不一致時，是因為定量指標沒有捕捉到預期的結果。
 ```
 
 Consider now the signals presented in [Table 7-2](#_bookmark567). What metrics might you create to measure each of those? Some of these signals might be measurable by analyzing tool and code logs. Others are measurable only by directly asking engineers. Still others might not be perfectly measurable—how do we truly measure code quality, for example?
 
-现在考虑一下表7-2中提出的信号。你可以创建什么指标来测量其中的每一个？其中一些信号可能是可以通过分析工具和代码日志来衡量的。其他的只能通过直接询问工程师来衡量。还有一些可能不是完全可衡量的——例如，我们如何真正测量代码质量？
+現在考慮一下表7-2中提出的訊號。你可以建立什麼指標來測量其中的每一個？其中一些訊號可能是可以透過分析工具和程式碼日誌來衡量的。其他的只能透過直接詢問工程師來衡量。還有一些可能不是完全可衡量的——例如，我們如何真正測量程式碼品質？
 
 Ultimately, when evaluating the impact of readability on productivity, we ended up with a combination of metrics from three sources. First, we had a survey that was specifically about the readability process. This survey was given to people after they completed the process; this allowed us to get their immediate feedback about the process. This hopefully avoids recall bias,[6](#_bookmark568) but it does introduce both recency bias[7](#_bookmark569) and sampling bias.[8](#_bookmark570) Second, we used a large-scale quarterly survey to track items that were not specifically about readability; instead, they were purely about metrics that we expected readability should affect. Finally, we used fine-grained logs metrics from our developer tools to determine how much time the logs claimed it took engineers to complete specific tasks.[9](#_bookmark571) [Table 7-2 ](#_bookmark567)presents the complete list of metrics with their corresponding signals and goals.
 
-最终，在评估可读性对生产力的影响时，我们最终综合了三个方面的指标。首先，我们有一个专门针对可读性过程的调查。这个调查是在人们完成了这个过程之后进行的；这使我们能够得到他们对这个过程的即时反馈。这有望避免回忆偏差，但它确实引入了近期偏差和抽样偏差。其次，我们使用大规模的季度调查来追踪那些不是专门关于可读性的项目；相反，它们纯粹是关于我们预期可读性应该影响的指标。最后，我们使用了来自我们的开发者工具的细粒度的日志指标来确定日志中声称的工程师完成特定任务所需的时间。表7-2列出了完整的指标清单及其相应的信号和目标。
+最終，在評估可讀性對生產力的影響時，我們最終綜合了三個方面的指標。首先，我們有一個專門針對可讀性過程的調查。這個調查是在人們完成了這個過程之後進行的；這使我們能夠得到他們對這個過程的即時反饋。這有望避免回憶偏差，但它確實引入了近期偏差和抽樣偏差。其次，我們使用大規模的季度調查來追蹤那些不是專門關於可讀性的專案；相反，它們純粹是關於我們預期可讀性應該影響的指標。最後，我們使用了來自我們的開發者工具的細粒度的日誌指標來確定日誌中聲稱的工程師完成特定任務所需的時間。表7-2列出了完整的指標清單及其相應的訊號和目標。
 
-*Table 7-2. Goals, signals, and metrics*  *表7-2. 目标、信号和指标*
+*Table 7-2. Goals, signals, and metrics*  *表7-2. 目標、訊號和指標*
 
 | QUANTS                       | Goal                                                         | Signal                                                       | Metric                                                       |
 | ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -412,30 +412,30 @@ Ultimately, when evaluating the impact of readability on productivity, we ended 
 
 
 
-| QUANTS         | 目标                                                         | 信号                                                         | 指标                                                         |
+| QUANTS         | 目標                                                         | 訊號                                                         | 指標                                                         |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **代码**的质量 | 由于可读性过程，工程师们会写出更高质量的代码。               | 被授予可读性的工程师判断他们的代码比没有被授予可读性的工程师的质量更高。<br/><br/>可读性过程对代码质量有积极影响。 | 季度调查。对自己的代码质量表示满意的工程师的比例<br/><br/>可读性调查。报告可读性审查对代码质量没有影响或有负面影响的工程师的比例 |
-|                |                                                              |                                                              | 可读性调查。报告说参与可读性过程改善了他们团队的代码质量的工程师的比例 |
-|                | 作为可读性过程的结果，工程师们写出的代码更加一致。           | 工程师在代码审查中由可读性审查员提供一致的反馈和指导，这是可读性过程的一部分。 | 可读性调查。报告可读性审查员的意见和可读性标准不一致的工程师比例。 |
-|                | 工程师对代码健康文化的贡献是可读性过程的结果。               | 被授予可读性的工程师经常在代码审查中评论风格和/或可读性问题。 | 可读性调查：报告他们经常在代码审查中评论风格和/或可读性问题的工程师的比例 |
-| 工程师的关注   | 不适用                                                       | 不适用                                                       | 不适用                                                       |
-| 知识           | 工程师们通过可读性过程了解谷歌的代码库和最佳编码实践。       | 工程师们报告了从可读性过程中的学习情况。                     | 可读性调查。报告说他们了解了四个相关主题的工程师比例         |
-|                |                                                              |                                                              | 可读性调查：报告学习或获得专业知识是可读性过程的优势的工程师比例 |
-|                | 工程师在可读性过程中接受指导。                               | 工程师们报告说，在可读性过程中，他们与作为审查员的经验丰富的谷歌工程师进行了积极的互动。 | 可读性调查：报告说与可读性审查员一起工作是可读性过程的优势的工程师的比例 |
-| 节奏/速度      | 由于可读性过程，工程师们的工作效率更高。                     | 被授予可读性的工程师判断自己比没有被授予可读性的工程师更有生产力。 | 季度调查：报告他们具有高生产力的工程师的比例                 |
-|                |                                                              | 工程师们报告说，完成可读性过程对他们的工程速度有积极的影响。 | 可读性调查：报告不具备可读性会降低团队工程速度的工程师比例   |
-|                |                                                              | 由被授予可读性的工程师编写的变更列表（CLs）比由未被授予可读性的工程师编写的变更列表审查得更快。 | 日志数据：有可读性和无可读性的作者所写的CL的审查时间中位数   |
-|                |                                                              | 由被授予可读性的工程师编写的CL比由未被授予可读性的工程师编写的CL更容易通过代码审查。 | Logs数据：具备可读性和不具备可读性的作者编写的CL的指导时间的中位数 |
-|                |                                                              | 由被授予可读性的工程师编写的CL比由未被授予可读性的工程师编写的CL更快地通过代码审查。 | 日志数据：具有可读性和不具有可读性的作者的CL提交时间的中位数 |
-|                |                                                              | 可读性过程不会对工程速度产生负面影响。                       | 可读性调查：报告可读性过程对其速度有负面影响的工程师比例     |
-|                |                                                              |                                                              | 可读性调查：报告可读性审查员及时回复的工程师比例             |
-|                |                                                              |                                                              | 可读性调查：可读性调查：报告审查的及时性是可读性过程的优势的工程师比例 |
-| 满意度         | 工程师们看到了可读性过程的好处，并对参与这一过程有积极的感受。 | 工程师们认为可读性过程是一个总体上积极的经历。               | 可读性调查：报告说他们在可读性过程中的经验总体上是积极的工程师的比例 |
-|                |                                                              | 工程师认为可读性过程是值得的                                 | 可读性调查：报告说可读性过程是值得的工程师比例               |
-|                |                                                              |                                                              | 可读性调查：报告称可读性审查质量是流程优势的工程师比例       |
-|                |                                                              |                                                              | 可读性调查：报道称彻底性是流程的优势的工程师比例             |
-|                |                                                              | 工程师不认为可读性过程是令人沮丧的。                         | 可读性调查：报告说可读性过程不确定、不清楚、缓慢或令人沮丧的工程师的比例 |
-|                |                                                              |                                                              | 季度调查：报告他们对自己的工程速度感到满意的工程师的比例     |
+| **程式碼**的品質 | 由於可讀性過程，工程師們會寫出更高品質的程式碼。               | 被授予可讀性的工程師判斷他們的程式碼比沒有被授予可讀性的工程師的品質更高。<br/><br/>可讀性過程對程式碼品質有積極影響。 | 季度調查。對自己的程式碼品質表示滿意的工程師的比例<br/><br/>可讀性調查。報告可讀性審查對程式碼品質沒有影響或有負面影響的工程師的比例 |
+|                |                                                              |                                                              | 可讀性調查。報告說參與可讀性過程改善了他們團隊的程式碼品質的工程師的比例 |
+|                | 作為可讀性過程的結果，工程師們寫出的程式碼更加一致。           | 工程師在程式碼審查中由可讀性審查員提供一致的反饋和指導，這是可讀性過程的一部分。 | 可讀性調查。報告可讀性審查員的意見和可讀性標準不一致的工程師比例。 |
+|                | 工程師對程式碼健康文化的貢獻是可讀性過程的結果。               | 被授予可讀性的工程師經常在程式碼審查中評論風格和/或可讀性問題。 | 可讀性調查：報告他們經常在程式碼審查中評論風格和/或可讀性問題的工程師的比例 |
+| 工程師的關注   | 不適用                                                       | 不適用                                                       | 不適用                                                       |
+| 知識           | 工程師們透過可讀性過程瞭解谷歌的程式碼函式庫和最佳編碼實踐。       | 工程師們報告了從可讀性過程中的學習情況。                     | 可讀性調查。報告說他們瞭解了四個相關主題的工程師比例         |
+|                |                                                              |                                                              | 可讀性調查：報告學習或獲得專業知識是可讀性過程的優勢的工程師比例 |
+|                | 工程師在可讀性過程中接受指導。                               | 工程師們報告說，在可讀性過程中，他們與作為審查員的經驗豐富的谷歌工程師進行了積極的互動。 | 可讀性調查：報告說與可讀性審查員一起工作是可讀性過程的優勢的工程師的比例 |
+| 節奏/速度      | 由於可讀性過程，工程師們的工作效率更高。                     | 被授予可讀性的工程師判斷自己比沒有被授予可讀性的工程師更有生產力。 | 季度調查：報告他們具有高生產力的工程師的比例                 |
+|                |                                                              | 工程師們報告說，完成可讀性過程對他們的工程速度有積極的影響。 | 可讀性調查：報告不具備可讀性會降低團隊工程速度的工程師比例   |
+|                |                                                              | 由被授予可讀性的工程師編寫的變更列表（CLs）比由未被授予可讀性的工程師編寫的變更列表審查得更快。 | 日誌資料：有可讀性和無可讀性的作者所寫的CL的審查時間中位數   |
+|                |                                                              | 由被授予可讀性的工程師編寫的CL比由未被授予可讀性的工程師編寫的CL更容易透過程式碼審查。 | Logs資料：具備可讀性和不具備可讀性的作者編寫的CL的指導時間的中位數 |
+|                |                                                              | 由被授予可讀性的工程師編寫的CL比由未被授予可讀性的工程師編寫的CL更快地透過程式碼審查。 | 日誌資料：具有可讀性和不具有可讀性的作者的CL提交時間的中位數 |
+|                |                                                              | 可讀性過程不會對工程速度產生負面影響。                       | 可讀性調查：報告可讀性過程對其速度有負面影響的工程師比例     |
+|                |                                                              |                                                              | 可讀性調查：報告可讀性審查員及時回覆的工程師比例             |
+|                |                                                              |                                                              | 可讀性調查：可讀性調查：報告審查的及時性是可讀性過程的優勢的工程師比例 |
+| 滿意度         | 工程師們看到了可讀性過程的好處，並對參與這一過程有積極的感受。 | 工程師們認為可讀性過程是一個總體上積極的經歷。               | 可讀性調查：報告說他們在可讀性過程中的經驗總體上是積極的工程師的比例 |
+|                |                                                              | 工程師認為可讀性過程是值得的                                 | 可讀性調查：報告說可讀性過程是值得的工程師比例               |
+|                |                                                              |                                                              | 可讀性調查：報告稱可讀性審查品質是流程優勢的工程師比例       |
+|                |                                                              |                                                              | 可讀性調查：報道稱徹底性是流程的優勢的工程師比例             |
+|                |                                                              | 工程師不認為可讀性過程是令人沮喪的。                         | 可讀性調查：報告說可讀性過程不確定、不清楚、緩慢或令人沮喪的工程師的比例 |
+|                |                                                              |                                                              | 季度調查：報告他們對自己的工程速度感到滿意的工程師的比例     |
 
 
 
@@ -445,30 +445,30 @@ Ultimately, when evaluating the impact of readability on productivity, we ended 
 8	Because we asked only those people who completed the process, we aren’t capturing the opinions of those who did not complete the process.
 9	There is a temptation to use such metrics to evaluate individual engineers, or perhaps even to identify high and low performers. Doing so would be counterproductive, though. If productivity metrics are used for performance reviews, engineers will be quick to game the metrics, and they will no longer be useful for measuring and improving productivity across the organization. The only way to make these measurements work is to let go of the idea of measuring individuals and embrace measuring the aggregate effect.
 
-6 回忆偏差是来自记忆的偏差。人们更愿意回忆那些特别有趣或令人沮丧的事件。
-7 近期偏见是另一种形式的来自记忆的偏见，即人们偏向于最近的经历。在这种情况下，由于他们刚刚成功地完成了这个过程，他们可能会感觉特别好。
-8 因为我们只问了那些完成过程的人，所以我们没有捕捉到那些没有完成过程的人的意见。
-9 有一种诱惑，就是用这样的指标来评价个别的工程师，甚至可能用来识别高绩效和低绩效的人。不过，这样做会适得其反。如果生产效率指标被用于绩效评估，工程师们就会很快玩弄这些指标，它们将不再对测量和提高整个组织的生产效率有用。让这些指标发挥作用的唯一方法是，放下衡量个人的想法，接受测量总体效果。
+6 回憶偏差是來自記憶的偏差。人們更願意回憶那些特別有趣或令人沮喪的事件。
+7 近期偏見是另一種形式的來自記憶的偏見，即人們偏向於最近的經歷。在這種情況下，由於他們剛剛成功地完成了這個過程，他們可能會感覺特別好。
+8 因為我們只問了那些完成過程的人，所以我們沒有捕捉到那些沒有完成過程的人的意見。
+9 有一種誘惑，就是用這樣的指標來評價個別的工程師，甚至可能用來識別高績效和低績效的人。不過，這樣做會適得其反。如果生產效率指標被用於績效評估，工程師們就會很快玩弄這些指標，它們將不再對測量和提高整個組織的生產效率有用。讓這些指標發揮作用的唯一方法是，放下衡量個人的想法，接受測量總體效果。
 
 ```
 
-## Taking Action and Tracking Results  采取行动并跟踪结果
+## Taking Action and Tracking Results  採取行動並追蹤結果
 
 Recall our original goal in this chapter: we want to take action and improve productivity. After performing research on a topic, the team at Google always prepares a list of recommendations for how we can continue to improve. We might suggest new features to a tool, improving latency of a tool, improving documentation, removing obsolete processes, or even changing the incentive structures for the engineers. Ideally, these recommendations are “tool driven”: it does no good to tell engineers to change their process or way of thinking if the tools do not support them in doing so. We instead always assume that engineers will make the appropriate trade-offs if they have the proper data available and the suitable tools at their disposal.
 
-回顾我们在本章中的最初目标：我们希望采取行动，提高生产效率。在对某个主题进行研究之后，谷歌的团队总是准备一份建议清单，说明我们可以如何继续改进。我们可能会建议给一个工具增加新的功能，改善工具的延迟，改善文档，删除过时的流程，甚至改变工程师的激励结构。理想情况下，这些建议是 "工具驱动 "的：如果工具不支持工程师改变他们的流程或思维方式，那么告诉他们这样做是没有用的。相反，我们总是假设，如果工程师有适当的数据和合适的工具可以使用，他们会做出适当的权衡。
+回顧我們在本章中的最初目標：我們希望採取行動，提高生產效率。在對某個主題進行研究之後，谷歌的團隊總是準備一份建議清單，說明我們可以如何繼續改進。我們可能會建議給一個工具增加新的功能，改善工具的延遲，改善文件，刪除過時的流程，甚至改變工程師的激勵結構。理想情況下，這些建議是 "工具驅動 "的：如果工具不支援工程師改變他們的流程或思維方式，那麼告訴他們這樣做是沒有用的。相反，我們總是假設，如果工程師有適當的資料和合適的工具可以使用，他們會做出適當的權衡。
 
 For readability, our study showed that it was overall worthwhile: engineers who had achieved readability were satisfied with the process and felt they learned from it. Our logs showed that they also had their code reviewed faster and submitted it faster, even accounting for no longer needing as many reviewers. Our study also showed places for improvement with the process: engineers identified pain points that would have made the process faster or more pleasant. The language teams took these recommendations and improved the tooling and process to make it faster and to be more transparent so that engineers would have a more pleasant experience.
 
-就可读性而言，我们的研究表明，总体上是值得的：实现了可读性的工程师对这一过程感到满意，并认为他们从中学到了东西。我们的记录显示，他们的代码审查得更快，提交得也更快，甚至不再需要那么多的审查员。我们的研究还显示了过程中需要改进的地方：工程师们发现了可以使过程更快、更愉快的痛点。语言团队采纳了这些建议，并改进了工具和流程，使其更快、更透明，从而使工程师有一个更愉快的体验。
+就可讀性而言，我們的研究表明，總體上是值得的：實現了可讀性的工程師對這一過程感到滿意，並認為他們從中學到了東西。我們的記錄顯示，他們的程式碼審查得更快，提交得也更快，甚至不再需要那麼多的審查員。我們的研究還顯示了過程中需要改進的地方：工程師們發現了可以使過程更快、更愉快的痛點。語言團隊採納了這些建議，並改進了工具和流程，使其更快、更透明，從而使工程師有一個更愉快的體驗。
 
-## Conclusion  总结
+## Conclusion  總結
 
 At Google, we’ve found that staffing a team of engineering productivity specialists has widespread benefits to software engineering; rather than relying on each team to chart its own course to increase productivity, a centralized team can focus on broad- based solutions to complex problems. Such “human-based” factors are notoriously difficult to measure, and it is important for experts to understand the data being analyzed given that many of the trade-offs involved in changing engineering processes are difficult to measure accurately and often have unintended consequences. Such a team must remain data driven and aim to eliminate subjective bias.
 
-在谷歌，我们发现配备一个工程生产效率专家团队对软件工程有广泛的好处；与其依靠每个团队制定自己的路线来提高生产效率，一个集中的团队可以专注于复杂问题的广泛解决方案。这种 "以人为本 "的因素是出了名的难以测量，而且鉴于改变工程流程所涉及的许多权衡都难以准确测量，而且往往会产生意想不到的后果，因此专家们必须了解正在分析的数据。这样的团队必须保持数据驱动，旨在消除主观偏见。
+在谷歌，我們發現配備一個工程生產效率專家團隊對軟體工程有廣泛的好處；與其依靠每個團隊制定自己的路線來提高生產效率，一個集中的團隊可以專注於複雜問題的廣泛解決方案。這種 "以人為本 "的因素是出了名的難以測量，而且鑑於改變工程流程所涉及的許多權衡都難以準確測量，而且往往會產生意想不到的後果，因此專家們必須瞭解正在分析的資料。這樣的團隊必須保持資料驅動，旨在消除主觀偏見。
 
-## TL;DRs  内容提要
+## TL;DRs  內容提要
 
 - Before measuring productivity, ask whether the result is actionable, regardless of whether the result is positive or negative. If you can’t do anything with the result, it is likely not worth measuring.
 - Select meaningful metrics using the GSM framework. A good metric is a reasonable proxy to the signal you’re trying to measure, and it is traceable back to your original goals.
@@ -476,8 +476,8 @@ At Google, we’ve found that staffing a team of engineering productivity specia
 - Qualitative metrics are metrics, too! Consider having a survey mechanism for tracking longitudinal metrics about engineers’ beliefs. Qualitative metrics should also align with the quantitative metrics; if they do not, it is likely the quantitative metrics that are incorrect.
 - Aim to create recommendations that are built into the developer workflow and incentive structures. Even though it is sometimes necessary to recommend additional training or documentation, change is more likely to occur if it is built into the developer’s daily habits.
 
-- 在测量生产效率之前，要问结果是否可操作，无论结果是积极还是消极。如果你对这个结果无能为力，它很可能不值得测量。
-- 使用GSM框架选择有意义的衡量标准。一个好的指标是你试图测量的信号的合理代理，而且它可以追溯到你的原始目标。
-- 选择涵盖生产效率所有部分的测量标准（QUANTS）。通过这样做，你可以确保你不会以牺牲另一个方面（如代码质量）为代价来改善生产力的一个方面（如开发人员的速度）。
-- 定性指标也是指标。考虑有一个调查机制来跟踪关于工程师信念的纵向指标。定性指标也应该与定量指标一致；如果它们不一致，很可能是定量指标不正确。
-- 争取创建内置于开发人员工作流程和激励结构的建议。即使有时有必要推荐额外的培训或文档，但如果将其纳入开发人员的日常习惯，则更有可能发生变化。
+- 在測量生產效率之前，要問結果是否可操作，無論結果是積極還是消極。如果你對這個結果無能為力，它很可能不值得測量。
+- 使用GSM框架選擇有意義的衡量標準。一個好的指標是你試圖測量的訊號的合理代理，而且它可以追溯到你的原始目標。
+- 選擇涵蓋生產效率所有部分的測量標準（QUANTS）。透過這樣做，你可以確保你不會以犧牲另一個方面（如程式碼品質）為代價來改善生產力的一個方面（如開發人員的速度）。
+- 定性指標也是指標。考慮有一個調查機制來追蹤關於工程師信念的縱向指標。定性指標也應該與定量指標一致；如果它們不一致，很可能是定量指標不正確。
+- 爭取建立內置於開發人員工作流程和激勵結構的建議。即使有時有必要推薦額外的培訓或文件，但如果將其納入開發人員的日常習慣，則更有可能發生變化。
