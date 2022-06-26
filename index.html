@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 
-    <!-- gitalk   -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">
 
 
 </head>
@@ -21,49 +21,49 @@
 <script>
     window.$docsify = {
         name: 'Software Engineering at Google',
-        repo: 'qiangmzsx/Software-Engineering-at-Google',
+        repo: 'doggy8088/Software-Engineering-at-Google',
 
         auto2top: true,
 
 
-        // 侧边栏
+        // 側邊欄
         loadSidebar: true,
         alias: {
             '/.*/_sidebar.md': '/_sidebar.md'
         },
         subMaxLevel: 3,
-        // 自动为每个页面增加标题
+        // 自動為每個頁面增加標題
         // autoHeader: true,
 
         // 封面
-        coverpage: true,
+        coverpage: false,
 
-        // 搜索支持
+        // 搜尋支援
         search: {
-            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+            maxAge: 86400000, // 過期時間，單位毫秒，預設一天
             paths: 'auto', // or 'auto'
 
-            // 支持本地化
+            // 支援本地化
             placeholder: {
-                '/zh-cn/': '搜索',
+                '/zh-cn/': '搜尋',
                 '/': 'Type to search'
             },
 
-            // 支持本地化
+            // 支援本地化
             noData: {
-                '/zh-cn/': '找不到结果',
+                '/zh-cn/': '找不到結果',
                 '/': 'No Results'
             },
 
-            // 避免搜索索引冲突
-            // 同一域下的多个网站之间
+            // 避免搜尋索引衝突
+            // 同一域下的多個網站之間
             namespace: 'Software-Engineering-at-Google',
 
-            // 使用不同的索引作为路径前缀（namespaces）
-            // 注意：仅适用于 paths: 'auto' 模式
+            // 使用不同的索引作為路徑字首（namespaces）
+            // 注意：僅適用於 paths: 'auto' 模式
             //
-            // 初始化索引时，我们从侧边栏查找第一个路径
-            // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+            // 初始化索引時，我們從側邊欄查詢第一個路徑
+            // 如果它與列表中的字首匹配，我們將切換到相應的索引
             pathNamespaces: ['/zh-cn'],
         },
         plugins: [
@@ -90,7 +90,7 @@
                 })
             },
             function (i) {
-                // 加载 Gitalk 元素
+                // 載入 Gitalk 元素
                 var e = Docsify.dom;
                 i.mounted(function (i) {
                     var n = e.create("div");
@@ -106,7 +106,7 @@
                     // remove gitalk-container
                     document.getElementById('gitalk-container').innerHTML = "";
                     // 渲染
-                    NewGitalk().render('gitalk-container');
+                    // NewGitalk().render('gitalk-container');
                 })
             }
         ],
@@ -119,10 +119,10 @@
 <!-- Pagination -->
 <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 
-<!-- gitalk -->
+
 <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 
-<!-- Medium's 风格的图片缩放插件 -->
+<!-- Medium's 風格的圖片縮放外掛 -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
 <script src="//cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"></script>
@@ -133,7 +133,7 @@
         // 除去param
         const hashPath = location.hash.indexOf("?id=") === -1 ? location.hash : location.hash.substring(0, location.hash.indexOf("?id="));
         const hrefPath = location.hash.indexOf("?id=") === -1 ? location.href : location.href.substring(0, location.href.indexOf("?id="));
-        // id 50字符限制
+        // id 50字元限制
         const md5Id = CryptoJS.MD5(hashPath).toString();
 
         return new Gitalk({
