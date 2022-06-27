@@ -422,7 +422,7 @@ A good postmortem should include the following:
 
 Years ago, I was writing a tool to convert CVS repositories to Subversion (and later, Git). Due to the vagaries of CVS, I kept unearthing bizarre bugs. Because my longtime friend and coworker Karl knew CVS quite intimately, we decided we should work together to fix these bugs.
 
-幾年前，我正在編寫一個將CVS儲存函式庫轉換為Subversion（後來是Git）的工具。由於CVS的變化無常，我不斷髮現各種奇怪的bug。因為我的老朋友兼同事Karl非常熟悉CVS，我們決定一起修復這些bug。
+幾年前，我正在編寫一個將CVS儲存函式庫轉換為Subversion（後來是Git）的工具。由於CVS的變化無常，我不斷發現各種奇怪的bug。因為我的老朋友兼同事Karl非常熟悉CVS，我們決定一起修復這些bug。
 
 A problem arose when we began pair programming: I’m a bottom-up engineer who is content to dive into the muck and dig my way out by trying a lot of things quickly and skimming over the details. Karl, however, is a top-down engineer who wants to get the full lay of the land and dive into the implementation of almost every method on the call stack before proceeding to tackle the bug. This resulted in some epic interpersonal conflicts, disagreements, and the occasional heated argument. It got to the point at which the two of us simply couldn’t pair-program together: it was too frustrating for us both.
 
