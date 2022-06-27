@@ -398,7 +398,7 @@ Over in Google X—the division that works on “moonshots” like self-driving 
 
 The key to learning from your mistakes is to document your failures by performing a root-cause analysis and writing up a “postmortem,” as it’s called at Google (and many other companies). Take extra care to make sure the postmortem document isn’t just a useless list of apologies or excuses or finger-pointing—that’s not its purpose. A proper postmortem should always contain an explanation of what was learned and what is going to change as a result of the learning experience. Then, make sure that the postmortem is readily accessible and that the team really follows through on the proposed changes. Properly documenting failures also makes it easier for other people (present and future) to know what happened and avoid repeating history. Don’t erase your tracks—light them up like a runway for those who follow you!
 
-從錯誤中學習的關鍵是透過進行根因分析和撰寫“事後總結”來記錄你的失敗，在谷歌（和許多其他公司）成為事後總結（國內成為覆盤）。要格外小心，確保 "事後總結 "檔案不只是一份無用的道歉、藉口或指責的清單，這不是它的目的。正確事後總結應該總是包含對所學到的內容的解釋，以及作為學習經驗作為後續的改進落地。然後，確保事後總結可以隨時查閱，並確保團隊真正貫徹執行所建議的改變。好的故障覆盤要讓其他人（現在和將來）知道發生了什麼，避免重蹈覆轍。不要抹去你的足跡——讓它們在道路上照亮給那些追隨你的人!
+從錯誤中學習的關鍵是透過進行根因分析和撰寫“事後總結”來記錄你的失敗，在谷歌（和許多其他公司）成為事後總結。要格外小心，確保 "事後總結 "檔案不只是一份無用的道歉、藉口或指責的清單，這不是它的目的。正確事後總結應該總是包含對所學到的內容的解釋，以及作為學習經驗作為後續的改進落地。然後，確保事後總結可以隨時查閱，並確保團隊真正貫徹執行所建議的改變。好的故障覆盤要讓其他人（現在和將來）知道發生了什麼，避免重蹈覆轍。不要抹去你的足跡——讓它們在道路上照亮給那些追隨你的人!
 
 A good postmortem should include the following:
 - A brief summary of the event
