@@ -13,7 +13,7 @@ In earlier chapters, we’ve explored the contrast between programming as the pr
 
 As new as the field of software engineering is, we’re newer still at understanding the impact it has on underrepresented people and diverse societies. We did not write this chapter because we know all the answers. We do not. In fact, understanding how to engineer products that empower and respect all our users is still something Google is learning to do. We have had many public failures in protecting our most vulnerable users, and so we are writing this chapter because the path forward to more equitable products begins with evaluating our own failures and encouraging growth.
 
-儘管軟體工程領域是個全新領域，但我們在瞭解它對代表性不足的群體和多元化社會的影響方面還比較淺。我們寫這一章並不是因為我們知道所有的答案。我們不知道。事實上，瞭解如何設計出能夠賦予所有使用者權益並尊重所有使用者的產品仍然是谷歌正在學習做的事情。在保護我們最弱勢的使用者方面，我們有很多公開的失敗產品，所以我們寫這一章是因為通往更平等的產品的道路始於評估我們自己的失敗和鼓勵成長。
+儘管軟體工程領域是個全新領域，但我們在瞭解它對代表性不足的群體和多元化社會的影響方面還比較淺。我們寫這一章並不是因為我們知道所有的答案。我們不知道。事實上，瞭解如何設計出能夠賦予所有使用者權益並尊重所有使用者的產品仍然是 Google 正在學習做的事情。在保護我們最弱勢的使用者方面，我們有很多公開的失敗產品，所以我們寫這一章是因為通往更平等的產品的道路始於評估我們自己的失敗和鼓勵成長。
 
 We are also writing this chapter because of the increasing imbalance of power between those who make development decisions that impact the world and those who simply must accept and live with those decisions that sometimes disadvantage already marginalized communities globally. It is important to share and reflect on what we’ve learned so far with the next generation of software engineers. It is even more important that we help influence the next generation of engineers to be better than we are today.
 
@@ -31,15 +31,15 @@ When engineers do not focus on users of different nationalities, ethnicities, ra
 
 Because of bias, Google has at times failed to represent users equitably within their products, with launches over the past several years that did not focus enough on underrepresented groups. Many users attribute our lack of awareness in these cases to the fact that our engineering population is mostly male, mostly White or Asian, and certainly not representative of all the communities that use our products. The lack of representation of such users in our workforce1 means that we often do not have the requisite diversity to understand how the use of our products can affect underrepresented or vulnerable users.
 
-由於偏見，谷歌有時未能在其產品中公平地代表使用者，在過去幾年中推出的產品沒有足夠關注代表性不足的群體。許多使用者將我們在這些情況下缺乏意識歸咎於這樣一個事實，即我們的工程人員大多數是男性，大多數是白人或亞洲人，當然不能代表所有使用我們產品的人群。這類別使用者在我們的員工隊伍中缺乏代表性，這意味著我們往往不具備必要的多樣性，無法理解使用我們的產品會如何影響代表性不足或弱勢的使用者。
+由於偏見， Google 有時未能在其產品中公平地代表使用者，在過去幾年中推出的產品沒有足夠關注代表性不足的群體。許多使用者將我們在這些情況下缺乏意識歸咎於這樣一個事實，即我們的工程人員大多數是男性，大多數是白人或亞洲人，當然不能代表所有使用我們產品的人群。這類別使用者在我們的員工隊伍中缺乏代表性，這意味著我們往往不具備必要的多樣性，無法理解使用我們的產品會如何影響代表性不足或弱勢的使用者。
 
 ------
 
-#### Case Study: Google Misses the Mark on Racial Inclusion  案例研究：谷歌在種族包容方面的失誤
+#### Case Study: Google Misses the Mark on Racial Inclusion  案例研究： Google 在種族包容方面的失誤
 
 In 2015, software engineer Jacky Alciné pointed out[2](#_bookmark316) that the image recognition algorithms in Google Photos were classifying his black friends as “gorillas.” Google was slow to respond to these mistakes and incomplete in addressing them.
 
-2015年，軟體工程師Jacky Alciné指出，谷歌照片中的影象識別演算法將他的黑人朋友歸為 "大猩猩"。谷歌對這些錯誤的反應很慢，解決起來也不徹底。
+2015年，軟體工程師Jacky Alciné指出， Google 照片中的影象識別演算法將他的黑人朋友歸為 "大猩猩"。 Google 對這些錯誤的反應很慢，解決起來也不徹底。
 
 What caused such a monumental failure? Several things:
 - Image recognition algorithms depend on being supplied a “proper” (often meaning “complete”) dataset. The photo data fed into Google’s image recognition algorithm was clearly incomplete. In short, the data did not represent the population.
@@ -47,27 +47,27 @@ What caused such a monumental failure? Several things:
 - Google’s target market for image recognition did not adequately include such underrepresented groups. Google’s tests did not catch these mistakes; as a result, our users did, which both embarrassed Google and harmed our users.
 
 是什麼導致了這樣一個巨大的失誤？有幾件事：
-- 影象識別演算法取決於是否提供了一個 "適當的"（通常意味著 "完整的"）資料集。送入谷歌影象識別演算法的照片資料顯然是不完整的。簡而言之，這些資料並不代表所有人口。
-- 谷歌本身（以及整個科技行業）沒有（也沒有）很多黑人代表，這影響了設計這種演算法和收集這種資料集的主觀決定。組織本身無意識的偏見很可能導致更具代表性的產品被擱置。
-- 谷歌的影象識別目標市場並沒有充分包括這種代表性不足的群體。谷歌的測試沒有發現這些錯誤；結果是我們的使用者發現了，這既讓谷歌感到尷尬，也傷害了我們的使用者。
+- 影象識別演算法取決於是否提供了一個 "適當的"（通常意味著 "完整的"）資料集。送入 Google 影象識別演算法的照片資料顯然是不完整的。簡而言之，這些資料並不代表所有人口。
+-  Google 本身（以及整個科技行業）沒有（也沒有）很多黑人代表，這影響了設計這種演算法和收集這種資料集的主觀決定。組織本身無意識的偏見很可能導致更具代表性的產品被擱置。
+-  Google 的影象識別目標市場並沒有充分包括這種代表性不足的群體。 Google 的測試沒有發現這些錯誤；結果是我們的使用者發現了，這既讓 Google 感到尷尬，也傷害了我們的使用者。
 
 As late as 2018, Google still had not adequately addressed the underlying problem.[4](#_bookmark318)
 
-直到2018年，谷歌仍然沒有徹底地解決這些潛在的問題。
+直到2018年， Google 仍然沒有徹底地解決這些潛在的問題。
 
 ------
 
 In this example, our product was inadequately designed and executed, failing to properly consider all racial groups, and as a result, failed our users and caused Google bad press. Other technology suffers from similar failures: autocomplete can return offensive or racist results. Google’s Ad system could be manipulated to show racist or offensive ads. YouTube might not catch hate speech, though it is technically outlawed on that platform.
 
-在這個例子中，我們的產品設計和執行不當，未能適當考慮到所有的種族群體，結果是辜負了我們的使用者，給谷歌帶來了惡劣的影響。其他技術也有類似的失誤：自動完成自動完成可以返回攻擊性或種族主義的結果。谷歌的廣告系統可以被操縱來顯示種族主義或攻擊性廣告。YouTube可能捕獲仇恨言論，儘管從技術上講，它在該平臺上是非法的。
+在這個例子中，我們的產品設計和執行不當，未能適當考慮到所有的種族群體，結果是辜負了我們的使用者，給 Google 帶來了惡劣的影響。其他技術也有類似的失誤：自動完成自動完成可以返回攻擊性或種族主義的結果。 Google 的廣告系統可以被操縱來顯示種族主義或攻擊性廣告。YouTube可能捕獲仇恨言論，儘管從技術上講，它在該平臺上是非法的。
 
 In all of these cases, the technology itself is not really to blame. Autocomplete, for example, was not designed to target users or to discriminate. But it was also not resilient enough in its design to exclude discriminatory language that is considered hate speech. As a result, the algorithm returned results that caused harm to our users. The harm to Google itself should also be obvious: reduced user trust and engagement with the company. For example, Black, Latinx, and Jewish applicants could lose faith in Google as a platform or even as an inclusive environment itself, therefore undermining Google’s goal of improving representation in hiring.
 
-在所有這些情況下，技術本身並不是真正的罪魁禍首。例如，自動完成自動完成的設計目的不是為了針對使用者或進行歧視。但它的設計也沒有足夠的靈活來排除被認為是仇恨言論的歧視性語言。結果，該演算法返回的結果對我們的使用者造成了傷害。對谷歌本身的損害也應該是顯而易見的：使用者對該公司的信任和參與度降低。例如，黑人、拉美人和猶太人的申請者可能會對谷歌這個平臺甚至其本身的包容性環境失去信心，因此破壞了谷歌改善招聘中的人群目標。
+在所有這些情況下，技術本身並不是真正的罪魁禍首。例如，自動完成自動完成的設計目的不是為了針對使用者或進行歧視。但它的設計也沒有足夠的靈活來排除被認為是仇恨言論的歧視性語言。結果，該演算法返回的結果對我們的使用者造成了傷害。對 Google 本身的損害也應該是顯而易見的：使用者對該公司的信任和參與度降低。例如，黑人、拉美人和猶太人的申請者可能會對 Google 這個平臺甚至其本身的包容性環境失去信心，因此破壞了 Google 改善招聘中的人群目標。
 
 How could this happen? After all, Google hires technologists with impeccable education and/or professional experience—exceptional programmers who write the best code and test their work. “Build for everyone” is a Google brand statement, but the truth is that we still have a long way to go before we can claim that we do. One way to address these problems is to help the software engineering organization itself look like the populations for whom we build products.
 
-這怎麼會發生呢？畢竟，谷歌僱用的技術專家擁有無可挑剔的教育和/或專業經驗——卓越的程式設計師，他們編寫最好的程式碼並測試他們的功能。"為每個人而建 "是谷歌的品牌宣言，但事實是，在宣稱我們做到這一點之前，我們仍有很長的路要走。解決這些問題的方法之一是幫助軟體工程組織本身變得像我們為其建造產品的人群。
+這怎麼會發生呢？畢竟， Google 僱用的技術專家擁有無可挑剔的教育和/或專業經驗——卓越的程式設計師，他們編寫最好的程式碼並測試他們的功能。"為每個人而建 "是 Google 的品牌宣言，但事實是，在宣稱我們做到這一點之前，我們仍有很長的路要走。解決這些問題的方法之一是幫助軟體工程組織本身變得像我們為其建造產品的人群。
 
 ```
 1    Google’s 2019 Diversity Report.
@@ -83,7 +83,7 @@ https://twitter.com/jackyalcine/status/615329515909156865.
 
 At Google, we believe that being an exceptional engineer requires that you also focus on bringing diverse perspectives into product design and implementation. It also means that Googlers responsible for hiring or interviewing other engineers must contribute to building a more representative workforce. For example, if you interview other engineers for positions at your company, it is important to learn how biased outcomes happen in hiring. There are significant prerequisites for understanding how to anticipate harm and prevent it. To get to the point where we can build for everyone, we first must understand our representative populations. We need to encourage engineers to have a wider scope of educational training.
 
-在谷歌，我們相信，作為一名出色的工程師，你還需要專注於將不同的視角引入打牌產品設計和實施中。這也意味著，負責招聘或面試其他工程師的谷歌人必須致力於打造更具代表性的團隊。例如，如果你為公司的職位面試其他工程師，瞭解招聘過程中的偏差結果是如何發生，這是很重要的。瞭解如何預測和預防傷害有重要的先決條件。為了達到我們能夠為每個人而建的目的，我們首先必須瞭解我們的代表人群。瞭解招聘過程中的偏差結果是如何發生的是很重要的。
+在 Google ，我們相信，作為一名出色的工程師，你還需要專注於將不同的視角引入打牌產品設計和實施中。這也意味著，負責招聘或面試其他工程師的 Google 人必須致力於打造更具代表性的團隊。例如，如果你為公司的職位面試其他工程師，瞭解招聘過程中的偏差結果是如何發生，這是很重要的。瞭解如何預測和預防傷害有重要的先決條件。為了達到我們能夠為每個人而建的目的，我們首先必須瞭解我們的代表人群。瞭解招聘過程中的偏差結果是如何發生的是很重要的。
 
 The first order of business is to disrupt the notion that as a person with a computer science degree and/or work experience, you have all the skills you need to become an exceptional engineer. A computer science degree is often a necessary foundation. However, the degree alone (even when coupled with work experience) will not make you an engineer. It is also important to disrupt the idea that only people with computer science degrees can design and build products. Today, [most programmers do have a computer science degree](https://oreil.ly/2Bu0H); they are successful at building code, establishing theories of change, and applying methodologies for problem solving. However, as the aforementioned examples demonstrate, *this approach is insufficient for inclusive and* *equitable engineering*.
 
@@ -121,7 +121,7 @@ Currently, AI-driven facial-recognition software continues to disadvantage peopl
 
 Data science itself is challenging for humans to evaluate, however. Even when we do have representation, a training set can still be biased and produce invalid results. A study completed in 2016 found that more than 117 million American adults are in a law enforcement facial recognition database.5 Due to the disproportionate policing of Black communities and disparate outcomes in arrests, there could be racially biased error rates in utilizing such a database in facial recognition. Although the software is being developed and deployed at ever-increasing rates, the independent testing is not. To correct for this egregious misstep, we need to have the integrity to slow down and ensure that our inputs contain as little bias as possible. Google now offers statistical training within the context of AI to help ensure that datasets are not intrinsically biased.
 
-然而，資料科學本身對人類的評估是具有挑戰性的。即使我們有表示，訓練集仍然可能有偏見，產生無效的結果。2016年完成的一項研究發現，執法部門的面部識別資料庫中有1.17億以上的美國成年人。由於黑人社群的警察比例過高，逮捕的結果也不盡相同，因此在面部識別中使用該資料庫可能存在種族偏見錯誤率。儘管該軟體的開發和部署速度不斷提高，但獨立測試卻並非如此。為了糾正這一令人震驚的錯誤，我們需要有誠信，放慢腳步，確保我們的輸入儘可能不包含偏見。谷歌現在在人工智慧的範圍內提供統計培訓，以幫助確保資料集沒有內在的偏見。
+然而，資料科學本身對人類的評估是具有挑戰性的。即使我們有表示，訓練集仍然可能有偏見，產生無效的結果。2016年完成的一項研究發現，執法部門的面部識別資料庫中有1.17億以上的美國成年人。由於黑人社群的警察比例過高，逮捕的結果也不盡相同，因此在面部識別中使用該資料庫可能存在種族偏見錯誤率。儘管該軟體的開發和部署速度不斷提高，但獨立測試卻並非如此。為了糾正這一令人震驚的錯誤，我們需要有誠信，放慢腳步，確保我們的輸入儘可能不包含偏見。 Google 現在在人工智慧的範圍內提供統計培訓，以幫助確保資料集沒有內在的偏見。
 
 Therefore, shifting the focus of your industry experience to include more comprehensive, multicultural, race and gender studies education is not only your responsibility, but also the responsibility of your employer. Technology companies must ensure that their employees are continually receiving professional development and that this development is comprehensive and multidisciplinary. The requirement is not that one individual take it upon themselves to learn about other cultures or other demographics alone. Change requires that each of us, individually or as leaders of teams, invest in continuous professional development that builds not just our software development and leadership skills, but also our capacity to understand the diverse experiences throughout humanity.
 
@@ -156,7 +156,7 @@ One singular narrative held dear in the technology industry is that lack of repr
 
 In the technology industry, many people from underrepresented groups are passed over daily for opportunities and advancement. Attrition among Black+ Google employees outpaces attrition from all other groups and confounds progress on representation goals. If we want to drive change and increase representation, we need to evaluate whether we’re creating an ecosystem in which all aspiring engineers and other technology professionals can thrive.
 
-在科技行業，許多來自代表性不足的群體的人每天都被排除在機會和晉升之外。谷歌黑人員工的流失率超過了所有其他群體的流失率，並影響了代表目標的實現。如果我們想推動變革並提高代表性，我們需要評估我們是否正在創造一個所有有抱負的工程師和其他技術專業人員都能茁壯成長的生態系統。
+在科技行業，許多來自代表性不足的群體的人每天都被排除在機會和晉升之外。 Google 黑人員工的流失率超過了所有其他群體的流失率，並影響了代表目標的實現。如果我們想推動變革並提高代表性，我們需要評估我們是否正在創造一個所有有抱負的工程師和其他技術專業人員都能茁壯成長的生態系統。
 
 Fully understanding an entire problem space is critical to determining how to fix it. This holds true for everything from a critical data migration to the hiring of a representative workforce. For example, if you are an engineering manager who wants to hire more women, don’t just focus on building a pipeline. Focus on other aspects of the hiring, retention, and progression ecosystem and how inclusive it might or might not be to women. Consider whether your recruiters are demonstrating the ability to identify strong candidates who are women as well as men. If you manage a diverse engineering team, focus on psychological safety and invest in increasing multicultural capacity on the team so that new team members feel welcome.
 
@@ -178,7 +178,7 @@ Challenging yourself to build more equitable systems goes beyond designing more 
 
 Consider a recent case evaluated for equity implications. At Google, several engineering teams worked to build a global hiring requisition system. The system supports both external hiring and internal mobility. The engineers and product managers involved did a great job of listening to the requests of what they considered to be their core user group: recruiters. The recruiters were focused on minimizing wasted time for hiring managers and applicants, and they presented the development team with use cases focused on scale and efficiency for those people. To drive efficiency, the recruiters asked the engineering team to include a feature that would highlight performance ratings—specifically lower ratings—to the hiring manager and recruiter as soon as an internal transfer expressed interest in a job.
 
-考慮一下最近一個被評估為對公平有影響的案例。在谷歌，幾個工程團隊致力於建立一個全球招聘申請系統。該系統同時支援外部招聘和內部流動。參與的工程師和產品經理在傾聽他們認為是他們的核心使用者群體的請求方面做得很好：招聘人員。招聘人員專注於最大限度地減少招聘經理和申請人的時間浪費，他們向開發團隊提出了專注於這些人的規模和效率的案例。為了提高效率，招聘人員要求工程團隊加入一項功能，在內部調動人員表示對某項工作感興趣時，該功能將突出績效評級，特別是向招聘經理和招聘人員提供較低的評級。
+考慮一下最近一個被評估為對公平有影響的案例。在 Google ，幾個工程團隊致力於建立一個全球招聘申請系統。該系統同時支援外部招聘和內部流動。參與的工程師和產品經理在傾聽他們認為是他們的核心使用者群體的請求方面做得很好：招聘人員。招聘人員專注於最大限度地減少招聘經理和申請人的時間浪費，他們向開發團隊提出了專注於這些人的規模和效率的案例。為了提高效率，招聘人員要求工程團隊加入一項功能，在內部調動人員表示對某項工作感興趣時，該功能將突出績效評級，特別是向招聘經理和招聘人員提供較低的評級。
 
 On its face, expediting the evaluation process and helping job seekers save time is a great goal. So where is the potential equity concern? The following equity questions were raised:
 - Are developmental assessments a predictive measure of performance?
@@ -206,7 +206,7 @@ This analysis definitely took up significant project time, but the positive trad
 
 Google has a strong track record of investing in hiring. As the previous example illustrates, we also continually evaluate our processes in order to improve equity and inclusion. More broadly, our core values are based on respect and an unwavering commitment to a diverse and inclusive workforce. Yet, year after year, we have also missed our mark on hiring a representative workforce that reflects our users around the globe. The struggle to improve our equitable outcomes persists despite the policies and programs in place to help support inclusion initiatives and promote excellence in hiring and progression. The failure point is not in the values, intentions, or investments of the company, but rather in the application of those policies at the implementation level.
 
-谷歌在招聘方面有著良好的投入記錄。正如前面的例子所示，我們也在不斷評估我們的流程，以提高公平和包容。更廣泛地說，我們的核心價值觀是基於尊重、對多元化和包容性勞動力的堅定承諾。然而，一年又一年，我們在僱用一支反映我們全球使用者的代表性員工隊伍方面卻沒有達到目標。儘管制定了策略和計劃，以幫助支援包容倡議並促進招聘和晉升的卓越性，但改善公平結果的鬥爭依然存在。失敗點不在於公司的價值觀、意圖或投入，而在於這些策略在執行層面的應用。
+ Google 在招聘方面有著良好的投入記錄。正如前面的例子所示，我們也在不斷評估我們的流程，以提高公平和包容。更廣泛地說，我們的核心價值觀是基於尊重、對多元化和包容性勞動力的堅定承諾。然而，一年又一年，我們在僱用一支反映我們全球使用者的代表性員工隊伍方面卻沒有達到目標。儘管制定了策略和計劃，以幫助支援包容倡議並促進招聘和晉升的卓越性，但改善公平結果的鬥爭依然存在。失敗點不在於公司的價值觀、意圖或投入，而在於這些策略在執行層面的應用。
 
 Old habits are hard to break. The users you might be used to designing for today— the ones you are used to getting feedback from—might not be representative of all the users you need to reach. We see this play out frequently across all kinds of products, from wearables that do not work for women’s bodies to video-conferencing software that does not work well for people with darker skin tones.
 
@@ -222,7 +222,7 @@ So, what’s the way out?
 
 那麼，出路是什麼？
 
-1. 認真照照鏡子。在谷歌，我們有一個品牌口號，"為每個人而建"。當我們沒有一個代表性的員工隊伍或首先集中社群反饋的參與模式時，我們如何為每個人建設？我們不能。事實是，我們有時在公開場合未能保護我們最脆弱的使用者免受種族主義、反猶太主義和恐同內容的侵害。
+1. 認真照照鏡子。在 Google ，我們有一個品牌口號，"為每個人而建"。當我們沒有一個代表性的員工隊伍或首先集中社群反饋的參與模式時，我們如何為每個人建設？我們不能。事實是，我們有時在公開場合未能保護我們最脆弱的使用者免受種族主義、反猶太主義和恐同內容的侵害。
 2. 不要為每個人而建。要與所有人一起共建。我們還沒有為每個人建設的能力。這項工作不會憑空實現，當技術仍然不能代表整個人口時，這項工作肯定不會發生。話雖如此，我們也不能打包回家。那麼，我們如何為每個人建立？我們與我們的使用者一起建設。我們需要讓全人類的使用者參與進來，並有意將最脆弱的群體置於我們設計的中心。他們不應該是事後的考慮物件。
 3. 為那些在使用你的產品時遇到最大困難的使用者設計。為那些有額外挑戰的人設計將使產品對所有人都更好。另一種思考方式是：不要用公平來換取短期的速度。
 4. 不要假設公平；**衡量整個系統的公平性**。認識到決策者也會有偏見，而且可能對不平等的原因認識不足。你可能不具備識別或衡量公平問題的範圍的專業知識。迎合單個使用者群可能意味著剝奪另一個使用者群的權利；這些權衡可能很難發現，也不可能逆轉。與作為多元化主題專家的個人或團隊合作，公平、平等和包容。

@@ -43,19 +43,19 @@ The use of test doubles introduces a few complications to software development t
 *模擬度*
 	模擬度是指測試替代的行為與它所替代的真實實現的行為有多大的相似性。如果測試替代的行為與真正的實現有很大的不同，那麼使用測試替代的測試可能不會提供太多的價值--例如，想象一下，嘗試用測試替代為一個數據函式庫寫一個測試，這個資料庫忽略了新增到資料庫的任何資料，總是返回空結果。但是完美的模擬可能是不可行的；測試替代通常需要比實際的實現簡單得多，以便適合在測試中使用。在許多情況下，即使沒有完美的模擬度，使用測試替代也是合適的。使用測試替代的單元測試通常需要由執行實際實現的更大範圍的測試來支援。
 
-## Test Doubles at Google 谷歌的測試替代
+## Test Doubles at Google  Google 的測試替代
 
 At Google, we’ve seen countless examples of the benefits to productivity and software quality that test doubles can bring to a codebase, as well as the negative impact they can cause when used improperly. The practices we follow at Google have evolved over time based on these experiences. Historically, we had few guidelines on how to effectively use test doubles, but best practices evolved as we saw common patterns and antipatterns arise in many teams’ codebases.
 
-在谷歌，我們已經看到了無數的例子，說明測試替代可以為程式碼函式庫提升生產力和軟體品質方面的好處，以及在使用不當時可能造成的負面影響。我們在谷歌遵循的做法是基於這些經驗隨著時間的推移而演變的。從歷史上看，我們很少有關於如何有效地使用測試替代，但最佳實踐隨著我們看到許多團隊的程式碼函式庫中出現了常見模式和反模式而不斷髮展。
+在 Google ，我們已經看到了無數的例子，說明測試替代可以為程式碼函式庫提升生產力和軟體品質方面的好處，以及在使用不當時可能造成的負面影響。我們在 Google 遵循的做法是基於這些經驗隨著時間的推移而演變的。從歷史上看，我們很少有關於如何有效地使用測試替代，但最佳實踐隨著我們看到許多團隊的程式碼函式庫中出現了常見模式和反模式而不斷髮展。
 
 One lesson we learned the hard way is the danger of overusing mocking frameworks, which allow you to easily create test doubles (we will discuss mocking frameworks in more detail later in this chapter). When mocking frameworks first came into use at Google, they seemed like a hammer fit for every nail—they made it very easy to write highly focused tests against isolated pieces of code without having to worry about how to construct the dependencies of that code. It wasn’t until several years and countless tests later that we began to realize the cost of such tests: though these tests were easy to write, we suffered greatly given that they required constant effort to maintain while rarely finding bugs. The pendulum at Google has now begun swinging in the other direction, with many engineers avoiding mocking frameworks in favor of writing more realistic tests.
 
-我們經過艱苦的歷程學到的一個教訓是過度使用模擬框架的危險，它允許你輕鬆建立測試替代（我們將在本章後面更詳細地討論模擬框架）。當mocking框架首次在Google使用時，它們就像一把錘子，適合每一根釘子。它們使得針對獨立的程式碼段編寫高度集中的測試變得非常容易，而不必擔心如何建構程式碼的依賴關係。直到幾年和無數次測試之後，我們才開始意識到這些測試的成本：儘管這些測試很容易編寫，但由於它們需要不斷的努力來維護，而很少發現bug，我們遭受了巨大的損失。谷歌的天平現在開始向另一個方向擺動，許多工程師避免模仿框架，轉而編寫更真實的測試。
+我們經過艱苦的歷程學到的一個教訓是過度使用模擬框架的危險，它允許你輕鬆建立測試替代（我們將在本章後面更詳細地討論模擬框架）。當mocking框架首次在Google使用時，它們就像一把錘子，適合每一根釘子。它們使得針對獨立的程式碼段編寫高度集中的測試變得非常容易，而不必擔心如何建構程式碼的依賴關係。直到幾年和無數次測試之後，我們才開始意識到這些測試的成本：儘管這些測試很容易編寫，但由於它們需要不斷的努力來維護，而很少發現bug，我們遭受了巨大的損失。 Google 的天平現在開始向另一個方向擺動，許多工程師避免模仿框架，轉而編寫更真實的測試。
 
 Even though the practices discussed in this chapter are generally agreed upon at Google, the actual application of them varies widely from team to team. This variance stems from engineers having inconsistent knowledge of these practices, inertia in an existing codebase that doesn’t conform to these practices, or teams doing what is easiest for the short term without thinking about the long-term implications.
 
-儘管本章中討論的實踐在谷歌公司得到普遍認可，但實際應用情況因團隊而異。這種差異源於工程師對這些實踐的認識差異，現有程式碼函式庫中的習慣不符合這些實踐，或者團隊只做短期內最容易的事情而不考慮長期影響。
+儘管本章中討論的實踐在 Google 公司得到普遍認可，但實際應用情況因團隊而異。這種差異源於工程師對這些實踐的認識差異，現有程式碼函式庫中的習慣不符合這些實踐，或者團隊只做短期內最容易的事情而不考慮長期影響。
 
 ## Basic Concepts 基本概念
 
@@ -165,7 +165,7 @@ class PaymentProcessor {
 
 To reduce boilerplate associated with manually specifying constructors, automated dependency injection frameworks can be used for constructing object graphs automatically. At Google, [Guice ](https://github.com/google/guice)and [Dagger ](https://google.github.io/dagger)are automated dependency injection frameworks that are commonly used for Java code.
 
-為了減少與手動指定建構函式有關的範本，可以使用自動依賴注入框架來自動建構物件。在谷歌，[Guice](https://github.com/google/guice)和[Dagger](https://google.github.io/dagger)是自動依賴注入框架，通常用於Java程式碼。
+為了減少與手動指定建構函式有關的範本，可以使用自動依賴注入框架來自動建構物件。在 Google ，[Guice](https://github.com/google/guice)和[Dagger](https://google.github.io/dagger)是自動依賴注入框架，通常用於Java程式碼。
 
 With dynamically typed languages such as Python or JavaScript, it is possible to dynamically replace individual functions or object methods. Dependency injection is less important in these languages because this capability makes it possible to use real implementations of dependencies in tests while only overriding functions or methods of the dependency that are unsuitable for tests.
 
@@ -332,11 +332,11 @@ tions helps accomplish this.
 
 At Google, the preference for real implementations developed over time as we saw that overuse of mocking frameworks had a tendency to pollute tests with repetitive code that got out of sync with the real implementation and made refactoring difficult. We’ll look at this topic in more detail later in this chapter.
 
-在谷歌，對真實實現的偏好隨著時間的推移而發展，因為我們看到過度使用模擬框架有一種傾向，即使用與真實實現不同步的重複程式碼汙染測試，從而使重構變得困難。我們將在本章後面更詳細地討論這個主題。
+在 Google ，對真實實現的偏好隨著時間的推移而發展，因為我們看到過度使用模擬框架有一種傾向，即使用與真實實現不同步的重複程式碼汙染測試，從而使重構變得困難。我們將在本章後面更詳細地討論這個主題。
 
 Preferring real implementations in tests is known as [*classical testing*](https://oreil.ly/OWw7h). There is also a style of testing known as *mockist testing*, in which the preference is to use mocking frameworks instead of real implementations. Even though some people in the software industry practice mockist testing (including the [creators of the first mocking](https://oreil.ly/_QWy7) [frameworks](https://oreil.ly/_QWy7)), at Google, we have found that this style of testing is difficult to scale. It requires engineers to follow [strict guidelines when designing the system under test](http://jmock.org/oopsla2004.pdf), and the default behavior of most engineers at Google has been to write code in a way that is more suitable for the classical testing style.
 
-在測試中更傾向於使用真實實現被稱為[*經典測試*]（https://oreil.ly/OWw7h）。還有一種測試風格被稱為*模擬測試*，其中傾向於使用模擬框架而不是真實實現。儘管軟體行業的一些人在進行模擬測試（包括[第一個模擬框架](https://oreil.ly/_QWy7)的創造者），但在谷歌，我們發現這種測試風格很難擴充套件。它要求工程師遵循[設計被測系統時的嚴格準則](http://jmock.org/oopsla2004.pdf)，而谷歌大多數工程師的預設行為是以一種更適合經典測試風格的方式來編寫程式碼。
+在測試中更傾向於使用真實實現被稱為[*經典測試*]（https://oreil.ly/OWw7h）。還有一種測試風格被稱為*模擬測試*，其中傾向於使用模擬框架而不是真實實現。儘管軟體行業的一些人在進行模擬測試（包括[第一個模擬框架](https://oreil.ly/_QWy7)的創造者），但在 Google ，我們發現這種測試風格很難擴充套件。它要求工程師遵循[設計被測系統時的嚴格準則](http://jmock.org/oopsla2004.pdf)，而 Google 大多數工程師的預設行為是以一種更適合經典測試風格的方式來編寫程式碼。
 
 ### Prefer Realism Over Isolation 傾向於現實主義而不是孤立主義
 
@@ -413,7 +413,7 @@ There is no exact answer here—it can depend on whether engineers feel a loss i
 
 Parellelization of tests can also help reduce execution time. At Google, our test infrastructure makes it trivial to split up tests in a test suite to be executed across multiple servers. This increases the cost of CPU time, but it can provide a large savings in developer time. We discuss this more in [Chapter 18](#_bookmark1596).
 
-測試的並行化也有助於減少執行時間。在谷歌，我們的測試基礎設施使得將測試套件中的測試拆分到多個伺服器上執行變得非常簡單。這增加了CPU的成本，但它可以為開發人員節省大量時間。我們在第18章中對此有更多的討論。
+測試的並行化也有助於減少執行時間。在 Google ，我們的測試基礎設施使得將測試套件中的測試拆分到多個伺服器上執行變得非常簡單。這增加了CPU的成本，但它可以為開發人員節省大量時間。我們在第18章中對此有更多的討論。
 
 Another trade-off to be aware of: using a real implementation can result in increased build times given that the tests need to build the real implementation as well as all of its dependencies. Using a highly scalable build system like [Bazel ](https://bazel.build/)can help because it caches unchanged build artifacts.
 
@@ -583,7 +583,7 @@ If a fake is not available, first ask the owners of the API to create one. The o
 
 If the owners of an API are unwilling or unable to create a fake, you might be able to write your own. One way to do this is to wrap all calls to the API in a single class and then create a fake version of the class that doesn’t talk to the API. Doing this can also be much simpler than creating a fake for the entire API because often you’ll need to use only a subset of the API’s behavior anyway. At Google, some teams have even contributed their fake to the owners of the API, which has allowed other teams to benefit from the fake.
 
-如果一個API的所有者不願意或無法建立一個偽造測試，你可以寫一個。實現這一點的一種方法是將對API的所有呼叫封裝在一個類別中，然後建立一個不與API對話的類別的偽造測試版本。這樣做也比為整個API建立一個偽造測試API簡單得多，因為通常您只需要使用API行為的一個子集。在谷歌，一些團隊甚至將他們的偽造測試貢獻給API的所有者，這使得其他團隊可以從偽造測試中獲益。
+如果一個API的所有者不願意或無法建立一個偽造測試，你可以寫一個。實現這一點的一種方法是將對API的所有呼叫封裝在一個類別中，然後建立一個不與API對話的類別的偽造測試版本。這樣做也比為整個API建立一個偽造測試API簡單得多，因為通常您只需要使用API行為的一個子集。在 Google ，一些團隊甚至將他們的偽造測試貢獻給API的所有者，這使得其他團隊可以從偽造測試中獲益。
 
 Finally, you could decide to settle on using a real implementation (and deal with the trade-offs of real implementations that are mentioned earlier in this chapter), or resort to other test double techniques (and deal with the trade-offs that we will mention later in this chapter).
 
@@ -773,7 +773,7 @@ public void sortNumbers_quicksortIsUsed() {
 
 At Google, we’ve found that emphasizing state testing is more scalable; it reduces test brittleness, making it easier to change and maintain code over time.
 
-在谷歌，我們發現強調狀態測試更具可擴充套件性；它減少了測試的脆弱性，使得隨著時間的推移更容易更改和維護程式碼。
+在 Google ，我們發現強調狀態測試更具可擴充套件性；它減少了測試的脆弱性，使得隨著時間的推移更容易更改和維護程式碼。
 
 The primary issue with interaction testing is that it can’t tell you that the system under test is working properly; it can only validate that certain functions are called as expected. It requires you to make an assumption about the behavior of the code; for example, “*If* *database.save(item) is called, we assume the item will be saved to the database.*” State testing is preferred because it actually validates this assumption (such as by saving an item to a database and then querying the database to validate that the item exists).
 
@@ -781,7 +781,7 @@ The primary issue with interaction testing is that it can’t tell you that the 
 
 Another downside of interaction testing is that it utilizes implementation details of the system under test—to validate that a function was called, you are exposing to the test that the system under test calls this function. Similar to stubbing, this extra code makes tests brittle because it leaks implementation details of your production code into tests. Some people at Google jokingly refer to tests that overuse interaction testing as [*change-detector* *tests* ](https://oreil.ly/zkMDu)because they fail in response to any change to the production code, even if the behavior of the system under test remains unchanged.
 
-互動測試的另一個缺點是，它利用被測系統的實現細節--驗證某個函式是否被呼叫，你向測試暴露了被測系統呼叫這個函式。與打樁類似，這個額外的程式碼使測試變得脆弱，因為它將生產程式碼的實現細節洩漏到測試中。谷歌的一些人開玩笑地把過度使用互動測試的測試稱為[*變更檢測器測試*](https://oreil.ly/zkMDu)，因為它們對生產程式碼的任何改變都會失敗，即使被測系統的行為保持不變。
+互動測試的另一個缺點是，它利用被測系統的實現細節--驗證某個函式是否被呼叫，你向測試暴露了被測系統呼叫這個函式。與打樁類似，這個額外的程式碼使測試變得脆弱，因為它將生產程式碼的實現細節洩漏到測試中。 Google 的一些人開玩笑地把過度使用互動測試的測試稱為[*變更檢測器測試*](https://oreil.ly/zkMDu)，因為它們對生產程式碼的任何改變都會失敗，即使被測系統的行為保持不變。
 
 ### When Is Interaction Testing Appropriate? 什麼時候適合進行互動測試？
 

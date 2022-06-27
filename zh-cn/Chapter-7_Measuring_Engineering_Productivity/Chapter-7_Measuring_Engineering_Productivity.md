@@ -10,7 +10,7 @@
 
 Google is a data-driven company. We back up most of our products and design decisions with hard data. The culture of data-driven decision making, using appropriate metrics, has some drawbacks, but overall, relying on data tends to make most decisions objective rather than subjective, which is often a good thing. Collecting and analyzing data on the human side of things, however, has its own challenges. Specifically, within software engineering, Google has found that having a team of specialists focus on engineering productivity itself to be very valuable and important as the company scales and can leverage insights from such a team.
 
-谷歌是一家資料驅動型公司。我們的大部分產品和設計決策都有可靠的資料支援。資料驅動的決策文化，使用適當的指標，有一些缺點，但總的來說，依靠資料往往使大多數決策變得客觀而不是主觀，這往往是一件好事。然而，收集和分析人類方面的資料，有其自身的挑戰。具體來說，在軟體工程領域，谷歌發現，隨著公司規模的擴大，擁有一支專注於工程生產效率的專家團隊本身是非常有價值和重要的，可以利用這樣一支團隊的洞察力。
+ Google 是一家資料驅動型公司。我們的大部分產品和設計決策都有可靠的資料支援。資料驅動的決策文化，使用適當的指標，有一些缺點，但總的來說，依靠資料往往使大多數決策變得客觀而不是主觀，這往往是一件好事。然而，收集和分析人類方面的資料，有其自身的挑戰。具體來說，在軟體工程領域， Google 發現，隨著公司規模的擴大，擁有一支專注於工程生產效率的專家團隊本身是非常有價值和重要的，可以利用這樣一支團隊的洞察力。
 
 ## Why Should We Measure Engineering Productivity? 我們為什麼要測量工程效率
 
@@ -25,7 +25,7 @@ There is another way to address our scaling problem, though: *we could make each
 
 Google has had to grow quickly into new businesses, which has meant learning how to make our engineers more productive. To do this, we needed to understand what makes them productive, identify inefficiencies in our engineering processes, and fix the identified problems. Then, we would repeat the cycle as needed in a continuous improvement loop. By doing this, we would be able to scale our engineering organization with the increased demand on it.
 
-谷歌不得不迅速發展新業務，這意味著要學習如何讓我們的工程師更有效率。要做到這一點，我們需要了解是什麼讓他們富有成效，找出我們工程流程中的低效之處，並解決所發現的問題。然後，我們將根據需要在一個持續改進的迴圈中重複這個迴圈。透過這樣做，我們將能夠在需求增加的情況下擴大我們的工程組織。
+ Google 不得不迅速發展新業務，這意味著要學習如何讓我們的工程師更有效率。要做到這一點，我們需要了解是什麼讓他們富有成效，找出我們工程流程中的低效之處，並解決所發現的問題。然後，我們將根據需要在一個持續改進的迴圈中重複這個迴圈。透過這樣做，我們將能夠在需求增加的情況下擴大我們的工程組織。
 
 However, this improvement cycle *also* takes human resources. It would not be worthwhile to improve the productivity of your engineering organization by the equivalent of 10 engineers per year if it took 50 engineers per year to understand and fix productivity blockers. *Therefore, our goal is to not only improve software engineering productivity, but to do so efficiently.*
 
@@ -33,15 +33,15 @@ However, this improvement cycle *also* takes human resources. It would not be wo
 
 At Google, we addressed these trade-offs by creating a team of researchers dedicated to understanding engineering productivity. Our research team includes people from the software engineering research field and generalist software engineers, but we also include social scientists from a variety of fields, including cognitive psychology and behavioral economics. The addition of people from the social sciences allows us to not only study the software artifacts that engineers produce, but to also understand the human side of software development, including personal motivations, incentive structures, and strategies for managing complex tasks. The goal of the team is to take a data-driven approach to measuring and improving engineering productivity.
 
-在谷歌，我們透過建立一個致力於瞭解工程生產效率的研究團隊來解決這些權衡問題。我們的研究團隊包括來自軟體工程研究領域的人員和普通的軟體工程師，但我們也包括來自不同領域的社會科學家，包括認知心理學和行為經濟學。來自社會科學的人員的加入使我們不僅可以研究工程師生產的軟體工件，還可以瞭解軟體開發中人的一面，包括個人動機、激勵結構和管理複雜任務的策略。該團隊的目標是採用資料驅動的方法來衡量和提高工程生產效率。
+在 Google ，我們透過建立一個致力於瞭解工程生產效率的研究團隊來解決這些權衡問題。我們的研究團隊包括來自軟體工程研究領域的人員和普通的軟體工程師，但我們也包括來自不同領域的社會科學家，包括認知心理學和行為經濟學。來自社會科學的人員的加入使我們不僅可以研究工程師生產的軟體工件，還可以瞭解軟體開發中人的一面，包括個人動機、激勵結構和管理複雜任務的策略。該團隊的目標是採用資料驅動的方法來衡量和提高工程生產效率。
 
 In this chapter, we walk through how our research team achieves this goal. This begins with the triage process: there are many parts of software development that we *can* measure, but what *should* we measure? After a project is selected, we walk through how the research team identifies meaningful metrics that will identify the problematic parts of the process. Finally, we look at how Google uses these metrics to track improvements to productivity.
 
-在本章中，我們將介紹我們的研究團隊是如何實現這一目標的。這從分類過程開始：我們對軟體開發的許多部分*可以*進行測量，但是我們應該測量什麼呢？在一個專案被選中後，我們將介紹研究團隊如何確定有意義的指標，以確定該過程中存在問題的部分。最後，我們看一下谷歌是如何使用這些指標來追蹤生產效率的改進。
+在本章中，我們將介紹我們的研究團隊是如何實現這一目標的。這從分類過程開始：我們對軟體開發的許多部分*可以*進行測量，但是我們應該測量什麼呢？在一個專案被選中後，我們將介紹研究團隊如何確定有意義的指標，以確定該過程中存在問題的部分。最後，我們看一下 Google 是如何使用這些指標來追蹤生產效率的改進。
 
 For this chapter, we follow one concrete example posed by the C++ and Java language teams at Google: readability. For most of Google’s existence, these teams have managed the readability process at Google. (For more on readability, see [Chapter 3](#_bookmark182).) The readability process was put in place in the early days of Google, before automatic formatters ([Chapter 8](#_bookmark580)) and linters that block submission were commonplace ([Chap‐](#_bookmark664) [ter 9](#_bookmark664)). The process itself is expensive to run because it requires hundreds of engineers performing readability reviews for other engineers in order to grant readability to them. Some engineers viewed it as an archaic hazing process that no longer held utility, and it was a favorite topic to argue about around the lunch table. The concrete question from the language teams was this: is the time spent on the readability process worthwhile?
 
-在本章中，我們遵循谷歌的C++和Java語言團隊提出的一個具體例子：可讀性。在谷歌存在的大部分時間裡，這些團隊一直在管理谷歌的可讀性過程。(關於可讀性的更多資訊，請參見第三章）。可讀性過程是在谷歌的早期建立的，當時自動格式化工具（第8章）和阻止提交的鎖定還沒有普及（第9章）。這個過程本身執行成本很高，因為它需要數以百計的工程師為其他工程師進行可讀性審查，以便授予他們可讀性。一些工程師認為這是一個古老的自欺欺人過程，不再具有實用性，這也是午餐桌上最喜歡爭論的話題。來自語言團隊的具體問題是：花在可讀性過程上的時間是值得的嗎？
+在本章中，我們遵循 Google 的C++和Java語言團隊提出的一個具體例子：可讀性。在 Google 存在的大部分時間裡，這些團隊一直在管理 Google 的可讀性過程。(關於可讀性的更多資訊，請參見第三章）。可讀性過程是在 Google 的早期建立的，當時自動格式化工具（第8章）和阻止提交的鎖定還沒有普及（第9章）。這個過程本身執行成本很高，因為它需要數以百計的工程師為其他工程師進行可讀性審查，以便授予他們可讀性。一些工程師認為這是一個古老的自欺欺人過程，不再具有實用性，這也是午餐桌上最喜歡爭論的話題。來自語言團隊的具體問題是：花在可讀性過程上的時間是值得的嗎？
 
 ```
 1	Frederick P. Brooks, The Mythical Man-Month: Essays on Software Engineering (New York: Addison-Wesley, 1995).
@@ -57,7 +57,7 @@ Before we decide how to measure the productivity of engineers, we need to know w
 
 At Google, we’ve come up with a series of questions to help teams determine whether it’s even worth measuring productivity in the first place. We first ask people to describe what they want to measure in the form of a concrete question; we find that the more concrete people can make this question, the more likely they are to derive benefit from the process. When the readability team approached us, its question was simple: are the costs of an engineer going through the readability process worth the benefits they might be deriving for the company?
 
-在谷歌，我們想出了一系列的問題來幫助團隊確定是否值得優先測量生產效率。我們首先要求人們以具體問題的形式描述他們想要測量的東西；我們發現，人們提出這個問題越具體，他們就越有可能從這個過程中獲益。當可讀性團隊與我們接觸時，其問題很簡單：工程師在可讀性過程中的成本是否值得他們為公司帶來的好處？
+在 Google ，我們想出了一系列的問題來幫助團隊確定是否值得優先測量生產效率。我們首先要求人們以具體問題的形式描述他們想要測量的東西；我們發現，人們提出這個問題越具體，他們就越有可能從這個過程中獲益。當可讀性團隊與我們接觸時，其問題很簡單：工程師在可讀性過程中的成本是否值得他們為公司帶來的好處？
 
 We then ask them to consider the following aspects of their question:
 
@@ -145,11 +145,11 @@ By asking these questions, we find that in many cases, measurement is simply not
 
 	決策者有強烈的意見，而你不太可能提供足夠多的正確型別的證據，來改變他們的信念。
 	
-	這就需要了解你的受眾。即使在谷歌，我們有時也會發現一些人由於他們過去的經驗而對某一主題有堅定的信念。我們曾發現一些利益相關者從不相信調查資料，因為他們不相信自我觀念。我們也發現一些利益相關者，他們最容易被由少量訪談得出的令人信服的敘述所動搖。當然，也有一些利益相關者只被日誌分析所動搖。在所有情況下，我們都試圖用混合方法對真相進行三角分析，但如果利益相關者只限於相信不適合問題的方法，那麼做這項工作就沒有意義。
+	這就需要了解你的受眾。即使在 Google ，我們有時也會發現一些人由於他們過去的經驗而對某一主題有堅定的信念。我們曾發現一些利益相關者從不相信調查資料，因為他們不相信自我觀念。我們也發現一些利益相關者，他們最容易被由少量訪談得出的令人信服的敘述所動搖。當然，也有一些利益相關者只被日誌分析所動搖。在所有情況下，我們都試圖用混合方法對真相進行三角分析，但如果利益相關者只限於相信不適合問題的方法，那麼做這項工作就沒有意義。
 
 *結果只能作為虛榮的指標，以來支援你一定要做的事情*
 
-	這也許是我們在谷歌告訴人們不要測量軟體過程的最常見的原因。很多時候，人們已經為多個原因規劃了一個決策，而改進軟體開發過程只是這些決策的一個好處。例如，谷歌的發佈工具團隊曾經要求對發佈工作流程系統的計劃變更進行測量。由於變化的性質，很明顯，這個變化不會比目前的狀態差，但他們不知道這是一個小的改進還是一個大的改進。我們問團隊：如果結果只是一個小的改進，無論如何你會花資源來實現這個功能，即使它看起來不值得投資？答案是肯定的! 這個功能碰巧提高了生產效率，但這是一個副作用：它也更具有效能，降低了發佈工具團隊的維護負擔。
+	這也許是我們在 Google 告訴人們不要測量軟體過程的最常見的原因。很多時候，人們已經為多個原因規劃了一個決策，而改進軟體開發過程只是這些決策的一個好處。例如， Google 的發佈工具團隊曾經要求對發佈工作流程系統的計劃變更進行測量。由於變化的性質，很明顯，這個變化不會比目前的狀態差，但他們不知道這是一個小的改進還是一個大的改進。我們問團隊：如果結果只是一個小的改進，無論如何你會花資源來實現這個功能，即使它看起來不值得投資？答案是肯定的! 這個功能碰巧提高了生產效率，但這是一個副作用：它也更具有效能，降低了發佈工具團隊的維護負擔。
 
 *唯一可用的指標不夠精確，無法衡量問題，而且會被其他因素所幹擾*
 
@@ -177,7 +177,7 @@ After we decide to measure a software process, we need to determine what metrics
 
 At Google, we use the Goals/Signals/Metrics (GSM) framework to guide metrics creation.
 
-在谷歌，我們使用目標/訊號/指標（GSM）框架來指導指標建立。
+在 Google ，我們使用目標/訊號/指標（GSM）框架來指導指標建立。
 
 - A *goal* is a desired end result. It’s phrased in terms of what you want to understand at a high level and should not contain references to specific ways to measure it.
 - A signal is how you might know that you’ve achieved the end result. Signals are things we would *like* to measure, but they might not be measurable themselves.
@@ -306,7 +306,7 @@ Going back to the readability example, our research team worked with the readabi
 
 *知識複雜性*
 
-	工程師們透過可讀性過程瞭解谷歌程式碼函式庫和最佳編碼實踐，他們在可讀性過程中接受指導。
+	工程師們透過可讀性過程瞭解 Google 程式碼函式庫和最佳編碼實踐，他們在可讀性過程中接受指導。
 
 *節奏和速度*
 
@@ -335,8 +335,8 @@ A signal is the way in which we will know we’ve achieved our goal. Not all sig
 | 目標                                                         | 訊號                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 由於可讀性過程，工程師們會寫出更高品質的程式碼。               | 被授予可讀性的工程師判斷他們的程式碼比沒有被授予可讀性的工程師的品質更高。可讀性過程對程式碼品質有積極影響。 |
-| 工程師們透過可讀性過程瞭解谷歌的程式碼函式庫和最佳編碼實踐。       | 工程師們報告了從可讀性過程中的學習情況。                     |
-| 工程師在可讀性過程中接受指導。                               | 工程師們報告了與經驗豐富的谷歌工程師的積極互動，他們在可讀性過程中擔任審查員。 |
+| 工程師們透過可讀性過程瞭解 Google 的程式碼函式庫和最佳編碼實踐。       | 工程師們報告了從可讀性過程中的學習情況。                     |
+| 工程師在可讀性過程中接受指導。                               | 工程師們報告了與經驗豐富的 Google 工程師的積極互動，他們在可讀性過程中擔任審查員。 |
 | 工程師在可讀性過程中得到指導。<br/><br/>由於可讀性過程，工程師們更快、更有效地完成工作任務。<br/><br/>工程師們看到了可讀性過程的好處，並對參與這一過程有積極的感受。 | 被授予可讀性的工程師判斷自己比沒有被授予可讀性的工程師更有生產效率。被授予可讀性的工程師所寫的修改比未被授予可讀性的工程師所寫的修改審查得更快。<br/><br/>工程師認為可讀性過程是值得的。 |
 
 
@@ -357,7 +357,7 @@ Additionally, some signals might not have any associated metric because the sign
 
 Following the GSM framework is a great way to clarify the goals for why you are measuring your software process and how it will actually be measured. However, it’s still possible that the metrics selected are not telling the complete story because they are not capturing the desired signal. At Google, we use qualitative data to validate our metrics and ensure that they are capturing the intended signal.
 
-遵循GSM框架是一個很好的方法，可以明確你為什麼要測量你的軟體過程的目標，以及它將如何被實際測量。然而，仍然有可能選擇的指標沒有說明全部情況，因為它們沒有捕獲所需的訊號。在谷歌，我們使用定性資料來驗證我們的指標，並確保它們捕捉到了預期的訊號。
+遵循GSM框架是一個很好的方法，可以明確你為什麼要測量你的軟體過程的目標，以及它將如何被實際測量。然而，仍然有可能選擇的指標沒有說明全部情況，因為它們沒有捕獲所需的訊號。在 Google ，我們使用定性資料來驗證我們的指標，並確保它們捕捉到了預期的訊號。
 
 ## Using Data to Validate Metrics  使用資料驗證指標
 
@@ -372,7 +372,7 @@ Quantitative metrics are useful because they give you power and scale. You can m
 ```
 5	It has routinely been our experience at Google that when the quantitative and qualitative metrics disagree, it was because the quantitative metrics were not capturing the expected result.
 
-5 我們在谷歌的常規經驗是，當定量指標和定性指標不一致時，是因為定量指標沒有捕捉到預期的結果。
+5 我們在 Google 的常規經驗是，當定量指標和定性指標不一致時，是因為定量指標沒有捕捉到預期的結果。
 ```
 
 Consider now the signals presented in [Table 7-2](#_bookmark567). What metrics might you create to measure each of those? Some of these signals might be measurable by analyzing tool and code logs. Others are measurable only by directly asking engineers. Still others might not be perfectly measurable—how do we truly measure code quality, for example?
@@ -419,9 +419,9 @@ Ultimately, when evaluating the impact of readability on productivity, we ended 
 |                | 作為可讀性過程的結果，工程師們寫出的程式碼更加一致。           | 工程師在程式碼審查中由可讀性審查員提供一致的反饋和指導，這是可讀性過程的一部分。 | 可讀性調查。報告可讀性審查員的意見和可讀性標準不一致的工程師比例。 |
 |                | 工程師對程式碼健康文化的貢獻是可讀性過程的結果。               | 被授予可讀性的工程師經常在程式碼審查中評論風格和/或可讀性問題。 | 可讀性調查：報告他們經常在程式碼審查中評論風格和/或可讀性問題的工程師的比例 |
 | 工程師的關注   | 不適用                                                       | 不適用                                                       | 不適用                                                       |
-| 知識           | 工程師們透過可讀性過程瞭解谷歌的程式碼函式庫和最佳編碼實踐。       | 工程師們報告了從可讀性過程中的學習情況。                     | 可讀性調查。報告說他們瞭解了四個相關主題的工程師比例         |
+| 知識           | 工程師們透過可讀性過程瞭解 Google 的程式碼函式庫和最佳編碼實踐。       | 工程師們報告了從可讀性過程中的學習情況。                     | 可讀性調查。報告說他們瞭解了四個相關主題的工程師比例         |
 |                |                                                              |                                                              | 可讀性調查：報告學習或獲得專業知識是可讀性過程的優勢的工程師比例 |
-|                | 工程師在可讀性過程中接受指導。                               | 工程師們報告說，在可讀性過程中，他們與作為審查員的經驗豐富的谷歌工程師進行了積極的互動。 | 可讀性調查：報告說與可讀性審查員一起工作是可讀性過程的優勢的工程師的比例 |
+|                | 工程師在可讀性過程中接受指導。                               | 工程師們報告說，在可讀性過程中，他們與作為審查員的經驗豐富的 Google 工程師進行了積極的互動。 | 可讀性調查：報告說與可讀性審查員一起工作是可讀性過程的優勢的工程師的比例 |
 | 節奏/速度      | 由於可讀性過程，工程師們的工作效率更高。                     | 被授予可讀性的工程師判斷自己比沒有被授予可讀性的工程師更有生產力。 | 季度調查：報告他們具有高生產力的工程師的比例                 |
 |                |                                                              | 工程師們報告說，完成可讀性過程對他們的工程速度有積極的影響。 | 可讀性調查：報告不具備可讀性會降低團隊工程速度的工程師比例   |
 |                |                                                              | 由被授予可讀性的工程師編寫的變更列表（CLs）比由未被授予可讀性的工程師編寫的變更列表審查得更快。 | 日誌資料：有可讀性和無可讀性的作者所寫的CL的審查時間中位數   |
@@ -456,7 +456,7 @@ Ultimately, when evaluating the impact of readability on productivity, we ended 
 
 Recall our original goal in this chapter: we want to take action and improve productivity. After performing research on a topic, the team at Google always prepares a list of recommendations for how we can continue to improve. We might suggest new features to a tool, improving latency of a tool, improving documentation, removing obsolete processes, or even changing the incentive structures for the engineers. Ideally, these recommendations are “tool driven”: it does no good to tell engineers to change their process or way of thinking if the tools do not support them in doing so. We instead always assume that engineers will make the appropriate trade-offs if they have the proper data available and the suitable tools at their disposal.
 
-回顧我們在本章中的最初目標：我們希望採取行動，提高生產效率。在對某個主題進行研究之後，谷歌的團隊總是準備一份建議清單，說明我們可以如何繼續改進。我們可能會建議給一個工具增加新的功能，改善工具的延遲，改善文件，刪除過時的流程，甚至改變工程師的激勵結構。理想情況下，這些建議是 "工具驅動 "的：如果工具不支援工程師改變他們的流程或思維方式，那麼告訴他們這樣做是沒有用的。相反，我們總是假設，如果工程師有適當的資料和合適的工具可以使用，他們會做出適當的權衡。
+回顧我們在本章中的最初目標：我們希望採取行動，提高生產效率。在對某個主題進行研究之後， Google 的團隊總是準備一份建議清單，說明我們可以如何繼續改進。我們可能會建議給一個工具增加新的功能，改善工具的延遲，改善文件，刪除過時的流程，甚至改變工程師的激勵結構。理想情況下，這些建議是 "工具驅動 "的：如果工具不支援工程師改變他們的流程或思維方式，那麼告訴他們這樣做是沒有用的。相反，我們總是假設，如果工程師有適當的資料和合適的工具可以使用，他們會做出適當的權衡。
 
 For readability, our study showed that it was overall worthwhile: engineers who had achieved readability were satisfied with the process and felt they learned from it. Our logs showed that they also had their code reviewed faster and submitted it faster, even accounting for no longer needing as many reviewers. Our study also showed places for improvement with the process: engineers identified pain points that would have made the process faster or more pleasant. The language teams took these recommendations and improved the tooling and process to make it faster and to be more transparent so that engineers would have a more pleasant experience.
 
@@ -466,7 +466,7 @@ For readability, our study showed that it was overall worthwhile: engineers who 
 
 At Google, we’ve found that staffing a team of engineering productivity specialists has widespread benefits to software engineering; rather than relying on each team to chart its own course to increase productivity, a centralized team can focus on broad- based solutions to complex problems. Such “human-based” factors are notoriously difficult to measure, and it is important for experts to understand the data being analyzed given that many of the trade-offs involved in changing engineering processes are difficult to measure accurately and often have unintended consequences. Such a team must remain data driven and aim to eliminate subjective bias.
 
-在谷歌，我們發現配備一個工程生產效率專家團隊對軟體工程有廣泛的好處；與其依靠每個團隊制定自己的路線來提高生產效率，一個集中的團隊可以專注於複雜問題的廣泛解決方案。這種 "以人為本 "的因素是出了名的難以測量，而且鑑於改變工程流程所涉及的許多權衡都難以準確測量，而且往往會產生意想不到的後果，因此專家們必須瞭解正在分析的資料。這樣的團隊必須保持資料驅動，旨在消除主觀偏見。
+在 Google ，我們發現配備一個工程生產效率專家團隊對軟體工程有廣泛的好處；與其依靠每個團隊制定自己的路線來提高生產效率，一個集中的團隊可以專注於複雜問題的廣泛解決方案。這種 "以人為本 "的因素是出了名的難以測量，而且鑑於改變工程流程所涉及的許多權衡都難以準確測量，而且往往會產生意想不到的後果，因此專家們必須瞭解正在分析的資料。這樣的團隊必須保持資料驅動，旨在消除主觀偏見。
 
 ## TL;DRs  內容提要
 

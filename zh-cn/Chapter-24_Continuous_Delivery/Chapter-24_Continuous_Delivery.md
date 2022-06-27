@@ -17,20 +17,20 @@ The long-term life cycle of a software product involves rapid exploration of new
 
 Work that stays in progress for a long time before delivering user value is high risk and high cost, and can even be a drain on morale. At Google, we strive to release early and often, or “launch and iterate,” to enable teams to see the impact of their work quickly and to adapt faster to a shifting market. The value of code is not realized at the time of submission but when features are available to your users. Reducing the time between “code complete” and user feedback minimizes the cost of work that is in progress.
 
-在交付使用者價值之前進行很長時間的工作是高風險和高成本的，甚至可能會消耗士氣。在谷歌，我們努力做到早期和經常發佈，或者說 "發佈和迭代"，以使團隊能夠迅速看到他們工作的影響，並更快地適應不斷變化的市場。程式碼的價值不是在提交時實現的，而是在你的使用者可以使用的功能時實現的。縮短 "程式碼完成 "和使用者反饋之間的時間，可以將正在進行中的工作的成本降到最低。
+在交付使用者價值之前進行很長時間的工作是高風險和高成本的，甚至可能會消耗士氣。在 Google ，我們努力做到早期和經常發佈，或者說 "發佈和迭代"，以使團隊能夠迅速看到他們工作的影響，並更快地適應不斷變化的市場。程式碼的價值不是在提交時實現的，而是在你的使用者可以使用的功能時實現的。縮短 "程式碼完成 "和使用者反饋之間的時間，可以將正在進行中的工作的成本降到最低。
 
 	You get extraordinary outcomes by realizing that the launch *never lands* but that it begins a learning cycle where you then fix the next most important thing, measure how it went, fix the next thing, etc.—and it is *never complete*.
 	
 	—David Weekly, Former Google product manager
 	
 	當你意識到發射從未著陸，但它開始了一個學習週期，然後你修復下一個最重要的事情，衡量它如何進行，修復下一個事情，等等——而且它永遠不會完成。
-	-David Weekly，前谷歌產品經理
+	-David Weekly，前 Google 產品經理
 
 At Google, the practices we describe in this book allow hundreds (or in some cases thousands) of engineers to quickly troubleshoot problems, to independently work on new features without worrying about the release, and to understand the effectiveness of new features through A/B experimentation. This chapter focuses on the key levers of rapid innovation, including managing risk, enabling developer velocity at scale, and understanding the cost and value trade-off of each feature you launch.
 
-在谷歌，我們在本書中描述的做法使數百名（或在某些情況下數千名）工程師能夠快速排除問題，獨立完成新功能而不必擔心發佈問題，並透過A/B實驗瞭解新功能的有效性。本章重點關注快速創新的關鍵槓桿，包括管理風險、實現大規模的開發者速度，以及瞭解你推出的每個功能的成本和價值權衡。
+在 Google ，我們在本書中描述的做法使數百名（或在某些情況下數千名）工程師能夠快速排除問題，獨立完成新功能而不必擔心發佈問題，並透過A/B實驗瞭解新功能的有效性。本章重點關注快速創新的關鍵槓桿，包括管理風險、實現大規模的開發者速度，以及瞭解你推出的每個功能的成本和價值權衡。
 
-## Idioms of Continuous Delivery at Google 谷歌持續交付的習慣用法
+## Idioms of Continuous Delivery at Google  Google 持續交付的習慣用法
 
 A core tenet of Continuous Delivery (CD) as well as of Agile methodology is that over time, smaller batches of changes result in higher quality; in other words, *faster is safer*. This can seem deeply controversial to teams at first glance, especially if the prerequisites for setting up CD—for example, Continuous Integration (CI) and testing— are not yet in place. Because it might take a while for all teams to realize the ideal of CD, we focus on developing various aspects that deliver value independently en route to the end goal. Here are some of these:
 
@@ -87,7 +87,7 @@ At first, releasing new versions of software frequently might seem risky. As you
 
 When a team is small, changes come into a codebase at a certain rate. We’ve seen an antipattern emerge as a team grows over time or splits into subteams: a subteam branches off its code to avoid stepping on anyone’s feet, but then struggles, later, with integration and culprit finding. At Google, we prefer that teams continue to develop at head in the shared codebase and set up CI testing, automatic rollbacks, and culprit finding to identify issues quickly. This is discussed at length in [Chapter 23](#_bookmark2022).
 
-當一個團隊很小的時候，變化以一定的速度進入一個程式碼函式庫。我們看到，隨著時間的推移，一個團隊的成長或分裂成子團隊，會出現一種反模式：一個子團隊將其程式碼分支，以避免踩到其他團隊的腳，但後來卻在整合和尋找罪魁禍首方面陷入困境。在谷歌，我們更傾向於團隊繼續在共享程式碼函式庫中進行開發，並設定CI測試、自動回滾和故障查詢，以快速識別問題。這在第23章中有詳細的討論。
+當一個團隊很小的時候，變化以一定的速度進入一個程式碼函式庫。我們看到，隨著時間的推移，一個團隊的成長或分裂成子團隊，會出現一種反模式：一個子團隊將其程式碼分支，以避免踩到其他團隊的腳，但後來卻在整合和尋找罪魁禍首方面陷入困境。在 Google ，我們更傾向於團隊繼續在共享程式碼函式庫中進行開發，並設定CI測試、自動回滾和故障查詢，以快速識別問題。這在第23章中有詳細的討論。
 
 One of our codebases, YouTube, is a large, monolithic Python application. The release process is laborious, with Build Cops, release managers, and other volunteers. Almost every release has multiple cherry-picked changes and respins. There is also a 50-hour manual regression testing cycle run by a remote QA team on every release. When the operational cost of a release is this high, a cycle begins to develop in which you wait to push out your release until you’re able to test it a bit more. Meanwhile, someone wants to add just one more feature that’s almost ready, and pretty soon you have yourself a release process that’s laborious, error prone, and slow. Worst of all, the experts who did the release last time are burned out and have left the team, and now nobody even knows how to troubleshoot those strange crashes that happen when you try to release an update, leaving you panicky at the very thought of pushing that button.
 
@@ -99,7 +99,7 @@ If your releases are costly and sometimes risky, the *instinct* is to slow down 
 
 The investment with the best return, though, is migrating to a microservice architecture, which can empower a large product team with the ability to remain scrappy and innovative while simultaneously reducing risk. In some cases, at Google, the answer has been to rewrite an application from scratch rather than simply migrating it, establishing the desired modularity into the new architecture. Although either of these options can take months and is likely painful in the short term, the value gained in terms of operational cost and cognitive simplicity will pay off over an application’s lifespan of years.
 
-不過，回報率最高的投資是遷移到微服務架構，這可以使一個大型產品團隊有能力保持活力和創新，同時降低風險。在某些情況下，在谷歌，答案是從頭開始重寫一個應用程式，而不是簡單地遷移它，在新的架構中建立所需的模組化。儘管這兩種選擇都需要幾個月的時間，而且在短期內可能是痛苦的，但在運營成本和認知的簡單性方面獲得的價值將在應用程式多年的生命週期中得到回報。
+不過，回報率最高的投資是遷移到微服務架構，這可以使一個大型產品團隊有能力保持活力和創新，同時降低風險。在某些情況下，在 Google ，答案是從頭開始重寫一個應用程式，而不是簡單地遷移它，在新的架構中建立所需的模組化。儘管這兩種選擇都需要幾個月的時間，而且在短期內可能是痛苦的，但在運營成本和認知的簡單性方面獲得的價值將在應用程式多年的生命週期中得到回報。
 
 ## Evaluating Changes in Isolation: Flag-Guarding Features 評估隔離中的更改：標誌保護功能
 
@@ -119,7 +119,7 @@ This is where the beauty of the flag guard comes to play. If the new code has a 
 
 Google’s Search binary is its first and oldest. Large and complicated, its codebase can be tied back to Google’s origin—a search through our codebase can still find code written at least as far back as 2003, often earlier. When smartphones began to take off, feature after mobile feature was shoehorned into a hairball of code written primarily for server deployment. Even though the Search experience was becoming more vibrant and interactive, deploying a viable build became more and more difficult. At one point, we were releasing the Search binary into production only once per week, and even hitting that target was rare and often based on luck.
 
-谷搜尋是其第一個也是最古老的二進位制檔案。它的程式碼函式庫龐大而複雜，可以追溯到谷歌的起源--在我們的程式碼函式庫中搜索，仍然可以找到至少早在2003年編寫的程式碼，通常更早。當智慧手機開始使用時，一個接一個的移動功能被塞進了一大堆主要為伺服器部署而編寫的程式碼中。儘管搜尋體驗變得更加生動和互動，部署一個可行的建構變得越來越困難。有一次，我們每週只發布一次搜尋二進位制檔案到生產中，而即使達到這個目標也是很難得的，而且往往要靠運氣。
+谷搜尋是其第一個也是最古老的二進位制檔案。它的程式碼函式庫龐大而複雜，可以追溯到 Google 的起源--在我們的程式碼函式庫中搜索，仍然可以找到至少早在2003年編寫的程式碼，通常更早。當智慧手機開始使用時，一個接一個的移動功能被塞進了一大堆主要為伺服器部署而編寫的程式碼中。儘管搜尋體驗變得更加生動和互動，部署一個可行的建構變得越來越困難。有一次，我們每週只發布一次搜尋二進位制檔案到生產中，而即使達到這個目標也是很難得的，而且往往要靠運氣。
 
 When one of our contributing authors, Sheri Shipe, took on the project of increasing our release velocity in Search, each release cycle was taking a group of engineers days to complete. They built the binary, integrated data, and then began testing. Each bug had to be manually triaged to make sure it wouldn’t impact Search quality, the user experience (UX), and/or revenue. This process was grueling and time consuming and did not scale to the volume or rate of change. As a result, a developer could never know when their feature was going to be released into production. This made timing press releases and public launches challenging.
 
@@ -145,7 +145,7 @@ One bug involved a rare dialect spoken on only one island in the Philippines. If
 
 We ran from office to office trying to determine how many people actually spoke this language, if it happened every time a user searched in this language, and whether these folks even used Google on a regular basis. Every quality engineer we spoke with deferred us to a more senior person. Finally, data in hand, we put the question to Search’s senior vice president. Should we delay a critical release to fix a bug that affected only a very small Philippine island? It turns out that no matter how small your island, you should get reliable and accurate search results: we delayed the release and fixed the bug.
 
-我們從一個辦公室跑到另一個辦公室，試圖確定究竟有多少人講這種語言，是否每次使用者用這種語言搜尋時都會出現這種情況，以及這些人是否經常使用谷歌。每個與我們交談的品質工程師都把我們推給更高級別的人。最後，資料在手，我們把問題交給了搜尋部的高階副總裁。我們是否應該推遲一個重要的版本來修復一個只影響到菲律賓一個很小的島嶼的錯誤？事實證明，無論你的島有多小，你都應該得到可靠和準確的搜尋結果：我們推遲了發佈，並修復了這個錯誤。
+我們從一個辦公室跑到另一個辦公室，試圖確定究竟有多少人講這種語言，是否每次使用者用這種語言搜尋時都會出現這種情況，以及這些人是否經常使用 Google 。每個與我們交談的品質工程師都把我們推給更高級別的人。最後，資料在手，我們把問題交給了搜尋部的高階副總裁。我們是否應該推遲一個重要的版本來修復一個只影響到菲律賓一個很小的島嶼的錯誤？事實證明，無論你的島有多小，你都應該得到可靠和準確的搜尋結果：我們推遲了發佈，並修復了這個錯誤。
 
 ### Meet Your Release Deadline 滿足您的發佈期限
 
@@ -170,7 +170,7 @@ A world of regular releases means that if a developer misses the release train, 
 
 Bloat is an unfortunate side effect of most software development life cycles, and the more successful a product becomes, the more bloated its code base typically becomes. One downside of a speedy, efficient release train is that this bloat is often magnified and can manifest in challenges to the product team and even to the users. Especially if the software is delivered to the client, as in the case of mobile apps, this can mean the user’s device pays the cost in terms of space, download, and data costs, even for features they never use, whereas developers pay the cost of slower builds, complex deployments, and rare bugs. In this section, we’ll talk about how dynamic deployments allow you to ship only what is used, forcing necessary trade-offs between user value and feature cost. At Google, this often means staffing dedicated teams to improve the efficiency of the product on an ongoing basis.
 
-膨脹是大多數軟體開發生命週期的一個不幸的副作用，產品越成功，其程式碼函式庫通常就越膨脹。快速、高效的發佈系列的一個缺點是，這種膨脹經常被放大，並可能表現為對產品團隊甚至使用者的挑戰。特別是如果軟體交付給客戶端（如移動應用程式），這可能意味著使用者的裝置要支付空間、下載和資料成本，即使是他們從未使用過的功能，而開發人員要支付建構速度較慢、部署複雜和罕見bug的成本。在本節中，我們將討論動態部署如何允許你僅發佈所使用的內容，從而在使用者價值和功能成本之間進行必要的權衡。在谷歌，這通常意味著配備專門的團隊，以不斷提高產品的效率。
+膨脹是大多數軟體開發生命週期的一個不幸的副作用，產品越成功，其程式碼函式庫通常就越膨脹。快速、高效的發佈系列的一個缺點是，這種膨脹經常被放大，並可能表現為對產品團隊甚至使用者的挑戰。特別是如果軟體交付給客戶端（如移動應用程式），這可能意味著使用者的裝置要支付空間、下載和資料成本，即使是他們從未使用過的功能，而開發人員要支付建構速度較慢、部署複雜和罕見bug的成本。在本節中，我們將討論動態部署如何允許你僅發佈所使用的內容，從而在使用者價值和功能成本之間進行必要的權衡。在 Google ，這通常意味著配備專門的團隊，以不斷提高產品的效率。
 
 Whereas some products are web-based and run on the cloud, many are client applications that use shared resources on a user’s device—a phone or tablet. This choice in itself showcases a trade-off between native apps that can be more performant and resilient to spotty connectivity, but also more difficult to update and more susceptible to platform-level issues. A common argument against frequent, continuous deployment for native apps is that users dislike frequent updates and must pay for the data cost and the disruption. There might be other limiting factors such as access to a network or a limit to the reboots required to percolate an update.
 
@@ -212,7 +212,7 @@ One of our release managers shared a piece of wisdom that turned the situation a
 
 When it comes to developing for Android clients, Google apps use specialized testing tracks and staged rollouts to an increasing percentage of user traffic, carefully monitoring for issues in these channels. Because the Play Store offers unlimited testing tracks, we can also set up a QA team in each country in which we plan to launch, allowing for a global overnight turnaround in testing key features.
 
-在為Android客戶端開發時，谷歌應用程式使用專門的測試軌道和分階段推出，以增加使用者流量的百分比，仔細監控這些渠道中的問題。由於Play Store提供無限的測試軌道，我們還可以在我們計劃推出的每個國家/地區建立一個QA團隊，允許在全球範圍內一夜之間完成關鍵功能的測試。
+在為Android客戶端開發時， Google 應用程式使用專門的測試軌道和分階段推出，以增加使用者流量的百分比，仔細監控這些渠道中的問題。由於Play Store提供無限的測試軌道，我們還可以在我們計劃推出的每個國家/地區建立一個QA團隊，允許在全球範圍內一夜之間完成關鍵功能的測試。
 
 One issue we noticed when doing deployments to Android was that we could expect a statistically significant change in user metrics *simply from pushing an update*. This meant that even if we made no changes to our product, pushing an update could affect device and user behavior in ways that were difficult to predict. As a result, although canarying the update to a small percentage of user traffic could give us good information about crashes or stability problems, it told us very little about whether the newer version of our app was in fact better than the older one.
 
@@ -243,7 +243,7 @@ At scale, increased complexity usually manifests as increased release latency. E
 
 On Google Maps, we take the perspective that features are very important, but only very seldom is any feature so important that a release should be held for it. If releases are frequent, the pain a feature feels for missing a release is small in comparison to the pain all the new features in a release feel for a delay, and especially the pain users can feel if a not-quite-ready feature is rushed to be included.
 
-在谷歌地圖上，我們的觀點是：功能是非常重要的，但只有在非常少的情況下，才會有如此重要的功能需要發佈。如果發佈的頻率很高，那麼一個功能因為錯過了一個版本而感到的痛苦與一個版本中所有的新功能因為延遲而感到的痛苦相比是很小的，特別是如果一個還沒有準備好的功能被匆忙納入，使用者會感到痛苦。
+在 Google 地圖上，我們的觀點是：功能是非常重要的，但只有在非常少的情況下，才會有如此重要的功能需要發佈。如果發佈的頻率很高，那麼一個功能因為錯過了一個版本而感到的痛苦與一個版本中所有的新功能因為延遲而感到的痛苦相比是很小的，特別是如果一個還沒有準備好的功能被匆忙納入，使用者會感到痛苦。
 
 One release responsibility is to protect the product from the developers.
 

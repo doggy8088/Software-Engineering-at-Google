@@ -9,7 +9,7 @@
 
 Because this chapter is about the cultural and social aspects of software engineering at Google, it makes sense to begin by focusing on the one variable over which you definitely have control: you.
 
-因為本章是從文化和社會方面來介紹谷歌軟體工程，首先從焦聚與一個你完全控制的變數開始：你自己。
+因為本章是從文化和社會方面來介紹 Google 軟體工程，首先從焦聚與一個你完全控制的變數開始：你自己。
 
 People are inherently imperfect—we like to say that humans are mostly a collection of intermittent bugs. But before you can understand the bugs in your coworkers, you need to understand the bugs in yourself. We’re going to ask you to think about your own reactions, behaviors, and attitudes—and in return, we hope you gain some real insight into how to become a more efficient and successful software engineer who spends less energy dealing with people-related problems and more time writing great code.
 
@@ -106,7 +106,7 @@ But hold on: time for a reality check. You’re probably not a genius.
 
 No offense, of course—we’re sure that you’re a very intelligent person. But do you realize how rare actual geniuses really are? Sure, you write code, and that’s a tricky skill. But even if you are a genius, it turns out that that’s not enough. Geniuses still make mistakes, and having brilliant ideas and elite programming skills doesn’t guarantee that your software will be a hit. Worse, you might find yourself solving only analytical problems and not human problems. Being a genius is most definitely not an excuse for being a jerk: anyone—genius or not—with poor social skills tends to be a poor teammate. The vast majority of the work at Google (and at most companies!) doesn’t require genius-level intellect, but 100% of the work requires a minimal level of social skills. What will make or break your career, especially at a company like Google, is how well you collaborate with others.
 
-無意冒犯，我們當然相信你是個非常聰明的人。但你要知道真正的天才有多稀有嗎？當然，你需要編寫程式碼，這是一項棘手的技能。即使你是個天才，會程式設計還不夠。天才仍然會犯錯誤，擁有卓越的想法和精英程式設計技能並不能保證你的軟體會大受歡迎。更糟糕的是，你可能會發現自己只解決了分析性問題，而沒有解決人的問題。作為一個天才絕對不是成為一個混蛋的藉口： 天才與否，社交能力差的人，往往是一個豬隊友。谷歌（以及大多數公司！）的絕大多數工作不需要天才水平的智力，但100%的工作需要最低水平的社交技能。決定你職業生涯成敗，尤其是在谷歌這樣的公司，更取決於你與他人合作的程度。
+無意冒犯，我們當然相信你是個非常聰明的人。但你要知道真正的天才有多稀有嗎？當然，你需要編寫程式碼，這是一項棘手的技能。即使你是個天才，會程式設計還不夠。天才仍然會犯錯誤，擁有卓越的想法和精英程式設計技能並不能保證你的軟體會大受歡迎。更糟糕的是，你可能會發現自己只解決了分析性問題，而沒有解決人的問題。作為一個天才絕對不是成為一個混蛋的藉口： 天才與否，社交能力差的人，往往是一個豬隊友。 Google （以及大多數公司！）的絕大多數工作不需要天才水平的智力，但100%的工作需要最低水平的社交技能。決定你職業生涯成敗，尤其是在 Google 這樣的公司，更取決於你與他人合作的程度。
 
 It turns out that this Genius Myth is just another manifestation of our insecurity. Many programmers are afraid to share work they’ve only just started because it means peers will see their mistakes and know the author of the code is not a genius.
 
@@ -205,7 +205,7 @@ I think that it’s not only unnecessary for most engineers4 to be in a private 
 
 Unfortunately, it seems that modern-day tech companies (including Google, in some cases) have swung the pendulum to the exact opposite extreme. Walk into their offices and you’ll often find engineers clustered together in massive rooms—a hundred or more people together—with no walls whatsoever. This “open floor plan” is now a topic of huge debate and, as a result, hostility toward open offices is on the rise. The tiniest conversation becomes public, and people end up not talking for risk of annoying dozens of neighbors. This is just as bad as private offices!
 
-不幸的是，現代科技公司（在某些情況下包括谷歌）似乎已經走向了另一個極端。走進他們的辦公室，你經常會發現工程師們聚集在一個巨大的房間裡——一百多人聚集在一起，沒有任何牆壁。這中“開放式平面圖”現在是一個大辯論的話題，因此，對開放式辦公室的敵意正在上升。最小範圍談話都會公開，工程師們不再說話，以免惹惱周圍幾十個鄰居。這和私人辦公室一樣糟糕！
+不幸的是，現代科技公司（在某些情況下包括 Google ）似乎已經走向了另一個極端。走進他們的辦公室，你經常會發現工程師們聚集在一個巨大的房間裡——一百多人聚集在一起，沒有任何牆壁。這中“開放式平面圖”現在是一個大辯論的話題，因此，對開放式辦公室的敵意正在上升。最小範圍談話都會公開，工程師們不再說話，以免惹惱周圍幾十個鄰居。這和私人辦公室一樣糟糕！
 
 We think the middle ground is really the best solution. Group teams of four to eight people together in small rooms (or large offices) to make it easy (and non- embarrassing) for spontaneous conversation to happen.
 
@@ -381,11 +381,11 @@ It’s an extreme story, to be sure, but the CEO in this story understands that 
 
 At Google, one of our favorite mottos is that “Failure is an option.” It’s widely recognized that if you’re not failing now and then, you’re not being innovative enough or taking enough risks. Failure is viewed as a golden opportunity to learn and improve for the next go-around.7 In fact, Thomas Edison is often quoted as saying, “If I find 10,000 ways something won’t work, I haven’t failed. I am not discouraged, because every wrong attempt discarded is another step forward.”
 
-在谷歌，我們最喜歡的格言之一是“失敗也是一種選擇”。我們普遍認為，如果你沒有遭遇過失敗，你就沒有足夠的創新或承擔足夠的風險的能力。失敗被視為一個黃金機會，可以在下一次嘗試中學習和改進。事實上，人們經常參考托馬斯·愛迪生的話說：“如果我發現有一萬種方法不能成功，我就沒有失敗。我並不氣餒，因為每一個被拋棄的錯誤嘗試都是向前邁出的另一步”
+在 Google ，我們最喜歡的格言之一是“失敗也是一種選擇”。我們普遍認為，如果你沒有遭遇過失敗，你就沒有足夠的創新或承擔足夠的風險的能力。失敗被視為一個黃金機會，可以在下一次嘗試中學習和改進。事實上，人們經常參考托馬斯·愛迪生的話說：“如果我發現有一萬種方法不能成功，我就沒有失敗。我並不氣餒，因為每一個被拋棄的錯誤嘗試都是向前邁出的另一步”
 
 Over in Google X—the division that works on “moonshots” like self-driving cars and internet access delivered by balloons—failure is deliberately built into its incentive system. People come up with outlandish ideas and coworkers are actively encouraged to shoot them down as fast as possible. Individuals are rewarded (and even compete) to see how many ideas they can disprove or invalidate in a fixed period of time. Only when a concept truly cannot be debunked at a whiteboard by all peers does it proceed to early prototype.
 
-在谷歌X部門——該部門負責研究自動駕駛汽車和透過熱氣球提供網際網路接入等 "登月計劃"——故意將失敗次數納入其激勵系統。人們會想出一些稀奇古怪的想法，同事們也會受到積極的鼓勵儘快實現它們。每個人都會得到獎勵（甚至是競爭），看看他們能在一段固定的時間內反駁或否定多少觀點。只有當一個概念真的不能在白板上被所有同行揭穿時，它才能進入早期原型。
+在 Google X部門——該部門負責研究自動駕駛汽車和透過熱氣球提供網際網路接入等 "登月計劃"——故意將失敗次數納入其激勵系統。人們會想出一些稀奇古怪的想法，同事們也會受到積極的鼓勵儘快實現它們。每個人都會得到獎勵（甚至是競爭），看看他們能在一段固定的時間內反駁或否定多少觀點。只有當一個概念真的不能在白板上被所有同行揭穿時，它才能進入早期原型。
 
 > 6    You can find a dozen variants of this legend on the web, attributed to different famous managers.  
 > 6  你可以在網上找到這一傳說的十幾種變體，它們都是由不同的著名經理人創造的。
@@ -398,7 +398,7 @@ Over in Google X—the division that works on “moonshots” like self-driving 
 
 The key to learning from your mistakes is to document your failures by performing a root-cause analysis and writing up a “postmortem,” as it’s called at Google (and many other companies). Take extra care to make sure the postmortem document isn’t just a useless list of apologies or excuses or finger-pointing—that’s not its purpose. A proper postmortem should always contain an explanation of what was learned and what is going to change as a result of the learning experience. Then, make sure that the postmortem is readily accessible and that the team really follows through on the proposed changes. Properly documenting failures also makes it easier for other people (present and future) to know what happened and avoid repeating history. Don’t erase your tracks—light them up like a runway for those who follow you!
 
-從錯誤中學習的關鍵是透過進行根因分析和撰寫“事後總結”來記錄你的失敗，在谷歌（和許多其他公司）成為事後總結（國內成為覆盤）。要格外小心，確保 "事後總結 "檔案不只是一份無用的道歉、藉口或指責的清單，這不是它的目的。正確事後總結應該總是包含對所學到的內容的解釋，以及作為學習經驗作為後續的改進落地。然後，確保事後總結可以隨時查閱，並確保團隊真正貫徹執行所建議的改變。好的故障覆盤要讓其他人（現在和將來）知道發生了什麼，避免重蹈覆轍。不要抹去你的足跡——讓它們在道路上照亮給那些追隨你的人!
+從錯誤中學習的關鍵是透過進行根因分析和撰寫“事後總結”來記錄你的失敗，在 Google （和許多其他公司）成為事後總結（國內成為覆盤）。要格外小心，確保 "事後總結 "檔案不只是一份無用的道歉、藉口或指責的清單，這不是它的目的。正確事後總結應該總是包含對所學到的內容的解釋，以及作為學習經驗作為後續的改進落地。然後，確保事後總結可以隨時查閱，並確保團隊真正貫徹執行所建議的改變。好的故障覆盤要讓其他人（現在和將來）知道發生了什麼，避免重蹈覆轍。不要抹去你的足跡——讓它們在道路上照亮給那些追隨你的人!
 
 A good postmortem should include the following:
 - A brief summary of the event
@@ -450,20 +450,20 @@ Professional politicians, for example, are notorious for never admitting error o
 
 例如，職業政客因從不承認錯誤或無知而臭名昭著，即使他們在某個問題上顯然是錯的或不知的。存在這種行為主要是因為政客們經常受到對手的攻擊，這就是為什麼大多數人不相信政客們說的一個字。然而，當你在編寫軟體時，你不需要不斷地進行防守——你的團隊成員是合作者，而不是競爭對手。你們都有相同的目標。
 
-### Being Googley  成為谷歌的
+### Being Googley  成為 Google 的
 
 At Google, we have our own internal version of the principles of “humility, respect, and trust” when it comes to behavior and human interactions.
 
-在谷歌，當涉及到行為和人際交往時，我們有自己的內部版本的“謙遜、尊重和信任”原則。
+在 Google ，當涉及到行為和人際交往時，我們有自己的內部版本的“謙遜、尊重和信任”原則。
 
 From the earliest days of our culture, we often referred to actions as being “Googley” or “not Googley.” The word was never explicitly defined; rather, everyone just sort of took it to mean “don’t be evil” or “do the right thing” or “be good to each other.” Over time, people also started using the term “Googley” as an informal test for culture-fit whenever we would interview a candidate for an engineering job, or when writing internal performance reviews of one another. People would often express opinions about others using the term; for example, “the person coded well, but didn’t seem to have a very Googley attitude.”
 
-從我們早期文化開始，我們經常將行為稱為“谷歌的”或“不是谷歌的”；相反，每個人都把它理解為“不作惡”、“做正確的事”或“善待彼此”。隨著時間的推移，人們也開始使用“Googley”一詞作為一種非正式的文化契合度測試，無論是在我們面試一名工程師崗位的應聘者時，還是在撰寫彼此的內部績效評估時。人們經常會用這個詞表達對他人的看法；例如，“這個人編碼很好，但似乎沒有很好的Googley態度。”
+從我們早期文化開始，我們經常將行為稱為“ Google 的”或“不是 Google 的”；相反，每個人都把它理解為“不作惡”、“做正確的事”或“善待彼此”。隨著時間的推移，人們也開始使用“Googley”一詞作為一種非正式的文化契合度測試，無論是在我們面試一名工程師崗位的應聘者時，還是在撰寫彼此的內部績效評估時。人們經常會用這個詞表達對他人的看法；例如，“這個人編碼很好，但似乎沒有很好的Googley態度。”
 
 Of course, we eventually realized that the term “Googley” was being overloaded with meaning; worse yet, it could become a source of unconscious bias in hiring or evaluations. If “Googley” means something different to every employee, we run the risk of the term starting to mean “is just like me.” Obviously, that’s not a good test for hiring
 —we don’t want to hire people “just like me,” but people from a diverse set of backgrounds and with different opinions and experiences. An interviewer’s personal desire to have a beer with a candidate (or coworker) should never be considered a valid signal about somebody else’s performance or ability to thrive at Google.
 
-當然，我們最終意識到“Googley”這個詞的含義太多了；更糟糕的是，它可能成為招聘或評估中無意識偏見的來源。如果“Googley”對每個員工都有不同的含義，那麼我們就有可能把“Googley”這個詞的意思改成“和我一樣”。顯然，這不是一個好的招聘模式——我們不希望招聘 "和我一樣 "的人，而是來自不同背景、有不同意見和經驗的人。面試官想和候選人（或同事）一起喝啤酒的願望，絕不應該被認為是關於其他人的表現或在谷歌發展的能力的有效訊號。
+當然，我們最終意識到“Googley”這個詞的含義太多了；更糟糕的是，它可能成為招聘或評估中無意識偏見的來源。如果“Googley”對每個員工都有不同的含義，那麼我們就有可能把“Googley”這個詞的意思改成“和我一樣”。顯然，這不是一個好的招聘模式——我們不希望招聘 "和我一樣 "的人，而是來自不同背景、有不同意見和經驗的人。面試官想和候選人（或同事）一起喝啤酒的願望，絕不應該被認為是關於其他人的表現或在 Google 發展的能力的有效訊號。
 
 Google eventually fixed the problem by explicitly defining a rubric for what we mean by “Googleyness”—a set of attributes and behaviors that we look for that represent strong leadership and exemplify “humility, respect, and trust”:
 *Thrives in ambiguity*
@@ -479,7 +479,7 @@ Google eventually fixed the problem by explicitly defining a rubric for what we 
 *Does the right thing*
     Has a strong sense of ethics about everything they do; willing to make difficult or inconvenient decisions to protect the integrity of the team and product.
 
-谷歌最終解決了這個問題，明確定義了我們所說的“谷歌特質”（Googleyness）——我們所尋找的一套屬性和行為，代表了強大的領導力，體現了 "謙遜、尊重和信任"：
+ Google 最終解決了這個問題，明確定義了我們所說的“ Google 特質”（Googleyness）——我們所尋找的一套屬性和行為，代表了強大的領導力，體現了 "謙遜、尊重和信任"：
 *在模稜兩可中茁壯成長*
 	即使在環境不斷變化的情況下，也能處理相互衝突的資訊或方向，建立共識，並對問題做出改進。
 *重視反饋*
@@ -487,7 +487,7 @@ Google eventually fixed the problem by explicitly defining a rubric for what we 
 *走出舒適區*
 	能夠設定巨集偉的目標並去追求，即使有來自他人的抵制或惰性。
 *客戶第一*
-	對谷歌產品的使用者抱有同情和尊重，並追求符合其最佳利益的行動。
+	對 Google 產品的使用者抱有同情和尊重，並追求符合其最佳利益的行動。
 *關心團隊*
 	對同事抱有同情心和尊重，並積極主動地幫助他們，提高團隊凝聚力。
 *做正確的事*

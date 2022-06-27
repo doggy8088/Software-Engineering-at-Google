@@ -10,7 +10,7 @@ Static analysis refers to programs analyzing source code to find potential issue
 
 In this chapter, we’ll look at what makes effective static analysis, some of the lessons we at Google have learned about making static analysis work, and how we imple‐ mented these best practices in our static analysis tooling and processes.[3](#_bookmark1793)
 
-本章我們將介紹如何進行有效的靜態分析，包含我們在谷歌瞭解到的一些關於靜態分析工作的經驗和我們在靜態分析工具和流程中的最佳實踐。
+本章我們將介紹如何進行有效的靜態分析，包含我們在 Google 瞭解到的一些關於靜態分析工作的經驗和我們在靜態分析工具和流程中的最佳實踐。
 
 ```
 1	See http://errorprone.info/bugpatterns.
@@ -27,7 +27,7 @@ Although there have been decades of static analysis research focused on developi
 
 Because modern software has become larger, analysis tools must explicitly address scaling in order to produce results in a timely manner, without slowing down the software development process. Static analysis tools at Google must scale to the size of Google’s multibillion-line codebase. To do this, analysis tools are shardable and incre‐ mental. Instead of analyzing entire large projects, we focus analyses on files affected by a pending code change, and typically show analysis results only for edited files or lines. Scaling also has benefits: because our codebase is so large, there is a lot of low- hanging fruit in terms of bugs to find. In addition to making sure analysis tools can run on a large codebase, we also must scale up the number and variety of analyses available. Analysis contributions are solicited from throughout the company. Another component to static analysis scalability is ensuring the *process* is scalable. To do this, Google static analysis infrastructure avoids bottlenecking analysis results by showing them directly to relevant engineers.
 
-現代軟體變得越來越大，為了使分析工具在不減慢軟體開發過程的情況下及時生效，必須有效地解決擴充套件性問題。對谷歌來說，分析工具需要滿足谷歌數十億行程式碼函式庫的規模。
+現代軟體變得越來越大，為了使分析工具在不減慢軟體開發過程的情況下及時生效，必須有效地解決擴充套件性問題。對 Google 來說，分析工具需要滿足 Google 數十億行程式碼函式庫的規模。
 為此，分析工具是分片和增量分析的，即不是分析整個大型專案，而是將分析重點放在受待處理程式碼更改影響的檔案上，並且通常僅顯示已編輯檔案或行的分析結果。
 因為程式碼函式庫非常大，這樣做在尋找bug時容易的多。 除了確保分析工具可以在大型程式碼函式庫上執行之外，還需要必須擴大可分析的數量和種類，可以從整個公司尋求分析結果。
 靜態分析可擴充套件性的另一個組成部分是確保過程是可擴充套件的，為此，Google靜態分析基礎架構透過直接向相關工程師展示分析結果來避免造成分析瓶頸。
@@ -60,7 +60,7 @@ We believe these choices and trade-offs that we have made in making static analy
 
 There are three key lessons that we have learned at Google about what makes static analysis tools work well. Let’s take a look at them in the following subsections.
 
-我們在谷歌瞭解到瞭如何用好靜態分析工具的三個關鍵點。讓我們在下面的小節中看看它們。
+我們在 Google 瞭解到瞭如何用好靜態分析工具的三個關鍵點。讓我們在下面的小節中看看它們。
 ### Focus on Developer Happiness  關注開發者的幸福感
 
 We mentioned some of the ways in which we try to save developer time and reduce the cost of interacting with the aforementioned static analysis tools; we also keep track of how well analysis tools are performing. If you don’t measure this, you can’t fix problems. We only deploy analysis tools with low false-positive rates (more on that in a minute). We also *actively solicit and act on feedback* from developers con‐ suming static analysis results, in real time. Nurturing this feedback loop between static analysis tool users and tool developers creates a virtuous cycle that has built up user trust and improved our tools. User trust is extremely important for the success of static analysis tools.
@@ -81,7 +81,7 @@ Furthermore, perception is a key aspect of the false-positive rate. If a static 
 
 At Google, we integrate static analysis into the core workflow via integration with code review tooling. Essentially all code committed at Google is reviewed before being committed; because developers are already in a change mindset when they send code for review, improvements suggested by static analysis tools can be made without too much disruption. There are other benefits to code review integration. Developers typically context switch after sending code for review, and are blocked on reviewers— there is time for analyses to run, even if they take several minutes to do so. There is also peer pressure from reviewers to address static analysis warnings. Furthermore, static analysis can save reviewer time by highlighting common issues automatically; static analysis tools help the code review process (and the reviewers) scale. Code review is a sweet spot for analysis results.5
 
-在谷歌，我們透過與程式碼審查工具整合，將靜態分析整合到核心工作流中。基本上谷歌提交的所有程式碼在提交之前都會經過審查，因為開發人員在傳送程式碼供審查時已經改變了心態，所以靜態分析工具建議的改進可以在沒有太多幹擾的情況下進行。
+在 Google ，我們透過與程式碼審查工具整合，將靜態分析整合到核心工作流中。基本上 Google 提交的所有程式碼在提交之前都會經過審查，因為開發人員在傳送程式碼供審查時已經改變了心態，所以靜態分析工具建議的改進可以在沒有太多幹擾的情況下進行。
 程式碼審查整合還有其他好處，開發人員通常在傳送程式碼進行審查後切換上下文，並且在審查者面前被阻止——即使需要幾分鐘的時間來執行分析。
 來自評論者的同行壓力也要求解決靜態分析警告問題，此外，靜態分析可以自動突出常見問題，從而節省審閱者的時間，這有助於程式碼評審過程（以及評審員）的規模化。程式碼評審是分析結果的最佳選擇。
 ```
@@ -102,11 +102,11 @@ For example, experts who know the context for a particular kind of configuration
 6	Louis Wasserman, “Scalable, Example-Based Refactorings with Refaster.” Workshop on Refactoring Tools, 2013.
 ```
 
-## Tricorder: Google’s Static Analysis Platform  Tricorder：谷歌的靜態分析平臺
+## Tricorder: Google’s Static Analysis Platform  Tricorder： Google 的靜態分析平臺
 Tricorder, our static analysis platform, is a core part of static analysis at Google.[7](#_bookmark1814) Tri‐ corder came out of several failed attempts to integrate static analysis with the devel‐ oper workflow at Google;[8](#_bookmark1815) the key difference between Tricorder and previous attempts was our relentless focus on having Tricorder deliver only valuable results to its users. Tricorder is integrated with the main code review tool at Google, Critique. Tricorder warnings show up on Critique’s diff viewer as gray comment boxes, as demonstrated in [Figure 20-1](#_bookmark1812).
 
 我們的靜態分析平臺 ricorder是Google靜態分析的核心部分。Tricorder是在Google多次嘗試將靜態分析與開發人員工作流整合的失敗嘗試中誕生的，與之前嘗試的主要區別在於 我們堅持不懈地致力於讓Tricorder只為使用者提供有價值的結果。
-Tricorder與谷歌的主要程式碼審查工具Critique整合在一起。 Tricorder警告在Critique的差異檢視器上顯示為灰色的註釋框，如圖 20-1 所示。 
+Tricorder與 Google 的主要程式碼審查工具Critique整合在一起。 Tricorder警告在Critique的差異檢視器上顯示為灰色的註釋框，如圖 20-1 所示。 
 
 ![Figure 20-1](./images/Figure%2020-1.png)
 
@@ -201,7 +201,7 @@ Tricorder 檢查也會在可能的情況下提供修復，如圖 20-2 所示。
 
 Automated fixes serve as an additional documentation source when the message is unclear and, as mentioned earlier, reduce the cost to addressing static analysis issues. Fixes can be applied directly from within Critique, or over an entire code change via a command-line tool. Although not all analyzers provide fixes, many do. We take the approach that *style* issues in particular should be fixed automatically; for example, by formatters that automatically reformat source code files. Google has style guides for each language that specify formatting issues; pointing out formatting errors is not a good use of a human reviewer’s time. Reviewers click “Please Fix” thousands of times per day, and authors apply the automated fixes approximately 3,000 times per day. And Tricorder analyzers received “Not useful” clicks 250 times per day.
 
-當反饋訊息不清晰時，自動修復可作為額外的文件來源，並且可以降低解決靜態分析問題的成本。 修復可以直接應用Critique中，也可以透過命令列工具應用於整個程式碼更改。並非所有分析器都提供修復，但很多都有。 我們的做法是，優先自動修復樣式問題， 例如，透過自動重新格式化原始碼檔案的格式化程式。谷歌有每種語言的風格指南，規定了各種語言的格式，但指出格式錯誤並不能很好地利用審閱者的時間。稽核者每天點選數千次“請修復”，作者每天應用自動修復大約3000次，Tricorder分析器每天收到250次“無用”點選
+當反饋訊息不清晰時，自動修復可作為額外的文件來源，並且可以降低解決靜態分析問題的成本。 修復可以直接應用Critique中，也可以透過命令列工具應用於整個程式碼更改。並非所有分析器都提供修復，但很多都有。 我們的做法是，優先自動修復樣式問題， 例如，透過自動重新格式化原始碼檔案的格式化程式。 Google 有每種語言的風格指南，規定了各種語言的格式，但指出格式錯誤並不能很好地利用審閱者的時間。稽核者每天點選數千次“請修復”，作者每天應用自動修復大約3000次，Tricorder分析器每天收到250次“無用”點選
 
 ###  Per-Project Customization  按專案訂製
 
@@ -226,7 +226,7 @@ Tricorder開發的早期，Critique展示了一組相對簡單的樣式檢查器
 
 In addition to code review, there are also other workflow integration points for static analysis at Google. Because developers can choose to ignore static analysis warnings displayed in code review, Google additionally has the ability to add an analysis that blocks committing a pending code change, which we call a *presubmit check*. Presub‐ mit checks include very simple customizable built-in checks on the contents or meta‐ data of a change, such as ensuring that the commit message does not say “DO NOT SUBMIT” or that test files are always included with corresponding code files. Teams can also specify a suite of tests that must pass or verify that there are no Tricorder  issues for a particular category. Presubmits also check that code is well formatted. Presubmit checks are typically run when a developer mails out a change for review and again during the commit process, but they can be triggered on an ad hoc basis in between those points. See [Chapter 23 ](#_bookmark2022)for more details on presubmits at Google.
 
-除了程式碼審查之外，谷歌還有其他用於靜態分析的工作流整合點。由於開發人員可以選擇忽略程式碼審查中顯示的靜態分析警告，谷歌還可以新增一個分析來阻止提交待處理的程式碼更改，我們稱之為提交前檢查。提交前檢查包括對更改的內容或元資料的非常簡單的可訂製的內建檢查，例如確保提交訊息沒有說“不要提交”或測試檔案始終包含在相應的程式碼檔案中。團隊還可以指定一組測試，這些測試必須透過或驗證特定類別沒有 Tricorder 問題。預提交還會檢查程式碼是否格式正確。提交前檢查通常在開發人員郵寄更改以供稽核時執行，並在提交過程中再次執行，但它們可以在這些點之間臨時觸發。有關 Google 預提交的更多詳細資訊，請參閱第 23 章。
+除了程式碼審查之外， Google 還有其他用於靜態分析的工作流整合點。由於開發人員可以選擇忽略程式碼審查中顯示的靜態分析警告， Google 還可以新增一個分析來阻止提交待處理的程式碼更改，我們稱之為提交前檢查。提交前檢查包括對更改的內容或元資料的非常簡單的可訂製的內建檢查，例如確保提交訊息沒有說“不要提交”或測試檔案始終包含在相應的程式碼檔案中。團隊還可以指定一組測試，這些測試必須透過或驗證特定類別沒有 Tricorder 問題。預提交還會檢查程式碼是否格式正確。提交前檢查通常在開發人員郵寄更改以供稽核時執行，並在提交過程中再次執行，但它們可以在這些點之間臨時觸發。有關 Google 預提交的更多詳細資訊，請參閱第 23 章。
 
 Some teams have written their own custom presubmits. These are additional checks on top of the base presubmit set that add the ability to enforce higher best-practice standards than the company as a whole and add project-specific analysis. This ena‐ bles new projects to have stricter best-practice guidelines than projects with large amounts of legacy code (for example). Team-specific presubmits can make the large- scale change (LSC) process (see [Chapter 22](#_bookmark1935)) more difficult, so some are skipped for changes with “CLEANUP=” in the change description.
 
@@ -272,7 +272,7 @@ Although we mostly focus on showing newly introduced static analysis warnings, o
 
 Static analysis can be a great tool to improve a codebase, find bugs early, and allow more expensive processes (such as human review and testing) to focus on issues that are not mechanically verifiable. By improving the scalability and usability of our static analysis infrastructure, we have made static analysis an effective component of soft‐ ware development at Google.
 
-靜態分析是一個很好的工具，可以改進程式碼函式庫，儘早發現錯誤，並允許成本更高的過程（如人工審查和測試）關注無法透過機械方式驗證的問題。透過提高靜態分析基礎設施的可擴充套件性和可用性，我們使靜態分析成為谷歌軟體開發的有效組成部分。
+靜態分析是一個很好的工具，可以改進程式碼函式庫，儘早發現錯誤，並允許成本更高的過程（如人工審查和測試）關注無法透過機械方式驗證的問題。透過提高靜態分析基礎設施的可擴充套件性和可用性，我們使靜態分析成為 Google 軟體開發的有效組成部分。
 
 ## 內容提要
 
@@ -283,5 +283,5 @@ Static analysis can be a great tool to improve a codebase, find bugs early, and 
 - *Empower users to contribute*. We can scale the work we do building and maintain‐ ing analysis tools and platforms by leveraging the expertise of domain experts. Developers are continuously adding new analyses and checks that make their lives easier and our codebase better.
 
 - 關注開發者的幸福感。我們投入了大量精力，在我們的工具中建立分析使用者和作者之間的反饋渠道，並積極調整分析以減少誤報的數量。
-- 將靜態分析作為核心開發人員工作流程的一部分。谷歌靜態分析的主要整合點是透過程式碼評審，在這裡，分析工具提供修復並讓評審人員參與。然而，我們也在其他方面（透過編譯器檢查、選通程式碼提交、在IDE中以及在瀏覽程式碼時）整合分析。
+- 將靜態分析作為核心開發人員工作流程的一部分。 Google 靜態分析的主要整合點是透過程式碼評審，在這裡，分析工具提供修復並讓評審人員參與。然而，我們也在其他方面（透過編譯器檢查、選通程式碼提交、在IDE中以及在瀏覽程式碼時）整合分析。
 - 授權使用者做出貢獻。透過利用領域專家的專業知識，我們可以擴充套件建構和維護分析工具和平臺的工作。開發人員不斷新增新的分析和檢查，使他們的生活更輕鬆，我們的程式碼函式庫更好。

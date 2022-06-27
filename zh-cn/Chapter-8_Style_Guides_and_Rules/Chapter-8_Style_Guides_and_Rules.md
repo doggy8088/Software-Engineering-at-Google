@@ -10,7 +10,7 @@
 
 Most engineering organizations have rules governing their codebases—rules about where source files are stored, rules about the formatting of the code, rules about naming and patterns and exceptions and threads. Most software engineers are working within the bounds of a set of policies that control how they operate. At Google, to manage our codebase, we maintain a set of style guides that define our rules.
 
-大多數軟體工程機構都有管理其程式碼函式庫的規則——關於原始檔的儲存位置、程式碼格式化規則、命名規則和模式以及異常和執行緒。大多數軟體工程師就在這組控制他們如何運作的策略的範圍內工作。在谷歌，要管理我們的程式碼函式庫，我們維護了一套風格指南來定義我們的規則。
+大多數軟體工程機構都有管理其程式碼函式庫的規則——關於原始檔的儲存位置、程式碼格式化規則、命名規則和模式以及異常和執行緒。大多數軟體工程師就在這組控制他們如何運作的策略的範圍內工作。在 Google ，要管理我們的程式碼函式庫，我們維護了一套風格指南來定義我們的規則。
 
 Rules are laws. They are not just suggestions or recommendations, but strict, mandatory laws. As such, they are universally enforceable—rules may not be disregarded except as approved on a need-to-use basis. In contrast to rules, guidance provides recommendations and best practices. These bits are good to follow, even highly advisable to follow, but unlike rules, they usually have some room for variance.
 
@@ -22,11 +22,11 @@ We collect the rules that we define, the do’s and don’ts of writing code tha
 
 We maintain separate style guides for each of the programming languages used at Google.At a high level, all of the guides have similar goals, aiming to steer code development with an eye to sustainability. At the same time, there is a lot of variation among them in scope, length, and content. Programming languages have different strengths, different features, different priorities, and different historical paths to adoption within Google’s ever-evolving repositories of code. It is far more practical, therefore, to independently tailor each language’s guidelines. Some of our style guides are concise, focusing on a few overarching principles like naming and formatting, as demonstrated in our Dart, R, and Shell guides. Other style guides include far more detail, delving into specific language features and stretching into far lengthier documents—notably, our C++, Python, and Java guides. Some style guides put a premium on typical non-Google use of the language—our Go style guide is very short, adding just a few rules to a summary directive to adhere to the practices outlined in the externally recognized conventions. Others include rules that fundamentally differ from external norms; our C++ rules disallow use of exceptions, a language feature widely used outside of Google code.
 
-我們為每一門在谷歌使用的程式語言都單獨維護一套程式碼風格指南。在高層次上，所有指南都有相似的目標，旨在引導程式碼開發並著眼於可持續性。同時，也有很多變化其中包括範圍、長度和內容。程式語言有不同的優勢，不同的特點，不同的重點，以及在谷歌不斷髮展的程式碼函式庫中採用的不同歷史路徑。因此，獨立訂製每種語言的指南要實際得多。我們的一部分風格指南注重簡潔，專注於一些總體原則，如命名和格式，如在我們的 Dart、R 和 Shell 指南中進行示範的樣子。另一部分風格指南注重更多細節方面，深入研究特定的語言特徵並擴充套件內容，特別是我們的 C++、Python 和 Java 指南。還有一部分風格指南重視該語言在谷歌之外的慣例——我們的 Go 風格指南非常簡短，只是在一個總結指令中添加了一些規則，以遵循外部公認的慣例。也有部分指南的規則和外部規範根本不同；我們的 C++ 風格指南中不允許使用異常，而使用異常是一種在 Google 程式碼之外廣泛使用語言特性。
+我們為每一門在 Google 使用的程式語言都單獨維護一套程式碼風格指南。在高層次上，所有指南都有相似的目標，旨在引導程式碼開發並著眼於可持續性。同時，也有很多變化其中包括範圍、長度和內容。程式語言有不同的優勢，不同的特點，不同的重點，以及在 Google 不斷髮展的程式碼函式庫中採用的不同歷史路徑。因此，獨立訂製每種語言的指南要實際得多。我們的一部分風格指南注重簡潔，專注於一些總體原則，如命名和格式，如在我們的 Dart、R 和 Shell 指南中進行示範的樣子。另一部分風格指南注重更多細節方面，深入研究特定的語言特徵並擴充套件內容，特別是我們的 C++、Python 和 Java 指南。還有一部分風格指南重視該語言在 Google 之外的慣例——我們的 Go 風格指南非常簡短，只是在一個總結指令中添加了一些規則，以遵循外部公認的慣例。也有部分指南的規則和外部規範根本不同；我們的 C++ 風格指南中不允許使用異常，而使用異常是一種在 Google 程式碼之外廣泛使用語言特性。
 
 The wide variance among even our own style guides makes it difficult to pin down the precise description of what a style guide should cover. The decisions guiding the development of Google’s style guides stem from the need to keep our codebase sustainable. Other organizations’ codebases will inherently have different requirements for sustainability that necessitate a different set of tailored rules. This chapter discusses the principles and processes that steer the development of our rules and guidance, pulling examples primarily from Google’s C++, Python, and Java style guides.
 
-即使是我們自己的風格指南也存在很大的差異，這使得我們很難精確地描述一個風格指南應該涵蓋什麼內容。指導谷歌風格指南開發的決定源於保持我們程式碼函式庫可持續性的需要。其他組織的程式碼函式庫天生對可持續性有不同的要求，這就需要一套不同的訂製規則。本章討論了指導我們規則和指南開發的原則和過程，主要從谷歌的c++、Python和Java風格指南中抽取示例。
+即使是我們自己的風格指南也存在很大的差異，這使得我們很難精確地描述一個風格指南應該涵蓋什麼內容。指導 Google 風格指南開發的決定源於保持我們程式碼函式庫可持續性的需要。其他組織的程式碼函式庫天生對可持續性有不同的要求，這就需要一套不同的訂製規則。本章討論了指導我們規則和指南開發的原則和過程，主要從 Google 的c++、Python和Java風格指南中抽取示例。
 
 ## Why Have Rules?  為什麼需要規則？
 
@@ -42,13 +42,13 @@ As an organization grows, the established rules and guidelines shape the common 
 
 When defining a set of rules, the key question is not, “What rules should we have?” The question to ask is, “What goal are we trying to advance?” When we focus on the goal that the rules will be serving, identifying which rules support this goal makes it easier to distill the set of useful rules. At Google, where the style guide serves as law for coding practices, we do not ask, “What goes into the style guide?” but rather, “Why does something go into the style guide?” What does our organization gain by having a set of rules to regulate writing code?
 
-當定義一組規則時，關鍵問題不是“我們應該有什麼規則?”我們要問的問題是:“我們想要實現的目標是什麼?”當我們關注規則將服務的目標時，識別哪些規則支援這個目標，可以更容易地提取有用的規則集。在谷歌，風格指南作為編碼實踐的法規，我們不會問，“風格指南中包含什麼?”而是“為什麼要把一些東西放進風格指南?”我們的組織透過制定一套規範程式碼編寫的規則獲得了什麼?
+當定義一組規則時，關鍵問題不是“我們應該有什麼規則?”我們要問的問題是:“我們想要實現的目標是什麼?”當我們關注規則將服務的目標時，識別哪些規則支援這個目標，可以更容易地提取有用的規則集。在 Google ，風格指南作為編碼實踐的法規，我們不會問，“風格指南中包含什麼?”而是“為什麼要把一些東西放進風格指南?”我們的組織透過制定一套規範程式碼編寫的規則獲得了什麼?
 
 ### Guiding Principles   指導原則
 
 Let’s put things in context: Google’s engineering organization is composed of more than 30,000 engineers. That engineering population exhibits a wild variance in skill and background. About 60,000 submissions are made each day to a codebase of more than two billion lines of code that will likely exist for decades. We’re optimizing for a different set of values than most other organizations need, but to some degree, these concerns are ubiquitous——we need to sustain an engineering environment that is resilient to both scale and time.
 
-讓我們把事情放在背景中:谷歌的工程組織由3萬多名工程師組成。工程師群體在技能和背景方面表現出巨大的差異。每天大約有6萬份檔案提交給超過20億行程式碼的程式碼函式庫，這些程式碼函式庫可能會存在幾十年。我們正在優化一套不同於大多數其他組織所需要的價值，但在某種程度上，這些關注是無處不在的——我們需要維持一個對規模和時間都有擴充套件的工程環境。
+讓我們把事情放在背景中: Google 的工程組織由3萬多名工程師組成。工程師群體在技能和背景方面表現出巨大的差異。每天大約有6萬份檔案提交給超過20億行程式碼的程式碼函式庫，這些程式碼函式庫可能會存在幾十年。我們正在優化一套不同於大多數其他組織所需要的價值，但在某種程度上，這些關注是無處不在的——我們需要維持一個對規模和時間都有擴充套件的工程環境。
 
 In this context, the goal of our rules is to manage the complexity of our development environment, keeping the codebase manageable while still allowing engineers to work productively. We are making a trade-off here: the large body of rules that helps us toward this goal does mean we are restricting choice. We lose some flexibility and we might even offend some people, but the gains of consistency and reduced conflict furnished by an authoritative standard win out.
 
@@ -76,7 +76,7 @@ Not everything should go into a style guide. There is a nonzero cost in asking a
 
 To this end, we deliberately chose not to include rules expected to be self-evident. Google’s style guide is not intended to be interpreted in a lawyerly fashion; just because something isn’t explicitly outlawed does not imply that it is legal. For example, the C++ style guide has no rule against the use of goto. C++ programmers already tend to avoid it, so including an explicit rule forbidding it would introduce unnecessary overhead. If just one or two engineers are getting something wrong, adding to everyone’s mental load by creating new rules doesn’t scale.
 
-為此，我們有意排除了大家公認的不言而喻的規則。谷歌的風格指南不打算以法律的方式解釋;沒有明確規定的東西並不意味著它是合法的。例如，c++風格指南沒有規定禁止使用goto。c++程式設計師已經傾向於避免使用它，所以包含禁止使用它的顯式規則將引入不必要的開銷。如果只有一兩個工程師犯了錯誤，那麼透過建立新規則來增加每個人的負擔是不利於以後擴充套件的。
+為此，我們有意排除了大家公認的不言而喻的規則。 Google 的風格指南不打算以法律的方式解釋;沒有明確規定的東西並不意味著它是合法的。例如，c++風格指南沒有規定禁止使用goto。c++程式設計師已經傾向於避免使用它，所以包含禁止使用它的顯式規則將引入不必要的開銷。如果只有一兩個工程師犯了錯誤，那麼透過建立新規則來增加每個人的負擔是不利於以後擴充套件的。
 
 #### Optimize for the reader   為讀者優化
 
@@ -125,7 +125,7 @@ Most style guide rules covering comments are also designed to support this goal 
 
 Our view on consistency within our codebase is similar to the philosophy we apply to our Google offices. With a large, distributed engineering population, teams are frequently split among offices, and Googlers often find themselves traveling to other sites. Although each office maintains its unique personality, embracing local flavor and style, for anything necessary to get work done, things are deliberately kept the same. A visiting Googler’s badge will work with all local badge readers; any Google devices will always get WiFi; the video conferencing setup in any conference room will have the same interface. A Googler doesn’t need to spend time learning how to get this all set up; they know that it will be the same no matter where they are. It’s easy to move between offices and still get work done.
 
-我們對程式碼函式庫一致性的看法類似於我們應用於谷歌辦公室的理念。由於工程人員眾多，分佈廣泛，團隊經常被分到不同的辦公室，而且谷歌員工經常發現自己在其他地方出差。儘管每個辦公室都保留了自己獨特的個性，融入了當地的風味和風格，但為了完成工作，有一些東西被刻意保持一致。來訪的谷歌員工的徽章可以工作在所有當地的徽章閱讀器上;任何谷歌裝置都可以使用WiFi;任何一間會議室的視訊會議設定都將具有相同的介面。谷歌員工不需要花時間去學習如何設定這些;他們知道，無論他們在哪裡，這個基本條件都是一樣的。在不同的辦公室之間轉換工作很容易，而且還能完成工作。
+我們對程式碼函式庫一致性的看法類似於我們應用於 Google 辦公室的理念。由於工程人員眾多，分佈廣泛，團隊經常被分到不同的辦公室，而且 Google 員工經常發現自己在其他地方出差。儘管每個辦公室都保留了自己獨特的個性，融入了當地的風味和風格，但為了完成工作，有一些東西被刻意保持一致。來訪的 Google 員工的徽章可以工作在所有當地的徽章閱讀器上;任何 Google 裝置都可以使用WiFi;任何一間會議室的視訊會議設定都將具有相同的介面。 Google 員工不需要花時間去學習如何設定這些;他們知道，無論他們在哪裡，這個基本條件都是一樣的。在不同的辦公室之間轉換工作很容易，而且還能完成工作。
 
 That’s what we strive for with our source code. Consistency is what enables any engineer to jump into an unfamiliar part of the codebase and get to work fairly quickly. A local project can have its unique personality, but its tools are the same, its techniques are the same, its libraries are the same, and it all Just Works.
 
@@ -142,7 +142,7 @@ Even though it might feel restrictive for an office to be disallowed from custom
 儘管不允許辦公室訂製徽章閱讀器或視訊會議介面可能會讓人覺得受到限制，但一致性帶來的好處遠遠大於我們失去的創作自由。程式碼也是如此:一致性有時可能會讓人感到約束，但這意味著更多的工程師用更少的努力完成更多的工作:  
 - 編寫程式碼的工程師和閱讀程式碼的其他人就可以專注於正在完成的工作，而不是它的呈現方式。在很大程度上，這種一致性允許專家分塊閱讀。當我們用相同的介面解決問題，並以一致的方式格式化程式碼時，專家們更容易瀏覽一些程式碼，鎖定重要的內容，並理解它在做什麼。它還使模組化程式碼和定位重複變得更容易。基於這些原因，我們將重點放在一致的命名約定、一致的通用模式使用以及一致的格式和結構上。也有許多規則對看似很小的問題做出決定，只是為了保證事情只能以一種方式完成。例如，選擇用於縮排的空格數或行長限制只有一個答案而不是答案本身的才是這裡有價值的部分。
 - 一致性可以使規模擴大。工具是組織擴充套件的關鍵，而一致的程式碼使建構能夠理解、編輯和產生程式碼的工具變得更容易。如果每個人都有少量不同的程式碼，那麼依賴於一致性的工具的全部好處就無法應用——如果一個工具可以透過新增缺失的匯入或刪除未使用的包含來更新原始檔，如果不同的專案為他們的匯入列表選擇不同的排序策略，這個工具可能不能在任何地方都適用。當每個人都使用相同的元件，當每個人的程式碼都遵循相同的結構和組織規則時，我們就可以投資於在任何地方都能工作的工具，為我們的許多維護任務建構自動化。如果每個團隊需要分別投資同一工具的訂製版本，為他們獨特的環境量身訂製，我們就會失去這種優勢。
-- 在擴充套件組織的人力部分時，一致性也有幫助。隨著組織的增長，從事程式碼函式庫工作的工程師數量也會增加。讓每個人都在編寫的程式碼儘可能一致，這樣可以更好地跨專案移動，最大限度地減少工程師轉換團隊的過渡時間，並為組織建構適應員工需求波動的能力。一個成長中的組織還意味著其他角色的人與程式碼SREs、函式庫工程師和程式碼管理員進行互動。在谷歌，這些角色通常跨越多個專案，這意味著不熟悉某個團隊專案的工程師可能會參與到專案程式碼的編寫中。跨程式碼函式庫的一致體驗使得這種方法非常有效。
+- 在擴充套件組織的人力部分時，一致性也有幫助。隨著組織的增長，從事程式碼函式庫工作的工程師數量也會增加。讓每個人都在編寫的程式碼儘可能一致，這樣可以更好地跨專案移動，最大限度地減少工程師轉換團隊的過渡時間，並為組織建構適應員工需求波動的能力。一個成長中的組織還意味著其他角色的人與程式碼SREs、函式庫工程師和程式碼管理員進行互動。在 Google ，這些角色通常跨越多個專案，這意味著不熟悉某個團隊專案的工程師可能會參與到專案程式碼的編寫中。跨程式碼函式庫的一致體驗使得這種方法非常有效。
 - 一致性也確保了對時間的適應性。隨著時間的推移，工程師離開專案，新人加入，所有權轉移，專案合併或分裂。努力實現一致的程式碼函式庫可以確保這些轉換的成本較低，並允許我們對程式碼和工作在程式碼上的工程師幾乎不受約束的流動，從而簡化長期維護所需的過程。
   
 -----
@@ -181,11 +181,11 @@ However, it is not always enough for an organization to create and stick to a se
 
 The Python style guide at Google initially mandated two-space indents for all of our Python code. The standard Python style guide, used by the external Python community, uses four-space indents. Most of our early Python development was in direct support of our C++ projects, not for actual Python applications. We therefore chose to use two-space indentation to be consistent with our C++ code, which was already formatted in that manner. As time went by, we saw that this rationale didn’t really hold up. Engineers who write Python code read and write other Python code much more often than they read and write C++ code. We were costing our engineers extra effort every time they needed to look something up or reference external code snippets. We were also going through a lot of pain each time we tried to export pieces of our code into open source, spending time reconciling the differences between our internal code and the external world we wanted to join.
 
-谷歌的Python風格指南最初要求我們所有的Python程式碼都採用雙空格縮排。外部Python社群使用的標準Python風格指南使用四空格縮排。我們早期的大部分Python開發都是直接支援我們的C++專案，而不是實際的Python應用程式。因此，我們選擇使用雙空格縮排，以與我們的C++程式碼保持一致，C++程式碼已經以這種方式格式化了。隨著時間的推移，我們發現這種理論並不成立。編寫Python程式碼的工程師讀和寫其他Python程式碼的頻率要比讀和寫c++程式碼的頻率高得多。每次我們的工程師需要查詢或參考外部程式碼片段時，我們都要花費額外的精力。每次我們試圖將程式碼片段輸出到開源時，我們都經歷了很多痛苦，花了很多時間來調和內部程式碼和我們想要加入的外部世界之間的差異。
+ Google 的Python風格指南最初要求我們所有的Python程式碼都採用雙空格縮排。外部Python社群使用的標準Python風格指南使用四空格縮排。我們早期的大部分Python開發都是直接支援我們的C++專案，而不是實際的Python應用程式。因此，我們選擇使用雙空格縮排，以與我們的C++程式碼保持一致，C++程式碼已經以這種方式格式化了。隨著時間的推移，我們發現這種理論並不成立。編寫Python程式碼的工程師讀和寫其他Python程式碼的頻率要比讀和寫c++程式碼的頻率高得多。每次我們的工程師需要查詢或參考外部程式碼片段時，我們都要花費額外的精力。每次我們試圖將程式碼片段輸出到開源時，我們都經歷了很多痛苦，花了很多時間來調和內部程式碼和我們想要加入的外部世界之間的差異。
 
 When the time came for Starlark (a Python-based language designed at Google to serve as the build description language) to have its own style guide, we chose to change to using four-space indents to be consistent with the outside world.
 
-當Starlark(一種基於python的語言，設計於谷歌，作為建構描述語言)有了自己的風格指南時，我們選擇使用四間距縮排來與外界保持一致。
+當Starlark(一種基於python的語言，設計於 Google ，作為建構描述語言)有了自己的風格指南時，我們選擇使用四間距縮排來與外界保持一致。
 
 -----
 
@@ -322,7 +322,7 @@ Our style guides aren’t static. As with most things, given the passage of time
 
 The decisions behind rules captured in our style guides are backed by evidence. When adding a rule, we spend time discussing and analyzing the relevant pros and cons as well as the potential consequences, trying to verify that a given change is appropriate for the scale at which Google operates. Most entries in Google’s style guides include these considerations, laying out the pros and cons that were weighed during the process and giving the reasoning for the final ruling. Ideally, we prioritize this detailed reasoning and include it with every rule.
 
-在我們的風格指南中，規則背後的決定是有證據支援的。在新增規則時，我們將花時間討論和分析相關的利弊以及潛在的後果，並試圖驗證給定的更改是否適合谷歌運營規模。谷歌風格指南中的大多數條目都包含了這些考慮因素，列出了在過程中權衡的利弊，並給出了最終裁決的理由。理想情況下，我們優先考慮這種詳細的推理，並將其包含在每條規則中。
+在我們的風格指南中，規則背後的決定是有證據支援的。在新增規則時，我們將花時間討論和分析相關的利弊以及潛在的後果，並試圖驗證給定的更改是否適合 Google 運營規模。 Google 風格指南中的大多數條目都包含了這些考慮因素，列出了在過程中權衡的利弊，並給出了最終裁決的理由。理想情況下，我們優先考慮這種詳細的推理，並將其包含在每條規則中。
 
 Documenting the reasoning behind a given decision gives us the advantage of being able to recognize when things need to change. Given the passage of time and changing conditions, a good decision made previously might not be the best current one. With influencing factors clearly noted, we are able to identify when changes related to one or more of these factors warrant reevaluating the rule.
 
@@ -334,7 +334,7 @@ Documenting the reasoning behind a given decision gives us the advantage of bein
 
 At Google, when we defined our initial style guidance for Python code, we chose to use CamelCase naming style instead of snake_case naming style for method names. Although the public Python style guide (PEP 8) and most of the Python community used snake_case naming, most of Google’s Python usage at the time was for C++ developers using Python as a scripting layer on top of a C++ codebase. Many of the defined Python types were wrappers for corresponding C++ types, and because Google’s C++ naming conventions follow CamelCase style, the cross-language consistency was seen as key.
 
-在谷歌，當我們為Python程式碼定義初始風格指導時，我們選擇使用駝峰命名風格，而不是使用snake_case命名風格來命名方法名。儘管公共Python風格指南(PEP 8)和大多數Python社群使用了snake_case命名，但當時谷歌的大多數Python用法是為c++開發人員使用Python作為c++程式碼函式庫之上的指令碼層。許多定義的Python型別是相應c++型別的包裝器，因為Goo‐gle的C++命名慣例遵循駝峰命名風格，在這裡跨語言的一致性被視為關鍵。
+在 Google ，當我們為Python程式碼定義初始風格指導時，我們選擇使用駝峰命名風格，而不是使用snake_case命名風格來命名方法名。儘管公共Python風格指南(PEP 8)和大多數Python社群使用了snake_case命名，但當時 Google 的大多數Python用法是為c++開發人員使用Python作為c++程式碼函式庫之上的指令碼層。許多定義的Python型別是相應c++型別的包裝器，因為Goo‐gle的C++命名慣例遵循駝峰命名風格，在這裡跨語言的一致性被視為關鍵。
 
 Later, we reached a point at which we were building and supporting independent Python applications. The engineers most frequently using Python were Python engineers developing Python projects, not C++ engineers pulling together a quick script. We were causing a degree of awkwardness and readability problems for our Python engineers, requiring them to maintain one standard for our internal code but constantly adjust for another standard every time they referenced external code. We were also making it more difficult for new hires who came in with Python experience to adapt to our codebase norms.
 
@@ -346,7 +346,7 @@ As our Python projects grew, our code more frequently interacted with external P
 
 Presented with these arguments, after discussing both the costs (losing consistency with other Google code, reeducation for Googlers used to our Python style) and benefits (gaining consistency with most other Python code, allowing what was already leaking in with third-party libraries), the style arbiters for the Python style guide decided to change the rule. With the restriction that it be applied as a file-wide choice, an exemption for existing code, and the latitude for projects to decide what is best for them, the Google Python style guide was updated to permit snake_case naming.
 
-提出這些論點後，討論了成本(失去與其他谷歌程式碼的一致性，對習慣於我們的 Python 風格的 Google 員工進行再教育)和好處(獲得與大多數其他Python程式碼的一致性，允許已經洩露到第三方函式庫的內容)，Python風格指南的風格仲裁者決定改變規則。有了它被應用為檔案範圍的選擇的限制，現有程式碼的例外，以及專案決定什麼最適合他們的自由度，谷歌Python風格指南已更新為允許 snake_case 命名。
+提出這些論點後，討論了成本(失去與其他 Google 程式碼的一致性，對習慣於我們的 Python 風格的 Google 員工進行再教育)和好處(獲得與大多數其他Python程式碼的一致性，允許已經洩露到第三方函式庫的內容)，Python風格指南的風格仲裁者決定改變規則。有了它被應用為檔案範圍的選擇的限制，現有程式碼的例外，以及專案決定什麼最適合他們的自由度， Google Python風格指南已更新為允許 snake_case 命名。
 
 ---
 
@@ -354,11 +354,11 @@ Presented with these arguments, after discussing both the costs (losing consiste
 
 Recognizing that things will need to change, given the long lifetime and ability to scale that we are aiming for, we created a process for updating our rules. The process for changing our style guide is solution based. Proposals for style guide updates are framed with this view, identifying an existing problem and presenting the proposed change as a way to fix it. “Problems,” in this process, are not hypothetical examples of things that could go wrong; problems are proven with patterns found in existing Google code. Given a demonstrated problem, because we have the detailed reasoning behind the existing style guide decision, we can reevaluate, checking whether a different conclusion now makes more sense.
 
-考慮到我們所追求的長生命週期和擴充套件能力，我們認識到事情需要改變，因此我們建立了一個更新規則的過程。改變我們的風格指南的過程是基於解決方案的。風格指南更新的建議是以此觀點為框架的，識別現有的問題，並將建議的更改作為修復問題的一種方法。在這個過程中，“問題”並不是可能出錯的假設例子;問題是透過在現有谷歌程式碼中發現的模式來證明的。給定一個被證明的問題，因為我們有現有風格指南決策背後的詳細理由，我們可以重新評估，檢查和之前不同的結論現在是否更有意義。
+考慮到我們所追求的長生命週期和擴充套件能力，我們認識到事情需要改變，因此我們建立了一個更新規則的過程。改變我們的風格指南的過程是基於解決方案的。風格指南更新的建議是以此觀點為框架的，識別現有的問題，並將建議的更改作為修復問題的一種方法。在這個過程中，“問題”並不是可能出錯的假設例子;問題是透過在現有 Google 程式碼中發現的模式來證明的。給定一個被證明的問題，因為我們有現有風格指南決策背後的詳細理由，我們可以重新評估，檢查和之前不同的結論現在是否更有意義。
 
 The community of engineers writing code governed by the style guide are often best positioned to notice when a rule might need to be changed. Indeed, here at Google, most changes to our style guides begin with community discussion. Any engineer can ask questions or propose a change, usually by starting with the language-specific mailing lists dedicated to style guide discussions.
 
-編寫風格指南所規範的程式碼的工程師群體，往往最能注意到何時需要改變規則。事實上，在谷歌，我們的風格指南的大多數改變都是從社群討論開始的。任何工程師都可以提出問題或提出更改建議，通常從專門用於討論風格指南的特定語言郵件列表開始。
+編寫風格指南所規範的程式碼的工程師群體，往往最能注意到何時需要改變規則。事實上，在 Google ，我們的風格指南的大多數改變都是從社群討論開始的。任何工程師都可以提出問題或提出更改建議，通常從專門用於討論風格指南的特定語言郵件列表開始。
 
 Proposals for style guide changes might come fully-formed, with specific, updated wording suggested, or might start as vague questions about the applicability of a given rule. Incoming ideas are discussed by the community, receiving feedback from other language users. Some proposals are rejected by community consensus, gauged to be unnecessary, too ambiguous, or not beneficial. Others receive positive feedback, gauged to have merit either as-is or with some suggested refinement. These proposals, the ones that make it through community review, are subject to final decision- making approval.
 
@@ -368,7 +368,7 @@ Proposals for style guide changes might come fully-formed, with specific, update
 
 At Google, for each language’s style guide, final decisions and approvals are made by the style guide’s owners—our style arbiters. For each programming language, a group of long-time language experts are the owners of the style guide and the designated decision makers. The style arbiters for a given language are often senior members of the language’s library team and other long-time Googlers with relevant language experience.
 
-在谷歌，對於每種語言的風格指南，最終的決定和批准都是由風格指南的所有者——我們的風格仲裁者——做出的。對於每一種程式語言，都有一群資深的語言專家是風格指南的所有者和指定的決策者。特定語言的風格仲裁人通常是該語言函式庫團隊的高階成員，以及其他具有相關語言經驗的長期谷歌員工。
+在 Google ，對於每種語言的風格指南，最終的決定和批准都是由風格指南的所有者——我們的風格仲裁者——做出的。對於每一種程式語言，都有一群資深的語言專家是風格指南的所有者和指定的決策者。特定語言的風格仲裁人通常是該語言函式庫團隊的高階成員，以及其他具有相關語言經驗的長期 Google 員工。
 
 The actual decision making for any style guide change is a discussion of the engineering trade-offs for the proposed modification. The arbiters make decisions within the context of the agreed-upon goals for which the style guide optimizes. Changes are not made according to personal preference; they’re trade-off judgments. In fact, the C++ style arbiter group currently consists of four members. This might seem strange: having an odd number of committee members would prevent tied votes in case of a split decision. However, because of the nature of the decision making approach, where nothing is “because I think it should be this way” and everything is an evaluation of trade-off, decisions are made by consensus rather than by voting. The four-member group is happily functional as-is.
 
@@ -400,15 +400,15 @@ Guidance represents the collected wisdom of our engineering experience, document
 
 One example of a pool of guidance that we cultivate is a set of primers for some of the predominant languages that we use. While our style guides are prescriptive, ruling on which language features are allowed and which are disallowed, the primers are descriptive, explaining the features that the guides endorse. They are quite broad in their coverage, touching on nearly every topic that an engineer new to the language’s use at Google would need to reference. They do not delve into every detail of a given topic, but they provide explanations and recommended use. When an engineer needs to figure out how to apply a feature that they want to use, the primers aim to serve as the go-to guiding reference.
 
-我們培養的指導函式庫的一個例子是我們使用的一些主要語言的編寫入門指南。雖然我們的風格指南是規範性的，規定了哪些語言特性是允許的，哪些是不允許的，而入門指南是描述性的，解釋了指南認可的特性。他們的內容相當廣泛，幾乎涵蓋了谷歌新使用該語言的工程師需要參考的所有主題。它們不會深入研究特定主題的每一個細節，但它們提供解釋和推薦使用。當工程師需要弄清楚如何應用他們想要使用的功能時，入門指南的目的是作為指導參考。
+我們培養的指導函式庫的一個例子是我們使用的一些主要語言的編寫入門指南。雖然我們的風格指南是規範性的，規定了哪些語言特性是允許的，哪些是不允許的，而入門指南是描述性的，解釋了指南認可的特性。他們的內容相當廣泛，幾乎涵蓋了 Google 新使用該語言的工程師需要參考的所有主題。它們不會深入研究特定主題的每一個細節，但它們提供解釋和推薦使用。當工程師需要弄清楚如何應用他們想要使用的功能時，入門指南的目的是作為指導參考。
 
 A few years ago, we began publishing a series of C++ tips that offered a mix of general language advice and Google-specific tips. We cover hard things—object lifetime, copy and move semantics, argument-dependent lookup; new things—C++ 11 features as they were adopted in the codebase, preadopted C++17 types like string_view, optional, and variant; and things that needed a gentle nudge of correction—reminders not to use using directives, warnings to remember to look out for implicit bool conversions. The tips grow out of actual problems encountered, addressing real programming issues that are not covered by the style guides. Their advice, unlike the rules in the style guide, are not true canon; they are still in the category of advice rather than rule. However, given the way they grow from observed patterns rather than abstract ideals, their broad and direct applicability set them apart from most other advice as a sort of “canon of the common.” Tips are narrowly focused and relatively short, each one no more than a few minutes’ read. This “Tip of the Week” series has been extremely successful internally, with frequent citations during code reviews and technical discussions.
 
-幾年前，我們開始發佈一系列C++提示，其中包括通用語言建議和谷歌特有的提示。我們涵蓋了困難的事情——物件生命期、複製和移動語義、依賴於引數的查詢;新事物- C++11特性，它們在程式碼函式庫中被採用，預採用的 C++17 型別，如string_view, optional, 和 variant;還有一些東西需要溫和的調整——提醒不要使用using指令，警告要記住尋找隱式布林轉換。這些技巧來源於所遇到的實際問題，解決了樣式指南中沒有涉及的實際程式設計問題。與風格指南中的規則不同，它們的建議並不是真正的經典;它們仍然屬於建議而非規則的範疇。然而，考慮到它們是從觀察到的模式而不是抽象的理想中發展出來的，它們廣泛而直接的適用性使它們有別於大多數其他建議，成為一種“共同的經典”。這些小貼士的內容都比較狹隘，篇幅也相對較短，每一條都不超過幾分鐘的閱讀時間。這個“每週技巧”系列在內部已經非常成功，在程式碼評審和技術討論中經常被參考。
+幾年前，我們開始發佈一系列C++提示，其中包括通用語言建議和 Google 特有的提示。我們涵蓋了困難的事情——物件生命期、複製和移動語義、依賴於引數的查詢;新事物- C++11特性，它們在程式碼函式庫中被採用，預採用的 C++17 型別，如string_view, optional, 和 variant;還有一些東西需要溫和的調整——提醒不要使用using指令，警告要記住尋找隱式布林轉換。這些技巧來源於所遇到的實際問題，解決了樣式指南中沒有涉及的實際程式設計問題。與風格指南中的規則不同，它們的建議並不是真正的經典;它們仍然屬於建議而非規則的範疇。然而，考慮到它們是從觀察到的模式而不是抽象的理想中發展出來的，它們廣泛而直接的適用性使它們有別於大多數其他建議，成為一種“共同的經典”。這些小貼士的內容都比較狹隘，篇幅也相對較短，每一條都不超過幾分鐘的閱讀時間。這個“每週技巧”系列在內部已經非常成功，在程式碼評審和技術討論中經常被參考。
 
 Software engineers come in to a new project or codebase with knowledge of the programming language they are going to be using, but lacking the knowledge of how the programming language is used within Google. To bridge this gap, we maintain a series of “<Language>@Google 101” courses for each of the primary programming languages in use. These full-day courses focus on what makes development with that language different in our codebase. They cover the most frequently used libraries and idioms, in-house preferences, and custom tool usage. For a C++ engineer who has just become a Google C++ engineer, the course fills in the missing pieces that make them not just a good engineer, but a good Google codebase engineer.
 
-軟體工程師進入一個新的專案或程式碼函式庫時，已經掌握了他們將要使用的程式語言的知識，但缺乏關於如何在 Google 中使用該程式語言的知識。為了彌補這一差距，我們為使用中的每一種主要程式語言設定了一系列的“<語言>@Google 101”課程。這些全日制課程側重於在我們的程式碼函式庫中使用該語言進行開發的不同之處。它們涵蓋了最常用的函式庫和習慣用法、內部首選項和自訂工具的使用。對於一個剛剛成為谷歌C++工程師的C++工程師，該課程填補了缺失的部分，使他們不僅是一名優秀的工程師，而且是一名優秀的 Google 程式碼函式庫工程師。
+軟體工程師進入一個新的專案或程式碼函式庫時，已經掌握了他們將要使用的程式語言的知識，但缺乏關於如何在 Google 中使用該程式語言的知識。為了彌補這一差距，我們為使用中的每一種主要程式語言設定了一系列的“<語言>@Google 101”課程。這些全日制課程側重於在我們的程式碼函式庫中使用該語言進行開發的不同之處。它們涵蓋了最常用的函式庫和習慣用法、內部首選項和自訂工具的使用。對於一個剛剛成為 Google C++工程師的C++工程師，該課程填補了缺失的部分，使他們不僅是一名優秀的工程師，而且是一名優秀的 Google 程式碼函式庫工程師。
 
 In addition to teaching courses that aim to get someone completely unfamiliar with our setup up and running quickly, we also cultivate ready references for engineers deep in the codebase to find the information that could help them on the go. These references vary in form and span the languages that we use. Some of the useful references that we maintain internally include the following:
 - Language-specific advice for the areas that are generally more difficult to get correct (such as concurrency and hashing).
@@ -425,7 +425,7 @@ In addition to teaching courses that aim to get someone completely unfamiliar wi
 Rules, by their nature, lend greater value when they are enforceable. Rules can be enforced socially, through teaching and training, or technically, with tooling. We have various formal training courses at Google that cover many of the best practices that our rules require. We also invest resources in keeping our documentation up to date to ensure that reference material remains accurate and current. A key part of our overall training approach when it comes to awareness and understanding of our rules is the role that code reviews play. The readability process that we run here at Google —where engineers new to Google’s development environment for a given language are mentored through code reviews—is, to a great extent, about cultivating the habits and patterns required by our style guides (see details on the readability process in
 Chapter 3). The process is an important piece of how we ensure that these practices are learned and applied across project boundaries.
 
-就其本質而言，規則在可執行的情況下會帶來更大的價值。規則可以透過教學和培訓在社會上執行，也可以在技術上透過工具來執行。我們在谷歌提供了各種正式的培訓課程，涵蓋了我們的規則所要求的許多最佳實踐。我們還投入資源使我們的文件保持更新，以確保參考材料保持準確和最新。當涉及到對規則的瞭解和理解時，我們整體培訓方法的一個關鍵部分是程式碼評審所扮演的角色。我們在谷歌執行的可讀性過程——在這裡，針對特定語言的谷歌開發環境的新工程師會透過程式碼審查來指導——在很大程度上是為了培養我們的風格指南所要求的習慣和模式(詳見第3章可讀性過程) 。這個過程是我們如何確保這些實踐是跨專案邊界學習和應用的重要部分。
+就其本質而言，規則在可執行的情況下會帶來更大的價值。規則可以透過教學和培訓在社會上執行，也可以在技術上透過工具來執行。我們在 Google 提供了各種正式的培訓課程，涵蓋了我們的規則所要求的許多最佳實踐。我們還投入資源使我們的文件保持更新，以確保參考材料保持準確和最新。當涉及到對規則的瞭解和理解時，我們整體培訓方法的一個關鍵部分是程式碼評審所扮演的角色。我們在 Google 執行的可讀性過程——在這裡，針對特定語言的 Google 開發環境的新工程師會透過程式碼審查來指導——在很大程度上是為了培養我們的風格指南所要求的習慣和模式(詳見第3章可讀性過程) 。這個過程是我們如何確保這些實踐是跨專案邊界學習和應用的重要部分。
 
 Although some level of training is always necessary—engineers must, after all, learn the rules so that they can write code that follows them—when it comes to checking for compliance, rather than exclusively depending on engineer-based verification, we strongly prefer to automate enforcement with tooling.
 
@@ -469,7 +469,7 @@ The tools we use are designed and tailored to support the rules that we define. 
 
 At Google, we generally use automated style checkers and formatters to enforce consistent formatting within our code. The question of line lengths has stopped being interesting.Engineers just run the style checkers and keep moving forward. When formatting is done the same way every time, it becomes a non-issue during code review, eliminating the review cycles that are otherwise spent finding, flagging, and fixing minor style nits.
 
-在谷歌，我們通常使用自動樣式檢查器和格式化器來在我們的程式碼中執行一致的格式。行長度的問題已經不再有趣了。工程師只需執行樣式檢查器並繼續前進。如果每次都以相同的方式進行格式化，那麼在程式碼審查期間就不會出現問題，從而消除了用來查詢、標記和修復要樣式細節的審查週期。
+在 Google ，我們通常使用自動樣式檢查器和格式化器來在我們的程式碼中執行一致的格式。行長度的問題已經不再有趣了。工程師只需執行樣式檢查器並繼續前進。如果每次都以相同的方式進行格式化，那麼在程式碼審查期間就不會出現問題，從而消除了用來查詢、標記和修復要樣式細節的審查週期。
 
 In managing the largest codebase ever, we’ve had the opportunity to observe the results of formatting done by humans versus formatting done by automated tooling. The robots are better on average than the humans by a significant amount. There are some places where domain expertise matters—formatting a matrix, for example, is something a human can usually do better than a general-purpose formatter. Failing that, formatting code with an automated style checker rarely goes wrong.
 
@@ -477,7 +477,7 @@ In managing the largest codebase ever, we’ve had the opportunity to observe th
 
 We enforce use of these formatters with presubmit checks: before code can be submitted, a service checks whether running the formatter on the code produces any diffs. If it does, the submit is rejected with instructions on how to run the formatter to fix the code. Most code at Google is subject to such a presubmit check. For our code, we use clang-format for C++; an in-house wrapper around yapf for Python; gofmt for Go; dartfmt for Dart; and buildifier for our BUILD files.
 
-我們透過預提交檢查強制使用這些格式化程式:在提交程式碼之前，服務會檢查在程式碼上執行格式化器是否會產生任何差異。如果是，提交將被拒絕，並提供有關如何執行格式化程式以修復程式碼的說明。谷歌上的大多數程式碼都要接受這種預提交檢查。在我們的程式碼中，C++使用了clang-format;Python使用yapf內部包裝器;Go使用gofmt; Dart 使用 dartfmt;以及我們的 BUILD 檔案使用buildifier。
+我們透過預提交檢查強制使用這些格式化程式:在提交程式碼之前，服務會檢查在程式碼上執行格式化器是否會產生任何差異。如果是，提交將被拒絕，並提供有關如何執行格式化程式以修復程式碼的說明。 Google 上的大多數程式碼都要接受這種預提交檢查。在我們的程式碼中，C++使用了clang-format;Python使用yapf內部包裝器;Go使用gofmt; Dart 使用 dartfmt;以及我們的 BUILD 檔案使用buildifier。
 
 ---
 
@@ -489,7 +489,7 @@ Sameer Ajmani
 
 Google released the Go programming language as open source on November 10, 2009. Since then, Go has grown as a language for developing services, tools, cloud infrastructure, and open source software.
 
-谷歌於2009年11月10日以開源方式發佈了Go程式語言。從那時起，Go已經發展成為一種開發服務、工具、雲基礎設施和開源軟體的語言。
+ Google 於2009年11月10日以開源方式發佈了Go程式語言。從那時起，Go已經發展成為一種開發服務、工具、雲基礎設施和開源軟體的語言。
 
 We knew that we needed a standard format for Go code from day one. We also knew that it would be nearly impossible to retrofit a standard format after the open source release. So the initial Go release included gofmt, the standard formatting tool for Go.
 
@@ -523,11 +523,11 @@ Thousands of open source packages read and write Go code.17 Because all editors 
 
 In 2012, we decided to automatically format all BUILD files at Google using a new standard formatter: buildifier. BUILD files contain the rules for building Google’s software with Blaze, Google’s build system. A standard BUILD format would enable us to create tools that automatically edit BUILD files without disrupting their format, just as Go tools do with Go files.
 
-在2012年，我們決定使用一個新的標準格式器來自動格式化谷歌中的所有BUILD檔案:buildifier。BUILD檔案包含了使用Blaze(谷歌的建構系統)建構谷歌軟體的規則。標準的BUILD格式將使我們能夠建立自動編輯BUILD檔案而不破壞其格式的工具，就像Go工具對Go檔案所做的那樣。
+在2012年，我們決定使用一個新的標準格式器來自動格式化 Google 中的所有BUILD檔案:buildifier。BUILD檔案包含了使用Blaze( Google 的建構系統)建構 Google 軟體的規則。標準的BUILD格式將使我們能夠建立自動編輯BUILD檔案而不破壞其格式的工具，就像Go工具對Go檔案所做的那樣。
 
 It took six weeks for one engineer to get the reformatting of Google’s 200,000 BUILD files accepted by the various code owners, during which more than a thousand new BUILD files were added each week. Google’s nascent infrastructure for making large- scale changes greatly accelerated this effort. (See Chapter 22.)
 
-一位工程師花了六週時間重新格式化了谷歌的 200,000 個 BUILD 檔案，這些檔案被各個程式碼所有者接受，在此期間每週都會新增一千多個新的 BUILD 檔案。谷歌為進行大規模變革而建立的基礎設施大大加快了這一努力。（見第 22 章）。
+一位工程師花了六週時間重新格式化了 Google 的 200,000 個 BUILD 檔案，這些檔案被各個程式碼所有者接受，在此期間每週都會新增一千多個新的 BUILD 檔案。 Google 為進行大規模變革而建立的基礎設施大大加快了這一努力。（見第 22 章）。
 
 -----
 

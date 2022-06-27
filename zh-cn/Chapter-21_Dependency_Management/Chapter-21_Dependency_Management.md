@@ -112,7 +112,7 @@ Not all languages prioritize the same amount of compatibility. The Go programmin
 
 Google’s Abseil project is much like Go, with an important caveat about time. We are unwilling to commit to compatibility *indefinitely*: Abseil lies at the foundation of most of our most computationally heavy services internally, which we believe are likely to be in use for many years to come. This means we’re careful to reserve the right to make changes, especially in implementation details and ABI, in order to allow better performance. We have experienced far too many instances of an API turning out to be confusing and error prone after the fact; publishing such known faults to tens of thousands of developers for the indefinite future feels wrong. Internally, we already have roughly 250 million lines of C++ code that depend on this library—we aren’t going to make API changes lightly, but it must be possible. To that end, Abseil explicitly does not promise ABI compatibility, but does promise a slightly limited form of API compatibility: we won’t make a breaking API change without also providing an automated refactoring tool that will transform code from the old API to the new transparently. We feel that shifts the risk of unexpected costs significantly in favor of users: no matter what version a dependency was written against, a user of that dependency and Abseil should be able to use the most current version. The highest cost should be “run this tool,” and presumably send the resulting patch for review in the mid-level dependency (liba or libb, continuing our example from earlier). In practice, the project is new enough that we haven’t had to make any significant API breaking changes. We can’t say how well this will work for the ecosystem as a whole, but in theory, it seems like a good balance for stability versus ease of upgrade.
 
-谷歌的Abseil專案很像Go，對時間有一個重要的警告。我們不願意無限期地致力於相容性。Abseil是我們內部大多數計算量最大的服務的基礎，我們相信這些服務可能會在未來很多年內使用。這意味著我們小心翼翼地保留修改的權利，特別是在實現細節和ABI方面，以實現更好的效能。我們已經經歷了太多的例子，一個API在事後被證明是混亂和容易出錯的；在無限期的未來向成千上萬的開發者公佈這種已知的錯誤感覺是錯誤的。在內部，我們已經有大約2.5億行的C++程式碼依賴於這個函式庫，我們不會輕易改變API，但它必須是可以改變的。為此，Abseil明確地不承諾ABI的相容性，但確實承諾了一種稍微有限的API相容性：我們不會在不提供自動重構工具的情況下做出破壞性的API改變，該工具將透明地將程式碼從舊的API轉換到新的API。我們覺得這將意外成本的風險大大地轉移到了使用者身上：無論一個依賴關係是針對哪個版本編寫的，該依賴關係和Abseil的使用者都應該能夠使用最新的版本。最高的成本應該是 "執行這個工具"，並推測在中級依賴關係（liba或libb，繼續我們前面的例子）中傳送產生的補丁以供審查。在實踐中，這個專案足夠新，我們沒有必要做任何重大的API破壞性改變。我們不能說這對整個生態系統會有多好的效果，但在理論上，這似乎是對穩定性和易升級的一個良好平衡。
+ Google 的Abseil專案很像Go，對時間有一個重要的警告。我們不願意無限期地致力於相容性。Abseil是我們內部大多數計算量最大的服務的基礎，我們相信這些服務可能會在未來很多年內使用。這意味著我們小心翼翼地保留修改的權利，特別是在實現細節和ABI方面，以實現更好的效能。我們已經經歷了太多的例子，一個API在事後被證明是混亂和容易出錯的；在無限期的未來向成千上萬的開發者公佈這種已知的錯誤感覺是錯誤的。在內部，我們已經有大約2.5億行的C++程式碼依賴於這個函式庫，我們不會輕易改變API，但它必須是可以改變的。為此，Abseil明確地不承諾ABI的相容性，但確實承諾了一種稍微有限的API相容性：我們不會在不提供自動重構工具的情況下做出破壞性的API改變，該工具將透明地將程式碼從舊的API轉換到新的API。我們覺得這將意外成本的風險大大地轉移到了使用者身上：無論一個依賴關係是針對哪個版本編寫的，該依賴關係和Abseil的使用者都應該能夠使用最新的版本。最高的成本應該是 "執行這個工具"，並推測在中級依賴關係（liba或libb，繼續我們前面的例子）中傳送產生的補丁以供審查。在實踐中，這個專案足夠新，我們沒有必要做任何重大的API破壞性改變。我們不能說這對整個生態系統會有多好的效果，但在理論上，這似乎是對穩定性和易升級的一個良好平衡。
 
 #### Boost
 
@@ -122,7 +122,7 @@ By comparison, the Boost C++ library makes no promises of [compatibility between
 
 Looking at the libraries in this discussion, it’s important to recognize that these compatibility issues are *software engineering* issues, not *programming* issues. You can download something like Boost with no compatibility promise and embed it deeply in the most critical, long-lived systems in your organization; it will *work* just fine. All of the concerns here are about how those dependencies will change over time, keeping up with updates, and the difficulty of getting developers to worry about maintenance instead of just getting features working. Within Google, there is a constant stream of guidance directed to our engineers to help them consider this difference between “I got it to work” and “this is working in a supported fashion.” That’s unsurprising: it’s basic application of Hyrum’s Law, after all.
 
-從這個討論中的函式庫來看，重要的是要認識到這些相容性問題是*軟體工程*問題，而不是*程式設計*問題。你可以下載像Boost這樣沒有相容性承諾的東西，並把它深深地嵌入到你的組織中最關鍵、生命週期最長的系統中；它可以*正常工作*。這裡所有的擔憂都是關於這些依賴關係會隨著時間的推移而改變，跟上更新的步伐，以及讓開發者擔心維護而不是讓功能正常工作的困難。在谷歌內部，有源源不斷的指導意見指向我們的工程師，幫助他們考慮“我讓它起作用了”和“這是以一種支援的方式起作用的”之間的區別。這並不奇怪：畢竟，這是Hyrum定律的基本應用。
+從這個討論中的函式庫來看，重要的是要認識到這些相容性問題是*軟體工程*問題，而不是*程式設計*問題。你可以下載像Boost這樣沒有相容性承諾的東西，並把它深深地嵌入到你的組織中最關鍵、生命週期最長的系統中；它可以*正常工作*。這裡所有的擔憂都是關於這些依賴關係會隨著時間的推移而改變，跟上更新的步伐，以及讓開發者擔心維護而不是讓功能正常工作的困難。在 Google 內部，有源源不斷的指導意見指向我們的工程師，幫助他們考慮“我讓它起作用了”和“這是以一種支援的方式起作用的”之間的區別。這並不奇怪：畢竟，這是Hyrum定律的基本應用。
 
 Put more broadly: it is important to realize that dependency management has a wholly different nature in a programming task versus a software engineering task. If you’re in a problem space for which maintenance over time is relevant, dependency management is difficult. If you’re purely developing a solution for today with no need to ever update anything, it is perfectly reasonable to grab as many readily available dependencies as you like with no thought of how to use them responsibly or plan for upgrades. Getting your program to work today by violating everything in SD-8 and also relying on binary compatibility from Boost and Abseil works fine…so long as you never upgrade the standard library, Boost, or Abseil, and neither does anything that depends on you.
 
@@ -164,7 +164,7 @@ When engineers at Google try to import dependencies, we encourage them to ask th
 
 -   How difficult do we expect it to be to perform an upgrade?
 
-當谷歌的工程師試圖匯入依賴關係時，我們鼓勵他們先問這個（不完整）的問題清單：
+當 Google 的工程師試圖匯入依賴關係時，我們鼓勵他們先問這個（不完整）的問題清單：
 
 - 該專案是否有你可以執行的測試？
 
@@ -184,7 +184,7 @@ When engineers at Google try to import dependencies, we encourage them to ask th
 
 在此基礎上，新增一些簡短的內部重點問題：
     
-- 在谷歌內部實現該功能會有多複雜？
+- 在 Google 內部實現該功能會有多複雜？
 
 - 我們有什麼激勵措施來保持這個依賴性的最新狀態？
 
@@ -213,11 +213,11 @@ That ease of use begins failing when it comes to our handling of external projec
 
 Alice, a software engineer at Google, is working on a project and realizes that there is an open source solution available. She would really like to have this project completed and demo’ed soon, to get it out of the way before going on vacation. The choice then is whether to reimplement that functionality from scratch or download the OSS package and get it added to *third_party*. It’s very likely that Alice decides that the faster development solution makes sense: she downloads the package and follows a few steps in our *third_party* policies. This is a fairly simple checklist: make sure it builds with our build system, make sure there isn’t an existing version of that package, and make sure at least two engineers are signed up as OWNERS to maintain the package in the event that any maintenance is necessary. Alice gets her teammate Bob to say, “Yes, I’ll help.” Neither of them need to have any experience maintaining a *third_party* package, and they have conveniently avoided the need to understand anything about the *implementation* of this package. At most, they have gained a little experience with its interface as part of using it to solve the prevacation demo problem.
 
-Alice是谷歌的一名軟體工程師，她正在做一個專案，並意識到有一個開源的解決方案可用。她真的很想盡快完成這個專案並進行示範，希望在去度假之前把它解決掉。然後的選擇是，是從頭開始重新實現這個功能，還是下載開放原始碼套件，並將其新增到*第三方*。很可能Alice決定更快的開發方案是有意義的：她下載了套件，並按照我們的*third_party*策略中的幾個步驟進行了操作。這是一個相當簡單的清單：確保它在我們的建構系統中建構，確保該軟體包沒有現有的版本，並確保至少有兩名工程師註冊為所有者，在有必要進行任何維護時維護該軟體套件。愛麗絲讓她的隊友Bob說，"是的，我會幫忙"。他們都不需要有維護*第三方*套件的經驗，而且他們很方便地避免了對這個套件的*實施*的瞭解。最多，他們對它的介面獲得了一點經驗，作為使用它來解決預先示範問題的一部分。
+Alice是 Google 的一名軟體工程師，她正在做一個專案，並意識到有一個開源的解決方案可用。她真的很想盡快完成這個專案並進行示範，希望在去度假之前把它解決掉。然後的選擇是，是從頭開始重新實現這個功能，還是下載開放原始碼套件，並將其新增到*第三方*。很可能Alice決定更快的開發方案是有意義的：她下載了套件，並按照我們的*third_party*策略中的幾個步驟進行了操作。這是一個相當簡單的清單：確保它在我們的建構系統中建構，確保該軟體包沒有現有的版本，並確保至少有兩名工程師註冊為所有者，在有必要進行任何維護時維護該軟體套件。愛麗絲讓她的隊友Bob說，"是的，我會幫忙"。他們都不需要有維護*第三方*套件的經驗，而且他們很方便地避免了對這個套件的*實施*的瞭解。最多，他們對它的介面獲得了一點經驗，作為使用它來解決預先示範問題的一部分。
 
 From this point on, the package is usually available to other Google teams to use in their own projects. The act of adding additional dependencies is completely transparent to Alice and Bob: they might be completely unaware that the package they downloaded and promised to maintain has become popular. Subtly, even if they are monitoring for new direct usage of their package, they might not necessarily notice growth in the *transitive* usage of their package. If they use it for a demo, while Charlie adds a dependency from within the guts of our Search infrastructure, the package will have suddenly moved from fairly innocuous to being in the critical infrastructure for important Google systems. However, we don’t have any particular signals surfaced to Charlie when he is considering whether to add this dependency.
 
-從這時起，該軟體包通常可以供其他谷歌團隊在他們自己的專案中使用。新增額外的依賴關係的行為對Alice和Bob來說是完全透明的：他們可能完全沒有意識到他們下載並承諾維護的軟體包已經變得很流行。微妙的是，即使他們在監測他們的軟體套件的新的直接使用情況，他們也不一定會注意到他們的軟體套件的*過渡性*使用的增長。如果他們把它用於示範，而Charlie為我們的搜尋基礎設施的內部增加了一個依賴，那麼這個包就會突然從相當無害的地方變成谷歌重要系統的關鍵基礎設施。然而，當Charlie考慮是否要新增這個依賴時，我們沒有任何特別的訊號提示給他。
+從這時起，該軟體包通常可以供其他 Google 團隊在他們自己的專案中使用。新增額外的依賴關係的行為對Alice和Bob來說是完全透明的：他們可能完全沒有意識到他們下載並承諾維護的軟體包已經變得很流行。微妙的是，即使他們在監測他們的軟體套件的新的直接使用情況，他們也不一定會注意到他們的軟體套件的*過渡性*使用的增長。如果他們把它用於示範，而Charlie為我們的搜尋基礎設施的內部增加了一個依賴，那麼這個包就會突然從相當無害的地方變成 Google 重要系統的關鍵基礎設施。然而，當Charlie考慮是否要新增這個依賴時，我們沒有任何特別的訊號提示給他。
 
 Now, it’s possible that this scenario is perfectly fine. Perhaps that dependency is well written, has no security bugs, and isn’t depended upon by other OSS projects. It might be *possible* for it to go quite a few years without being updated. It’s not necessarily *wise* for that to happen: changes externally might have optimized it or added important new functionality, or cleaned up security holes before CVEs[^5] were discovered. The longer that the package exists, the more dependencies (direct and indirect) are likely to accrue. The more that the package remains stable, the more that we are likely to accrete Hyrum’s Law reliance on the particulars of the version that is checked into *third_party*.
 
@@ -233,7 +233,7 @@ All of which is to say: Alice and the other users of this package are in for a c
 
 Our *third_party* policies don’t work for these unfortunately common scenarios. We roughly understand that we need a higher bar for ownership, we need to make it easier (and more rewarding) to update regularly and more difficult for *third_party* packages to be orphaned and important at the same time. The difficulty is that it is difficult for codebase maintainers and *third_party* leads to say, “No, you can’t use this thing that solves your development problem perfectly because we don’t have resources to update everyone with new versions constantly.” Projects that are popular and have no compatibility promise (like Boost) are particularly risky: our developers might be very familiar with using that dependency to solve programming problems outside of Google, but allowing it to become ingrained into the fabric of our codebase is a big risk. Our codebase has an expected lifespan of decades at this point: upstream projects that are not explicitly prioritizing stability are a risk.
 
-我們的*第三方包*策略不適用於這些不幸的常見情況。我們大致明白，我們需要一個更高的所有權標準，我們需要讓定期更新更容易（和更多的回報），讓*第三方包*更難成為孤兒，同時也更重要。困難在於，程式碼函式庫維護者和*第三方包*領導很難說："不，你不能使用這個能完美解決你的開發問題的東西，因為我們沒有資源不斷為大家更新新版本"。那些流行的、沒有相容性承諾的專案（比如Boost）尤其有風險：我們的開發者可能非常熟悉使用這種依賴關係來解決谷歌以外的程式設計問題，但允許它根植於我們的程式碼函式庫結構中是一個很大的風險。在這一點上，我們的程式碼函式庫有幾十年的預期壽命：上游專案如果沒有明確地優先考慮穩定性，就是一種風險。
+我們的*第三方包*策略不適用於這些不幸的常見情況。我們大致明白，我們需要一個更高的所有權標準，我們需要讓定期更新更容易（和更多的回報），讓*第三方包*更難成為孤兒，同時也更重要。困難在於，程式碼函式庫維護者和*第三方包*領導很難說："不，你不能使用這個能完美解決你的開發問題的東西，因為我們沒有資源不斷為大家更新新版本"。那些流行的、沒有相容性承諾的專案（比如Boost）尤其有風險：我們的開發者可能非常熟悉使用這種依賴關係來解決 Google 以外的程式設計問題，但允許它根植於我們的程式碼函式庫結構中是一個很大的風險。在這一點上，我們的程式碼函式庫有幾十年的預期壽命：上游專案如果沒有明確地優先考慮穩定性，就是一種風險。
 
 
 [^5]:	Common Vulnerabilities and Exposures（常見漏洞和暴露）
@@ -329,7 +329,7 @@ In the bundled distribution approach, version selection is handled by dedicated 
 
 The model that some of us at Google[^8] have been pushing for is theoretically sound, but places new and costly burdens on participants in a dependency network. It’s wholly unlike the models that exist in OSS ecosystems today, and it is not clear how to get from here to there as an industry. Within the boundaries of an organization like Google, it is costly but effective, and we feel that it places most of the costs and incentives into the correct places. We call this model “Live at Head.” It is viewable as the dependency-management extension of trunk-based development: where trunk- based development talks about source control policies, we’re extending that model to apply to upstream dependencies as well.
 
-我們谷歌的一些人一直在推動的模式在理論上是合理的，但給依賴網路的參與者帶來了新的、沉重的負擔。它完全不同於今天存在於開放原始碼軟體生態系統中的模式，而且不清楚作為一個行業如何從這裡走到那裡。在像谷歌這樣的組織的範圍內，它的成本很高，但很有效，我們覺得它把大部分的成本和激勵放到了正確的地方。我們稱這種模式為 "活在當下"。它可以被看作是基於主幹的開發的依賴管理的延伸：基於主幹的開發討論原始碼控制策略時，我們將該模型擴充套件到應用於上游依賴關係。
+我們 Google 的一些人一直在推動的模式在理論上是合理的，但給依賴網路的參與者帶來了新的、沉重的負擔。它完全不同於今天存在於開放原始碼軟體生態系統中的模式，而且不清楚作為一個行業如何從這裡走到那裡。在像 Google 這樣的組織的範圍內，它的成本很高，但很有效，我們覺得它把大部分的成本和激勵放到了正確的地方。我們稱這種模式為 "活在當下"。它可以被看作是基於主幹的開發的依賴管理的延伸：基於主幹的開發討論原始碼控制策略時，我們將該模型擴充套件到應用於上游依賴關係。
 
 Live at Head presupposes that we can unpin dependencies, drop SemVer, and rely on dependency providers to test changes against the entire ecosystem before committing. Live at Head is an explicit attempt to take time and choice out of the issue of dependency management: always depend on the current version of everything, and never change anything in a way in which it would be difficult for your dependents to adapt. A change that (unintentionally) alters API or behavior will in general be caught by CI on downstream dependencies, and thus should not be committed. For cases in which such a change *must* happen (i.e., for security reasons), such a break should be made only after either the downstream dependencies are updated or an automated tool is provided to perform the update in place. (This tooling is essential for closed- source downstream consumers: the goal is to allow any user the ability to update use of a changing API without expert knowledge of the use or the API. That property significantly mitigates the “mostly bystanders” costs of breaking changes.) This philosophical shift in responsibility in the open source ecosystem is difficult to motivate initially: putting the burden on an API provider to test against and change all of its downstream customers is a significant revision to the responsibilities of an API provider.
 
@@ -347,7 +347,7 @@ In the Live at Head approach, version selection is handled by asking “What is 
 
 在Live at Head方法中，透過詢問“哪個是最新的穩定版本？”來處理版本選擇。如果提供者能夠負責任地做出更改，則所有更改都將順利進行。
 
-[^8]: Especially the author and others in the Google C++ community.（特別是作者和其他在谷歌C++社群。）
+[^8]: Especially the author and others in the Google C++ community.（特別是作者和其他在 Google C++社群。）
 
 
 ## The Limitations of SemVer  SemVer （語義版本管理）的侷限性
@@ -390,7 +390,7 @@ On the flip side, the application of SemVer makes the explicit assumption that a
 
 The idea that SemVer patch versions, which in theory are only changing implementation details, are “safe” changes absolutely runs afoul of Google’s experience with Hyrum’s Law—“With a sufficient number of users, every observable behavior of your system will be depended upon by someone.” Changing the order that dependencies are imported, or changing the output order for an “unordered” producer will, at scale, invariably break assumptions that some consumer was (perhaps incorrectly) relying upon. The very term “breaking change” is misleading: there are changes that are theoretically breaking but safe in practice (removing an unused API). There are also changes that are theoretically safe but break client code in practice (any of our earlier Hyrum’s Law examples). We can see this in any SemVer/dependency-management system for which the version-number requirement system allows for restrictions on the patch number: if you can say liba requires libbase >1.1.14 rather than liba requires libbase 1.1, that’s clearly an admission that there are observable differences in patch versions.
 
-SemVer補丁版本在理論上只是改變了實現細節，是 "安全 "的改變，這種想法絕對違背了谷歌對Hyrum定律的經驗--"只要有足夠數量的使用者，你的系統的每一個可觀察到的行為都會被某人所依賴。" 改變依賴關係的匯入順序，或者改變一個 "無序 "使用者的輸出順序，在規模上將不可避免地打破一些使用者（也許是錯誤地）所依賴的假設。"破壞性變化 "這個術語本身就具有誤導性：有些更改在理論上是突破性的，但在實踐中是安全的（刪除未使用的API）。也有一些變化在理論上是安全的，但在實踐中會破壞客戶端程式碼（我們之前的任何一個Hyrum定律的例子）。我們可以在任何SemVer/依賴管理系統中看到這一點，其中的版本號要求系統允許對補丁號進行限制：如果你可以說liba需要libbase >1.1.14，而不是liba需要libbase 1.1，這顯然是承認補丁版本中存在明顯的差異。
+SemVer補丁版本在理論上只是改變了實現細節，是 "安全 "的改變，這種想法絕對違背了 Google 對Hyrum定律的經驗--"只要有足夠數量的使用者，你的系統的每一個可觀察到的行為都會被某人所依賴。" 改變依賴關係的匯入順序，或者改變一個 "無序 "使用者的輸出順序，在規模上將不可避免地打破一些使用者（也許是錯誤地）所依賴的假設。"破壞性變化 "這個術語本身就具有誤導性：有些更改在理論上是突破性的，但在實踐中是安全的（刪除未使用的API）。也有一些變化在理論上是安全的，但在實踐中會破壞客戶端程式碼（我們之前的任何一個Hyrum定律的例子）。我們可以在任何SemVer/依賴管理系統中看到這一點，其中的版本號要求系統允許對補丁號進行限制：如果你可以說liba需要libbase >1.1.14，而不是liba需要libbase 1.1，這顯然是承認補丁版本中存在明顯的差異。
 
 *A change in isolation isn’t breaking or nonbreaking—*that statement can be evaluated only in the context of how it is being used. There is no absolute truth in the notion of “This is a breaking change”; a change can been seen to be breaking for only a (known or unknown) set of existing users and use cases. The reality of how we evaluate a change inherently relies upon information that isn’t present in the SemVer formulation of dependency management: how are downstream users consuming this dependency?
 
@@ -427,7 +427,7 @@ Finally, there’s the human fallibility of the process. In general, SemVer vers
 
 In 2018, as part of an essay series on building a package management system for the Go programming language, Google’s own Russ Cox described an interesting variation on SemVer dependency management: [Minimum Version Selection](https://research.swtch.com/vgo-mvs) (MVS). When updating the version for some node in the dependency network, it is possible that its dependencies need to be updated to newer versions to satisfy an updated SemVer requirement—this can then trigger further changes transitively. In most constraint- satisfaction/version-selection formulations, the newest possible versions of those downstream dependencies are chosen: after all, you’ll need to update to those new versions eventually, right?
 
-2018年，作為為Go程式語言建構軟體包管理系統的系列文章的一部分，谷歌自己的Russ Cox描述了SemVer依賴性管理的一個有趣變化。[最小版本選擇](https://research.swtch.com/vgo-mvs)（MVS）。當更新依賴網路中某個節點的版本時，它的依賴關係有可能需要更新到較新的版本，以滿足更新的SemVer需求--這可能會觸發進一步的變化。在大多數約束滿足/版本選擇公式中，這些下游依賴關係的最新版本被選中：畢竟，你最終需要更新到這些新版本，對嗎？
+2018年，作為為Go程式語言建構軟體包管理系統的系列文章的一部分， Google 自己的Russ Cox描述了SemVer依賴性管理的一個有趣變化。[最小版本選擇](https://research.swtch.com/vgo-mvs)（MVS）。當更新依賴網路中某個節點的版本時，它的依賴關係有可能需要更新到較新的版本，以滿足更新的SemVer需求--這可能會觸發進一步的變化。在大多數約束滿足/版本選擇公式中，這些下游依賴關係的最新版本被選中：畢竟，你最終需要更新到這些新版本，對嗎？
 
 MVS makes the opposite choice: when liba’s specification requires libbase ≥1.7, we’ll try libbase 1.7 directly, even if a 1.8 is available. This “produces high-fidelity builds in which the dependencies a user builds are as close as possible to the ones the author developed against.”[^14] There is a critically important truth revealed in this point: when liba says it requires libbase ≥1.7, that almost certainly means that the developer of liba had libbase 1.7 installed. Assuming that the maintainer performed even basic testing before publishing,[^15] we have at least anecdotal evidence of interoperability testing for that version of liba and version 1.7 of libbase. It’s not CI or proof that everything has been unit tested together, but it’s something.
 
@@ -470,7 +470,7 @@ When you have only a few carefully chosen and well-maintained dependencies in yo
 
 However, our experience at Google suggests that it is unlikely that you can have *any* of those three properties at scale and keep them working constantly over time. Scale tends to be the thing that shows the weaknesses in SemVer. As your dependency network scales up, both in the size of each dependency and the number of dependencies (as well as any monorepo effects from having multiple projects depending on the same network of external dependencies), the compounded fidelity loss in SemVer will begin to dominate. These failures manifest as both false positives (practically incompatible versions that theoretically should have worked) and false negatives (compatible versions disallowed by SAT-solvers and resulting dependency hell).
 
-然而，我們在谷歌的經驗表明，你不太可能在規模上擁有這三個屬性中的任何一個，並且隨著時間的推移保持它們持續工作。規模往往是顯示SemVer弱點的東西。隨著你的依賴網路規模的擴大，無論是每個依賴的規模還是依賴的數量（以及由多個專案依賴於同一外部依賴網路而產生的任何單一效應），SemVer的複合模擬度損失將開始佔據主導地位。這些故障表現為誤報（理論上應該有效的實際不相容版本）和漏報（SAT求解器不允許的相容版本以及由此產生的依賴地獄）。
+然而，我們在 Google 的經驗表明，你不太可能在規模上擁有這三個屬性中的任何一個，並且隨著時間的推移保持它們持續工作。規模往往是顯示SemVer弱點的東西。隨著你的依賴網路規模的擴大，無論是每個依賴的規模還是依賴的數量（以及由多個專案依賴於同一外部依賴網路而產生的任何單一效應），SemVer的複合模擬度損失將開始佔據主導地位。這些故障表現為誤報（理論上應該有效的實際不相容版本）和漏報（SAT求解器不允許的相容版本以及由此產生的依賴地獄）。
 
 ## Dependency Management with Infinite Resources  無限資源下的依賴管理
 
@@ -546,7 +546,7 @@ What changes would we need to the OSS ecosystem to apply such a model? Unfortuna
 
 Inherent in this is a scale question: against which versions of each dependency in the network do you test presubmit changes? If we test against the full combination of all historical versions, we’re going to burn a truly staggering amount of compute resources, even by Google standards. The most obvious simplification to this version- selection strategy would seem to be “test the current stable version” (trunk-based development is the goal, after all). And thus, the model of dependency management given infinite resources is effectively that of the Live at Head model. The outstanding question is whether that model can apply effectively with a more practical resource availability and whether API providers are willing to take greater responsibility for testing the practical safety of their changes. Recognizing where our existing low-cost facilities are an oversimplification of the difficult-to-compute truth that we are looking for is still a useful exercise.
 
-這裡面有一個規模問題：你要針對網路中每個依賴關係的哪些版本來測試預提交的變化？如果我們針對所有歷史版本的完整組合進行測試，我們將消耗大量的計算資源，即使按照谷歌的能力。這個版本選擇策略最明顯的簡化似乎是 "測試當前的穩定版本"（畢竟，基於主幹的開發是目標）。因此，在資源無限的情況下，依賴管理的模式實際上就是 "Live at Head"的模式。懸而未決的問題是，該模型是否可以有效地適用於更實際的資源可用性，以及API提供者是否願意承擔更大的責任來測試其變化的實際安全性。認識到我們現有的低成本設施是對我們正在尋找的難以計算的真相的過度簡化，仍然是一項有益的工作。
+這裡面有一個規模問題：你要針對網路中每個依賴關係的哪些版本來測試預提交的變化？如果我們針對所有歷史版本的完整組合進行測試，我們將消耗大量的計算資源，即使按照 Google 的能力。這個版本選擇策略最明顯的簡化似乎是 "測試當前的穩定版本"（畢竟，基於主幹的開發是目標）。因此，在資源無限的情況下，依賴管理的模式實際上就是 "Live at Head"的模式。懸而未決的問題是，該模型是否可以有效地適用於更實際的資源可用性，以及API提供者是否願意承擔更大的責任來測試其變化的實際安全性。認識到我們現有的低成本設施是對我們正在尋找的難以計算的真相的過度簡化，仍然是一項有益的工作。
 
 
 [^16]: Because the public OSS dependency network can’t generally depend on a bunch of private nodes, graphics firmware notwithstanding.（因為公共開放原始碼軟體的依賴網路一般不能依賴一堆私人節點，儘管有圖形固定。）
@@ -573,7 +573,7 @@ For reputation loss, consider the case of something like Google’s experience c
 
 -   If an OSS project accepts code from outside developers, that’s generally a legal issue—the project originator doesn’t *own* that contribution, they only have rights to it.
 
-對於信譽的損失，可以考慮像谷歌在2006年左右開放我們的C++命令列標誌函式庫的經驗的情況。當然，回饋開源社群是一個純粹的善舉，不會回來困擾我們，對嗎？遺憾的是，不是。有很多原因共同促使這一善舉變成了肯定會傷害我們的聲譽，也可能會損害開放原始碼社群:
+對於信譽的損失，可以考慮像 Google 在2006年左右開放我們的C++命令列標誌函式庫的經驗的情況。當然，回饋開源社群是一個純粹的善舉，不會回來困擾我們，對嗎？遺憾的是，不是。有很多原因共同促使這一善舉變成了肯定會傷害我們的聲譽，也可能會損害開放原始碼社群:
 
 - 當時，我們沒有能力進行大規模的重構，所以所有內部使用該函式庫的東西都必須保持相同--我們不能把程式碼移到程式碼函式庫的新位置。
 
@@ -583,11 +583,11 @@ For reputation loss, consider the case of something like Google’s experience c
 
 As a result, the gflags project was doomed to be either a “throw over the wall” release or a disconnected fork. Patches contributed to the project couldn’t be reincorporated into the original source inside of Google, and we couldn’t move the project within our monorepo because we hadn’t yet mastered that form of refactoring, nor could we make everything internally depend on the OSS version.
 
-因此，gflags 專案註定是一個 "拋棄"的版本，或者是一個不相連的分支。貢獻給專案的補丁不能被重新納入谷歌內部的原始原始碼，我們也無法將該專案轉移到monorepo中，因為我們還沒有掌握這種重構形式，也無法讓內部的一切都依賴於開放原始碼版本。
+因此，gflags 專案註定是一個 "拋棄"的版本，或者是一個不相連的分支。貢獻給專案的補丁不能被重新納入 Google 內部的原始原始碼，我們也無法將該專案轉移到monorepo中，因為我們還沒有掌握這種重構形式，也無法讓內部的一切都依賴於開放原始碼版本。
 
 Further, like most organizations, our priorities have shifted and changed over time. Around the time of the original release of that flags library, we were interested in  products outside of our traditional space (web applications, search), including things like Google Earth, which had a much more traditional distribution mechanism: precompiled binaries for a variety of platforms. In the late 2000s, it was unusual but not unheard of for a library in our monorepo, especially something low-level like flags, to be used on a variety of platforms. As time went on and Google grew, our focus narrowed to the point that it was extremely rare for any libraries to be built with anything other than our in-house configured toolchain, then deployed to our production fleet. The “portability” concerns for properly supporting an OSS project like flags were nearly impossible to maintain: our internal tools simply didn’t have support for those platforms, and our average developer didn’t have to interact with external tools. It was a constant battle to try to maintain portability.
 
-此外，像大多陣列織一樣，我們的優先事項隨著時間的推移而發生了改變。在最初發布flags函式庫的時候，我們對傳統領域（網路應用、搜尋）以外的產品感興趣，包括像谷歌地球這樣的產品，它有一個更傳統的發佈機制：為各種平臺預編譯的二進位制檔案。在21世紀末，在我們的monorepo中的一個函式庫，特別是像flags這樣的低階的東西，被用在各種平臺上，這是不正常的，但也不是沒有。隨著時間的推移和谷歌的成長，我們的關注點逐漸縮小，除了我們內部配置的工具鏈之外，很少有任何函式庫是用其他東西建構的，然後部署到我們的生產機群。對於正確支援像flags這樣的開放原始碼軟體專案來說，"可移植性 "問題幾乎是不可能維持的：我們的內部工具根本沒有對這些平臺的支援，而我們的普通開發人員也不需要與外部工具進行互動。為了保持可移植性，這是一場持久戰。
+此外，像大多陣列織一樣，我們的優先事項隨著時間的推移而發生了改變。在最初發布flags函式庫的時候，我們對傳統領域（網路應用、搜尋）以外的產品感興趣，包括像 Google 地球這樣的產品，它有一個更傳統的發佈機制：為各種平臺預編譯的二進位制檔案。在21世紀末，在我們的monorepo中的一個函式庫，特別是像flags這樣的低階的東西，被用在各種平臺上，這是不正常的，但也不是沒有。隨著時間的推移和 Google 的成長，我們的關注點逐漸縮小，除了我們內部配置的工具鏈之外，很少有任何函式庫是用其他東西建構的，然後部署到我們的生產機群。對於正確支援像flags這樣的開放原始碼軟體專案來說，"可移植性 "問題幾乎是不可能維持的：我們的內部工具根本沒有對這些平臺的支援，而我們的普通開發人員也不需要與外部工具進行互動。為了保持可移植性，這是一場持久戰。
 
 As the original authors and OSS supporters moved on to new companies or new teams, it eventually became clear that nobody internally was really supporting our OSS flags project—nobody could tie that support back to the priorities for any particular team. Given that it was no specific team’s job, and nobody could say why it was important, it isn’t surprising that we basically let that project rot externally.[^18] The internal and external versions diverged slowly over time, and eventually some external developers took the external version and forked it, giving it some proper attention.
 
@@ -595,7 +595,7 @@ As the original authors and OSS supporters moved on to new companies or new team
 
 Other than the initial “Oh look, Google contributed something to the open source world,” no part of that made us look good, and yet every little piece of it made sense given the priorities of our engineering organization. Those of us who have been close to it have learned, “Don’t release things without a plan (and a mandate) to support it for the long term.” Whether the whole of Google engineering has learned that or not remains to be seen. It’s a big organization.
 
-除了最初的“哦，看，谷歌為開源世界做出了一些貢獻”之外，沒有任何一部分能讓我們看起來很好，但考慮到我們工程組織的優先事項，它的每一個小部分都是有意義的。我們這些與它關係密切的人已經瞭解到，“在沒有長期支援它的計劃（和授權）的情況下，不要發佈任何東西。”整個谷歌工程部門是否已經瞭解到這一點還有待觀察。這是一個大組織。
+除了最初的“哦，看， Google 為開源世界做出了一些貢獻”之外，沒有任何一部分能讓我們看起來很好，但考慮到我們工程組織的優先事項，它的每一個小部分都是有意義的。我們這些與它關係密切的人已經瞭解到，“在沒有長期支援它的計劃（和授權）的情況下，不要發佈任何東西。”整個 Google 工程部門是否已經瞭解到這一點還有待觀察。這是一個大組織。
 
 
 [^18]: That isn’t to say it’s right or wise, just that as an organization we let some things slip through the cracks.（這並不是說這是對的或明智的，只是作為一個組織，我們讓一些事情從縫隙中溜走。）
@@ -607,7 +607,7 @@ Above and beyond the nebulous “We look bad,” there are also parts of this st
 
 Then, for unrelated reasons, C++ library teams began tweaking observable-but-not- documented pieces of the internal flag implementation. At that point, everyone who was depending on the stability and equivalence of an unsupported external fork started screaming that their builds and releases were suddenly broken. An optimization opportunity worth some thousands of aggregate CPUs across Google’s fleet was significantly delayed, not because it was difficult to update the API that 250 million lines of code depended upon, but because a tiny handful of projects were relying on unpromised and unexpected things. Once again, Hyrum’s Law affects software changes, in this case even for forked APIs maintained by separate organizations.
 
-然後，由於不相關的原因，C++函式庫團隊開始調整內部標誌實現中可觀察到但沒有記錄的部分。在這一點上，所有依賴於不支援的外部分支的穩定性和等效性的人都開始尖叫，他們的建構和發佈突然被破壞。一個值得在谷歌叢集中使用數千個CPU的優化機會被大大推遲了，不是因為難以更新2.5億行程式碼所依賴的API，而是因為極少數專案依賴於未經預測和意外的東西。Hyrum定律再一次影響了軟體的變化，在這種情況下，甚至是由不同組織維護的分叉API。
+然後，由於不相關的原因，C++函式庫團隊開始調整內部標誌實現中可觀察到但沒有記錄的部分。在這一點上，所有依賴於不支援的外部分支的穩定性和等效性的人都開始尖叫，他們的建構和發佈突然被破壞。一個值得在 Google 叢集中使用數千個CPU的優化機會被大大推遲了，不是因為難以更新2.5億行程式碼所依賴的API，而是因為極少數專案依賴於未經預測和意外的東西。Hyrum定律再一次影響了軟體的變化，在這種情況下，甚至是由不同組織維護的分叉API。
 
 ----
 
@@ -615,7 +615,7 @@ Then, for unrelated reasons, C++ library teams began tweaking observable-but-not
 
 A more serious example of exposing ourselves to greater risk of unexpected technical dependency comes from publishing Google’s AppEngine service. This service allows users to write their applications on top of an existing framework in one of several popular programming languages. So long as the application is written with a proper storage/state management model, the AppEngine service allows those applications to scale up to huge usage levels: backing storage and frontend management are managed and cloned on demand by Google’s production infrastructure.
 
-一個更嚴重的技術依賴將我們自己暴露在意料外的更大風險中的例子來自於發佈谷歌的AppEngine服務。這項服務允許使用者在現有框架的基礎上用幾種流行的程式語言之一編寫他們的應用程式。只要應用程式是用適當的儲存/狀態管理模型編寫的，AppEngine服務允許這些應用程式擴充套件到超大規模的使用水平：備份儲存和前端管理是由谷歌的生產基礎設施按需管理和複製的。
+一個更嚴重的技術依賴將我們自己暴露在意料外的更大風險中的例子來自於發佈 Google 的AppEngine服務。這項服務允許使用者在現有框架的基礎上用幾種流行的程式語言之一編寫他們的應用程式。只要應用程式是用適當的儲存/狀態管理模型編寫的，AppEngine服務允許這些應用程式擴充套件到超大規模的使用水平：備份儲存和前端管理是由 Google 的生產基礎設施按需管理和複製的。
 
 Originally, AppEngine’s support for Python was a 32-bit build running with an older version of the Python interpreter. The AppEngine system itself was (of course) implemented in our monorepo and built with the rest of our common tools, in Python and in C++ for backend support. In 2014 we started the process of doing a major update to the Python runtime alongside our C++ compiler and standard library installations, with the result being that we effectively tied “code that builds with the current C++ compiler” to “code that uses the updated Python version”—a project that upgraded one of those dependencies inherently upgraded the other at the same time. For most projects, this was a non-issue. For a few projects, because of edge cases and Hyrum’s Law, our language platform experts wound up doing some investigation and debugging to unblock the transition. In a terrifying instance of Hyrum’s Law running into business practicalities, AppEngine discovered that many of its users, our paying customers, couldn’t (or wouldn’t) update: either they didn’t want to take the change to the newer Python version, or they couldn’t afford the resource consumption changes involved in moving from 32-bit to 64-bit Python. Because there were some customers that were paying a significant amount of money for AppEngine services, AppEngine was able to make a strong business case that a forced switch to the new language and compiler versions must be delayed. This inherently meant that every piece of C++ code in the transitive closure of dependencies from AppEngine had to be compatible with the older compiler and standard library versions: any bug fixes or performance optimizations that could be made to that infrastructure had to be compatible across versions. That situation persisted for almost three years.
 
@@ -625,7 +625,7 @@ Originally, AppEngine’s support for Python was a 32-bit build running with an 
 
 With enough users, any “observable” of your system will come to be depended upon by somebody. At Google, we constrain all of our internal users within the boundaries of our technical stack and ensure visibility into their usage with the monorepo and code indexing systems, so it is far easier to ensure that useful change remains possible. When we shift from source control to dependency management and lose visibility into how code is used or are subject to competing priorities from outside groups (especially ones that are paying you), it becomes much more difficult to make pure engineering trade-offs. Releasing APIs of any sort exposes you to the possibility of competing priorities and unforeseen constraints by outsiders. This isn’t to say that you shouldn’t release APIs; it serves only to provide the reminder: external users of an API cost a lot more to maintain than internal ones.
 
-有了足夠多的使用者，你的系統的任何 "可觀察到的 "都會被某些人所依賴。在谷歌，我們把所有的內部使用者都限制在我們的技術堆疊的範圍內，並透過monorepo和程式碼索引系統確保對他們的使用情況的可見性，所以更容易確保有用的改變是可能的。當我們從原始碼控制轉向依賴管理，並失去了對程式碼使用情況的可見性，或者受到來自外部團體（尤其是那些付錢給你的團體）的高優先順序的影響時，要做出純粹的工程權衡就變得更加困難。發佈任何型別的API都會使你暴露在競爭性的優先順序和外部人員不可預見的限制的可能性中。這並不是說你不應該發佈API；這只是為了提醒你：API的外部使用者比內部使用者的維護成本高得多。
+有了足夠多的使用者，你的系統的任何 "可觀察到的 "都會被某些人所依賴。在 Google ，我們把所有的內部使用者都限制在我們的技術堆疊的範圍內，並透過monorepo和程式碼索引系統確保對他們的使用情況的可見性，所以更容易確保有用的改變是可能的。當我們從原始碼控制轉向依賴管理，並失去了對程式碼使用情況的可見性，或者受到來自外部團體（尤其是那些付錢給你的團體）的高優先順序的影響時，要做出純粹的工程權衡就變得更加困難。發佈任何型別的API都會使你暴露在競爭性的優先順序和外部人員不可預見的限制的可能性中。這並不是說你不應該發佈API；這只是為了提醒你：API的外部使用者比內部使用者的維護成本高得多。
 
 Sharing code with the outside world, either as an open source release or as a closed- source library release, is not a simple matter of charity (in the OSS case) or business opportunity (in the closed-source case). Dependent users that you cannot monitor, in different organizations, with different priorities, will eventually exert some form of Hyrum’s Law inertia on that code. Especially if you are working with long timescales, it is impossible to accurately predict the set of necessary or useful changes that could become valuable. When evaluating whether to release something, be aware of the long-term risks: externally shared dependencies are often much more expensive to modify over time.
 

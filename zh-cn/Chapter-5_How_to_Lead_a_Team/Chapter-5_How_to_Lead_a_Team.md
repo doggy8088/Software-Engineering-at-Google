@@ -13,7 +13,7 @@ We’ve covered a lot of ground so far on the culture and composition of teams w
 
 No team can function well without a leader, especially at Google, where engineering is almost exclusively a team endeavor. At Google, we recognize two different leadership roles. A *Manager* is a leader of people, whereas a *Tech Lead* leads technology efforts. Although the responsibilities of these two roles require similar planning skills, they require quite different people skills.
 
-沒有領導者，任何團隊都無法正常運作，尤其是在谷歌，工程幾乎完全是團隊的努力。在谷歌，我們認識到兩種不同的領導者角色。*經理*是人的領導，而*技術負責人*則領導技術工作。雖然這兩個角色的職責需要類似的規劃技能，但他們需要相當不同的人際交往技能。
+沒有領導者，任何團隊都無法正常運作，尤其是在 Google ，工程幾乎完全是團隊的努力。在 Google ，我們認識到兩種不同的領導者角色。*經理*是人的領導，而*技術負責人*則領導技術工作。雖然這兩個角色的職責需要類似的規劃技能，但他們需要相當不同的人際交往技能。
 
 A boat without a captain is nothing more than a floating waiting room: unless someone grabs the rudder and starts the engine, it’s just going to drift along aimlessly with the current. A piece of software is just like that boat: if no one pilots it, you’re left with a group of engineers burning up valuable time, just sitting around waiting for something to happen (or worse, still writing code that you don’t need). Although this chapter is about people management and technical leadership, it is still worth a read if you’re an individual contributor because it will likely help you understand your own leaders a bit better.
 
@@ -23,7 +23,7 @@ A boat without a captain is nothing more than a floating waiting room: unless so
 
 Whereas every engineering team generally has a leader, they acquire those leaders in different ways. This is certainly true at Google; sometimes an experienced manager comes in to run a team, and sometimes an individual contributor is promoted into a leadership position (usually of a smaller team).
 
-雖然每個工程團隊通常都有一個領導者，但他們以不同的方式獲得這些領導者。這在谷歌肯定是一樣的；有時是一位經驗豐富的經理來管理一個團隊，有時是一位因個人貢獻被提升為領導職位（通常是一個較小的團隊）。
+雖然每個工程團隊通常都有一個領導者，但他們以不同的方式獲得這些領導者。這在 Google 肯定是一樣的；有時是一位經驗豐富的經理來管理一個團隊，有時是一位因個人貢獻被提升為領導職位（通常是一個較小的團隊）。
 
 In nascent teams, both roles will sometimes be filled by the same person: a *Tech Lead Manager* (TLM). On larger teams, an experienced people manager will step in to take on the management role while a senior engineer with extensive experience will step into the tech lead role. Even though manager and tech lead each play an important part in the growth and productivity of an engineering team, the people skills required to succeed in each role are wildly different.
 
@@ -33,7 +33,7 @@ In nascent teams, both roles will sometimes be filled by the same person: a *Tec
 
 Many companies bring in trained people managers who might know little to nothing about software engineering to run their engineering teams. Google decided early on, however, that its software engineering managers should have an engineering background. This meant hiring experienced managers who used to be software engineers, or training software engineers to be managers (more on this later).
 
-許多公司引進了訓練有素的人事經理，他們可能對軟體工程知之甚少，甚至一無所知來管理工程團隊。然而，谷歌很早就決定，其軟體工程經理應該有工程背景。這意味著僱用曾經是軟體工程師的有經驗的經理，或者培訓軟體工程師成為經理（後面會有更多介紹）。
+許多公司引進了訓練有素的人事經理，他們可能對軟體工程知之甚少，甚至一無所知來管理工程團隊。然而， Google 很早就決定，其軟體工程經理應該有工程背景。這意味著僱用曾經是軟體工程師的有經驗的經理，或者培訓軟體工程師成為經理（後面會有更多介紹）。
 
 At the highest level, an engineering manager is responsible for the performance, productivity, and happiness of every person on their team—including their tech lead— while still making sure that the needs of the business are met by the product for which they are responsible. Because the needs of the business and the needs of individual team members don’t always align, this can often place a manager in a difficult position.
 
@@ -53,11 +53,11 @@ On small and nascent teams for which engineering managers need a strong technica
 
 At Google, it’s customary for larger, well-established teams to have a pair of leaders— one TL and one engineering manager—working together as partners. The theory is that it’s really difficult to do both jobs at the same time (well) without completely burning out, so it’s better to have two specialists crushing each role with dedicated focus.
 
-在谷歌，大型、成熟的團隊習慣於有一對領導——一個TL（技術負責人）和一個工程經理——作為夥伴一起工作。理論上說，要同時做這兩份工作（好）而又不至於完全精疲力竭，真的很困難，因此最好有兩名專家專注於每個角色。
+在 Google ，大型、成熟的團隊習慣於有一對領導——一個TL（技術負責人）和一個工程經理——作為夥伴一起工作。理論上說，要同時做這兩份工作（好）而又不至於完全精疲力竭，真的很困難，因此最好有兩名專家專注於每個角色。
 
 The job of TLM is a tricky one and often requires the TLM to learn how to balance individual work, delegation, and people management. As such, it usually requires a high degree of mentoring and assistance from more experienced TLMs. (In fact, we recommend that in addition to taking a number of classes that Google offers on this subject, a newly minted TLM seek out a senior mentor who can advise them regularly as they grow into the role.)
 
-TLM（技術主管經理）的工作很棘手，通常需要TLM學習如何平衡個人工作、授權和人員管理。因此，它通常需要經驗豐富的TLM的深入指導和幫助。（事實上，我們建議新晉的TLM除了學習谷歌提供的一些關於這一主題的課程外，還應該尋找一位資深導師，在他們成長為該角色時定期向他們提供建議。）
+TLM（技術主管經理）的工作很棘手，通常需要TLM學習如何平衡個人工作、授權和人員管理。因此，它通常需要經驗豐富的TLM的深入指導和幫助。（事實上，我們建議新晉的TLM除了學習 Google 提供的一些關於這一主題的課程外，還應該尋找一位資深導師，在他們成長為該角色時定期向他們提供建議。）
 
 -----
 
@@ -69,11 +69,11 @@ It’s generally accepted that you can get folks who report to you to do the wor
 
 For example, for years, Jeff Dean, senior engineering fellow and possibly the most well-known Googler *inside* of Google, led only a fraction of Google’s engineering team, but his influence on technical decisions and direction reaches to the ends of the entire engineering organization and beyond (thanks to his writing and speaking outside of the company).
 
-例如，多年來，高階工程研究員傑夫·迪安（Jeff Dean）可能是谷歌內部最知名的Googler，他只領導谷歌工程團隊的一小部分，但他對技術決策和方向的影響卻達到了整個工程組織的末端，甚至更遠（這要歸功於他在公司之外的寫作和演講）。
+例如，多年來，高階工程研究員傑夫·迪安（Jeff Dean）可能是 Google 內部最知名的Googler，他只領導 Google 工程團隊的一小部分，但他對技術決策和方向的影響卻達到了整個工程組織的末端，甚至更遠（這要歸功於他在公司之外的寫作和演講）。
 
 Another example is a team that I started called The Data Liberation Front: with a team of less than a half-dozen engineers, we managed to get more than 50 Google products to export their data through a product that we launched called Google Takeout. At the time, there was no formal directive from the executive level at Google for all products to be a part of Takeout, so how did we get hundreds of engineers to contribute to this effort? By identifying a strategic need for the company, showing how it linked to the mission and existing priorities of the company, and working with a small group of engineers to develop a tool that allowed teams to quickly and easily integrate with Takeout.
 
-另一個例子是我發起的一個名為“資料解放陣線”的團隊：一個由不到六名工程師組成的團隊，我們成功地讓50多個谷歌產品透過我們推出的一款名為“Google Takeout”的產品來輸出資料。當時，谷歌的管理層並沒有正式指示所有產品都要成為Takeout的一部分，那麼我們是如何讓數百名工程師為這項工作做出貢獻的呢？透過確定公司的戰略需求，展示它如何與公司的使命和現有的優先事項相聯絡，並與一小組工程師合作開發一個工具，使團隊能夠快速、輕鬆地與Takeout整合。
+另一個例子是我發起的一個名為“資料解放陣線”的團隊：一個由不到六名工程師組成的團隊，我們成功地讓50多個 Google 產品透過我們推出的一款名為“Google Takeout”的產品來輸出資料。當時， Google 的管理層並沒有正式指示所有產品都要成為Takeout的一部分，那麼我們是如何讓數百名工程師為這項工作做出貢獻的呢？透過確定公司的戰略需求，展示它如何與公司的使命和現有的優先事項相聯絡，並與一小組工程師合作開發一個工具，使團隊能夠快速、輕鬆地與Takeout整合。
 
 -----
 
@@ -103,7 +103,7 @@ If you’ve spent the majority of your career writing code, you typically end a 
 
 Another big reason for not becoming a manager is often unspoken but rooted in the famous “Peter Principle,” which states that “In a hierarchy every employee tends to rise to his level of incompetence.” Google generally avoids this by requiring that a person perform the job *above* their current level for a period of time (i.e., to “exceeds expectations” at their current level) before being promoted to that level. Most people have had a manager who was incapable of doing their job or was just really bad at managing people,[2](#_bookmark373) and we know some people who have worked only for bad managers. If you’ve been exposed only to crappy managers for your entire career, why would you *ever* want to be a manager? Why would you want to be promoted to a role that you don’t feel able to do?
 
-不成為經理的另一個重要原因往往是不言而喻的，但卻源於著名的 "彼得原理"，即 "在等級制度中，每個職工趨向於上升到他所不能勝任的職位"。谷歌通常透過要求一個人在晉升到該級別之前，必須在其目前的級別上完成高於當前水平的工作一段時間（即達到 "超出預期 "的目前級別）來避免這種情況。大多數人都有過一個不能勝任工作的經理，或者只是非常不善於管理人，而我們知道有些人只為糟的糕經理工作。如果你在整個職業生涯中只接觸過糟糕的經理，你為什麼**想成為一名經理**？你為什麼要被提拔到一個你覺得無法勝任的角色？
+不成為經理的另一個重要原因往往是不言而喻的，但卻源於著名的 "彼得原理"，即 "在等級制度中，每個職工趨向於上升到他所不能勝任的職位"。 Google 通常透過要求一個人在晉升到該級別之前，必須在其目前的級別上完成高於當前水平的工作一段時間（即達到 "超出預期 "的目前級別）來避免這種情況。大多數人都有過一個不能勝任工作的經理，或者只是非常不善於管理人，而我們知道有些人只為糟的糕經理工作。如果你在整個職業生涯中只接觸過糟糕的經理，你為什麼**想成為一名經理**？你為什麼要被提拔到一個你覺得無法勝任的角色？
 
 ```
 彼得原理推導：每一個職位最終都將被一個不能勝任其工作的職工所佔據。層級組織的工作任務多半是由尚未達到勝任階層的員工完成的。
@@ -123,7 +123,7 @@ There are, however, great reasons to consider becoming a TL or manager. First, i
 
 There seems to be a sort of disease that strikes managers in which they forget about all the awful things their managers did to them and suddenly begin doing these same things to “manage” the people that report to them. The symptoms of this disease include, but are by no means limited to, micromanaging, ignoring low performers, and hiring pushovers. Without prompt treatment, this disease can kill an entire team. The best advice I received when I first became a manager at Google was from Steve Vinter, an engineering director at the time. He said, “Above all, resist the urge to manage.” One of the greatest urges of the newly minted manager is to actively “manage” their employees because that’s what a manager does, right? This typically has disastrous consequences.
 
-似乎有一種疾病襲擾了經理們，他們忘記了他們的經理對他們所做的所有可怕的事情，突然開始做同樣的事情來 "管理 "向他們彙報的人。這種疾病的症狀包括，但不限於，微觀管理（事必躬親），忽視低績效員工，以及使用推卸責任者。如果不及時治療，這種疾病可以殺死整個團隊。當我第一次在谷歌成為經理時，我得到的最好的建議是來自當時的工程總監史蒂夫·溫特。他說："首先，要抵制管人的衝動"。新上任的經理人最大的衝動之一就是積極 "管理 "他們的員工，因為這就是經理的工作，對嗎？這通常會帶來災難性的後果。
+似乎有一種疾病襲擾了經理們，他們忘記了他們的經理對他們所做的所有可怕的事情，突然開始做同樣的事情來 "管理 "向他們彙報的人。這種疾病的症狀包括，但不限於，微觀管理（事必躬親），忽視低績效員工，以及使用推卸責任者。如果不及時治療，這種疾病可以殺死整個團隊。當我第一次在 Google 成為經理時，我得到的最好的建議是來自當時的工程總監史蒂夫·溫特。他說："首先，要抵制管人的衝動"。新上任的經理人最大的衝動之一就是積極 "管理 "他們的員工，因為這就是經理的工作，對嗎？這通常會帶來災難性的後果。
 
 The cure for the “management” disease is a liberal application of “servant leadership,” which is a nice way of saying the most important thing you can do as a leader is to serve your team, much like a butler or majordomo tends to the health and well-being of a household. As a servant leader, you should strive to create an atmosphere of humility, respect, and trust. This might mean removing bureaucratic obstacles that a team member can’t remove by themselves, helping a team achieve consensus, or even buying dinner for the team when they’re working late at the office. The servant leader fills in the cracks to smooth the way for their team and advises them when necessary, but still isn’t afraid of getting their hands dirty. The only managing that a servant leader does is to manage both the technical and social health of the team; as tempting  as it might be to focus on purely the technical health of the team, the social health of the team is just as important (but often infinitely more difficult to manage).
 
@@ -145,7 +145,7 @@ So, what is actually expected of a manager at a modern software company? Before 
 
 Before talking about the core responsibilities of an engineering manager at Google, let’s review the history of managers. The present-day concept of the pointy-haired manager is partially a carryover, first from military hierarchy and later adopted by the Industrial Revolution—more than a hundred years ago! Factories began popping up everywhere, and they required (usually unskilled) workers to keep the machines going. Consequently, these workers required supervisors to manage them, and because it was easy to replace these workers with other people who were desperate for a job, the managers had little motivation to treat their employees well or improve conditions for them. Whether humane or not, this method worked well for many years when the employees had nothing more to do than perform rote tasks.
 
-在談論谷歌工程經理的核心職責之前，讓我們回顧一下經理的歷史。今天的頂尖經理的概念部分是延續下來的，首先是來自軍隊的等級制度，後來被工業革命所採用——一百多年前！工廠開始到處湧現，他們需要（通常是不熟練的）工人來維持機器運轉。因此，這些工人需要主管人員來管理他們，由於很容易用其他急於找工作的人取代這些工人，主管人員沒有什麼動力來善待他們的僱員或改善他們的條件。無論人道與否，這種方法在許多年裡都很有效，當時員工除了完成死記硬背的任務外沒有其他事情可做。
+在談論 Google 工程經理的核心職責之前，讓我們回顧一下經理的歷史。今天的頂尖經理的概念部分是延續下來的，首先是來自軍隊的等級制度，後來被工業革命所採用——一百多年前！工廠開始到處湧現，他們需要（通常是不熟練的）工人來維持機器運轉。因此，這些工人需要主管人員來管理他們，由於很容易用其他急於找工作的人取代這些工人，主管人員沒有什麼動力來善待他們的僱員或改善他們的條件。無論人道與否，這種方法在許多年裡都很有效，當時員工除了完成死記硬背的任務外沒有其他事情可做。
 
 Managers frequently treated employees in the same way that cart drivers would treat their mules: they motivated them by alternately leading them forward with a carrot, and, when that didn’t work, whipping them with a stick. This carrot-and-stick method of management survived the transition from the factory[3](#_bookmark380) to the modern office, where the stereotype of the tough-as-nails manager-as-mule-driver flourished in the middle part of the twentieth century when employees would work at the same job for years and years.
 
@@ -179,11 +179,11 @@ A new engineer, Jerry, joined my team a few years ago. Jerry’s last manager (a
 
 Another way to catalyze your team is to make them feel safe and secure so that they can take greater risks by building psychological safety—meaning that your team members feel like they can be themselves without fear of negative repercussions from you or their team members. Risk is a fascinating thing; most humans are terrible at evaluating risk, and most companies try to avoid risk at all costs. As a result, the usual modus operandi is to work conservatively and focus on smaller successes, even when taking a bigger risk might mean exponentially greater success. A common saying at Google is that if you try to achieve an impossible goal, there’s a good chance you’ll fail, but if you fail trying to achieve the impossible, you’ll most likely accomplish far more than you would have accomplished had you merely attempted something you knew you could complete. A good way to build a culture in which risk taking is accepted is to let your team know that it’s OK to fail.
 
-催化你的團隊的另一個方法是讓他們感到安全和有保障，這樣他們就可以透過建立心理安全來承擔更大的風險——也就是說，你的團隊成員覺得他們可以做自己，而不用擔心來自你或團隊成員的負面反饋。風險是一個令人著迷的東西；大多數人在評估風險方面是很糟糕的，而且大多數公司試圖不惜一切代價避免風險。因此，通常的工作方式是保守地工作，專注於較小的成功，即使承擔較大的風險可能意味著成倍的成功。在谷歌，有一句話是這樣說的：如果你試圖實現一個不可能的目標，你很有可能會失敗，但如果你試圖實現不可能的目標而失敗，你的成就很可能會遠遠超過你僅僅嘗試你知道你可以完成的事情所取得的成就。建立一個接受風險的文化的好方法是讓你的團隊知道，失敗是允許的。
+催化你的團隊的另一個方法是讓他們感到安全和有保障，這樣他們就可以透過建立心理安全來承擔更大的風險——也就是說，你的團隊成員覺得他們可以做自己，而不用擔心來自你或團隊成員的負面反饋。風險是一個令人著迷的東西；大多數人在評估風險方面是很糟糕的，而且大多數公司試圖不惜一切代價避免風險。因此，通常的工作方式是保守地工作，專注於較小的成功，即使承擔較大的風險可能意味著成倍的成功。在 Google ，有一句話是這樣說的：如果你試圖實現一個不可能的目標，你很有可能會失敗，但如果你試圖實現不可能的目標而失敗，你的成就很可能會遠遠超過你僅僅嘗試你知道你可以完成的事情所取得的成就。建立一個接受風險的文化的好方法是讓你的團隊知道，失敗是允許的。
 
 So, let’s get that out of the way: it’s OK to fail. In fact, we like to think of failure as a way of learning a lot really quickly (provided that you’re not repeatedly failing at the same thing). In addition, it’s important to see failure as an opportunity to learn and not to point fingers or assign blame. Failing fast is good because there’s not a lot at stake. Failing slowly can also teach a valuable lesson, but it is more painful because more is at risk and more can be lost (usually engineering time). Failing in a manner that affects customers is probably the least desirable failure that we encounter, but it’s also one in which we have the greatest amount of structure in place to learn from failures. As mentioned earlier, every time there is a major production failure at Google, we perform a postmortem. This procedure is a way to document the events that led to the actual failure and to develop a series of steps that will prevent it from happening in the future. This is neither an opportunity to point fingers, nor is it intended to introduce unnecessary bureaucratic checks; rather, the goal is to strongly focus on the core of the problem and fix it once and for all. It’s very difficult, but quite effective (and cathartic).
 
-所以，讓我們先把話說清楚：失敗是允許的。事實上，我們喜歡把失敗看作是一種快速學習的方式（只要你不是在同一件事上反覆犯錯）。此外，重要的是把失敗看作是一個學習的機會，而不是指責或推責。快速失敗是好的，因為沒有太多的風險。緩慢的失敗也能給人以寶貴的教訓，但它更痛苦，因為風險更大，可能損失更多（通常是工程時間）。以影響客戶的方式失敗可能是我們遇到的最不可取的失敗，但這也是我們從失敗中學習的最大方式。如前所述，每次谷歌出現重大生產故障時，我們都會進行事後分析。這一過程是記錄失敗的一種方式導致實際失敗的事件，並制定一系列措施防止未來發生。這既不是一個指責的機會，也不是為了引入不必要的官僚檢查；相反，目標是強烈關注問題的核心，並一勞永逸地解決它。這非常困難，但相當有效（和宣洩）。
+所以，讓我們先把話說清楚：失敗是允許的。事實上，我們喜歡把失敗看作是一種快速學習的方式（只要你不是在同一件事上反覆犯錯）。此外，重要的是把失敗看作是一個學習的機會，而不是指責或推責。快速失敗是好的，因為沒有太多的風險。緩慢的失敗也能給人以寶貴的教訓，但它更痛苦，因為風險更大，可能損失更多（通常是工程時間）。以影響客戶的方式失敗可能是我們遇到的最不可取的失敗，但這也是我們從失敗中學習的最大方式。如前所述，每次 Google 出現重大生產故障時，我們都會進行事後分析。這一過程是記錄失敗的一種方式導致實際失敗的事件，並制定一系列措施防止未來發生。這既不是一個指責的機會，也不是為了引入不必要的官僚檢查；相反，目標是強烈關注問題的核心，並一勞永逸地解決它。這非常困難，但相當有效（和宣洩）。
 
 Individual successes and failures are a bit different. It’s one thing to laud individual successes, but looking to assign individual blame in the case of failure is a great way to divide a team and discourage risk taking across the board. It’s alright to fail, but fail as a team and learn from your failures. If an individual succeeds, praise them in front of the team. If an individual fails, give constructive criticism in private.[5](#_bookmark391) Whatever the case, take advantage of the opportunity and apply a liberal helping of humility, respect, and trust to help your team learn from its failures.
 
@@ -220,7 +220,7 @@ Instead, you should strive to hire people who are smarter than you and can repla
 
 Early in my career as a manager at Google, the time came for me to hand out bonus letters to my team, and I grinned as I told my manager, “I love being a manager!” Without missing a beat, my manager, a long-time industry veteran, replied, “Sometimes you get to be the tooth fairy, other times you have to be the dentist.”
 
-在我在谷歌擔任經理的早期，到了給我的團隊發獎金信的時候，我咧嘴笑著對我的經理說："我喜歡當經理！" 我的經理是一位長期的行業老手，他不慌不忙地回答說："有時你可以做牙仙，有時你必須做牙醫。"
+在我在 Google 擔任經理的早期，到了給我的團隊發獎金信的時候，我咧嘴笑著對我的經理說："我喜歡當經理！" 我的經理是一位長期的行業老手，他不慌不忙地回答說："有時你可以做牙仙，有時你必須做牙醫。"
 
 It’s never any fun to pull teeth. We’ve seen team leaders do all the right things to build incredibly strong teams only to have these teams fail to excel (and eventually fall apart) because of just one or two low performers. We understand that the human aspect is the most challenging part of writing software, but the most difficult part of dealing with humans is handling someone who isn’t meeting expectations. Sometimes, people miss expectations because they’re not working long enough or hard enough, but the most difficult cases are when someone just isn’t capable of doing their job no matter how long or hard they work.
 
@@ -228,7 +228,7 @@ It’s never any fun to pull teeth. We’ve seen team leaders do all the right t
 
 Google’s Site Reliability Engineering (SRE) team has a motto: “Hope is not a strategy.” And nowhere is hope more overused as a strategy than in dealing with a low performer. Most team leaders grit their teeth, avert their eyes, and just *hope* that the low performer either magically improves or just goes away. Yet it is extremely rare that this person does either.
 
-谷歌的網站可靠性工程（SRE）團隊有一個座右銘："希望不是一種策略"。而希望作為一種策略被過度使用的情況，莫過於在處理低績效員工時。大多數團隊領導咬緊牙關，轉移視線，只是*希望*低績效員工要麼神奇地改善，要麼就消失。然而，這種情況極少發生。
+ Google 的網站可靠性工程（SRE）團隊有一個座右銘："希望不是一種策略"。而希望作為一種策略被過度使用的情況，莫過於在處理低績效員工時。大多數團隊領導咬緊牙關，轉移視線，只是*希望*低績效員工要麼神奇地改善，要麼就消失。然而，這種情況極少發生。
 
 While the leader is hoping and the low performer isn’t improving (or leaving), high performers on the team waste valuable time pulling the low performer along, and team morale leaks away into the ether. You can be sure that the team knows the low performer is there even if you’re ignoring them—in fact, the team is *acutely* aware of who the low performers are, because they have to carry them.
 
@@ -250,7 +250,7 @@ How do you effectively coach a low performer? The best analogy is to imagine tha
 
 A manager has two major areas of focus for their team: the social and the technical. It’s rather common for managers to be stronger in the technical side at Google, and because most managers are promoted from a technical job (for which the primary goal of their job was to solve technical problems), they can tend to ignore human issues. It’s tempting to focus all of your energy on the technical side of your team because, as an individual contributor, you spend the vast majority of your time solving technical problems. When you were a student, your classes were all about learning the technical ins and outs of your work. Now that you’re a manager, however, you ignore the human element of your team at your own peril.
 
-經理對他們的團隊有兩個主要的關注領域：社會和技術。在谷歌，經理在技術方面比較強大是比較常見的，因為大多數經理都是從技術工作中晉升的（對他們來說，工作的主要目標是解決技術問題），他們可能傾向於忽視人性問題。把所有的精力都集中在團隊的技術方面是很誘人的，因為作為個人貢獻者，你的絕大部分時間都在解決技術問題。當你還是個學生的時候，你的課程都是關於學習工作的技術內涵和外延。然而，現在你是一名經理，你忽視了團隊中的人性因素，這將是你自己的危險。
+經理對他們的團隊有兩個主要的關注領域：社會和技術。在 Google ，經理在技術方面比較強大是比較常見的，因為大多數經理都是從技術工作中晉升的（對他們來說，工作的主要目標是解決技術問題），他們可能傾向於忽視人性問題。把所有的精力都集中在團隊的技術方面是很誘人的，因為作為個人貢獻者，你的絕大部分時間都在解決技術問題。當你還是個學生的時候，你的課程都是關於學習工作的技術內涵和外延。然而，現在你是一名經理，你忽視了團隊中的人性因素，這將是你自己的危險。
 
 Let’s begin with an example of a leader ignoring the human element in his team. Years ago, Jake had his first child. Jake and Katie had worked together for years, both remotely and in the same office, so in the weeks following the arrival of the new baby, Jake worked from home. This worked out great for the couple, and Katie was totally fine with it because she was already used to working remotely with Jake. They were their usual productive selves until their manager, Pablo (who worked in a different office), found out that Jake was working from home for most of the week. Pablo was upset that Jake wasn’t going into the office to work with Katie, despite the fact that Jake was just as productive as always and that Katie was fine with the situation. Jake attempted to explain to Pablo that he was just as productive as he would be if he came into the office and that it was much easier on him and his wife for him to mostly work from home for a few weeks. Pablo’s response: “Dude, people have kids all the time. You need to go into the office.” Needless to say, Jake (normally a mild-mannered engineer) was enraged and lost a lot of respect for Pablo.
 
@@ -278,7 +278,7 @@ Sometimes, it can be tricky to move into a management role over someone who has 
 
 Steve Jobs once said: “A people hire other A people; B people hire C people.” It’s incredibly easy to fall victim to this adage, and even more so when you’re trying to hire quickly. A common approach I’ve seen outside of Google is that a team needs to hire 5 engineers, so it sifts through a pile of applications, interviews 40 or 50 people, and picks the best 5 candidates regardless of whether they meet the hiring bar.
 
-史蒂夫·喬布斯曾經說過。"A類別人僱用其他A類別人；B類別人僱用C類別人。" 這句格言很容易讓你成為犧牲品，尤其是當你試圖快速僱傭的時候。我在谷歌之外看到的一個常見的方法是，一個團隊需要招聘5名工程師，所以它篩選了一堆申請，面試了40或50人，並挑選了最好的5名候選人，不管他們是否符合招聘標準。
+史蒂夫·喬布斯曾經說過。"A類別人僱用其他A類別人；B類別人僱用C類別人。" 這句格言很容易讓你成為犧牲品，尤其是當你試圖快速僱傭的時候。我在 Google 之外看到的一個常見的方法是，一個團隊需要招聘5名工程師，所以它篩選了一堆申請，面試了40或50人，並挑選了最好的5名候選人，不管他們是否符合招聘標準。
 
 This is one of the fastest ways to build a mediocre team.
 
@@ -297,13 +297,13 @@ The best way to show your team that you don’t trust it is to treat team member
 
 The results of this level of trust go all the way to more mundane things like office and computer supplies. As another example, Google provides employees with cabinets stocked with various and sundry office supplies (e.g., pens, notebooks, and other “legacy” implements of creation) that are free to take as employees need them. The IT department runs numerous “Tech Stops” that provide self-service areas that are like a mini electronics store. These contain lots of computer accessories and doodads (power supplies, cables, mice, USB drives, etc.) that would be easy to just grab and walk off with en masse, but because Google employees are being trusted to check these items out, they feel a responsibility to Do The Right Thing. Many people from typical corporations react in horror to hearing this, exclaiming that surely Google is hemorrhaging money due to people “stealing” these items. That’s certainly possible, but what about the costs of having a workforce that behaves like children or that has to waste valuable time formally requesting cheap office supplies? Surely that’s more expensive than the price of a few pens and USB cables.
 
-這種信任程度的結果一直延伸到更平凡的事情，如辦公室和電腦用品。另一個例子是，谷歌為員工提供了儲存有各種雜類別辦公用品的櫃子（例如，筆、筆記本和其他 "傳統 "創作工具），員工可以根據需要自由取用。IT部門經營著許多 "技術站"，提供自助服務區，就像一個小型電子產品商店。這些地方有很多電腦配件和小玩意（電源、電纜、滑鼠、隨身碟等），這些東西很容易就被拿走了，但因為谷歌員工被信任去獲取這些物品，他們覺得有責任去做正確的事情。許多來自典型企業的人聽到這個訊息後都會感到驚恐，他們感嘆說，他們驚呼肯定是因為有人“偷”這些東西，谷歌肯定會損失慘重。這當然是可能的，但是擁有一支像小孩子一樣的員工隊伍，或者不得不浪費寶貴的時間正式申請廉價辦公用品的成本呢？這肯定比幾支筆和USB線的價格要貴。
+這種信任程度的結果一直延伸到更平凡的事情，如辦公室和電腦用品。另一個例子是， Google 為員工提供了儲存有各種雜類別辦公用品的櫃子（例如，筆、筆記本和其他 "傳統 "創作工具），員工可以根據需要自由取用。IT部門經營著許多 "技術站"，提供自助服務區，就像一個小型電子產品商店。這些地方有很多電腦配件和小玩意（電源、電纜、滑鼠、隨身碟等），這些東西很容易就被拿走了，但因為 Google 員工被信任去獲取這些物品，他們覺得有責任去做正確的事情。許多來自典型企業的人聽到這個訊息後都會感到驚恐，他們感嘆說，他們驚呼肯定是因為有人“偷”這些東西， Google 肯定會損失慘重。這當然是可能的，但是擁有一支像小孩子一樣的員工隊伍，或者不得不浪費寶貴的時間正式申請廉價辦公用品的成本呢？這肯定比幾支筆和USB線的價格要貴。
 
 ## Positive Patterns  積極模式
 
 Now that we’ve covered antipatterns, let’s turn to positive patterns for successful leadership and management that we’ve learned from our experiences at Google, from watching other successful leaders and, most of all, from our own leadership mentors. These patterns are not only those that we’ve had great success implementing, but the patterns that we’ve always respected the most in the leaders who we follow.
 
-現在我們已經介紹了反模式，讓我們來談談成功的領導和管理的積極模式，這些模式是我們從在谷歌的經驗中，從觀察其他成功的領導者中，最重要的是，從我們自己的領導導師那裡學到的。這些模式不僅是那些我們已經成功實施的模式，而且是我們一直以來最尊重的領導者的模式。
+現在我們已經介紹了反模式，讓我們來談談成功的領導和管理的積極模式，這些模式是我們從在 Google 的經驗中，從觀察其他成功的領導者中，最重要的是，從我們自己的領導導師那裡學到的。這些模式不僅是那些我們已經成功實施的模式，而且是我們一直以來最尊重的領導者的模式。
 
 ### Lose the Ego  丟掉自負
 
@@ -343,7 +343,7 @@ Another way of thinking about this is the maxim that the leader is always on sta
 
 One of the early managers at Google, Bill Coughran, a VP of engineering, had truly mastered the ability to maintain calm at all times. No matter what blew up, no matter what crazy thing happened, no matter how big the firestorm, Bill would never panic. Most of the time he’d place one arm across his chest, rest his chin in his hand, and ask questions about the problem, usually to a completely panicked engineer. This had the effect of calming them and helping them to focus on solving the problem instead of running around like a chicken with its head cut off. Some of us used to joke that if someone came in and told Bill that 19 of the company’s offices had been attacked by space aliens, Bill’s response would be, “Any idea why they didn’t make it an even 20?”
 
-谷歌的早期經理之一，工程部副部長比爾·考夫蘭，真正掌握了在任何時候都保持冷靜的能力。無論發生什麼事情，無論發生什麼瘋狂的事情，無論發生多大的風波，比爾都不會驚慌。大多數時候，他會把一隻手放在胸前，用手託著下巴，對問題進行提問，通常是向完全驚慌失措的工程師提問。這樣做的效果是讓他們平靜下來，幫助他們專注於解決問題，而不是像一隻被砍了頭的雞一樣到處亂跑。我們中的一些人曾經開玩笑說，如果有人進來告訴比爾，公司的19個辦公室被太空外星人襲擊了，比爾的反應會是："知道為什麼他們沒有襲擊20個？"。
+ Google 的早期經理之一，工程部副部長比爾·考夫蘭，真正掌握了在任何時候都保持冷靜的能力。無論發生什麼事情，無論發生什麼瘋狂的事情，無論發生多大的風波，比爾都不會驚慌。大多數時候，他會把一隻手放在胸前，用手託著下巴，對問題進行提問，通常是向完全驚慌失措的工程師提問。這樣做的效果是讓他們平靜下來，幫助他們專注於解決問題，而不是像一隻被砍了頭的雞一樣到處亂跑。我們中的一些人曾經開玩笑說，如果有人進來告訴比爾，公司的19個辦公室被太空外星人襲擊了，比爾的反應會是："知道為什麼他們沒有襲擊20個？"。
 
 This brings us to another Zen management trick: asking questions. When a team member asks you for advice, it’s usually pretty exciting because you’re finally getting the chance to fix something. That’s exactly what you did for years before moving into a leadership position, so you usually go leaping into solution mode, but that is the last place you should be. The person asking for advice typically doesn’t want *you* to solve their problem, but rather to help them solve it, and the easiest way to do this is to ask this person questions. This isn’t to say that you should replace yourself with a Magic 8 Ball, which would be maddening and unhelpful. Instead, you can apply some humility, respect, and trust and try to help the person solve the problem on their own by trying to refine and explore the problem. This will usually lead the employee to the answer,[6](#_bookmark419) and it will be that person’s answer, which leads back to the ownership and responsibility we went over earlier in this chapter. Whether or not you have the answer, using this technique will almost always leave the employee with the impression that you did. Tricky, eh? Socrates would be proud of you.
 
@@ -373,7 +373,7 @@ Sometimes, your team already has consensus about what you need to do, but it hit
 
 One time, a team spent several weeks trying to work past an obstacle with Google’s legal department. When the team finally reached its collective wits’ end and went to its manager with the problem, the manager had it solved in less than two hours simply because he knew the right person to contact to discuss the matter. Another time, a team needed some server resources and just couldn’t get them allocated. Fortunately, the team’s manager was in communication with other teams across the company and managed to get the team exactly what it needed that very afternoon. Yet another time, one of the engineers was having trouble with an arcane bit of Java code. Although the team’s manager was not a Java expert, she was able to connect the engineer to another engineer who knew exactly what the problem was. You don’t need to know all the answers to help remove roadblocks, but it usually helps to know the people who do. In many cases, knowing the right person is more valuable than knowing the right answer.
 
-有一次，一個團隊花了幾個星期的時間試圖克服谷歌法律部門的一個障礙。當該團隊最終一籌莫展，向其經理提出這個問題時，經理在不到兩個小時內就解決了這個問題，只因為他知道討論這個問題的正確關聯人。還有一次，一個團隊需要一些伺服器資源，卻無法將其分配。幸運的是，團隊經理與公司其他團隊進行了溝通，並設法在當天下午讓團隊完全滿足其需求。還有一次，一位工程師在處理一段神祕的Java程式碼時遇到了麻煩。雖然該團隊的經理不是Java專家，但她還是為該工程師聯絡到了另一位工程師，而這位工程師正是知道問題出在哪裡。你不需要知道所有的答案來幫助消除障礙，但是瞭解那些知道的人通常是有幫助的。在許多情況下，瞭解正確的人比知道正確的答案更有價值。
+有一次，一個團隊花了幾個星期的時間試圖克服 Google 法律部門的一個障礙。當該團隊最終一籌莫展，向其經理提出這個問題時，經理在不到兩個小時內就解決了這個問題，只因為他知道討論這個問題的正確關聯人。還有一次，一個團隊需要一些伺服器資源，卻無法將其分配。幸運的是，團隊經理與公司其他團隊進行了溝通，並設法在當天下午讓團隊完全滿足其需求。還有一次，一位工程師在處理一段神祕的Java程式碼時遇到了麻煩。雖然該團隊的經理不是Java專家，但她還是為該工程師聯絡到了另一位工程師，而這位工程師正是知道問題出在哪裡。你不需要知道所有的答案來幫助消除障礙，但是瞭解那些知道的人通常是有幫助的。在許多情況下，瞭解正確的人比知道正確的答案更有價值。
 
 ```
 7	Attempting to achieve 100% consensus can also be harmful. You need to be able to decide to proceed even if not everyone is on the same page or there is still some uncertainty.
@@ -454,14 +454,14 @@ A good simple way to track your team’s happiness[8](#_bookmark441) is to ask t
 ```
 8	Google also runs an annual employee survey called “Googlegeist” that rates employee happiness across many dimensions. This provides good feedback but isn’t what we would call “simple.”
 
-8 谷歌還開展了一項名為 "Googlegeist "的年度員工調查，從多個方面對員工的幸福感進行評價。這提供了良好的反饋，但並不是我們所說的 "簡單"。
+8  Google 還開展了一項名為 "Googlegeist "的年度員工調查，從多個方面對員工的幸福感進行評價。這提供了良好的反饋，但並不是我們所說的 "簡單"。
 ```
 
 ## The Unexpected Question  意想不到的問題
 
 Shortly after I started at Google, I had my first meeting with then-CEO Eric Schmidt, and at the end Eric asked me, “Is there anything you need?” I had prepared a million defensive responses to difficult questions or challenges but was completely unprepared for this. So I sat there, dumbstruck and staring. You can be sure I had something ready the next time I was asked that question!
 
-在我進入谷歌後不久，我與當時的執行長埃裡克·施密特（Eric Schmidt）進行了第一次會面，最後埃裡克問我：“你需要什麼嗎？”我準備了一百萬份針對困難問題或挑戰的防禦性回覆，但對此完全沒有準備。於是我坐在那裡，呆呆地望著。下次再被問到這個問題時，我已經準備好了東西！’
+在我進入 Google 後不久，我與當時的執行長埃裡克·施密特（Eric Schmidt）進行了第一次會面，最後埃裡克問我：“你需要什麼嗎？”我準備了一百萬份針對困難問題或挑戰的防禦性回覆，但對此完全沒有準備。於是我坐在那裡，呆呆地望著。下次再被問到這個問題時，我已經準備好了東西！’
 
 It can also be worthwhile as a leader to pay some attention to your team’s happiness outside the office. Our colleague Mekka starts his one-on-ones by asking his reports to rate their happiness on a scale of 1 to 10, and oftentimes his reports will use this as a way to discuss happiness in *and* outside of the office. Be wary of assuming that people have no life outside of work—having unrealistic expectations about the amount of time people can put into their work will cause people to lose respect for you, or worse, to burn out. We’re not advocating that you pry into your team members’ personal lives, but being sensitive to personal situations that your team members are going through can give you a lot of insight as to why they might be more or less productive at any given time. Giving a little extra slack to a team member who is currently having a tough time at home can make them a lot more willing to put in longer hours when your team has a tight deadline to hit later.
 
@@ -496,7 +496,7 @@ Following are other miscellaneous tips and tricks that we at Google recommend wh
 *Let your team know when they’re doing well*
     ​Many new team leads can get so caught up in dealing with the shortcomings of their team members that they neglect to provide positive feedback often enough. Just as you let someone know when they screw up, be sure to let them know when they do well, and be sure to let them (and the rest of the team) know when they knock one out of the park.
 
-下面是谷歌在你擔任領導職務時推薦的其他提示和竅門： 
+下面是 Google 在你擔任領導職務時推薦的其他提示和竅門： 
 *委託，但要弄髒自己的手*
     當從個人貢獻者的角色轉變為領導角色時，實現平衡是最難做到的事情之一。起初，你會傾向於自己做所有的工作，而在領導崗位上呆久了，很容易養成自己不做任何工作的習慣。如果你剛開始擔任領導職務，你可能需要努力工作，把工作委託給團隊中的其他工程師，即使他們完成這項工作所需的時間比你長很多。這不僅是你保持理智的一種方式，而且也是你的團隊其他成員學習的方式。如果你已經領導了一段時間的團隊，或者你接了一個新的團隊，獲得團隊的尊重和了解他們的工作的最簡單的方法之一就是弄髒你的手——通常是承擔一個別人不願意做的骯髒的任務。你可以有一份簡歷和一份一英里長的成就清單，但沒有任何東西能讓團隊知道你有多熟練、有多謙遜（和謙遜），你喜歡跳進去做一些艱苦的工作。
 
@@ -556,15 +556,15 @@ There are two types of motivation: *extrinsic*, which originates from outside fo
 
 A person has autonomy when they have the ability to act on their own without someone micromanaging them.[12](#_bookmark458) With autonomous employees (and Google strives to hire mostly autonomous engineers), you might give them the general direction in which they need to take the product but leave it up to them to decide how to get there. This helps with motivation not only because they have a closer relationship with the product (and likely know better than you how to build it), but also because it gives them a much greater sense of ownership of the product. The bigger their stake is in the success of the product, the greater their interest is in seeing it succeed.
 
-當一個人能夠獨立行動而不受任何人的微觀管理時，他就擁有了自主權。有了自主員工（谷歌努力僱傭的大多是自主工程師），你可能會給他們提供他們需要的產品的大方向，但讓他們自己決定如何去做。這有助於激勵，不僅因為他們與產品的關係更密切（而且可能比你更瞭解如何建構產品），而且還因為這讓他們對產品有更大的主人翁意識。他們對產品的成功所持的股份越大，他們對看到產品成功的興趣就越大。
+當一個人能夠獨立行動而不受任何人的微觀管理時，他就擁有了自主權。有了自主員工（ Google 努力僱傭的大多是自主工程師），你可能會給他們提供他們需要的產品的大方向，但讓他們自己決定如何去做。這有助於激勵，不僅因為他們與產品的關係更密切（而且可能比你更瞭解如何建構產品），而且還因為這讓他們對產品有更大的主人翁意識。他們對產品的成功所持的股份越大，他們對看到產品成功的興趣就越大。
 
 Mastery in its basest form simply means that you need to give someone the opportunity to improve existing skills and learn new ones. Giving ample opportunities for mastery not only helps to motivate people, it also makes them better over time, which makes for stronger teams.[13](#_bookmark459) An employee’s skills are like the blade of a knife: you can spend tens of thousands of dollars to find people with the sharpest skills for your team, but if you use that knife for years without sharpening it, you will wind up with a dull knife that is inefficient, and in some cases useless. Google gives ample opportunities for engineers to learn new things and master their craft so as to keep them sharp, efficient, and effective.
 
-掌握最基本的方式只意味著你需要給某人機會來提高現有技能並學習新技能。提供充分的掌握技能的機會不僅有助於激勵員工，而且隨著時間的推移，他們也會變得更好，從而形成更強大的團隊。員工的技能就像刀鋒：你可以花數萬美元為團隊找到最有技能的人，但是，如果你使用這把刀多年而沒有磨快它，你會得到一把鈍刀，這是低效的，在某些情況下是無用的。谷歌為工程師提供了大量學習新事物和掌握技能的機會，從而使他們保持敏銳、高效和高效。
+掌握最基本的方式只意味著你需要給某人機會來提高現有技能並學習新技能。提供充分的掌握技能的機會不僅有助於激勵員工，而且隨著時間的推移，他們也會變得更好，從而形成更強大的團隊。員工的技能就像刀鋒：你可以花數萬美元為團隊找到最有技能的人，但是，如果你使用這把刀多年而沒有磨快它，你會得到一把鈍刀，這是低效的，在某些情況下是無用的。 Google 為工程師提供了大量學習新事物和掌握技能的機會，從而使他們保持敏銳、高效和高效。
 
 Of course, all the autonomy and mastery in the world isn’t going to help motivate someone if they’re doing work for no reason at all, which is why you need to give their work purpose. Many people work on products that have great significance, but they’re kept at arm’s length from the positive effects their products might have on their company, their customers, or even the world. Even for cases in which the product might have a much smaller impact, you can motivate your team by seeking the reason for their efforts and making this reason clear to them. If you can help them to see this purpose in their work, you’ll see a tremendous increase in their motivation and productivity.[14](#_bookmark464) One manager we know keeps a close eye on the email feedback that Google gets for its product (one of the “smaller-impact” products), and whenever she sees a message from a customer talking about how the company’s product has helped them personally or helped their business, she immediately forwards it to the engineering team. This not only motivates the team, but also frequently inspires team members to think about ways in which they can make their product even better.
 
-當然，如果某人無緣無故地工作，那麼世界上所有的自主性和掌握性都無助於激勵他們，這就是為什麼你需要給他們工作的目的。許多人從事具有重大意義的產品，但他們與產品可能對公司、客戶甚至世界產生的積極影響保持一定距離。即使在產品的影響可能小得多的情況下，你也可以透過尋找他們努力的原因並向他們說明原因來激勵團隊。如果你能幫助他們在工作中看到這一目標，你會看到他們的積極性和生產效率有了巨大的提高。我們認識的一位經理密切關注谷歌為其產品（一種“影響較小”的產品）收到的電子郵件反饋，每當她看到客戶在談論公司的產品如何幫助他們個人或幫助他們的業務時，她會立即將其轉發給工程團隊。這不僅激勵了團隊，也經常激勵團隊成員思考如何讓他們的產品變得更好。
+當然，如果某人無緣無故地工作，那麼世界上所有的自主性和掌握性都無助於激勵他們，這就是為什麼你需要給他們工作的目的。許多人從事具有重大意義的產品，但他們與產品可能對公司、客戶甚至世界產生的積極影響保持一定距離。即使在產品的影響可能小得多的情況下，你也可以透過尋找他們努力的原因並向他們說明原因來激勵團隊。如果你能幫助他們在工作中看到這一目標，你會看到他們的積極性和生產效率有了巨大的提高。我們認識的一位經理密切關注 Google 為其產品（一種“影響較小”的產品）收到的電子郵件反饋，每當她看到客戶在談論公司的產品如何幫助他們個人或幫助他們的業務時，她會立即將其轉發給工程團隊。這不僅激勵了團隊，也經常激勵團隊成員思考如何讓他們的產品變得更好。
 
 ```
 10	See Dan’s fantastic TED talk on this subject.
@@ -585,7 +585,7 @@ Of course, all the autonomy and mastery in the world isn’t going to help motiv
 
 Leading a team is a different task than that of being a software engineer. As a result, good software engineers do not always make good managers, and that’s OK— effective organizations allow productive career paths for both individual contributors and people managers. Although Google has found that software engineering experience itself is invaluable for managers, the most important skills an effective manager brings to the table are social ones. Good managers enable their engineering teams by helping them work well, keeping them focused on proper goals, and insulating them from problems outside the group, all while following the three pillars of humility, trust, and respect.
 
-領導團隊與作為軟體工程師是不同的任務。因此，好的軟體工程師並不總是能成為好的管理者，這也沒關係——高效的組織為個人貢獻者和人員管理者提供了富有成效的職業道路。儘管谷歌發現軟體工程經驗本身對管理者來說是無價的，但一個有效的管理者所帶來的最重要的技能是社交技能。優秀的管理者幫助他們的工程團隊做好工作，讓他們專注於正確的目標，讓他們遠離團隊之外的問題，同時遵循謙遜、信任和尊重這三大支柱。
+領導團隊與作為軟體工程師是不同的任務。因此，好的軟體工程師並不總是能成為好的管理者，這也沒關係——高效的組織為個人貢獻者和人員管理者提供了富有成效的職業道路。儘管 Google 發現軟體工程經驗本身對管理者來說是無價的，但一個有效的管理者所帶來的最重要的技能是社交技能。優秀的管理者幫助他們的工程團隊做好工作，讓他們專注於正確的目標，讓他們遠離團隊之外的問題，同時遵循謙遜、信任和尊重這三大支柱。
 
 ## TL;DRs  內容提要
 

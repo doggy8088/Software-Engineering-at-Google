@@ -12,7 +12,7 @@
 
 The previous chapter introduced two of the main axes along which Google classifies tests: *size* and *scope*. To recap, size refers to the resources consumed by a test and what it is allowed to do, and scope refers to how much code a test is intended to validate. Though Google has clear definitions for test size, scope tends to be a little fuzzier. We use the term *unit test* to refer to tests of relatively narrow scope, such as of a single class or method. Unit tests are usually small in size, but this isn’t always the case.
 
-上一章介紹了谷歌對測試進行分類的兩個主要軸線：*大小*和*範圍*。簡而言之，大小是指測試所消耗的資源和允許做的事情，範圍是指測試要驗證多少程式碼。雖然谷歌對測試規模有明確的定義，但範圍往往是比較模糊的。我們使用術語*單元測試*指的是範圍相對較窄的測試，如單個類別或方法的測試。單元測試通常是小規模的，但這並不總是這樣的。
+上一章介紹了 Google 對測試進行分類的兩個主要軸線：*大小*和*範圍*。簡而言之，大小是指測試所消耗的資源和允許做的事情，範圍是指測試要驗證多少程式碼。雖然 Google 對測試規模有明確的定義，但範圍往往是比較模糊的。我們使用術語*單元測試*指的是範圍相對較窄的測試，如單個類別或方法的測試。單元測試通常是小規模的，但這並不總是這樣的。
 
 After preventing bugs, the most important purpose of a test is to improve engineers’ productivity. Compared to broader-scoped tests, unit tests have many properties that make them an excellent way to optimize productivity:
 
@@ -24,7 +24,7 @@ After preventing bugs, the most important purpose of a test is to improve engine
 
 在實現防止bug之後，測試最重要的目的是提高工程師的生產效率。與範圍更廣的測試相比，單元測試有許多特性，使其成為優化生產效率的絕佳方式:
 
-- 根據谷歌對測試規模的定義，它們往往是小型的。小型測試是快速和確定的，允許開發人員頻繁地執行它們，作為他們工作流程的一部分，並獲得即時反饋。
+- 根據 Google 對測試規模的定義，它們往往是小型的。小型測試是快速和確定的，允許開發人員頻繁地執行它們，作為他們工作流程的一部分，並獲得即時反饋。
 
 - 單元測試往往很容易與正在測試的程式碼同時編寫，允許工程師將他們的測試集中在他們正在工作的程式碼上，而不需要建立和理解一個更大的系統。
 
@@ -36,11 +36,11 @@ After preventing bugs, the most important purpose of a test is to improve engine
 
 Due to their many advantages, most tests written at Google are unit tests, and as a rule of thumb, we encourage engineers to aim for a mix of about 80% unit tests and 20% broader-scoped tests. This advice, coupled with the ease of writing unit tests and the speed with which they run, means that engineers run a *lot* of unit tests—it’s not at all unusual for an engineer to execute thousands of unit tests (directly or indirectly) during the average workday.
 
-由於單元測試有很多優點，在谷歌寫的大多數測試都是單元測試，作為經驗法則，我們鼓勵工程師把80%的單元測試和20%的範圍更廣的測試混合起來。這個建議，再加上編寫單元測試的簡易性和執行速度，意味著工程師要執行*多個*單元測試--一個工程師在平均工作日中執行數千個單元測試（直接或間接）是很正常的。
+由於單元測試有很多優點，在 Google 寫的大多數測試都是單元測試，作為經驗法則，我們鼓勵工程師把80%的單元測試和20%的範圍更廣的測試混合起來。這個建議，再加上編寫單元測試的簡易性和執行速度，意味著工程師要執行*多個*單元測試--一個工程師在平均工作日中執行數千個單元測試（直接或間接）是很正常的。
 
 Because they make up such a big part of engineers’ lives, Google puts a lot of focus on *test maintainability*. Maintainable tests are ones that “just work”: after writing them, engineers don’t need to think about them again until they fail, and those failures indicate real bugs with clear causes. The bulk of this chapter focuses on exploring the idea of maintainability and techniques for achieving it.
 
-因為測試在工程師的生活中佔了很大一部分，所以谷歌非常重視*測試*的可維護性。可維護的測試是那些 "正常工作 "的測試：在寫完測試後，工程師不需要再考慮它們，直到它們失敗，而這些失敗表明有明確原因的真正錯誤。本章的主要內容是探討可維護性的概念和實現它的技術。
+因為測試在工程師的生活中佔了很大一部分，所以 Google 非常重視*測試*的可維護性。可維護的測試是那些 "正常工作 "的測試：在寫完測試後，工程師不需要再考慮它們，直到它們失敗，而這些失敗表明有明確原因的真正錯誤。本章的主要內容是探討可維護性的概念和實現它的技術。
 
 ## The Importance of Maintainability  可維護性的重要性
 
@@ -50,7 +50,7 @@ Imagine this scenario: Mary wants to add a simple new feature to the product and
 
 Here, testing had the opposite of its intended effect by draining productivity rather than improving it while not meaningfully increasing the quality of the code under test. This scenario is far too common, and Google engineers struggle with it every day. There’s no magic bullet, but many engineers at Google have been working to develop sets of patterns and practices to alleviate these problems, which we encourage the rest of the company to follow.
 
-在這裡，測試產生了與預期相反的效果，它消耗了生產力，而不是提高生產效率，同時沒有顯著提高被測試程式碼的品質。這種情況太普遍了，谷歌工程師每天都在與之鬥爭。沒有什麼靈丹妙藥，但谷歌的許多工程師一直在努力開發一套模式和實踐來緩解這些問題，我們鼓勵公司的其他人效仿。
+在這裡，測試產生了與預期相反的效果，它消耗了生產力，而不是提高生產效率，同時沒有顯著提高被測試程式碼的品質。這種情況太普遍了， Google 工程師每天都在與之鬥爭。沒有什麼靈丹妙藥，但 Google 的許多工程師一直在努力開發一套模式和實踐來緩解這些問題，我們鼓勵公司的其他人效仿。
 
 The problems Mary ran into weren’t her fault, and there was nothing she could have done to avoid them: bad tests must be fixed before they are checked in, lest they impose a drag on future engineers. Broadly speaking, the issues she encountered fall into two categories. First, the tests she was working with were *brittle*: they broke in response to a harmless and unrelated change that introduced no real bugs. Second, the tests were *unclear*: after they were failing, it was difficult to determine what was wrong, how to fix it, and what those tests were supposed to be doing in the first place.
 
@@ -64,7 +64,7 @@ As just defined, a brittle test is one that fails in the face of an unrelated ch
 
 Brittle tests cause pain in codebases of any size, but they become particularly acute at Google’s scale. An individual engineer might easily run thousands of tests in a single day during the course of their work, and a single large-scale change (see [Chapter 22](#_bookmark1935)) can trigger hundreds of thousands of tests. At this scale, spurious breakages that affect even a small percentage of tests can waste huge amounts of engineering time. Teams at Google vary quite a bit in terms of how brittle their test suites are, but we’ve identified a few practices and patterns that tend to make tests more robust to change.
 
-脆弱測試在任何規模的程式碼函式庫中都會造成痛苦，但在谷歌的規模中，它們變得尤為嚴重。一個單獨的工程師在工作過程中，可能在一天內就會輕易地執行數千個測試，而一個大規模的變化（見第22章）可能會引發數十萬個測試。在這種規模下，即使是影響一小部分測試的誤報故障也會浪費大量的工程時間。谷歌的團隊在測試套件的脆弱性方面存在很大差異，但我們已經確定了一些實踐和模式，這些實踐和模式傾向於使測試變得更健壯，更易於更改。
+脆弱測試在任何規模的程式碼函式庫中都會造成痛苦，但在 Google 的規模中，它們變得尤為嚴重。一個單獨的工程師在工作過程中，可能在一天內就會輕易地執行數千個測試，而一個大規模的變化（見第22章）可能會引發數十萬個測試。在這種規模下，即使是影響一小部分測試的誤報故障也會浪費大量的工程時間。 Google 的團隊在測試套件的脆弱性方面存在很大差異，但我們已經確定了一些實踐和模式，這些實踐和模式傾向於使測試變得更健壯，更易於更改。
 
 ### Strive for Unchanging Tests  力求不變的測試
 
@@ -232,7 +232,7 @@ Defining an appropriate scope for a unit and hence what should be considered the
 
 At Google, we’ve found that engineers sometimes need to be persuaded that testing via public APIs is better than testing against implementation details. The reluctance is understandable because it’s often much easier to write tests focused on the piece of code you just wrote rather than figuring out how that code affects the system as a whole. Nevertheless, we have found it valuable to encourage such practices, as the extra upfront effort pays for itself many times over in reduced maintenance burden. Testing against public APIs won’t completely prevent brittleness, but it’s the most important thing you can do to ensure that your tests fail only in the event of meaningful changes to your system.
 
-在谷歌，我們發現工程師有時需要被說服，透過公共API進行測試比針對實現細節進行測試要好。這種不情願的態度是可以理解的，因為寫測試的重點往往是你剛剛寫的那段程式碼，而不是弄清楚這段程式碼是如何影響整個系統的。然而，我們發現鼓勵這種做法是很有價值的，因為額外的前期努力在減少維護負擔方面得到了許多倍的回報。針對公共API的測試並不能完全防止脆性，但這是你能做的最重要的事情，以確保你的測試只在系統發生有意義的變化時才失敗。
+在 Google ，我們發現工程師有時需要被說服，透過公共API進行測試比針對實現細節進行測試要好。這種不情願的態度是可以理解的，因為寫測試的重點往往是你剛剛寫的那段程式碼，而不是弄清楚這段程式碼是如何影響整個系統的。然而，我們發現鼓勵這種做法是很有價值的，因為額外的前期努力在減少維護負擔方面得到了許多倍的回報。針對公共API的測試並不能完全防止脆性，但這是你能做的最重要的事情，以確保你的測試只在系統發生有意義的變化時才失敗。
 
 ### Test State, Not Interactions  測試狀態，而不是互動
 
@@ -950,7 +950,7 @@ Unit tests are one of the most powerful tools that we as software engineers have
 
 Unit tests at Google are far from perfect, but we’ve found tests that follow the practices outlined in this chapter to be orders of magnitude more valuable than those that don’t. We hope they’ll help you to improve the quality of your own tests!
 
-谷歌的單元測試遠非完美，但我們發現遵循本章所述做法的測試比那些不遵循的測試要有價值得多。我們希望它們能幫助你提高你自己的測試的品質。
+ Google 的單元測試遠非完美，但我們發現遵循本章所述做法的測試比那些不遵循的測試要有價值得多。我們希望它們能幫助你提高你自己的測試的品質。
 
 ## TL;DRs  內容提要
 - Strive for unchanging tests.

@@ -149,11 +149,11 @@ The main point here is that this insight—a better understanding of all the tra
 
 At face value, Always Be Leaving sounds like terrible advice. Why would a good leader be trying to leave? In fact, this is a famous quote from Bharat Mediratta, a former Google engineering director. What he meant was that it’s not just your job to solve an ambiguous problem, but to get your organization to solve it by itself, without you present. If you can do that, it frees you up to move to a new problem (or new organization), leaving a trail of self-sufficient success in your wake.
 
-從字面自私上看，"始終保持離開" 聽上去是一個可怕的建議。為什麼一個好的領導者要嘗試離開他的團隊呢？事實上這是參考的前谷歌工程主管 Bharat Mediratta 的話。他的意思是你的任務不僅僅是解決邊界不清晰的問題，而是還要引導你的組織在沒有你在場的情況下自己解決問題。如果你能做到這點，將釋放你一部分精力去解決新的問題（或去管理新的組織），在你身後留下一個個能自給自足的團隊。
+從字面自私上看，"始終保持離開" 聽上去是一個可怕的建議。為什麼一個好的領導者要嘗試離開他的團隊呢？事實上這是參考的前 Google 工程主管 Bharat Mediratta 的話。他的意思是你的任務不僅僅是解決邊界不清晰的問題，而是還要引導你的組織在沒有你在場的情況下自己解決問題。如果你能做到這點，將釋放你一部分精力去解決新的問題（或去管理新的組織），在你身後留下一個個能自給自足的團隊。
 
 The antipattern here, of course, is a situation in which you’ve set yourself up to be a single point of failure (SPOF). As we noted earlier in this book, Googlers have a term for that, the bus factor: the number of people that need to get hit by a bus before your project is completely doomed.
 
-這裡的反模式是，把你自己置為單點故障的情況。就像我們在本書前面說的那樣，谷歌員工有一個個專用短語來說明這個情況——“巴士因子”：在你的專案完全失敗之前，需要有多少人被公共汽車撞倒。
+這裡的反模式是，把你自己置為單點故障的情況。就像我們在本書前面說的那樣， Google 員工有一個個專用短語來說明這個情況——“巴士因子”：在你的專案完全失敗之前，需要有多少人被公共汽車撞倒。
 
 Of course, the “bus” here is just a metaphor. People become sick; they switch teams or companies; they move away. As a litmus test, think about a difficult problem that your team is making good progress on. Now imagine that you, the leader, disappear. Does your team keep going? Does it continue to be successful? Here’s an even simpler test: think about the last vacation you took that was at least a week long. Did you keep checking your work email? (Most leaders do.) Ask yourself why. Will things fall apart if you don’t pay attention? If so, you have very likely made yourself an SPOF. You need to fix that.
 

@@ -18,7 +18,7 @@
 - [第十六章：版本控制和分支管理](zh-cn/Chapter-16_Version_Control_and_Branch_Management/Chapter-16_Version_Control_and_Branch_Management.md)
 - [第十七章 程式碼搜尋](zh-cn/Chapter-17_Code_Search/Chapter-17_Code_Search.md)
 - [第十八章 建構系統，建構理念](zh-cn/Chapter-18_Build_Systems_and_Build_Philosophy/Chapter-18_Build_Systems_and_Build_Philosophy.md)
-- [第十九章：體驗：谷歌的程式碼審查工具](zh-cn/Chapter-19_Critique_Googles_Code_Review_Tool/Chapter-19_Critique_Googles_Code_Review_Tool.md)
+- [第十九章：體驗：Google 的程式碼審查工具](zh-cn/Chapter-19_Critique_Googles_Code_Review_Tool/Chapter-19_Critique_Googles_Code_Review_Tool.md)
 - [第二十章：靜態分析](zh-cn/Chapter-20_Static_Analysis/Chapter-20_Static_Analysis.md) 
 - [第二十一章：依賴管理](zh-cn/Chapter-21_Dependency_Management/Chapter-21_Dependency_Management.md)
 - [第二十二章：大規模變更](zh-cn/Chapter-22_Large-Scale_Changes/Chapter-22_Large-Scale_Changes.md)

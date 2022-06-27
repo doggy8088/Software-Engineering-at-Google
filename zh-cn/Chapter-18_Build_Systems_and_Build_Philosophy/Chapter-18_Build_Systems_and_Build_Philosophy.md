@@ -8,13 +8,13 @@
 
 If you ask Google engineers what they like most about working at Google (besides the free food and cool products), you might hear something surprising: engineers love the build system.1 Google has spent a tremendous amount of engineering effort over its lifetime in creating its own build system from the ground up, with the goal of ensuring that our engineers are able to quickly and reliably build code. The effort has been so successful that Blaze, the main component of the build system, has been reimplemented several different times by ex-Googlers who have left the company.2 In 2015, Google finally open sourced an implementation of Blaze named Bazel.
 
-如果你問谷歌的工程師，他們最喜歡在谷歌工作的什麼（除了免費的食物和黑科技產品），你還會聽到一些令人驚訝的事情：工程師們喜歡建構系統。谷歌一直在花費了巨大的努力，從零開始建立自己的建構系統，目的是確保工程師們能夠快速、可靠地建構程式碼。這一努力是成功的，建構系統的主要元件Blaze，已經被已經離開公司的前谷歌員工重新實現了好幾次。2015年，谷歌終於公開了Blaze的一個實現，名為Bazel。
+如果你問 Google 的工程師，他們最喜歡在 Google 工作的什麼（除了免費的食物和黑科技產品），你還會聽到一些令人驚訝的事情：工程師們喜歡建構系統。 Google 一直在花費了巨大的努力，從零開始建立自己的建構系統，目的是確保工程師們能夠快速、可靠地建構程式碼。這一努力是成功的，建構系統的主要元件Blaze，已經被已經離開公司的前 Google 員工重新實現了好幾次。2015年， Google 終於公開了Blaze的一個實現，名為Bazel。
 
 ```
 1	In an internal survey, 83% of Googlers reported being satisfied with the build system, making it the fourth most satisfying tool of the 19 surveyed. The average tool had a satisfaction rating of 69%.
 2	See https://buck.build/ and https://www.pantsbuild.org/index.html.
 
-1  在一項內部調查中，83%的谷歌使用者表示對建構系統感到滿意，這使它成為19項調查中第四個最令人滿意的工具。平均工具的滿意度為69%。
+1  在一項內部調查中，83%的 Google 使用者表示對建構系統感到滿意，這使它成為19項調查中第四個最令人滿意的工具。平均工具的滿意度為69%。
 2 查閱 https://buck.build/ and https://www.pantsbuild.org/index.html
 ```
 
@@ -43,7 +43,7 @@ Build systems aren’t just for humans; they also allow machines to create build
 •	Authors of low-level libraries are able to test their changes across the entire codebase, ensuring that their changes are safe across millions of tests and binaries.
 •	Engineers are able to create large-scale changes (LSCs) that touch tens of thousands of source files at a time (e.g., renaming a common symbol) while still being able to safely submit and test those changes. We discuss LSCs in greater detail in Chapter 22.
 
-建構系統不僅僅是為人類服務的；它們也允許機器自動建立建構，無論是用於測試還是用於發佈到生產環境。事實上，谷歌的大部分建構都是自動觸發的，而不是由工程師點選觸發的。我們幾乎所有的開發工具都以某種方式與建構系統相結合，為每個在我們的程式碼函式庫上工作的人提供了巨大的價值。以下是利用我們的自動建構系統的一小部分工作流示例：
+建構系統不僅僅是為人類服務的；它們也允許機器自動建立建構，無論是用於測試還是用於發佈到生產環境。事實上， Google 的大部分建構都是自動觸發的，而不是由工程師點選觸發的。我們幾乎所有的開發工具都以某種方式與建構系統相結合，為每個在我們的程式碼函式庫上工作的人提供了巨大的價值。以下是利用我們的自動建構系統的一小部分工作流示例：
 - 程式碼自動建構、測試並推送到生產環境，無需任何人工干預。不同的團隊以不同的頻率做這件事：有些團隊每週推送一次，有些團隊每天推送一次，有些團隊則以系統能夠建立和驗證新建構的速度推送。(見第24章）。
 - 開發人員的更改在傳送給程式碼審查時自動進行測試（參見第19章），以便作者和審查人員都可以立即看到更改引起的任何建構或測試問題。。
 - 在將修改合併到主幹中之前，會立即對其進行測試，這使得提交破壞性修改變得更加困難。
@@ -53,7 +53,7 @@ Build systems aren’t just for humans; they also allow machines to create build
 
 All of this is possible only because of Google’s investment in its build system. Although Google might be unique in its scale, any organization of any size can realize similar benefits by making proper use of a modern build system. This chapter describes what Google considers to be a “modern build system” and how to use such systems.
 
-所有這些都是由於谷歌對其建構系統的投入才得以實現。儘管谷歌的規模是獨一無二的，但任何規模的組織都可以透過正確使用現代建構系統實現類似的好處。本章介紹了Google認為的 "現代建構系統 "以及如何使用這些系統。
+所有這些都是由於 Google 對其建構系統的投入才得以實現。儘管 Google 的規模是獨一無二的，但任何規模的組織都可以透過正確使用現代建構系統實現類似的好處。本章介紹了Google認為的 "現代建構系統 "以及如何使用這些系統。
 
 #  What Happens Without a Build System? 沒有建構系統會怎樣？
 
@@ -268,7 +268,7 @@ Some build systems try to enable incremental builds by letting engineers specify
 
 There’s no general-purpose way to solve these performance, correctness, or maintainability problems within the task-based framework laid out here. So long as engineers can write arbitrary code that runs during the build, the system can’t have enough information to always be able to run builds quickly and correctly. To solve the problem, we need to take some power out of the hands of engineers and put it back in the hands of the system and reconceptualize the role of the system not as running tasks, but as producing artifacts. This is the approach that Google takes with Blaze and Bazel, and it will be described in the next section.
 
-在這裡列出的基於任務的框架中，沒有通用的方法來解決這些效能、正確性或可維護性問題。只要工程師能夠編寫在建構過程中執行的任意程式碼，系統就不可能擁有足夠的資訊來始終能夠快速、正確地執行建構。我們需要從工程師手中奪走一些權力，把它放回系統的手中，並重新認識到系統的作用不是作為執行任務，而是作為生產元件。這就是谷歌對Blaze和Bazel採取的方法，將在下一節進行描述。
+在這裡列出的基於任務的框架中，沒有通用的方法來解決這些效能、正確性或可維護性問題。只要工程師能夠編寫在建構過程中執行的任意程式碼，系統就不可能擁有足夠的資訊來始終能夠快速、正確地執行建構。我們需要從工程師手中奪走一些權力，把它放回系統的手中，並重新認識到系統的作用不是作為執行任務，而是作為生產元件。這就是 Google 對Blaze和Bazel採取的方法，將在下一節進行描述。
 
 ## Artifact-Based Build Systems 基於構件的建構系統
 To design a better build system, we need to take a step back. The problem with the earlier systems is that they gave too much power to individual engineers by letting them define their own tasks. Maybe instead of letting engineers define tasks, we can have a small number of tasks defined by the system that engineers can configure in a limited way. We could probably deduce the name of the most important task from the name of this chapter: a build system’s primary task should be to build code. Engineers would still need to tell the system what to build, but the how of doing the build would be left to the system.
@@ -290,7 +290,7 @@ Many problems cannot be easily expressed using functional programming, but the o
 
 Getting concrete with Bazel. Bazel is the open source version of Google’s internal build tool, Blaze, and is a good example of an artifact-based build system. Here’s what a buildfile (normally named BUILD) looks like in Bazel:
 
-用Bazel來實現具體化。Bazel是谷歌內部建構工具Blaze的開源版本，是基於構件的建構系統的一個好例子。下面是Bazel中建構檔案（通常名為BUILD）的內容：
+用Bazel來實現具體化。Bazel是 Google 內部建構工具Blaze的開源版本，是基於構件的建構系統的一個好例子。下面是Bazel中建構檔案（通常名為BUILD）的內容：
 
 ```
 java_binary(
@@ -405,7 +405,7 @@ Of course, it can still be a problem if a remote server becomes unavailable or s
 ## Distributed Builds 分散式建構
 Google’s codebase is enormous—with more than two billion lines of code, chains of dependencies can become very deep. Even simple binaries at Google often depend on tens of thousands of build targets. At this scale, it’s simply impossible to complete a build in a reasonable amount of time on a single machine: no build system can get around the fundamental laws of physics imposed on a machine’s hardware. The only way to make this work is with a build system that supports distributed builds wherein the units of work being done by the system are spread across an arbitrary and scalable number of machines. Assuming we’ve broken the system’s work into small enough units (more on this later), this would allow us to complete any build of any size as quickly as we’re willing to pay for. 
 
-谷歌的程式碼函式庫非常龐大--有超過20億行的程式碼，依賴關係鏈可以變得非常深。在谷歌，即使是簡單的二進位制檔案也常常依賴於成千上萬個建構目標。在這種規模下，要在一臺機器上以合理的時間完成建構是根本不可能的：任何建構系統都無法繞過強加給機器硬體的基本物理定律。唯一的辦法是使用支援分散式建構的建構系統，其中系統所完成的工作單元分佈在任意數量且可擴充套件的機器上。假設我們把系統的工作分解成足夠小的單位（後面會有更多介紹），這將使我們能夠以我們可以根據支付的費用來獲得想要的速度完成任何規模的建構。
+ Google 的程式碼函式庫非常龐大--有超過20億行的程式碼，依賴關係鏈可以變得非常深。在 Google ，即使是簡單的二進位制檔案也常常依賴於成千上萬個建構目標。在這種規模下，要在一臺機器上以合理的時間完成建構是根本不可能的：任何建構系統都無法繞過強加給機器硬體的基本物理定律。唯一的辦法是使用支援分散式建構的建構系統，其中系統所完成的工作單元分佈在任意數量且可擴充套件的機器上。假設我們把系統的工作分解成足夠小的單位（後面會有更多介紹），這將使我們能夠以我們可以根據支付的費用來獲得想要的速度完成任何規模的建構。
 
 This scalability is the holy grail we’ve been working toward by defining an artifact-based build system.
 
@@ -422,7 +422,7 @@ Figure 18-2. A distributed build showing remote caching
 
 Every system that performs builds, including both developer workstations and continuous integration systems, shares a reference to a common remote cache service. This service might be a fast and local short-term storage system like Redis or a cloud service like Google Cloud Storage. Whenever a user needs to build an artifact, whether directly or as a dependency, the system first checks with the remote cache to see if that artifact already exists there. If so, it can download the artifact instead of building it. If not, the system builds the artifact itself and uploads the result back to the cache. This means that low-level dependencies that don’t change very often can be built once and shared across users rather than having to be rebuilt by each user. At Google, many artifacts are served from a cache rather than built from scratch, vastly reducing the cost of running our build system.
 
-每個執行建構的系統，包括開發人員工作站和連續整合系統，都共享對公共遠端快取服務的參考。這個服務可能是一個高速的本地短期儲存系統，如Redis，或一個雲服務，如谷歌雲端儲存。每當使用者需要建構一個構件時，無論是直接建構還是作為一個依賴，系統首先檢查遠端快取，看該構件是否已經存在。如果存在，它可以下載該構件而不是建構它。如果沒有，系統會自己建構構件，並將結果上傳到快取中。這意味著不經常更改的低階依賴項可以建構一次並在使用者之間共享，而不必由每個使用者重新建構。在谷歌，許多構件是從快取中提供的，而不是從頭開始建構的，這大大降低了我們執行建構系統的成本。
+每個執行建構的系統，包括開發人員工作站和連續整合系統，都共享對公共遠端快取服務的參考。這個服務可能是一個高速的本地短期儲存系統，如Redis，或一個雲服務，如 Google 雲端儲存。每當使用者需要建構一個構件時，無論是直接建構還是作為一個依賴，系統首先檢查遠端快取，看該構件是否已經存在。如果存在，它可以下載該構件而不是建構它。如果沒有，系統會自己建構構件，並將結果上傳到快取中。這意味著不經常更改的低階依賴項可以建構一次並在使用者之間共享，而不必由每個使用者重新建構。在 Google ，許多構件是從快取中提供的，而不是從頭開始建構的，這大大降低了我們執行建構系統的成本。
 
 For a remote caching system to work, the build system must guarantee that builds are completely reproducible. That is, for any build target, it must be possible to determine the set of inputs to that target such that the same set of inputs will produce exactly the same output on any machine. This is the only way to ensure that the results of downloading an artifact are the same as the results of building it oneself. Fortunately, Bazel provides this guarantee and so supports [remote caching](https://oreil.ly/D9doX). Note that this requires that each artifact in the cache be keyed on both its target and a hash of its inputs—that way, different engineers could make different modifications to the same target at the same time, and the remote cache would store all of the resulting artifacts and serve them appropriately without conflict.
 
@@ -430,7 +430,7 @@ For a remote caching system to work, the build system must guarantee that builds
 
 Of course, for there to be any benefit from a remote cache, downloading an artifact needs to be faster than building it. This is not always the case, especially if the cache server is far from the machine doing the build. Google’s network and build system is carefully tuned to be able to quickly share build results. When configuring remote caching in your organization, take care to consider network latencies and perform experiments to ensure that the cache is actually improving performance.
 
-當然，要想從遠端快取中獲得任何好處，下載構件的速度必須比建構它的速度快。但情況並非總是如此，尤其是當快取伺服器遠離進行建構的機器時。谷歌的網路和建構系統是經過精心調整的，能夠快速分享建構結果。在組織中配置遠端快取時，請注意考慮網路延遲，並進行實驗以確保快取實際上正在提高效能
+當然，要想從遠端快取中獲得任何好處，下載構件的速度必須比建構它的速度快。但情況並非總是如此，尤其是當快取伺服器遠離進行建構的機器時。 Google 的網路和建構系統是經過精心調整的，能夠快速分享建構結果。在組織中配置遠端快取時，請注意考慮網路延遲，並進行實驗以確保快取實際上正在提高效能
 
 ## Remote execution 遠端建構
 
@@ -456,7 +456,7 @@ For this to work, all of the parts of the artifact-based build systems described
 
 **Distributed builds at Google.** Since 2008, Google has been using a distributed build system that employs both remote caching and remote execution, which is illustrated in [Figure 18-4](#_bookmark1678).
 
-**谷歌的分散式建構。**自2008年以來，谷歌一直在使用分散式建構系統，該系統同時採用了遠端快取和遠端執行，如[圖18-4]（#_bookmark1678）所示。
+** Google 的分散式建構。**自2008年以來， Google 一直在使用分散式建構系統，該系統同時採用了遠端快取和遠端執行，如[圖18-4]（#_bookmark1678）所示。
 
 ![Figure 18-4](./images/Figure%2018-4.png)
 
@@ -464,15 +464,15 @@ For this to work, all of the parts of the artifact-based build systems described
 
 Google’s remote cache is called ObjFS. It consists of a backend that stores build outputs in [Bigtables](https://oreil.ly/S_N-D) distributed throughout our fleet of production machines and a frontend FUSE daemon named objfsd that runs on each developer’s machine. The FUSE daemon allows engineers to browse build outputs as if they were normal files stored on the workstation, but with the file content downloaded on-demand only for the few files that are directly requested by the user. Serving file contents on-demand greatly reduces both network and disk usage, and the system is able to [build twice as](https://oreil.ly/NZxSp) [fast ](https://oreil.ly/NZxSp)compared to when we stored all build output on the developer’s local disk.
 
-谷歌的遠端快取被稱為ObjFS。它包括一個將建構輸出儲存在[Bigtables](https://oreil.ly/S_N-D)的後端，分佈在我們的生產機群中，以及一個執行在每個開發人員機器上的名為objfsd的前端FUSE守護程式。FUSE守護程序允許工程師瀏覽建構輸出，就像它們是儲存在工作站上的普通檔案一樣，但檔案內容僅針對使用者直接請求的少數檔案按需下載。按需提供檔案內容大大減少了網路和磁碟的使用，系統的建構速度是將所有建構輸出儲存在開發人員的本地磁碟上時的兩倍。
+ Google 的遠端快取被稱為ObjFS。它包括一個將建構輸出儲存在[Bigtables](https://oreil.ly/S_N-D)的後端，分佈在我們的生產機群中，以及一個執行在每個開發人員機器上的名為objfsd的前端FUSE守護程式。FUSE守護程序允許工程師瀏覽建構輸出，就像它們是儲存在工作站上的普通檔案一樣，但檔案內容僅針對使用者直接請求的少數檔案按需下載。按需提供檔案內容大大減少了網路和磁碟的使用，系統的建構速度是將所有建構輸出儲存在開發人員的本地磁碟上時的兩倍。
 
 Google’s remote execution system is called Forge. A Forge client in Blaze called the Distributor sends requests for each action to a job running in our datacenters called the Scheduler. The Scheduler maintains a cache of action results, allowing it to return a response immediately if the action has already been created by any other user of the system. If not, it places the action into a queue. A large pool of Executor jobs continually read actions from this queue, execute them, and store the results directly in the ObjFS Bigtables. These results are available to the executors for future actions, or to be downloaded by the end user via objfsd.
 
-谷歌的遠端執行系統被稱為Forge。在Blaze中，一個名為 "Distributor "的Forge客戶端將每個操作的請求傳送到資料中心中名為Scheduler排程器。排程器維護操作結果的快取，允許它在操作已經由系統的任何其他使用者建立時立即返回響應。如果沒有，它就把操作放到一個佇列中。大量執行器作業從該佇列中連續讀取操作，執行它們，並將結果直接儲存在ObjFS Bigtables中。這些結果可供執行者用於將來的操作，或由終端使用者透過objfsd下載。
+ Google 的遠端執行系統被稱為Forge。在Blaze中，一個名為 "Distributor "的Forge客戶端將每個操作的請求傳送到資料中心中名為Scheduler排程器。排程器維護操作結果的快取，允許它在操作已經由系統的任何其他使用者建立時立即返回響應。如果沒有，它就把操作放到一個佇列中。大量執行器作業從該佇列中連續讀取操作，執行它們，並將結果直接儲存在ObjFS Bigtables中。這些結果可供執行者用於將來的操作，或由終端使用者透過objfsd下載。
 
 The end result is a system that scales to efficiently support all builds performed at Google. And the scale of Google’s builds is truly massive: Google runs millions of builds executing millions of test cases and producing petabytes of build outputs from billions of lines of source code every *day*. Not only does such a system let our engineers build complex codebases quickly, it also allows us to implement a huge number of automated tools and systems that rely on our build. We put many years of effort into developing this system, but nowadays open source tools are readily available such that any organization can implement a similar system. Though it can take time and energy to deploy such a build system, the end result can be truly magical for engineers and is often well worth the effort.
 
-最終的結果是一個可擴充套件的系統，能夠有效地支援在谷歌執行的所有建構。谷歌建構的規模確實是巨大的：谷歌每天執行數以百萬計的建構，執行數以百萬計的測試用例，並從數十億行原始碼中產生數PB的建構輸出。這樣一個系統不僅讓我們的工程師快速建構複雜的程式碼函式庫，還讓我們能夠實現大量依賴我們建構的自動化工具和系統。我們為開發這個系統付出了多年的努力，但現在開源工具已經很容易獲得，這樣任何組織都可以實現類似的系統。雖然部署這樣一個建構系統可能需要時間和精力，但最終的結果對工程師來說確實是神奇的，而且通常是值得付出努力的。
+最終的結果是一個可擴充套件的系統，能夠有效地支援在 Google 執行的所有建構。 Google 建構的規模確實是巨大的： Google 每天執行數以百萬計的建構，執行數以百萬計的測試用例，並從數十億行原始碼中產生數PB的建構輸出。這樣一個系統不僅讓我們的工程師快速建構複雜的程式碼函式庫，還讓我們能夠實現大量依賴我們建構的自動化工具和系統。我們為開發這個系統付出了多年的努力，但現在開源工具已經很容易獲得，這樣任何組織都可以實現類似的系統。雖然部署這樣一個建構系統可能需要時間和精力，但最終的結果對工程師來說確實是神奇的，而且通常是值得付出努力的。
 
 ## Time, Scale, Trade-Offs 時間、規模、權衡
 
@@ -490,7 +490,7 @@ Task-based build systems begin to run into some fundamental problems as the proj
 
 Changes to a project’s build system can be expensive, and that cost increases as the project becomes larger. This is why Google believes that almost every new project benefits from incorporating an artifact-based build system like Bazel right from the start. Within Google, essentially all code from tiny experimental projects up to Google Search is built using Blaze.
 
-對一個專案的建構系統進行修改代價耿是昂貴的，而且隨著專案的擴大，成本也會增加。這就是為什麼谷歌認為，幾乎每一個新專案從一開始就可以從Bazel這樣的基於工件的建構系統中獲益。在谷歌內部，從微小的實驗性專案到谷歌搜尋，基本上所有的程式碼都是用Blaze建構的。
+對一個專案的建構系統進行修改代價耿是昂貴的，而且隨著專案的擴大，成本也會增加。這就是為什麼 Google 認為，幾乎每一個新專案從一開始就可以從Bazel這樣的基於工件的建構系統中獲益。在 Google 內部，從微小的實驗性專案到 Google 搜尋，基本上所有的程式碼都是用Blaze建構的。
 
 # Dealing with Modules and Dependencies 處理模組和依賴關係
 Projects that use artifact-based build systems like Bazel are broken into a set of modules, with modules expressing dependencies on one another via BUILD files. Proper organization of these modules and dependencies can have a huge effect on both the performance of the build system and how much work it takes to maintain.
@@ -508,11 +508,11 @@ Most projects fall somewhere between these extremes, and the choice involves a t
 
 Though the exact granularity varies by language (and often even within language), Google tends to favor significantly smaller modules than one might typically write in a task-based build system. A typical production binary at Google will likely depend on tens of thousands of targets, and even a moderate-sized team can own several hundred targets within its codebase. For languages like Java that have a strong built- in notion of packaging, each directory usually contains a single package, target, and BUILD file (Pants, another build system based on Blaze, calls this the 1:1:1 rule). Languages with weaker packaging conventions will frequently define multiple targets per BUILD file.
 
-雖然精確的顆粒度因語言而異（甚至在語言內部也是如此），但谷歌傾向於使用比通常在基於任務的建構系統中編寫的模組小得多的模組。在谷歌，一個典型的生產二進位制檔案可能會依賴於數以萬計的目標構件，甚至一箇中等規模的團隊也可能在其程式碼函式庫中擁有數百個目標。對於像Java這樣有強大的內建打包概念的語言，每個目錄通常包含一個單獨的包、目標和BUILD檔案（另一個基於Blaze的建構系統Pants稱之為1:1:1規則）。封裝約定較弱的語言通常會為每個建構檔案定義多個目標。
+雖然精確的顆粒度因語言而異（甚至在語言內部也是如此），但 Google 傾向於使用比通常在基於任務的建構系統中編寫的模組小得多的模組。在 Google ，一個典型的生產二進位制檔案可能會依賴於數以萬計的目標構件，甚至一箇中等規模的團隊也可能在其程式碼函式庫中擁有數百個目標。對於像Java這樣有強大的內建打包概念的語言，每個目錄通常包含一個單獨的包、目標和BUILD檔案（另一個基於Blaze的建構系統Pants稱之為1:1:1規則）。封裝約定較弱的語言通常會為每個建構檔案定義多個目標。
 
 The benefits of smaller build targets really begin to show at scale because they lead to faster distributed builds and a less frequent need to rebuild targets. The advantages become even more compelling after testing enters the picture, as finer-grained targets mean that the build system can be much smarter about running only a limited subset of tests that could be affected by any given change. Because Google believes in the systemic benefits of using smaller targets, we’ve made some strides in mitigating the downside by investing in tooling to automatically manage BUILD files to avoid burdening developers. Many of these tools are now open source.
 
-較小的建構目標的好處真正開始在規模上表現出來，因為它們可以支援更快的分散式建構和更少的重建目標的需要。當測試進入畫面後，這些優勢變得更加引人注目，因為更細粒度的目標意味著建構系統可以更智慧地只執行可能受任何給定更改影響的有限測試子集。由於谷歌相信使用較小目標的系統性好處，我們透過開發自動管理建構檔案的工具，在減輕不利影響方面取得了一些進展，以避免打擾開發人員。其中許多工具現在都是開源的。
+較小的建構目標的好處真正開始在規模上表現出來，因為它們可以支援更快的分散式建構和更少的重建目標的需要。當測試進入畫面後，這些優勢變得更加引人注目，因為更細粒度的目標意味著建構系統可以更智慧地只執行可能受任何給定更改影響的有限測試子集。由於 Google 相信使用較小目標的系統性好處，我們透過開發自動管理建構檔案的工具，在減輕不利影響方面取得了一些進展，以避免打擾開發人員。其中許多工具現在都是開源的。
 
 ## Minimizing Module Visibility 最小化模組可見性
 Bazel and other build systems allow each target to specify a visibility: a property that specifies which other targets may depend on it. Targets can be public, in which case they can be referenced by any other target in the workspace; private, in which case they can be referenced only from within the same BUILD file; or visible to only an explicitly defined list of other targets. A visibility is essentially the opposite of a dependency: if target A wants to depend on target B, target B must make itself visible to target A.
@@ -521,7 +521,7 @@ Bazel和其他建構系統允許每個目標指定可見性：一個屬性，指
 
 Just like in most programming languages, it is usually best to minimize visibility as much as possible. Generally, teams at Google will make targets public only if those targets represent widely used libraries available to any team at Google. Teams that require others to coordinate with them before using their code will maintain a whitelist of customer targets as their target’s visibility. Each team’s internal implementation targets will be restricted to only directories owned by the team, and most BUILD files will have only one target that isn’t private.
 
-就像在大多數程式語言中，通常最好方法是儘可能地減少可見性。一般來說，谷歌的團隊只有在這些目標代表了谷歌任何團隊都可以使用的廣泛使用的函式庫時，才會將目標公開。要求其他人在使用程式碼之前與他們協調的團隊將保留一份客戶目標白名單，作為其目標的可見性。每個團隊的內部實施目標將被限制在該團隊所擁有的目錄中，而且大多數BUILD檔案將只有一個非私有的目標。
+就像在大多數程式語言中，通常最好方法是儘可能地減少可見性。一般來說， Google 的團隊只有在這些目標代表了 Google 任何團隊都可以使用的廣泛使用的函式庫時，才會將目標公開。要求其他人在使用程式碼之前與他們協調的團隊將保留一份客戶目標白名單，作為其目標的可見性。每個團隊的內部實施目標將被限制在該團隊所擁有的目錄中，而且大多數BUILD檔案將只有一個非私有的目標。
 
 ## Managing Dependencies 管理依賴關係
 Modules need to be able to refer to one another. The downside of breaking a codebase into fine-grained modules is that you need to manage the dependencies among those modules (though tools can help automate this). Expressing these dependencies usually ends up being the bulk of the content in a BUILD file.
@@ -543,11 +543,11 @@ One issue that should be handled carefully with regard to internal dependencies 
 
 As far as the underlying tools are concerned, there’s no problem with this; both B and C will be linked into target A when it is built, so any symbols defined in C are known to A. Blaze allowed this for many years, but as Google grew, we began to see problems. Suppose that B was refactored such that it no longer needed to depend on C. If B’s dependency on C was then removed, A and any other target that used C via a dependency on B would break. Effectively, a target’s dependencies became part of its public contract and could never be safely changed. This meant that dependencies accumulated over time and builds at Google started to slow down.
 
-就底層工具而言，這沒有問題；B和C在建構目標A時都會連結到目標A中，因此C中定義的任何符號都會被A知道。Blaze允許這一點很多年了，但隨著谷歌的發展，我們開始發現問題。假設B被重構，不再需要依賴C。如果B對C的依賴關係被刪除，A和透過對B的依賴關係使用C的任何其他目標都將中斷。實際上，一個目標的依賴關係成為其公共契約的一部分，永遠無法安全地更改。這意味著依賴性會隨著時間的推移而積累，谷歌的建構速度開始變慢。
+就底層工具而言，這沒有問題；B和C在建構目標A時都會連結到目標A中，因此C中定義的任何符號都會被A知道。Blaze允許這一點很多年了，但隨著 Google 的發展，我們開始發現問題。假設B被重構，不再需要依賴C。如果B對C的依賴關係被刪除，A和透過對B的依賴關係使用C的任何其他目標都將中斷。實際上，一個目標的依賴關係成為其公共契約的一部分，永遠無法安全地更改。這意味著依賴性會隨著時間的推移而積累， Google 的建構速度開始變慢。
 
 Google eventually solved this issue by introducing a “strict transitive dependency mode” in Blaze. In this mode, Blaze detects whether a target tries to reference a symbol without depending on it directly and, if so, fails with an error and a shell command that can be used to automatically insert the dependency. Rolling this change out across Google’s entire codebase and refactoring every one of our millions of build targets to explicitly list their dependencies was a multiyear effort, but it was well worth it. Our builds are now much faster given that targets have fewer unnecessary dependencies,[6](#_bookmark1703) and engineers are empowered to remove dependencies they don’t need without worrying about breaking targets that depend on them.
 
-谷歌最終解決了這個問題，在Blaze中引入了一個 "嚴格傳遞依賴模式"。在這種模式下，Blaze檢測目標是否嘗試參考符號而不直接依賴它，如果是，則失敗，並顯示錯誤和可用於自動插入依賴項的shell命令。在谷歌的整個程式碼函式庫中推廣這一變化，並重構我們數百萬個建構目標中的每一個，以以明確列出它們的依賴關係，這是一項多年的努力，但這是非常值得的。現在我們的建構速度快多了，因為目標的不必要的依賴性減少了，工程師有權刪除他們不需要的依賴關係，而不用擔心破壞依賴它們的目標。
+ Google 最終解決了這個問題，在Blaze中引入了一個 "嚴格傳遞依賴模式"。在這種模式下，Blaze檢測目標是否嘗試參考符號而不直接依賴它，如果是，則失敗，並顯示錯誤和可用於自動插入依賴項的shell命令。在 Google 的整個程式碼函式庫中推廣這一變化，並重構我們數百萬個建構目標中的每一個，以以明確列出它們的依賴關係，這是一項多年的努力，但這是非常值得的。現在我們的建構速度快多了，因為目標的不必要的依賴性減少了，工程師有權刪除他們不需要的依賴關係，而不用擔心破壞依賴它們的目標。
 
 As usual, enforcing strict transitive dependencies involved a trade-off. It made build files more verbose, as frequently used libraries now need to be listed explicitly in many places rather than pulled in incidentally, and engineers needed to spend more effort adding dependencies to *BUILD* files. We’ve since developed tools that reduce this toil by automatically detecting many missing dependencies and adding them to a *BUILD* files without any developer intervention. But even without such tools, we’ve found the trade-off to be well worth it as the codebase scales: explicitly adding a dependency to *BUILD* file is a one-time cost, but dealing with implicit transitive dependencies can cause ongoing problems as long as the build target exists. [Bazel](https://oreil.ly/Z-CqD) [enforces strict transitive dependencies ](https://oreil.ly/Z-CqD)on Java code by default.
 
@@ -561,7 +561,7 @@ If a dependency isn’t internal, it must be external. External dependencies are
 
 ```
 6	Of course, actually removing these dependencies was a whole separate process. But requiring each target to explicitly declare what it used was a critical first step. See Chapter 22 for more information about how Google makes large-scale changes like this.
-6   當然，實際上刪除這些依賴項是一個完全獨立的過程。但要求每個目標明確宣告它使用了什麼是關鍵的第一步。請參閱第22章，瞭解更多關於谷歌如何做出如此大規模改變的資訊。
+6   當然，實際上刪除這些依賴項是一個完全獨立的過程。但要求每個目標明確宣告它使用了什麼是關鍵的第一步。請參閱第22章，瞭解更多關於 Google 如何做出如此大規模改變的資訊。
 ```
 
  **Automatic versus manual dependency management.** Build systems can allow the versions of external dependencies to be managed either manually or automatically. When managed manually, the buildfile explicitly lists the version it wants to download from the artifact repository, often using [a semantic version string ](https://semver.org/)such as “1.1.4”. When managed automatically, the source file specifies a range of acceptable versions, and the build system always downloads the latest one. For example, Gradle allows a dependency version to be declared as “1.+” to specify that any minor or patch version of a dependency is acceptable so long as the major version is 1.
@@ -578,7 +578,7 @@ In contrast, because manually managed dependencies require a change in source co
 
 **The One-Version Rule.** Different versions of a library are usually represented by different artifacts, so in theory there’s no reason that different versions of the same external dependency couldn’t both be declared in the build system under different names. That way, each target could choose which version of the dependency it wanted to use. Google has found this to cause a lot of problems in practice, so we enforce a strict [*One-Version Rule* ](https://oreil.ly/OFa9V)for all third-party dependencies in our internal codebase.
 
-**一個版本的規則。**一個函式庫的不同版本通常由不同的構件來代表，所以在理論上，沒有理由不能在建構系統中以不同的名稱宣告相同外部依賴的不同版本。這樣，每個目標都可以選擇要使用哪個版本的依賴項。谷歌發現這在實踐中會造成很多問題，因此我們在內部程式碼函式庫中對所有第三方依賴項實施嚴格的一個版本規則。
+**一個版本的規則。**一個函式庫的不同版本通常由不同的構件來代表，所以在理論上，沒有理由不能在建構系統中以不同的名稱宣告相同外部依賴的不同版本。這樣，每個目標都可以選擇要使用哪個版本的依賴項。 Google 發現這在實踐中會造成很多問題，因此我們在內部程式碼函式庫中對所有第三方依賴項實施嚴格的一個版本規則。
 
 The biggest problem with allowing multiple versions is the *diamond dependency* issue. Suppose that target A depends on target B and on v1 of an external library. If target B is later refactored to add a dependency on v2 of the same external library, target A will break because it now depends implicitly on two different versions of the same library. Effectively, it’s never safe to add a new dependency from a target to any third-party library with multiple versions, because any of that target’s users could already be depending on a different version. Following the One-Version Rule makes this conflict impossible—if a target adds a dependency on a third-party library, any existing dependencies will already be on that same version, so they can happily coexist.
 
@@ -614,7 +614,7 @@ However, this also introduces a lot of overhead and complexity: someone needs to
 
 A better way to solve the problem of artifacts taking a long time to build is to use a build system that supports remote caching, as described earlier. Such a build system will save the resulting artifacts from every build to a location that is shared across engineers, so if a developer depends on an artifact that was recently built by someone else, the build system will automatically download it instead of building it. This provides all of the performance benefits of depending directly on artifacts while still ensuring that builds are as consistent as if they were always built from the same source. This is the strategy used internally by Google, and Bazel can be configured to use a remote cache.
 
-解決工件建構時間過長問題的更好方法是使用支援遠端快取的建構系統，如前所述。這樣的建構系統將把每次建構產生的構件儲存到工程師共享的位置，所以如果一個開發者依賴於最近由其他人建構的構件，建構系統將自動下載它而不是建構它。這提供了直接依賴構件的所有效能優勢，同時確保建構的一致性，就像它們總是從同一個源建構一樣。這是谷歌內部使用的策略，Bazel可以配置為使用遠端快取。
+解決工件建構時間過長問題的更好方法是使用支援遠端快取的建構系統，如前所述。這樣的建構系統將把每次建構產生的構件儲存到工程師共享的位置，所以如果一個開發者依賴於最近由其他人建構的構件，建構系統將自動下載它而不是建構它。這提供了直接依賴構件的所有效能優勢，同時確保建構的一致性，就像它們總是從同一個源建構一樣。這是 Google 內部使用的策略，Bazel可以配置為使用遠端快取。
 
 **Security and reliability of external dependencies.** Depending on artifacts from third- party sources is inherently risky. There’s an availability risk if the third-party source (e.g., an artifact repository) goes down, because your entire build might grind to a halt if it’s unable to download an external dependency. There’s also a security risk: if the third-party system is compromised by an attacker, the attacker could replace the referenced artifact with one of their own design, allowing them to inject arbitrary code into your build.
 
@@ -626,7 +626,7 @@ Both problems can be mitigated by mirroring any artifacts you depend on onto ser
 
 Another alternative that completely sidesteps the issue is to *vendor* your project’s dependencies. When a project vendors its dependencies, it checks them into source control alongside the project’s source code, either as source or as binaries. This effectively means that all of the project’s external dependencies are converted to internal dependencies. Google uses this approach internally, checking every third-party library referenced throughout Google into a *third_party* directory at the root of Google’s source tree. However, this works at Google only because Google’s source control system is custom built to handle an extremely large monorepo, so vendoring might not be an option for other organizations.
 
-另一個完全避開這個問題的辦法是你專案的依賴關係。當專案提供其依賴項時，它會將它們與專案原始碼一起作為原始碼或二進位制檔案檢查到原始碼管理中。這實際上意味著該專案所有的外部依賴被轉換為內部依賴。谷歌在內部使用這種方法，將整個谷歌參考的每一個第三方函式庫檢查到谷歌原始碼樹根部的*第三方*目錄中。然而，這在谷歌是可行的，因為谷歌的原始碼控制系統是訂製的，可以處理一個非常大的monorepo，所以對於其他組織來說，vendor可能不是一個選項。
+另一個完全避開這個問題的辦法是你專案的依賴關係。當專案提供其依賴項時，它會將它們與專案原始碼一起作為原始碼或二進位制檔案檢查到原始碼管理中。這實際上意味著該專案所有的外部依賴被轉換為內部依賴。 Google 在內部使用這種方法，將整個 Google 參考的每一個第三方函式庫檢查到 Google 原始碼樹根部的*第三方*目錄中。然而，這在 Google 是可行的，因為 Google 的原始碼控制系統是訂製的，可以處理一個非常大的monorepo，所以對於其他組織來說，vendor可能不是一個選項。
 
 # Conclusion 總結
 
@@ -636,15 +636,15 @@ A build system is one of the most important parts of an engineering organization
 
 As discussed in this chapter, one of the more surprising lessons that Google has learned is that *limiting engineers’ power and flexibility can improve their productivity*. We were able to develop a build system that meets our needs not by giving engineers free reign in defining how builds are performed, but by developing a highly structured framework that limits individual choice and leaves most interesting decisions in the hands of automated tools. And despite what you might think, engineers don’t resent this: Googlers love that this system mostly works on its own and lets them focus on the interesting parts of writing their applications instead of grappling with build logic. Being able to trust the build is powerful—incremental builds just work, and there is almost never a need to clear build caches or run a “clean” step.
 
-正如本章所討論的，谷歌學到的一個更令人驚訝的教訓是，*限制工程師的權力和靈活性可以提高他們的生產力*。我們能夠開發出一個滿足我們需求的建構系統，並不是透過讓工程師自由決定如何進行建構，而是透過開發一個高度結構化的框架，限制個人的選擇，並將最有趣的決策留給自動化工具。不管你怎麼想，工程師們對此並不反感：Googlers喜歡這個系統主要靠自己工作，讓他們專注於編寫應用程式的有趣部分，而不是糾結於建構邏輯。能夠信任建構是一個強大的增量建構，而且幾乎不需要清除建構快取或執行“清理”步驟。
+正如本章所討論的， Google 學到的一個更令人驚訝的教訓是，*限制工程師的權力和靈活性可以提高他們的生產力*。我們能夠開發出一個滿足我們需求的建構系統，並不是透過讓工程師自由決定如何進行建構，而是透過開發一個高度結構化的框架，限制個人的選擇，並將最有趣的決策留給自動化工具。不管你怎麼想，工程師們對此並不反感：Googlers喜歡這個系統主要靠自己工作，讓他們專注於編寫應用程式的有趣部分，而不是糾結於建構邏輯。能夠信任建構是一個強大的增量建構，而且幾乎不需要清除建構快取或執行“清理”步驟。
 
 We took this insight and used it to create a whole new type of *artifact-based* build system, contrasting with traditional *task-based* build systems. This reframing of the build as centering around artifacts instead of tasks is what allows our builds to scale to an organization the size of Google. At the extreme end, it allows for a *distributed* *build system* that is able to leverage the resources of an entire compute cluster to accelerate engineers’ productivity. Though your organization might not be large enough to benefit from such an investment, we believe that artifact-based build systems scale down as well as they scale up: even for small projects, build systems like Bazel can bring significant benefits in terms of speed and correctness.
 
-我們接受了這一觀點，並利用它建立了一種全新的基於構件的建構系統，與傳統的建構系統形成對比。這種以構件為中心而不是以任務為中心的建構重構，使我們的建構能夠擴充套件到一個與谷歌規模相當的組織。在極端情況下，它允許一個*分散式建構系統*，能夠利用整個計算叢集的資源來加速工程師的生產力。雖然你的組織可能還沒有大到可以從這樣的投資中獲益，但我們相信，基於工件的建構系統會隨著規模的擴大而縮小：即使對於小型專案，像Bazel這樣的建構系統也可以在速度和正確性方面帶來顯著的好處。
+我們接受了這一觀點，並利用它建立了一種全新的基於構件的建構系統，與傳統的建構系統形成對比。這種以構件為中心而不是以任務為中心的建構重構，使我們的建構能夠擴充套件到一個與 Google 規模相當的組織。在極端情況下，它允許一個*分散式建構系統*，能夠利用整個計算叢集的資源來加速工程師的生產力。雖然你的組織可能還沒有大到可以從這樣的投資中獲益，但我們相信，基於工件的建構系統會隨著規模的擴大而縮小：即使對於小型專案，像Bazel這樣的建構系統也可以在速度和正確性方面帶來顯著的好處。
 
 The remainder of this chapter explored how to manage dependencies in an artifact- based world. We came to the conclusion that *fine-grained modules scale better than coarse-grained modules*. We also discussed the difficulties of managing dependency versions, describing the O*ne-Version Rule* and the observation that all dependencies should be *versioned manually and explicitly*. Such practices avoid common pitfalls like the diamond dependency issue and allow a codebase to achieve Google’s scale of billions of lines of code in a single repository with a unified build system.
 
-本章的其餘部分探討了如何在一個基於工件的系統中管理依賴關係。我們得出的結論是：*細粒度的模組比粗粒度的模組更容易擴充套件。我們還討論了管理依賴版本的困難，描述了* "一個版本規則 "*，以及所有的依賴都應該*手動和明確的版本*的觀點。這樣的做法可以避免像鑽石依賴問題這樣的常見陷阱，並允許程式碼函式庫在一個具有統一建構系統的單一儲存函式庫中實現谷歌數萬億行程式碼的規模。
+本章的其餘部分探討了如何在一個基於工件的系統中管理依賴關係。我們得出的結論是：*細粒度的模組比粗粒度的模組更容易擴充套件。我們還討論了管理依賴版本的困難，描述了* "一個版本規則 "*，以及所有的依賴都應該*手動和明確的版本*的觀點。這樣的做法可以避免像鑽石依賴問題這樣的常見陷阱，並允許程式碼函式庫在一個具有統一建構系統的單一儲存函式庫中實現 Google 數萬億行程式碼的規模。
 
 # TL;DRs  內容提要
 •   A fully featured build system is necessary to keep developers productive as an organization scales.

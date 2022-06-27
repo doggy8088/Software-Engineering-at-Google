@@ -30,7 +30,7 @@ We mentioned above that Critique provides functionality to support the goals of 
 *簡潔性
 	Critique的使用者介面（UI）基於使程式碼審查變得容易而不需要很多不必要的選擇，並且具有流暢介面。使用者介面載入速度快，導航簡單，支援熱鍵，而且有清晰的視覺標記，可以顯示更改是否已稽核的總體狀態。
 *信任的基礎*
-	程式碼審查不是為了拖慢別人，相反，它是為了授權他人。儘可能地信任同事使其發揮作用。這可能意味著，例如，信任作者進行修改，而不需要額外的審查階段來再次檢查是否確實解決了次要評論。信任還體現在使修改在整個谷歌上公開進行（供檢視和審查）。
+	程式碼審查不是為了拖慢別人，相反，它是為了授權他人。儘可能地信任同事使其發揮作用。這可能意味著，例如，信任作者進行修改，而不需要額外的審查階段來再次檢查是否確實解決了次要評論。信任還體現在使修改在整個 Google 上公開進行（供檢視和審查）。
 *通用的溝通*
 	溝通問題很難透過工具來解決。Critique優先考慮讓使用者對程式碼修改進行評論的通用方法，而不是複雜的協定。評論鼓勵使用者詳細說明他們想要的內容，甚至建議進行一些編輯，而不是使資料模型和過程更加複雜。即使是最好的程式碼審查工具，溝通也會出錯，因為使用者是人。
 *工作流程的整合*。
@@ -172,7 +172,7 @@ Google has tools built on top of Piper, its monolithic source code repository (s
 •   Rapid, a release tool that packages and deploys binaries containing a series of changes
 •   Zapfhahn, a test coverage calculation tool
 
-谷歌擁有建立在Piper--其單體原始碼函式庫（見第16章）之上的工具，例如以下這些。
+ Google 擁有建立在Piper--其單體原始碼函式庫（見第16章）之上的工具，例如以下這些。
 - Cider，用於編輯雲中儲存的原始碼的線上IDE
 - 程式碼搜尋，用於在程式碼函式庫中搜索程式碼的工具
 - Tricorder，用於顯示靜態分析結果的工具（前面提到）
@@ -193,7 +193,7 @@ After the author is happy with the state of the change, they can send it for rev
 (Google Web Server) that assigns specific reviewers based on the configuration linked to the alias. For example, a change author can assign a review to some-team-list-alias, and GwsQ will pick a specific member of some-team-list-alias to perform the review.
 
 在作者對更改的狀態感到滿意後，他們可以把它送去審查，如圖19-5中所描述的。這需要作者挑選審查者。在一個小團隊內，尋找審查者可能看起來很簡單，但是即使在團隊成員之間均勻地分配評論，也需要考慮像是誰休假的情況。為了解決這個問題，團隊可以為收到的程式碼審查提供一個電子郵件別名。這個別名被一個叫做*GwsQ*的工具所使用（以最初使用這種技術的團隊命名：
-（谷歌網路伺服器），它根據連結到別名的配置分配特定的審閱者。例如，變更作者可以將評審分配給某個團隊列表別名，GwsQ將選擇某個團隊列表別名的特定成員來執行評審。
+（ Google 網路伺服器），它根據連結到別名的配置分配特定的審閱者。例如，變更作者可以將評審分配給某個團隊列表別名，GwsQ將選擇某個團隊列表別名的特定成員來執行評審。
 
 ![Figure 19-5](./images/Figure%2019-5.png)
 
@@ -205,7 +205,7 @@ Given the size of Google’s codebase and the number of people modifying it, it 
 •   Who is available for review (i.e., not out of office and preferably in the same time zone)
 •   The GwsQ team alias setup
 
-考慮到谷歌程式碼函式庫的規模和修改程式碼的人數，很難找出誰最有資格審查你自己專案之外的變更。發現審查者在達到一定的規模時要考慮的問題。評論必須處理規模問題。Critique提供了建議一組足以批准更改的審閱者的功能。評審員的選擇工具考慮到了以下因素。
+考慮到 Google 程式碼函式庫的規模和修改程式碼的人數，很難找出誰最有資格審查你自己專案之外的變更。發現審查者在達到一定的規模時要考慮的問題。評論必須處理規模問題。Critique提供了建議一組足以批准更改的審閱者的功能。評審員的選擇工具考慮到了以下因素。
 - 誰擁有被修改的程式碼（見下一節）
 - 誰對該程式碼最熟悉（即，誰最近修改過該程式碼）。
 - 誰可以進行審查（即沒有離開辦公室，最好是在同一時區）。
@@ -293,7 +293,7 @@ Critique的登陸頁面是使用者的儀表盤頁面，如圖19-8所示。儀�
 
 The dashboard page is powered by a search system called *Changelist Search*. Changelist Search indexes the latest state of all available changes (both pre- and post-submit) across all users at Google and allows its users to look up relevant changes by regular expression–based queries. Each dashboard section is defined by a query to Changelist Search. We have spent time ensuring Changelist Search is fast enough for interactive use; everything is indexed quickly so that authors and reviewers are not slowed down, despite the fact that we have an extremely large number of concurrent changes happening simultaneously at Google.
 
-儀表板頁面是由一個名為*Changelist Search*的搜尋系統提供的。Changelist Search索引了谷歌所有使用者的所有可用變化的最新狀態（包括提交前和提交後），並允許其使用者透過基於正則表示式的查詢來查詢相關變化。每個儀表板部分都由對Changelist Search的查詢來定義。我們花了很多時間來確保Changelist Search搜尋足夠快；所有的東西都被快速索引，這樣作者和審稿人就不會被拖慢，儘管事實上谷歌同時出現了大量的併發更改。
+儀表板頁面是由一個名為*Changelist Search*的搜尋系統提供的。Changelist Search索引了 Google 所有使用者的所有可用變化的最新狀態（包括提交前和提交後），並允許其使用者透過基於正則表示式的查詢來查詢相關變化。每個儀表板部分都由對Changelist Search的查詢來定義。我們花了很多時間來確保Changelist Search搜尋足夠快；所有的東西都被快速索引，這樣作者和審稿人就不會被拖慢，儘管事實上 Google 同時出現了大量的併發更改。
 
 To optimize the user experience (UX), Critique’s default dashboard setting is to have the first section display the changes that need a user’s attention, although this is customizable. There is also a search bar for making custom queries over all changes and browsing the results. As a reviewer, you mostly just need the attention set. As an author, you mostly just need to take a look at what is still waiting for review to see if you need to ping any changes. Although we have shied away from customizability in some other parts of the Critique UI, we found that users like to set up their dashboards differently without detracting from the fundamental experience, similar to the way everyone organizes their emails differently.[1](#_bookmark1770)
 
@@ -306,7 +306,7 @@ Showing whether a reviewer thinks a change is good boils down to providing conce
 •   Approval
 •   The number of unresolved comments
 
-顯示一個審查員是否認為一個變更是好的，歸根結底是透過評論提供關注和建議。此外，還需要有一些機制來提供一個高水平的 "OK"。在谷歌，對一個變化的打分分為三個部分：
+顯示一個審查員是否認為一個變更是好的，歸根結底是透過評論提供關注和建議。此外，還需要有一些機制來提供一個高水平的 "OK"。在 Google ，對一個變化的打分分為三個部分：
 - LGTM（“我覺得不錯”）
 - 批准
 - 未解決的評論的數量
@@ -368,7 +368,7 @@ Case Study: Gerrit 案例研究：Gerrit
 
 Although Critique is the most commonly used review tool at Google, it is not the only one. Critique is not externally available due to its tight interdependencies with our large monolithic repository and other internal tools. Because of this, teams at Google that work on open source projects (including Chrome and Android) or internal projects that can’t or don’t want to be hosted in the monolithic repository use a different code review tool: Gerrit.
 
-儘管Critique是Google最常用的審查工具，但它並不是唯一的工具。由於Critique與我們的大型單體函式庫和其他內部工具有緊密的相互依賴關係，所以Critique不能對外使用。正因為如此，在谷歌從事開源專案（包括Chrome和Android）或內部專案的團隊，如果不能或不想託管在單片函式庫中，就會使用另一種程式碼審查工具：Gerrit。
+儘管Critique是Google最常用的審查工具，但它並不是唯一的工具。由於Critique與我們的大型單體函式庫和其他內部工具有緊密的相互依賴關係，所以Critique不能對外使用。正因為如此，在 Google 從事開源專案（包括Chrome和Android）或內部專案的團隊，如果不能或不想託管在單片函式庫中，就會使用另一種程式碼審查工具：Gerrit。
 
 Gerrit is a standalone, open source code review tool that is tightly integrated with the Git version control system. As such, it offers a web UI to many Git features including code browsing, merging branches, cherry-picking commits, and, of course, code review. In addition, Gerrit has a fine-grained permission model that we can use to restrict access to repositories and branches.
 
@@ -392,7 +392,7 @@ You can learn more about Gerrit and see it in action at [*https://www.gerritcode
 
 There are a number of implicit trade-offs when using a code review tool. Critique builds in a number of features and integrates with other tools to make the review process more seamless for its users. Time spent in code reviews is time not spent coding, so any optimization of the review process can be a productivity gain for the company. Having only two people in most cases (author and reviewer) agree on the change before it can be committed keeps velocity high. Google greatly values the educational aspects of code review, even though they are more difficult to quantify.
 
-在使用程式碼審查工具時，有一些隱含的權衡因素。Critique內建了許多功能，並與其他工具整合，使使用者的審查過程更加完美。花在程式碼評審上的時間並不是比花在編碼上的時間少多少，所以評審過程的任何優化都可以提高公司的生產效率。在大多數情況下，只有兩個人（作者和審查者）在提交修改前達成一致，可以保持高速度。谷歌非常重視程式碼審查的培訓方面，儘管它們更難以量化。
+在使用程式碼審查工具時，有一些隱含的權衡因素。Critique內建了許多功能，並與其他工具整合，使使用者的審查過程更加完美。花在程式碼評審上的時間並不是比花在編碼上的時間少多少，所以評審過程的任何優化都可以提高公司的生產效率。在大多數情況下，只有兩個人（作者和審查者）在提交修改前達成一致，可以保持高速度。 Google 非常重視程式碼審查的培訓方面，儘管它們更難以量化。
 
 To minimize the time it takes for a change to be reviewed, the code review process should flow seamlessly, informing users succinctly of the changes that need their attention and identifying potential issues before human reviewers come in (issues are caught by analyzers and Continuous Integration). When possible, quick analysis results are presented before the longer-running analyses can finish.
 

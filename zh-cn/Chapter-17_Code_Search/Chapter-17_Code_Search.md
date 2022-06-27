@@ -236,7 +236,7 @@ Conversely, sometimes it’s useful to be able to go back in time to a previous 
 
 ## Google’s Implementation
 
-## 谷歌的實現
+##  Google 的實現
 
 Google’s particular implementation of Code Search is tailored to the unique characteristics of its codebase, and the previous section outlined our design constraints for creating a robust and responsive index. The following section outlines how the Code Search team implemented and released its tool to Google developers.
 
@@ -468,7 +468,7 @@ Code Search grew from an organic replacement for grep into a central tool boosti
 
 The most important one is perhaps obvious: understanding code is key to developing and maintaining it, and this means that investing in understanding code will yield dividends that might be difficult to measure, but are real. Every feature we added to Code Search was and is used by developers to help them in their daily work (admittedly some more than others). Two of the most important features, Kythe integration (i.e., adding semantic code understanding) and finding working examples, are also the most clearly tied to understanding code (versus, for example, finding it, or seeing how it’s changed). In terms of tool impact, no one uses a tool that they don’t know exists, so it is also important to make developers aware of the available tooling—at Google, it is part of “Noogler” training, the onboarding training for newly hired software engineers.
 
-最重要的一點可能是顯而易見的：理解程式碼是開發和維護程式碼的關鍵，這意味著投資在理解程式碼上將產生可能難以衡量但實實在在的紅利。我們新增到程式碼搜尋中的每個功能都被開發人員用來幫助他們完成日常工作（誠然，其中一些功能比其他功能更多）。兩個最重要的功能，Kythe 整合（即新增語義程式碼理解）和查詢工作示例，也與理解程式碼最明顯相關（例如，查詢程式碼或檢視程式碼如何更改）。就工具影響而言，沒有人使用他們不知道存在的工具，因此讓開發人員瞭解可用工具也很重要——在谷歌，它是“Noogler”培訓的一部分，即新人的入職培訓和聘請的軟體工程師培訓。
+最重要的一點可能是顯而易見的：理解程式碼是開發和維護程式碼的關鍵，這意味著投資在理解程式碼上將產生可能難以衡量但實實在在的紅利。我們新增到程式碼搜尋中的每個功能都被開發人員用來幫助他們完成日常工作（誠然，其中一些功能比其他功能更多）。兩個最重要的功能，Kythe 整合（即新增語義程式碼理解）和查詢工作示例，也與理解程式碼最明顯相關（例如，查詢程式碼或檢視程式碼如何更改）。就工具影響而言，沒有人使用他們不知道存在的工具，因此讓開發人員瞭解可用工具也很重要——在 Google ，它是“Noogler”培訓的一部分，即新人的入職培訓和聘請的軟體工程師培訓。
 
 For you, this might mean setting up a standard indexing profile for IDEs, sharing knowledge about egrep, running ctags, or setting up some custom indexing tooling, like Code Search. Whatever you do, it will almost certainly be used, and used more, and in different ways than you expected—and your developers will benefit.
 

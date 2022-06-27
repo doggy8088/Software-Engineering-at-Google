@@ -16,7 +16,7 @@ In previous chapters, we have recounted how a testing culture was established at
 
 As mentioned previously, Google has specific notions of test size. Small tests are restricted to one thread, one process, one machine. Larger tests do not have the same restrictions. But Google also has notions of test scope. A unit test necessarily is of smaller scope than an integration test. And the largest-scoped tests (sometimes called end-to-end or system tests) typically involve several real dependencies and fewer test doubles.
 
-如前所述，谷歌對測試規模有特定的概念。小型測試僅限於一個執行緒、一個程序、一臺機器。較大的測試沒有相同的限制。但谷歌也有測試範圍的概念。單元測試的範圍必然比整合測試的範圍小。而最大範圍的測試（有時被稱為端到端或系統測試）通常涉及多個實際依賴項和較少的測試替身。（`Test Double`是在Martin Fowler的文章[Test Double](https://martinfowler.com/bliki/TestDouble.html)中，Gerard Meszaros提出了這個概念。雖然是06年的文章了，但裡面的概念並不過時。這篇文章提到`Test Double`只是一個通用的詞，代表為了達到測試目的並且減少被測試物件的依賴，使用“替身”代替一個真實的依賴物件，從而保證了測試的速度和穩定性。統一翻譯為測試替代）
+如前所述， Google 對測試規模有特定的概念。小型測試僅限於一個執行緒、一個程序、一臺機器。較大的測試沒有相同的限制。但 Google 也有測試範圍的概念。單元測試的範圍必然比整合測試的範圍小。而最大範圍的測試（有時被稱為端到端或系統測試）通常涉及多個實際依賴項和較少的測試替身。（`Test Double`是在Martin Fowler的文章[Test Double](https://martinfowler.com/bliki/TestDouble.html)中，Gerard Meszaros提出了這個概念。雖然是06年的文章了，但裡面的概念並不過時。這篇文章提到`Test Double`只是一個通用的詞，代表為了達到測試目的並且減少被測試物件的依賴，使用“替身”代替一個真實的依賴物件，從而保證了測試的速度和穩定性。統一翻譯為測試替代）
 
 Larger tests are many things that small tests are not. They are not bound by the same constraints; thus, they can exhibit the following characteristics:
 •	They may be slow. Our large tests have a default timeout of 15 minutes or 1 hour, but we also have tests that run for multiple hours or even days.
@@ -34,7 +34,7 @@ So why have larger tests? Reflect back on your coding process. How do you confir
 
 Also, how do you know that your code continues to work during upgrades? Suppose that you have a site that uses the Google Maps API and there’s a new API version. Your unit tests likely won’t help you to know whether there are any compatibility issues. You’d probably run it and try it out to see whether anything broke.
 
-另外，你怎麼知道你的程式碼在升級時還能繼續工作？假設你有一個使用谷歌地圖API的網站，有一個新的API版本。你的單元測試很可能無法幫助你知道是否有任何相容性問題。你可能會執行它，試一試，看看是否有什麼故障。
+另外，你怎麼知道你的程式碼在升級時還能繼續工作？假設你有一個使用 Google 地圖API的網站，有一個新的API版本。你的單元測試很可能無法幫助你知道是否有任何相容性問題。你可能會執行它，試一試，看看是否有什麼故障。
 
 Unit tests can give you confidence about individual functions, objects, and modules, but large tests provide more confidence that the overall system works as intended. And having actual automated tests scales in ways that manual testing does not.
 
@@ -72,7 +72,7 @@ A single unit test typically covers one class or module. Test doubles (as discus
 
 Almost all unit tests at Google are written by the same engineer who is writing the unit under test. When those unit tests need doubles and when the doubles used are mocks, it is the engineer writing the unit test defining the mock and its intended behavior. But that engineer usually did *not* write the thing being mocked and can be misinformed about its actual behavior. The relationship between the unit under test and a given peer is a behavioral contract, and if the engineer is mistaken about the actual behavior, the understanding of the contract is invalid.
 
-在谷歌，幾乎所有的單元測試都是由編寫被測單元的工程師編寫的。當這些單元測試需要替代時，當使用的替代是模擬時，是編寫單元測試的工程師在定義模擬和它的預期行為。但該工程師通常沒有*寫被模擬的東西，因此可能對其實際行為有誤解。被測單元與給定對等方之間的關係是一種行為契約，如果工程師對實際行為有誤解，則對契約的理解無效。
+在 Google ，幾乎所有的單元測試都是由編寫被測單元的工程師編寫的。當這些單元測試需要替代時，當使用的替代是模擬時，是編寫單元測試的工程師在定義模擬和它的預期行為。但該工程師通常沒有*寫被模擬的東西，因此可能對其實際行為有誤解。被測單元與給定對等方之間的關係是一種行為契約，如果工程師對實際行為有誤解，則對契約的理解無效。
 
 Moreover, mocks become stale. If this mock-based unit test is not visible to the author of the real implementation and the real implementation changes, there is no signal that the test (and the code being tested) should be updated to keep up with the changes.
 
@@ -94,7 +94,7 @@ If there are issues with these files or the compatibility between the state defi
 
 At Google, configuration changes are the number one reason for our major outages. This is an area in which we have underperformed and has led to some of our most embarrassing bugs. For example, there was a global Google outage back in 2013 due to a bad network configuration push that was never tested. Configurations tend to be written in configuration languages, not production code languages. They also often have faster production rollout cycles than binaries, and they can be more difficult to test. All of these lead to a higher likelihood of failure. But at least in this case (and others), configuration was version controlled, and we could quickly identify the culprit and mitigate the issue.
 
-在谷歌，配置變更是我們重大故障的頭號原因。這是一個我們表現不佳的領域，並導致了我們一些最尷尬的錯誤。例如，2013年，由於一次從未測試過的糟糕網路配置推送，谷歌出現了一次全球停機。它們通常也比二進位制檔案具有更快的生產部署週期，而且它們可能更難測試。所有這些都會導致更高的失敗可能性。但至少在這種情況下（和其他情況下），配置是由版本控制的，我們可以快速識別故障並緩解問題。
+在 Google ，配置變更是我們重大故障的頭號原因。這是一個我們表現不佳的領域，並導致了我們一些最尷尬的錯誤。例如，2013年，由於一次從未測試過的糟糕網路配置推送， Google 出現了一次全球停機。它們通常也比二進位制檔案具有更快的生產部署週期，而且它們可能更難測試。所有這些都會導致更高的失敗可能性。但至少在這種情況下（和其他情況下），配置是由版本控制的，我們可以快速識別故障並緩解問題。
 
 ```
 1	See “Continuous Delivery” on page 483 and Chapter 25 for more information.
@@ -105,7 +105,7 @@ At Google, configuration changes are the number one reason for our major outages
 
 At Google, unit tests are intended to be small and fast because they need to fit into our standard test execution infrastructure and also be run many times as part of a frictionless developer workflow. But performance, load, and stress testing often require sending large volumes of traffic to a given binary. These volumes become difficult to test in the model of a typical unit test. And our large volumes are big, often thousands or millions of queries per second (in the case of ads, [real-time bidding](https://oreil.ly/brV5-))!
 
-在谷歌，單元測試的目的是小而快，因為它們需要適配標準測試執行基礎設施，也可以作為順暢的開發人員工作流程的一部分多次執行。但效能、負載和壓力測試往往需要向一個特定的二進位制檔案傳送大量的流量。這些流量在典型的單元測試模型中變得難以製造。而我們的大流量是很大的，往往是每秒數千或數百萬次的查詢（在廣告的情況下，即時競價）!
+在 Google ，單元測試的目的是小而快，因為它們需要適配標準測試執行基礎設施，也可以作為順暢的開發人員工作流程的一部分多次執行。但效能、負載和壓力測試往往需要向一個特定的二進位制檔案傳送大量的流量。這些流量在典型的單元測試模型中變得難以製造。而我們的大流量是很大的，往往是每秒數千或數百萬次的查詢（在廣告的情況下，即時競價）!
 
 #### Unanticipated behaviors, inputs, and side effects 非預期的行為、投入和副作用
 
@@ -139,7 +139,7 @@ In earlier chapters, we discussed many of the properties of a developer-friendly
 *快速*
 	它需要足夠快，以避免中斷開發人員的工作流程。
 *可擴充套件性*
-	谷歌需要能夠有效地執行所有這些有用的受影響的測試，用於預提交和後提交。
+	 Google 需要能夠有效地執行所有這些有用的受影響的測試，用於預提交和後提交。
 
 Good unit tests exhibit all of these properties. Larger tests often violate all of these constraints. For example, larger tests are often flakier because they use more infrastructure than does a small unit test. They are also often much slower, both to set up as well as to run. And they have trouble scaling because of the resource and time requirements, but often also because they are not isolated—these tests can collide with one another.
 
@@ -151,13 +151,13 @@ Additionally, larger tests present two other challenges. First, there is a chall
 
 The second challenge for larger tests is one of standardization (or the lack thereof). Unlike unit tests, larger tests suffer a lack of standardization in terms of the infrastructure and process by which they are written, run, and debugged. The approach to larger tests is a product of a system’s architectural decisions, thus introducing variance in the type of tests required. For example, the way we build and run A-B diff regression tests in Google Ads is completely different from the way such tests are built and run in Search backends, which is different again from Drive. They use different platforms, different languages, different infrastructures, different libraries, and competing testing frameworks.
 
-大型測試的第二個挑戰是標準化問題（或缺乏標準化）。與單元測試不同，大型測試在編寫、執行和除錯的基礎設施和流程方面缺乏標準化。大型測試的方法是系統架構決策的產物，因此在所需的測試型別中引入了差異性。例如，我們在谷歌廣告中建立和執行A-B差異迴歸測試的方式與在搜尋後端建立和執行此類別測試的方式完全不同，而搜尋後端又與驅動不同。他們使用不同的平臺，不同的語言，不同的基礎設施，不同的函式庫，以及相互競爭的測試框架。
+大型測試的第二個挑戰是標準化問題（或缺乏標準化）。與單元測試不同，大型測試在編寫、執行和除錯的基礎設施和流程方面缺乏標準化。大型測試的方法是系統架構決策的產物，因此在所需的測試型別中引入了差異性。例如，我們在 Google 廣告中建立和執行A-B差異迴歸測試的方式與在搜尋後端建立和執行此類別測試的方式完全不同，而搜尋後端又與驅動不同。他們使用不同的平臺，不同的語言，不同的基礎設施，不同的函式庫，以及相互競爭的測試框架。
 
 This lack of standardization has a significant impact. Because larger tests have so many ways of being run, they often are skipped during large-scale changes. (See [Chapter 22](#_bookmark1935).) The infrastructure does not have a standard way to run those tests, and asking the people executing LSCs to know the local particulars for testing on every team doesn’t scale. Because larger tests differ in implementation from team to team, tests that actually test the integration between those teams require unifying incompatible infrastructures. And because of this lack of standardization, we cannot teach a single approach to Nooglers (new Googlers) or even more experienced engineers, which both perpetuates the situation and also leads to a lack of understanding about the motivations of such tests.
 
 這種缺乏標準化的情況有很大的影響。因為大型測試有許多執行方式，在大規模的變更中，它們經常被忽略。(見第22章) 基礎設施沒有一個標準的方式來執行這些測試，要求執行LSC的人員瞭解每個團隊測試的本地細節是不可行的。因為更大的測試在各個團隊的實施中是不同的，因此實際測試這些團隊之間整合的測試需要統一不相容的基礎架構。而且由於缺乏標準化，我們無法向Nooglers（新的Googlers）甚至更有經驗的工程師傳授單一的方法，這既使情況長期存在，也導致人們對這種測試的動機缺乏瞭解。
 
-## Larger Tests at Google 谷歌的大型測試
+## Larger Tests at Google  Google 的大型測試
 
 When we discussed the history of testing at Google earlier (see Chapter 11), we mentioned how Google Web Server (GWS) mandated automated tests in 2003 and how this was a watershed moment. However, we actually had automated tests in use before this point, but a common practice was using automated large and enormous tests. For example, AdWords created an end-to-end test back in 2001 to validate product scenarios. Similarly, in 2002, Search wrote a similar “regression test” for its indexing code, and AdSense (which had not even publicly launched yet) created its variation on the AdWords test.
 
@@ -165,7 +165,7 @@ When we discussed the history of testing at Google earlier (see Chapter 11), we 
 
 Other “larger” testing patterns also existed circa 2002. The Google search frontend relied heavily on manual QA—manual versions of end-to-end test scenarios. And Gmail got its version of a “local demo” environment—a script to bring up an end-to- end Gmail environment locally with some generated test users and mail data for local manual testing.
 
-其他 "較大 "的測試模式也開始於2002年左右。谷歌搜尋前端在很大程度上依賴於手動QA--端到端的測試場景的手動版本。Gmail得到了它的 "本地示範 "環境的版本--一個指令碼，在本地建立一個端到端的Gmail環境，其中有一些產生的測試使用者和郵件資料，用於本地手動測試。
+其他 "較大 "的測試模式也開始於2002年左右。 Google 搜尋前端在很大程度上依賴於手動QA--端到端的測試場景的手動版本。Gmail得到了它的 "本地示範 "環境的版本--一個指令碼，在本地建立一個端到端的Gmail環境，其中有一些產生的測試使用者和郵件資料，用於本地手動測試。
 
 When C/J Build (our first continuous build framework) launched, it did not distinguish between unit tests and other tests, but there were two critical developments that led to a split. First, Google focused on unit tests because we wanted to encourage the testing pyramid and to ensure the vast majority of written tests were unit tests. Second, when TAP replaced C/J Build as our formal continuous build system, it was only able to do so for tests that met TAP’s eligibility requirements: hermetic tests buildable at a single change that could run on our build/test cluster within a maximum time limit. Although most unit tests satisfied this requirement, larger tests mostly did not. However, this did not stop the need for other kinds of tests, and they have continued to fill the coverage gaps. C/J Build even stuck around for years specifically to handle these kinds of tests until newer systems replaced it.
 
@@ -175,7 +175,7 @@ When C/J Build (our first continuous build framework) launched, it did not disti
 
 Throughout this book, we have looked at the influence of time on software engineering, because Google has built software running for more than 20 years. How are larger tests influenced by the time dimension? We know that certain activities make more sense the longer the expected lifespan of code, and testing of various forms is an activity that makes sense at all levels, but the test types that are appropriate change over the expected lifetime of code.
 
-在本書中，我們一直在關注時間對軟體工程的影響，因為谷歌已經開發了執行20多年的軟體。大型測試是如何受到時間維度的影響的？我們知道，程式碼的生命週期越長，某些活行為就越有意義，各種形式的測試是一種在各個層面都有意義的活動，但適合的測試型別會隨著程式碼的生命週期而改變。
+在本書中，我們一直在關注時間對軟體工程的影響，因為 Google 已經開發了執行20多年的軟體。大型測試是如何受到時間維度的影響的？我們知道，程式碼的生命週期越長，某些活行為就越有意義，各種形式的測試是一種在各個層面都有意義的活動，但適合的測試型別會隨著程式碼的生命週期而改變。
 
 As we pointed out before, unit tests begin to make sense for software with an expected lifespan from hours on up. At the minutes level (for small scripts), manual testing is most common, and the SUT usually runs locally, but the local demo likely *is* production, especially for one-off scripts, demos, or experiments. At longer lifespans, manual testing continues to exist, but the SUTs usually diverge because the production instance is often cloud hosted instead of locally hosted.
 
@@ -205,7 +205,7 @@ It is *critical* for longer-term health to move toward the test pyramid within t
 
 在開發的頭幾天，透過建立單元測試，向測試金字塔邁進，然後在這之後透過引入自動化整合測試，擺脫手動端到端的測試，這對長期的穩定是*穩健*。我們成功地使單元測試成為提交的要求，但彌補單元測試和手工測試之間的差距對長期穩健是必要的。
 
-#### Larger Tests at Google Scale 谷歌的大型測試
+#### Larger Tests at Google Scale  Google 的大型測試
 
 It would seem that larger tests should be more necessary and more appropriate at larger scales of software, but even though this is so, the complexity of authoring, running, maintaining, and debugging these tests increases with the growth in scale, even more so than with unit tests.
 
@@ -282,7 +282,7 @@ At Google, we use many different forms of SUTs, and the scope of the SUT is one 
 *Fidelity*
 	The SUT’s accuracy in reflecting the production system being tested. An SUT with high fidelity will consist of binaries that resemble the production versions (rely on similar configurations, use similar infrastructures, and have a similar overall topology).
 
-在谷歌，我們使用許多不同形式的SUT，而SUT的範圍是大型測試本身範圍的主要驅動因素之一（SUT越大，測試越大）。每種SUT形式都可以根據兩個主要因素來判斷。
+在 Google ，我們使用許多不同形式的SUT，而SUT的範圍是大型測試本身範圍的主要驅動因素之一（SUT越大，測試越大）。每種SUT形式都可以根據兩個主要因素來判斷。
 *封閉性性*
 	這是SUT與相關測試之外的其他元件的使用和互動的隔離。具有高隔離性的SUT將具有最少的併發性和基礎架構脆弱性來源。
 *模擬度*
@@ -310,7 +310,7 @@ Often these two factors are in direct conflict. Following are some examples of S
 *共享環境（臨時和生產）*。
 	測試只使用共享環境，而不是執行獨立的SUT。這具有最低的成本，因為這些共享環境通常已經存在，但是測試可能會與其他同時使用衝突，並且必須等待程式碼被推送到這些環境中。生產也增加了終端使用者受到影響的風險。
 *混合模式*
-	一些SUT代表了一種混合：可以執行一些SUT，但可以讓它與共享環境互動。通常被測試的東西是顯式執行的，但是它的後端是共享的。對於像谷歌這樣擴張的公司來說，實際上不可能執行所有谷歌互聯服務的多個副本，因此需要一些混合。
+	一些SUT代表了一種混合：可以執行一些SUT，但可以讓它與共享環境互動。通常被測試的東西是顯式執行的，但是它的後端是共享的。對於像 Google 這樣擴張的公司來說，實際上不可能執行所有 Google 互聯服務的多個副本，因此需要一些混合。
 
 #### The benefits of hermetic SUTs 封閉式SUT的好處
 
@@ -331,7 +331,7 @@ The next step is to support cloud-isolated or machine-hermetic SUTs. Such an env
 *Case Study:Risks of testing in production and Webdriver Torso*  *案例研究：生產中的測試風險和Webdriver Torso*。
 We mentioned that testing in production can be risky.One humorous episode resulting from testing in production was known as the Webdriver Torso incident.Weneeded a way to verify that video rendering in You Tube production was workingproperly and so created automated scripts to generate test videos,upload them,andverify the quality of the upload.This was done in a Google-owned YouTube channelcalled Webdriver Torso.But this channel was public,as were most of the videos.
 
-我們提到，在生產中進行測試是有風險的。我們需要一種方法來驗證YouTube生產中的視訊渲染是否正常，因此建立了自動指令碼來產生測試視訊，上傳它們，並驗證上傳品質，這是在谷歌擁有的名為Webdriver Torso的YouTube中進行的。
+我們提到，在生產中進行測試是有風險的。我們需要一種方法來驗證YouTube生產中的視訊渲染是否正常，因此建立了自動指令碼來產生測試視訊，上傳它們，並驗證上傳品質，這是在 Google 擁有的名為Webdriver Torso的YouTube中進行的。
 
 Subsequently,this channel was publicized in an article at Wired,which led to itsspread throughout the media and subsequent efforts to solve the mystery.Finally,ablogger tied everything back to Google.Eventually,we came clean by having a bit offun with it,including a Rickroll and an Easter Egg,so everything worked out well.Butwe do need to think about the possibility of end-user discovery of any test data weinclude in production and be prepared for it.
 
@@ -377,11 +377,11 @@ In the previous chapter, we discussed test doubles and approaches that can be us
 
 One way of dealing with an SUT’s dependent but subsidiary services is to use a test double, but how does one know that the double reflects the dependency’s actual behavior? A growing approach outside of Google is to use a framework for [consumer-driven contract ](https://oreil.ly/RADVJ)tests. These are tests that define a contract for both the client and the provider of the service, and this contract can drive automated tests. That is, a client defines a mock of the service saying that, for these input arguments, I get a particular output. Then, the real service uses this input/output pair in a real test to ensure that it produces that output given those inputs. Two public tools for consumer-driven contract testing are [Pact Contract Testing ](https://docs.pact.io/)and [Spring Cloud Con‐](https://oreil.ly/szQ4j) [tracts](https://oreil.ly/szQ4j). Google’s heavy dependency on protocol buffers means that we don’t use these internally.
 
-處理SUT的依賴關係和附屬服務的一種方法是使用測試替代，但如何知道替代反映了依賴的實際行為？在谷歌之外，一種正在發展的方法是使用一個框架進行消費者驅動的合同測試。這些測試為客戶和服務的提供者定義了一個合同，這個合同可以驅動自動測試。也就是說，一個客戶定義了一個服務的模擬，說對於這些輸入引數，我得到一個特定的輸出。然後，真正的服務在真正的測試中使用這個輸入/輸出對，以確保它在這些輸入的情況下產生那個輸出。消費者驅動的合同測試的兩個公共工具是[Pact Contract Testing](https://docs.pact.io/)和[Spring Cloud Con-](https://oreil.ly/szQ4j) [tracts](https://oreil.ly/szQ4j)。谷歌對協議緩衝區的嚴重依賴意味著我們內部不使用這些工具。
+處理SUT的依賴關係和附屬服務的一種方法是使用測試替代，但如何知道替代反映了依賴的實際行為？在 Google 之外，一種正在發展的方法是使用一個框架進行消費者驅動的合同測試。這些測試為客戶和服務的提供者定義了一個合同，這個合同可以驅動自動測試。也就是說，一個客戶定義了一個服務的模擬，說對於這些輸入引數，我得到一個特定的輸出。然後，真正的服務在真正的測試中使用這個輸入/輸出對，以確保它在這些輸入的情況下產生那個輸出。消費者驅動的合同測試的兩個公共工具是[Pact Contract Testing](https://docs.pact.io/)和[Spring Cloud Con-](https://oreil.ly/szQ4j) [tracts](https://oreil.ly/szQ4j)。 Google 對協議緩衝區的嚴重依賴意味著我們內部不使用這些工具。
 
 At Google, we do something a little bit different. [Our most popular approach ](https://oreil.ly/-wvYi)(for which there is a public API) is to use a larger test to generate a smaller one by recording the traffic to those external services when running the larger test and replaying it when running smaller tests. The larger, or “Record Mode” test runs continuously on post-submit, but its primary purpose is to generate these traffic logs (it must pass, however, for the logs to be generated). The smaller, or “Replay Mode” test is used during development and presubmit testing.
 
-在谷歌，我們做的有些不同。我們最流行的方法（有公共API）是使用較大的測試產生較小的測試，方法是在執行較大的測試時記錄到這些外部服務的流量，並在執行較小的測試時重播流量。大型或“記錄模式”測試在提交後持續執行，但其主要目的是產生這些流量日誌（但必須透過才能產生日誌）。在開發和提交前測試過程中，使用較小的或“重播模式”測試。
+在 Google ，我們做的有些不同。我們最流行的方法（有公共API）是使用較大的測試產生較小的測試，方法是在執行較大的測試時記錄到這些外部服務的流量，並在執行較小的測試時重播流量。大型或“記錄模式”測試在提交後持續執行，但其主要目的是產生這些流量日誌（但必須透過才能產生日誌）。在開發和提交前測試過程中，使用較小的或“重播模式”測試。
 
 One of the interesting aspects of how record/replay works is that, because of nondeterminism, requests must be matched via a matcher to determine which response to replay. This makes them very similar to stubs and mocks in that argument matching is used to determine the resulting behavior.
 
@@ -457,7 +457,7 @@ assertThat(response.Contains("Colossal Cave"))
 	就像你在本地嘗試你的二進位制檔案一樣，手動驗證使用人工與SUT互動以確定它的功能是否正確。這種驗證可以包括透過執行一致的測試計劃中定義的操作來測試迴歸，也可以是探索性的，透過不同的互動路徑來識別可能的新故障。
 需要注意的是，人工迴歸測試的規模不是線性的：系統越大，透過它的操作越多，需要人力測試的時間就越多。
 *斷言*
-	與單元測試一樣，這些是對系統預期行為的明確檢查。例如，對於谷歌搜尋xyzzy的整合測試，一個斷言可能如下：
+	與單元測試一樣，這些是對系統預期行為的明確檢查。例如，對於 Google 搜尋xyzzy的整合測試，一個斷言可能如下：
 
 ```
 assertThat(response.Contains("Colossal Cave"))
@@ -484,7 +484,7 @@ What follows is a list of different kinds of large tests that we use at Google, 
 •   Disaster recovery and chaos engineering
 •   User evaluation
 
-下面是我們在谷歌使用的各種大型測試的列表，它們是如何組成的，它們的用途是什麼，它們的侷限性是什麼：
+下面是我們在 Google 使用的各種大型測試的列表，它們是如何組成的，它們的用途是什麼，它們的侷限性是什麼：
 • 一個或多個二進位制檔案的功能測試
 • 瀏覽器和裝置測試
 • 效能、負載和壓力測試
@@ -502,7 +502,7 @@ Given such a wide number of combinations and thus a wide range of tests, how do 
 
 At Google, we have a specialized engineering role of “Test Engineer,” and one of the things we look for in a good test engineer is the ability to outline a test strategy for our products.
 
-在谷歌，我們有一個專門的工程角色“測試工程師”，我們在一個好的測試工程師身上尋找的東西之一就是能夠為我們的產品勾勒出一個測試策略。
+在 Google ，我們有一個專門的工程角色“測試工程師”，我們在一個好的測試工程師身上尋找的東西之一就是能夠為我們的產品勾勒出一個測試策略。
 
 ### Functional Testing of One or More Interacting Binaries 一個或多個二進位制檔案的功能測試
 
@@ -614,7 +614,7 @@ Tests of these type have the following characteristics:
 
 Unit tests cover expected behavior paths for a small section of code. But it is impossible to predict many of the possible failure modes for a given publicly facing product. Additionally, as Hyrum’s Law states, the actual public API is not the declared one but all user-visible aspects of a product. Given those two properties, it is no surprise that A/B diff tests are possibly the most common form of larger testing at Google. This approach conceptually dates back to 1998. At Google, we have been running tests based on this model since 2001 for most of our products, starting with Ads, Search, and Maps.
 
-單元測試覆蓋了一小部分程式碼的預期行為路徑。但是，對於給定的面向公眾的產品，預測許多可能的故障模式是不可能的。。此外，正如Hyrum's Law所指出的，實際的公共API不是宣告的API，而是一個產品的所有使用者可見的方面。鑑於這兩個特性，A/B對比測試可能是谷歌最常見的大型測試形式，這並不奇怪。這種方法在概念上可以追溯到1998年。在谷歌，我們從2001年開始為我們的大多數產品進行基於這種模式的測試，從廣告、搜尋和地圖開始。
+單元測試覆蓋了一小部分程式碼的預期行為路徑。但是，對於給定的面向公眾的產品，預測許多可能的故障模式是不可能的。。此外，正如Hyrum's Law所指出的，實際的公共API不是宣告的API，而是一個產品的所有使用者可見的方面。鑑於這兩個特性，A/B對比測試可能是 Google 最常見的大型測試形式，這並不奇怪。這種方法在概念上可以追溯到1998年。在 Google ，我們從2001年開始為我們的大多數產品進行基於這種模式的測試，從廣告、搜尋和地圖開始。
 
 A/B diff tests operate by sending traffic to a public API and comparing the responses between old and new versions (especially during migrations). Any deviations in behavior must be reconciled as either anticipated or unanticipated (regressions). In this case, the SUT is composed of two sets of real binaries: one running at the candidate version and the other running at the base version. A third binary sends traffic and compares the results.
 
@@ -678,7 +678,7 @@ For cases in which there is either a specific end customer or a customer proxy (
 
 Google does not actually do a lot of automated UAT and does not use specification languages very much. Many of Google’s products historically have been created by the software engineers themselves. There has been little need for runnable specification languages because those defining the intended product behavior are often fluent in the actual coding languages themselves.
 
-谷歌實際上並沒有做很多自動化的UAT，也不怎麼使用規範語言。谷歌的許多產品在歷史上都是由軟體工程師自己建立的。幾乎不需要可執行的規範語言，因為那些定義預期產品行為的規範語言通常能夠流利地使用實際的編碼語言。
+ Google 實際上並沒有做很多自動化的UAT，也不怎麼使用規範語言。 Google 的許多產品在歷史上都是由軟體工程師自己建立的。幾乎不需要可執行的規範語言，因為那些定義預期產品行為的規範語言通常能夠流利地使用實際的編碼語言。
 
 ### Probers and Canary Analysis 探針和金絲雀分析
 
@@ -699,7 +699,7 @@ Probers and canary analysis are ways to ensure that the production environment i
 
 Probers are functional tests that run encoded assertions against the production environment. Usually these tests perform well-known and deterministic read-only actions so that the assertions hold even though the production data changes over time. For example, a prober might perform a Google search at [www.google.com ](http://www.google.com/)and verify that a result is returned, but not actually verify the contents of the result. In that respect, they are “smoke tests” of the production system, but they provide early detection of major issues.
 
-Probers是功能測試，針對生產環境執行編碼的斷言。通常，這些測試執行眾所周知的和確定的唯讀動作，這樣即使生產資料隨時間變化，斷言也能成立。例如，探針可能在 [www.google.com](http://www.google.com/) 執行谷歌搜尋，並驗證返回的結果，但實際上並不驗證結果的內容。在這方面，它們是生產系統的 "煙霧測試"，但可以及早發現重大問題。
+Probers是功能測試，針對生產環境執行編碼的斷言。通常，這些測試執行眾所周知的和確定的唯讀動作，這樣即使生產資料隨時間變化，斷言也能成立。例如，探針可能在 [www.google.com](http://www.google.com/) 執行 Google 搜尋，並驗證返回的結果，但實際上並不驗證結果的內容。在這方面，它們是生產系統的 "煙霧測試"，但可以及早發現重大問題。
 
 Canary analysis is similar, except that it focuses on when a release is being pushed to the production environment. If the release is staged over time, we can run both prober assertions targeting the upgraded (canary) services as well as compare health metrics of both the canary and baseline parts of production and make sure that they are not out of line.
 
@@ -737,11 +737,11 @@ These test how well your systems will react to unexpected changes or failures.
 
 For years, Google has run an annual war game called [DiRT ](https://oreil.ly/17ffL)(Disaster Recovery Testing) during which faults are injected into our infrastructure at a nearly planetary scale. We simulate everything from datacenter fires to malicious attacks. In one memorable case, we simulated an earthquake that completely isolated our headquarters in Mountain View, California, from the rest of the company. Doing so exposed not only technical shortcomings but also revealed the challenge of running a company when all the key decision makers were unreachable.[3](#_bookmark1293)
 
-多年來，谷歌每年都會舉辦一場名為“災難恢復測試”[DiRT](https://oreil.ly/17ffL)(Disaster Recovery Testing)的演練，在這場演練中，故障幾乎以全球規模注入我們的基礎設施。我們模擬了從資料中心火災到惡意攻擊的一切。在一個令人難忘的案例中，我們模擬了一場地震，將我們位於加州山景城的總部與公司其他部門完全隔離。這樣做不僅暴露了技術上的缺陷，也揭示了在所有關鍵決策者都無法聯絡到的情況下，管理公司的挑戰。
+多年來， Google 每年都會舉辦一場名為“災難恢復測試”[DiRT](https://oreil.ly/17ffL)(Disaster Recovery Testing)的演練，在這場演練中，故障幾乎以全球規模注入我們的基礎設施。我們模擬了從資料中心火災到惡意攻擊的一切。在一個令人難忘的案例中，我們模擬了一場地震，將我們位於加州山景城的總部與公司其他部門完全隔離。這樣做不僅暴露了技術上的缺陷，也揭示了在所有關鍵決策者都無法聯絡到的情況下，管理公司的挑戰。
 
 The impacts of DiRT tests require a lot of coordination across the company; by contrast, chaos engineering is more of a “continuous testing” for your technical infrastructure. [Made popular by Netflix](https://oreil.ly/BCwdM), chaos engineering involves writing programs that continuously introduce a background level of faults into your systems and seeing what happens. Some of the faults can be quite large, but in most cases, chaos testing tools are designed to restore functionality before things get out of hand. The goal of chaos engineering is to help teams break assumptions of stability and reliability and help them grapple with the challenges of building resiliency in. Today, teams at Google perform thousands of chaos tests each week using our own home-grown system called Catzilla.
 
-DiRT測試的影響需要整個公司的大量協調；相比之下，混沌工程更像是對你的技術基礎設施的 "持續測試"。[由Netflix推廣](https://oreil.ly/BCwdM)，混沌工程包括編寫程式，在你的系統中不斷引入背景水平的故障，並觀察會發生什麼。有些故障可能相當大，但在大多數情況下，混沌測試工具旨在在事情失控之前恢復功能。混沌工程的目標是幫助團隊打破穩定性和可靠性的假設，幫助他們應對建立彈性的挑戰。今天，谷歌的團隊每週都會使用我們自己開發的名為Catzilla的系統進行數千次混沌測試。
+DiRT測試的影響需要整個公司的大量協調；相比之下，混沌工程更像是對你的技術基礎設施的 "持續測試"。[由Netflix推廣](https://oreil.ly/BCwdM)，混沌工程包括編寫程式，在你的系統中不斷引入背景水平的故障，並觀察會發生什麼。有些故障可能相當大，但在大多數情況下，混沌測試工具旨在在事情失控之前恢復功能。混沌工程的目標是幫助團隊打破穩定性和可靠性的假設，幫助他們應對建立彈性的挑戰。今天， Google 的團隊每週都會使用我們自己開發的名為Catzilla的系統進行數千次混沌測試。
 
 These kinds of fault and negative tests make sense for live production systems that have enough theoretical fault tolerance to support them and for which the costs and risks of the tests themselves are affordable.
 
@@ -792,9 +792,9 @@ Production-based testing makes it possible to collect a lot of data about user b
 	我們可以利用有限的推廣和實驗，將生產中的功能提供給一部分使用者使用。我們有時會和自己的員工一起這樣做（吃自己的狗糧），他們會在真實的部署環境中給我們提供寶貴的反饋。
 *實驗*
 	在使用者不知情的情況下，將一個新的行為作為一個實驗提供給一部分使用者。然後，將實驗組與控制組在某種期望的指標方面進行綜合比較。例如，在YouTube，我們做了一個有限的實驗，改變了視訊加分的方式（取消了降分），只有一部分使用者看到了這個變化。
-	這是一個[對谷歌來說非常重要的方法]（https://oreil.ly/OAvqF）。Noogler在加入公司後聽到的第一個故事是關於谷歌推出了一個實驗，改變了谷歌搜尋中AdWords廣告的背景陰影顏色，並注意到實驗組的使用者與對照組相比，廣告點選量明顯增加。
+	這是一個[對 Google 來說非常重要的方法]（https://oreil.ly/OAvqF）。Noogler在加入公司後聽到的第一個故事是關於 Google 推出了一個實驗，改變了 Google 搜尋中AdWords廣告的背景陰影顏色，並注意到實驗組的使用者與對照組相比，廣告點選量明顯增加。
 *評分員評價*
-	評分員會被告知某一特定操作的結果，並選擇哪一個 "更好 "以及原因。然後，這種反饋被用來確定一個特定的變更是正面、中性還是負面的。例如，谷歌在歷史上一直使用評分員對搜尋查詢進行評估（我們已經公佈了我們給評員者的指導方針）。在某些情況下，來自該評級資料的反饋有助於確定演算法更改的啟動透過/不透過。評價員的評價對於像機器學習系統這樣的非確定性系統至關重要，因為這些系統沒有明確的正確答案，只有一個更好或更差的概念。
+	評分員會被告知某一特定操作的結果，並選擇哪一個 "更好 "以及原因。然後，這種反饋被用來確定一個特定的變更是正面、中性還是負面的。例如， Google 在歷史上一直使用評分員對搜尋查詢進行評估（我們已經公佈了我們給評員者的指導方針）。在某些情況下，來自該評級資料的反饋有助於確定演算法更改的啟動透過/不透過。評價員的評價對於像機器學習系統這樣的非確定性系統至關重要，因為這些系統沒有明確的正確答案，只有一個更好或更差的概念。
 
 ## Large Tests and the Developer Workflow  大型測試和開發人員工作流程
 
@@ -803,7 +803,7 @@ We’ve talked about what large tests are, why to have them, when to have them, 
 
 Although standard unit test infrastructure might not apply, it is still critical to integrate larger tests into the developer workflow. One way of doing this is to ensure that automated mechanisms for presubmit and post-submit execution exist, even if these are different mechanisms than the unit test ones. At Google, many of these large tests do not belong in TAP. They are nonhermetic, too flaky, and/or too resource intensive. But we still need to keep them from breaking or else they provide no signal and become too difficult to triage. What we do, then, is to have a separate post-submit continuous build for these. We also encourage running these tests presubmit, because that provides feedback directly to the author.
 
-儘管標準的單元測試基礎設施可能不適用，但將大型測試整合到開發人員的工作流程中仍然是至關重要的。做到這一點的一個方法是確保存在預提交和後提交執行的自動化機制，即使這些機制與單元測試的機制不同。在谷歌，許多大型測試不屬於TAP。它們不密封、太薄和/或資源密集。但是我們仍然需要防止它們被破壞，否則它們就不能提供任何訊號，並且變得太難處理了。那麼，我們所做的就是為這些測試建立一個單獨的提交後持續建構。我們也鼓勵在提交前執行這些測試，因為這樣可以直接向作者提供反饋。
+儘管標準的單元測試基礎設施可能不適用，但將大型測試整合到開發人員的工作流程中仍然是至關重要的。做到這一點的一個方法是確保存在預提交和後提交執行的自動化機制，即使這些機制與單元測試的機制不同。在 Google ，許多大型測試不屬於TAP。它們不密封、太薄和/或資源密集。但是我們仍然需要防止它們被破壞，否則它們就不能提供任何訊號，並且變得太難處理了。那麼，我們所做的就是為這些測試建立一個單獨的提交後持續建構。我們也鼓勵在提交前執行這些測試，因為這樣可以直接向作者提供反饋。
 
 A/B diff tests that require manual blessing of diffs can also be incorporated into such a workflow. For presubmit, it can be a code-review requirement to approve any diffs in the UI before approving the change. One such test we have files release-blocking bugs automatically if code is submitted with unresolved diffs.
 
@@ -893,7 +893,7 @@ Just as making tests reactive or event driven can speed them up, it can also rem
 
 A bigger problem with internal system timeouts is that exceeding them can lead to difficult errors to triage. A production system will often try to limit end-user exposure to catastrophic failure by handling possible internal system issues gracefully. For example, if Google cannot serve an ad in a given time limit, we don’t return a 500, we just don’t serve an ad. But this looks to a test runner as if the ad-serving code might be broken when there is just a flaky timeout issue. It’s important to make the failure mode obvious in this case and to make it easy to tune such internal timeouts for test scenarios.
 
-內部系統超時的一個更大問題是，超過這些超時會導致難以分類的錯誤。生產系統通常會試圖透過優雅地方式處理可能的內部系統問題來限制終端使用者對災難性故障的暴露。例如，如果谷歌不能在給定的時間限制內提供廣告，我們不會返回500，我們只是不提供廣告。但在測試執行人員看來，如果只是出現異常超時問題，廣告服務可能會被中斷。在這種情況下，重要的是使故障模式變得明顯，並使調整測試場景的此類別內部超時變得容易
+內部系統超時的一個更大問題是，超過這些超時會導致難以分類的錯誤。生產系統通常會試圖透過優雅地方式處理可能的內部系統問題來限制終端使用者對災難性故障的暴露。例如，如果 Google 不能在給定的時間限制內提供廣告，我們不會返回500，我們只是不提供廣告。但在測試執行人員看來，如果只是出現異常超時問題，廣告服務可能會被中斷。在這種情況下，重要的是使故障模式變得明顯，並使調整測試場景的此類別內部超時變得容易
 
 #### Making tests understandable  讓測試變得易懂
 
@@ -913,7 +913,7 @@ How does this work in practice? A good large test that fails should do the follo
 *有一個明確指出失敗原因的資訊*。
 	最壞的情況是有一個錯誤，只是說 "斷言失敗 "和一個堆疊追蹤。一個好的錯誤能預見到測試執行者對程式碼的不熟悉，並提供一個資訊來說明背景。”in test_ReturnsOneFullPageOfSearchResultsForAPopularQuery中，預期有10個搜尋結果，但得到了1個。" 對於失敗的效能或A/B對比測試，在輸出中應該有一個明確的解釋，說明什麼是被測量的，為什麼該行為被認為是可疑的。
 *儘量減少識別差異的根本原因所需的努力*。
-	堆疊追蹤對較大的測試沒有用，因為呼叫鏈可能跨越多個程序邊界。相反，有必要在整個呼叫鏈中產生一個追蹤，或者投資於能夠縮小罪魁禍首的自動化。測試應該產生某種工具來達到這個效果。例如，[Dapper](https://oreil.ly/FXzbv)是谷歌使用的一個框架，將一個單一的請求ID與RPC呼叫鏈中的所有請求相關聯，該請求的所有相關日誌都可以透過該ID進行關聯，以方便追蹤。
+	堆疊追蹤對較大的測試沒有用，因為呼叫鏈可能跨越多個程序邊界。相反，有必要在整個呼叫鏈中產生一個追蹤，或者投資於能夠縮小罪魁禍首的自動化。測試應該產生某種工具來達到這個效果。例如，[Dapper](https://oreil.ly/FXzbv)是 Google 使用的一個框架，將一個單一的請求ID與RPC呼叫鏈中的所有請求相關聯，該請求的所有相關日誌都可以透過該ID進行關聯，以方便追蹤。
 *提供支援和聯絡資訊*。
 	透過使測試的所有者和支持者易於聯絡，測試執行者應該很容易獲得幫助。
 

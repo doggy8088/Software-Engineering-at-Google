@@ -2,7 +2,7 @@
 
 This book is titled *Software Engineering at Google*. What precisely do we mean by software engineering? What distinguishes “software engineering” from “programming” or “computer science”? And why would Google have a unique perspective to add to the corpus of previous software engineering literature written over the past 50 years?
 
-本書的標題是*《谷歌的軟體工程》*。我們對軟體工程的確切定義是什麼？軟體工程 "與 "程式設計 "或 "電腦科學 "的區別是什麼？為什麼谷歌在過去50年的軟體工程文獻函式庫中會有哪些獨特的視角？
+本書的標題是*《Google 的軟體工程》*。我們對軟體工程的確切定義是什麼？軟體工程 "與 "程式設計 "或 "電腦科學 "的區別是什麼？為什麼 Google 在過去50年的軟體工程文獻函式庫中會有哪些獨特的視角？
 
 The terms “programming” and “software engineering” have been used interchangeably for quite some time in our industry, although each term has a different emphasis and different implications. University students tend to study computer science and get jobs writing code as “programmers.”
 
@@ -20,7 +20,7 @@ Unlike those more established engineering professions, current software engineer
 
 We propose that “software engineering” encompasses not just the act of writing code, but all of the tools and processes an organization uses to build and maintain that code over time. What practices can a software organization introduce that will best keep its code valuable over the long term? How can engineers make a codebase more sustainable and the software engineering discipline itself more rigorous? We don’t have fundamental answers to these questions, but we hope that Google’s collective experience over the past two decades illuminates possible paths toward finding those answers.
 
-我們建議，"軟體工程 "不僅包括編寫程式碼的行為，還包括一個組織用來長期建構和維護程式碼的所有工具和流程。一個軟體組織可以採用哪些做法來使其程式碼長期保持最佳價值？工程師們如何才能使程式碼函式庫更具有可持續性，並使軟體工程學科本身更加嚴格？我們沒有這些問題的最終答案，但我們希望谷歌在過去20年的集體經驗能夠為尋找這些答案的提供可能。
+我們建議，"軟體工程 "不僅包括編寫程式碼的行為，還包括一個組織用來長期建構和維護程式碼的所有工具和流程。一個軟體組織可以採用哪些做法來使其程式碼長期保持最佳價值？工程師們如何才能使程式碼函式庫更具有可持續性，並使軟體工程學科本身更加嚴格？我們沒有這些問題的最終答案，但我們希望 Google 在過去20年的集體經驗能夠為尋找這些答案的提供可能。
 
 One key insight we share in this book is that software engineering can be thought of as “programming integrated over time.” What practices can we introduce to our code to make it *sustainable*—able to react to necessary change—over its life cycle, from conception to introduction to maintenance to deprecation?
 
@@ -46,41 +46,41 @@ Throughout the chapters, we have tried to tie back to these themes and point out
 
 在整個章節中，我們都嘗試與這些主題聯絡起來，並指出這些原則如何影響工程實踐並使其可持續。(見[第1章](#_bookmark3)的全面討論)。
 
-### Google’s Perspective 谷歌的視角
+### Google’s Perspective  Google 的視角
 
 Google has a unique perspective on the growth and evolution of a sustainable soft‐ ware ecosystem, stemming from our scale and longevity. We hope that the lessons we have learned will be useful as your organization evolves and embraces more sustainable practices.
 
-谷歌對可持續軟體生態系統的發展和演變有著獨特的視角，這源於我們的規模和壽命。我們希望在你的組織發展和採用更多的可持續發展的做法時，我們學到的經驗將能對你有幫助。
+ Google 對可持續軟體生態系統的發展和演變有著獨特的視角，這源於我們的規模和壽命。我們希望在你的組織發展和採用更多的可持續發展的做法時，我們學到的經驗將能對你有幫助。
 
 We’ve divided the topics in this book into three main aspects of Google’s software engineering landscape:
 - Culture
 -  Processes
 - Tools
 
-我們將本書的主題分為谷歌軟體工程領域的三個主要方面：
+我們將本書的主題分為 Google 軟體工程領域的三個主要方面：
 - 文化
 - 過程
 - 工具
 
 Google’s culture is unique, but the lessons we have learned in developing our engineering culture are widely applicable. Our chapters on Culture ([Part II](#_bookmark100)) emphasize the collective nature of a software development enterprise, that the development of software is a team effort, and that proper cultural principles are essential for an organization to grow and remain healthy.
 
-谷歌的文化是獨一無二的，但我們在發展工程文化中所獲得的經驗是廣泛適用的。我們關於文化的章節（[第二部分](#_bookmark100)）強調了軟體開發企業的集體性，軟體開發是一項團隊工作，正確的文化原則對於一個組織的成長和保持健康至關重要。
+ Google 的文化是獨一無二的，但我們在發展工程文化中所獲得的經驗是廣泛適用的。我們關於文化的章節（[第二部分](#_bookmark100)）強調了軟體開發企業的集體性，軟體開發是一項團隊工作，正確的文化原則對於一個組織的成長和保持健康至關重要。
 
 The techniques outlined in our Processes chapters ([Part III](#_bookmark579)) are familiar to most soft‐ ware engineers, but Google’s large size and long-lived codebase provides a more complete stress test for developing best practices. Within those chapters, we have tried to emphasize what we have found to work over time and at scale as well as identify areas where we don’t yet have satisfying answers.
 
-在我們的流程章節（[第三部分](#_bookmark579)）中概述的技術是大多數軟體工程師所熟悉的，但谷歌的龐大規模和長期的程式碼函式庫為開發最佳實踐提供了一個更完整的壓力測試。在這些章節中，我們強調我們發現隨著時間的推移和規模的擴大，什麼是有效的，以及確定我們還沒有滿意的答案的領域。
+在我們的流程章節（[第三部分](#_bookmark579)）中概述的技術是大多數軟體工程師所熟悉的，但 Google 的龐大規模和長期的程式碼函式庫為開發最佳實踐提供了一個更完整的壓力測試。在這些章節中，我們強調我們發現隨著時間的推移和規模的擴大，什麼是有效的，以及確定我們還沒有滿意的答案的領域。
 
 Finally, our Tools chapters ([Part IV](#_bookmark1363)) illustrate how we leverage our investments in tooling infrastructure to provide benefits to our codebase as it both grows and ages. In some cases, these tools are specific to Google, though we point out open source or third-party alternatives where applicable. We expect that these basic insights apply to most engineering organizations.
 
-最後，我們的工具章節（[第四部分](#_bookmark1363)）說明了我們如何利用對工具基礎設施的投入來優化程式碼函式庫，因為它既增長又腐化。在某些情況下，這些工具是谷歌特有的，儘管我們在適當的地方指出了開源或第三方的替代品。我們希望這些基本的見解適用於大多數工程組織。
+最後，我們的工具章節（[第四部分](#_bookmark1363)）說明了我們如何利用對工具基礎設施的投入來優化程式碼函式庫，因為它既增長又腐化。在某些情況下，這些工具是 Google 特有的，儘管我們在適當的地方指出了開源或第三方的替代品。我們希望這些基本的見解適用於大多數工程組織。
 
 The culture, processes, and tools outlined in this book describe the lessons that a typical software engineer hopefully learns on the job. Google certainly doesn’t have a monopoly on good advice, and our experiences presented here are not intended to dictate what your organization should do. This book is our perspective, but we hope you will find it useful, either by adopting these lessons directly or by using them as a starting point when considering your own practices, specialized for your own problem domain.
 
-本書中描寫的文化、流程和工具是大多數的軟體工程師希望在工作中使用的內容。谷歌當然不會獨斷好建議，我們在這裡介紹的經驗並不是要規定你的組織應當這麼做。本書是我們的觀點，但我們希望你會發現它是有用的，可以直接採用這些經驗，也可以在考慮自己的實踐時把它們作為一個起點，專門用於解決自己的領域問題。
+本書中描寫的文化、流程和工具是大多數的軟體工程師希望在工作中使用的內容。 Google 當然不會獨斷好建議，我們在這裡介紹的經驗並不是要規定你的組織應當這麼做。本書是我們的觀點，但我們希望你會發現它是有用的，可以直接採用這些經驗，也可以在考慮自己的實踐時把它們作為一個起點，專門用於解決自己的領域問題。
 
 Neither is this book intended to be a sermon. Google itself still imperfectly applies many of the concepts within these pages. The lessons that we have learned, we learned through our failures: we still make mistakes, implement imperfect solutions, and need to iterate toward improvement. Yet the sheer size of Google’s engineering organization ensures that there is a diversity of solutions for every problem. We hope that this book contains the best of that group.
 
-本書也不打算成為一本佈道書。谷歌自身仍在不完善地應用這些書中的許多理念。我們從失敗中吸收了教訓：我們仍然會犯錯誤，實施不完美的解決方案，還需要迭代改進。然而，谷歌工程組織的龐大規模確定了每個問題都有多樣化的解決方案。我們希望這本書包含了這群人中最好的方案。
+本書也不打算成為一本佈道書。 Google 自身仍在不完善地應用這些書中的許多理念。我們從失敗中吸收了教訓：我們仍然會犯錯誤，實施不完美的解決方案，還需要迭代改進。然而， Google 工程組織的龐大規模確定了每個問題都有多樣化的解決方案。我們希望這本書包含了這群人中最好的方案。
 
 ### What This Book Isn’t 本書不適用於哪些
 

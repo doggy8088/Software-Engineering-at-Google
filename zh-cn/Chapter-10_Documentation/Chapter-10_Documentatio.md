@@ -8,7 +8,7 @@
 
 Of the complaints most engineers have about writing, using, and maintaining code, a singular common frustration is the lack of quality documentation. “What are the side effects of this method?” “I got an error after step 3.” “What does this acronym mean?” “Is this document up to date?” Every software engineer has voiced complaints about the quality, quantity, or sheer lack of documentation throughout their career, and the software engineers at Google are no different.
 
-在大多數工程師對編寫、使用和維護程式碼的抱怨中，一個常見的問題是缺乏高品質的文件。"這個方法的副作用是什麼？" "我在第三步之後出錯了。”“這個縮寫詞是什麼意思？”“這份文件是最新的嗎？”每個軟體工程師在他們的職業生涯中都對文件的品質、數量或完全缺失提出過抱怨，谷歌的軟體工程師也不例外。
+在大多數工程師對編寫、使用和維護程式碼的抱怨中，一個常見的問題是缺乏高品質的文件。"這個方法的副作用是什麼？" "我在第三步之後出錯了。”“這個縮寫詞是什麼意思？”“這份文件是最新的嗎？”每個軟體工程師在他們的職業生涯中都對文件的品質、數量或完全缺失提出過抱怨， Google 的軟體工程師也不例外。
 
 Technical writers and project managers may help, but software engineers will always need to write most documentation themselves. Engineers, therefore, need the proper tools and incentives to do so effectively. The key to making it easier for them to write quality documentation is to introduce processes and tools that scale with the organization and that tie into their existing workflow.
 
@@ -16,13 +16,13 @@ Technical writers and project managers may help, but software engineers will alw
 
 Overall, the state of engineering documentation in the late 2010s is similar to the state of software testing in the late 1980s. Everyone recognizes that more effort needs to be made to improve it, but there is not yet organizational recognition of its critical benefits. That is changing, if slowly. At Google, our most successful efforts have been when documentation is treated like code and incorporated into the traditional engineering workflow, making it easier for engineers to write and maintain simple documents.
 
-總體而言，2010年代末的工程文件狀況與1980年代末的軟體測試狀態相似。每個人都認識到需要做出更多的努力來改善它，但還沒有組織上認識到它的關鍵好處。這種情況正在改變，儘管很緩慢。在谷歌，我們最成功的努力是將文件像程式碼一樣對待，並將其納入傳統的工程工作流程，使工程師更便捷地編寫和維護文件。
+總體而言，2010年代末的工程文件狀況與1980年代末的軟體測試狀態相似。每個人都認識到需要做出更多的努力來改善它，但還沒有組織上認識到它的關鍵好處。這種情況正在改變，儘管很緩慢。在 Google ，我們最成功的努力是將文件像程式碼一樣對待，並將其納入傳統的工程工作流程，使工程師更便捷地編寫和維護文件。
 
 ## What Qualifies as Documentation? 什麼是合格的文件？
 
 When we refer to “documentation,” we’re talking about every supplemental text that an engineer needs to write to do their job: not only standalone documents, but code comments as well. (In fact, most of the documentation an engineer at Google writes comes in the form of code comments.) We’ll discuss the various types of engineering documents further in this chapter.
 
-當我們提到“文件”時，我們談論的是工程師為完成工作需要編寫的每一個補充文字：不僅是獨立文件，還有程式碼註釋。(事實上，谷歌的工程師所寫的大部分文件都是以程式碼註釋的形式出現的）。我們將在本章進一步討論各種型別的工程文件。
+當我們提到“文件”時，我們談論的是工程師為完成工作需要編寫的每一個補充文字：不僅是獨立文件，還有程式碼註釋。(事實上， Google 的工程師所寫的大部分文件都是以程式碼註釋的形式出現的）。我們將在本章進一步討論各種型別的工程文件。
 
 ## Why Is Documentation Needed? 為什麼需要文件？
 
@@ -83,7 +83,7 @@ Documentation benefits several different groups. Even to the writer, documentati
 
 As great as these benefits are to the writer of documentation, the lion’s share of documentation’s benefits will naturally accrue to the reader. Google’s C++ Style Guide notes the maxim “optimize for the reader.” This maxim applies not just to code, but to the comments around code, or the documentation set attached to an API. Much like testing, the effort you put into writing good documents will reap benefits many times over its lifetime. Documentation is critical over time, and reaps tremendous benefits for especially critical code as an organization scales.
 
-儘管這些好處對文件的作者來說是巨大的，但文件的大部分好處自然會累積到讀者身上。谷歌的《C++風格指南》指出了 "為讀者優化 "的格言。這句格言不僅適用於程式碼，也適用於程式碼周圍的註釋，或者附加到API的文件集。和測試一樣，你為編寫好的文件所付出的努力將在其生命週期內多次獲得收益。隨著時間的推移，文件是非常重要的，隨著組織規模的擴大，對於特別重要的程式碼，文件將獲得巨大的好處。
+儘管這些好處對文件的作者來說是巨大的，但文件的大部分好處自然會累積到讀者身上。 Google 的《C++風格指南》指出了 "為讀者優化 "的格言。這句格言不僅適用於程式碼，也適用於程式碼周圍的註釋，或者附加到API的文件集。和測試一樣，你為編寫好的文件所付出的努力將在其生命週期內多次獲得收益。隨著時間的推移，文件是非常重要的，隨著組織規模的擴大，對於特別重要的程式碼，文件將獲得巨大的好處。
 
 ## Documentation Is Like Code 把文件當做程式碼
 
@@ -93,7 +93,7 @@ Software engineers who write in a single, primary programming language still oft
 
 Documentation should be no different: it’s a tool, written in a different language (usually English) to accomplish a particular task. Writing documentation is not much different than writing code. Like a programming language, it has rules, a particular syntax, and style decisions, often to accomplish a similar purpose as that within code: enforce consistency, improve clarity, and avoid (comprehension) errors. Within technical documentation, grammar is important not because one needs rules, but to standardize the voice and avoid confusing or distracting the reader. Google requires a certain comment style for many of its languages for this reason.
 
-文件應該沒有什麼不同：它是一種工具，用不同的語言（通常是英語）編寫，用於完成特定任務。編寫文件與編寫程式碼沒有太大區別。與程式語言一樣，它有規則、特定語法和樣式規範，通常用於實現與程式碼中類似的目的：加強一致性、提高清晰度和避免（理解）錯誤。在技術文件中，語法很重要，不是因為需要規則，而是為了使聲音標準化，避免混淆或分散讀者的注意力。出於這個原因，谷歌對其許多語言都要求有一定的註釋風格。
+文件應該沒有什麼不同：它是一種工具，用不同的語言（通常是英語）編寫，用於完成特定任務。編寫文件與編寫程式碼沒有太大區別。與程式語言一樣，它有規則、特定語法和樣式規範，通常用於實現與程式碼中類似的目的：加強一致性、提高清晰度和避免（理解）錯誤。在技術文件中，語法很重要，不是因為需要規則，而是為了使聲音標準化，避免混淆或分散讀者的注意力。出於這個原因， Google 對其許多語言都要求有一定的註釋風格。
 
 Like code, documents should also have owners. Documents without owners become stale and difficult to maintain. Clear ownership also makes it easier to handle documentation through existing developer workflows: bug tracking systems, code review tooling, and so forth. Of course, documents with different owners can still conflict with one another. In those cases, it is important to designate canonical documentation: determine the primary source and consolidate other associated documents into that primary source (or deprecate the duplicates).
 
@@ -101,7 +101,7 @@ Like code, documents should also have owners. Documents without owners become st
 
 The prevalent usage of “go/links” at Google (see Chapter 3) makes this process easier. Documents with straightforward go/ links often become the canonical source of truth. One other way to promote canonical documents is to associate them directly with the code they document by placing them directly under source control and alongside the source code itself.
 
-在谷歌，"go/links "的普遍使用（見第三章）使這一過程更加容易。有直接的 "go/links "的檔案往往成為權威的標準來源。促進規範化文件的另一種方法是，透過將它們直接置於原始碼控制之下並與原始碼本身一起，將它們與它們所記錄的程式碼直接關聯。
+在 Google ，"go/links "的普遍使用（見第三章）使這一過程更加容易。有直接的 "go/links "的檔案往往成為權威的標準來源。促進規範化文件的另一種方法是，透過將它們直接置於原始碼控制之下並與原始碼本身一起，將它們與它們所記錄的程式碼直接關聯。
 
 Documentation is often so tightly coupled to code that it should, as much as possible, be treated as code. That is, your documentation should:
 
@@ -129,19 +129,19 @@ The more engineers treat documentation as “one of” the necessary tasks of so
 
 ------
 
- **Case Study: The Google Wiki ** 案例研究：谷歌維基
+ **Case Study: The Google Wiki ** 案例研究： Google 維基
 
 When Google was much smaller and leaner, it had few technical writers. The easiest way to share information was through our own internal wiki (GooWiki). At first, this seemed like a reasonable approach; all engineers shared a single documentation set and could update it as needed.
 
-當谷歌規模更小、更精簡時，幾乎沒有技術作家。分享資訊的最簡單方法是透過我們自己的內部維基（GooWiki）。起初，這似乎是一個合理的方法；所有工程師共享一個文件集，可以根據需要進行更新。
+當 Google 規模更小、更精簡時，幾乎沒有技術作家。分享資訊的最簡單方法是透過我們自己的內部維基（GooWiki）。起初，這似乎是一個合理的方法；所有工程師共享一個文件集，可以根據需要進行更新。
 
 But as Google scaled, problems with a wiki-style approach became apparent. Because there were no true owners for documents, many became obsolete.[3](#_bookmark765) Because no process was put in place for adding new documents, duplicate documents and document sets began appearing. GooWiki had a flat namespace, and people were not good at applying any hierarchy to the documentation sets. At one point, there were 7 to 10 documents (depending on how you counted them) on setting up Borg, our production compute environment, only a few of which seemed to be maintained, and most were specific to certain teams with certain permissions and assumptions.
 
-但隨著谷歌規模的擴大，維基風格方法的問題變得明顯。因為沒有真正的文件所有者，許多文件變得過時了。因為沒有建立新增新文件的流程，重複的文件和文件集開始出現了。GooWiki有一個扁平的名稱空間，人們不擅長將任何層次結構應用於文件集。在某些點上，有7到10個文件（取決於你如何計算）用於設定我們的生產計算環境Borg，其中只有少數文件似乎得到了維護，大多數文件都是特定於具有特定許可權和設定的特指定團隊的。
+但隨著 Google 規模的擴大，維基風格方法的問題變得明顯。因為沒有真正的文件所有者，許多文件變得過時了。因為沒有建立新增新文件的流程，重複的文件和文件集開始出現了。GooWiki有一個扁平的名稱空間，人們不擅長將任何層次結構應用於文件集。在某些點上，有7到10個文件（取決於你如何計算）用於設定我們的生產計算環境Borg，其中只有少數文件似乎得到了維護，大多數文件都是特定於具有特定許可權和設定的特指定團隊的。
 
 Another problem with GooWiki became apparent over time: the people who could fix the documents were not the people who used them. New users discovering bad documents either couldn’t confirm that the documents were wrong or didn’t have an easy way to report errors. They knew something was wrong (because the document didn’t work), but they couldn’t “fix” it. Conversely, the people best able to fix the documents often didn’t need to consult them after they were written. The documentation became so poor as Google grew that the quality of documentation became Google’s number one developer complaint on our annual developer surveys.
 
-隨著時間的推移，GooWiki的另一個問題變得顯而易見：能夠修復文件的人不是使用它們的人。發現不良文件的新使用者要麼無法確認文件是否有誤，要麼無法便捷報告錯誤。他們知道出了問題（因為文件不起作用），但他們無法“修復”它。相反，最能修復文件的人通常不需要在編寫文件後查閱它們。隨著谷歌的發展，文件品質變得如此之差，以至於在我們的年度開發者調查中，文件品質成了谷歌對開發者的第一大抱怨。
+隨著時間的推移，GooWiki的另一個問題變得顯而易見：能夠修復文件的人不是使用它們的人。發現不良文件的新使用者要麼無法確認文件是否有誤，要麼無法便捷報告錯誤。他們知道出了問題（因為文件不起作用），但他們無法“修復”它。相反，最能修復文件的人通常不需要在編寫文件後查閱它們。隨著 Google 的發展，文件品質變得如此之差，以至於在我們的年度開發者調查中，文件品質成了 Google 對開發者的第一大抱怨。
 
 The way to improve the situation was to move important documentation under the same sort of source control that was being used to track code changes. Documents began to have their own owners, canonical locations within the source tree, and processes for identifying bugs and fixing them; the documentation began to dramatically improve. Additionally, the way documentation was written and maintained began to look the same as how code was written and maintained. Errors in the documents could be reported within our bug tracking software. Changes to the documents could be handled using the existing code review process. Eventually, engineers began to fix the documents themselves or send changes to technical writers (who were often the owners).
 
@@ -155,7 +155,7 @@ Many engineers were convinced that doing away with the GooWiki, that bastion of 
 
 The introduction of Markdown as a common documentation formatting language also helped because it made it easier for engineers to understand how to edit documents without needing specialized expertise in HTML or CSS. Google eventually introduced its own framework for embedding documentation within code: g3doc.With that framework, documentation improved further, as documents existed side by side with the source code within the engineer’s development environment. Now, engineers could update the code and its associated documentation in the same change (a practice for which we’re still trying to improve adoption).
 
-引入Markdown作為通用的文件格式化語言也有幫助，因為它使工程師更容易理解如何編輯文件，而不需要HTML或CSS方面的專業知識。谷歌最終引入了自己的框架，用於在程式碼中嵌入文件：g3doc.有了這個框架，文件得到了進一步的改善，因為在工程師的開發環境中，文件與原始碼並列存在。現在，工程師們可以在相同的變更中更新程式碼及其相關的文件（我們仍在努力改進這種做法）。
+引入Markdown作為通用的文件格式化語言也有幫助，因為它使工程師更容易理解如何編輯文件，而不需要HTML或CSS方面的專業知識。 Google 最終引入了自己的框架，用於在程式碼中嵌入文件：g3doc.有了這個框架，文件得到了進一步的改善，因為在工程師的開發環境中，文件與原始碼並列存在。現在，工程師們可以在相同的變更中更新程式碼及其相關的文件（我們仍在努力改進這種做法）。
 
 The key difference was that maintaining documentation became a similar experience to maintaining code: engineers filed bugs, made changes to documents in changelists, sent changes to reviews by experts, and so on. Leveraging of existing developer  workflows, rather than creating new ones, was a key benefit.
 
@@ -212,7 +212,7 @@ Another important audience distinction is based on how a user encounters a docum
 另一個重要的受眾區分是基於使用者如何使用文件：
 
 - 尋求者，工程師知道他們想要什麼，並且想知道他們所看到的是否符合要求。對於這些聽眾來說，一個關鍵的教學手段是一致性。如果你為這一群體寫參考文件——在一個程式碼檔案內，例如——你希望註釋遵循類似的格式，以便受眾可以快速掃描參考並檢視是否找到所需內容。
-- 瀏覽者，可能不知道他們到底想要什麼。他們可能對如何實施他們正在使用的東西只有一個模糊的概念。這類別讀者的關鍵是清晰。提供概述或介紹（例如，在檔案的頂部），解釋他們正在檢視的程式碼的用途。確定文件何時不適合受眾也很有用。谷歌的很多檔案都以 "TL;DR宣告 "開始，如 "TL;DR：如果你對谷歌的C++編譯器不感興趣，你現在可以停止閱讀。"
+- 瀏覽者，可能不知道他們到底想要什麼。他們可能對如何實施他們正在使用的東西只有一個模糊的概念。這類別讀者的關鍵是清晰。提供概述或介紹（例如，在檔案的頂部），解釋他們正在檢視的程式碼的用途。確定文件何時不適合受眾也很有用。 Google 的很多檔案都以 "TL;DR宣告 "開始，如 "TL;DR：如果你對 Google 的C++編譯器不感興趣，你現在可以停止閱讀。"
 
 Finally, one important audience distinction is between that of a customer (e.g., a user of an API) and that of a provider (e.g., a member of the project team). As much as possible, documents intended for one should be kept apart from documents intended for the other. Implementation details are important to a team member for maintenance purposes; end users should not need to read such information. Often, engineers denote design decisions within the reference API of a library they publish. Such reasonings belong more appropriately in specific documents (design documents) or, at best, within the implementation details of code hidden behind an interface.
 
@@ -240,7 +240,7 @@ There are several main types of documents that software engineers often need to 
 
 It was common in the early days of Google for teams to have monolithic wiki pages with bunches of links (many broken or obsolete), some conceptual information about how the system worked, an API reference, and so on, all sprinkled together. Such documents fail because they don’t serve a single purpose (and they also get so long that no one will read them; some notorious wiki pages scrolled through several dozens of screens). Instead, make sure your document has a singular purpose, and if adding something to that page doesn’t make sense, you probably want to find, or even create, another document for that purpose.
 
-在谷歌的早期，團隊擁有單頁的維基頁面是很常見的，其中有成堆的連結（許多連結已死鏈或過時），一些關於系統如何工作的概念資訊，一個API參考等等，這些都散落在一起。這些文件之所以失敗，是因為它們沒有一個單一的職責（而且它們也會變得如此之長，以至於沒有人會閱讀它們；一些臭名昭著的wiki頁面滾動了幾十個螢幕）。相反，要確保你的文件有一個單一的職責，如果向該頁面新增內容沒有意義，可能希望找到或甚至建立另一個用於該用途的文件。
+在 Google 的早期，團隊擁有單頁的維基頁面是很常見的，其中有成堆的連結（許多連結已死鏈或過時），一些關於系統如何工作的概念資訊，一個API參考等等，這些都散落在一起。這些文件之所以失敗，是因為它們沒有一個單一的職責（而且它們也會變得如此之長，以至於沒有人會閱讀它們；一些臭名昭著的wiki頁面滾動了幾十個螢幕）。相反，要確保你的文件有一個單一的職責，如果向該頁面新增內容沒有意義，可能希望找到或甚至建立另一個用於該用途的文件。
 
 ### Reference Documentation 參考文件
 Reference documentation is the most common type that engineers need to write; indeed, they often need to write some form of reference documents every day. By reference documentation, we mean anything that documents the usage of code within the codebase. Code comments are the most common form of reference documentation that an engineer must maintain. Such comments can be divided into two basic camps: API comments versus implementation comments. Remember the audience differences between these two: API comments don’t need to discuss implementation details or design decisions and can’t assume a user is as versed in the API as the author. Implementation comments, on the other hand, can assume a lot more domain knowledge of the reader, though be careful in assuming too much: people leave projects, and sometimes it’s safer to be methodical about exactly why you wrote this code the way you did.
@@ -253,16 +253,16 @@ Most reference documentation, even when provided as separate documentation from 
 
 Google takes this approach: a C++ API deserves to have its reference documentation live within the header file. Other reference documentation is embedded directly in the Java, Python, and Go source code as well. Because Google’s Code Search browser (see Chapter 17) is so robust, we’ve found little benefit to providing separate generated reference documentation. Users in Code Search not only search code easily, they can usually find the original definition of that code as the top result. Having the documentation alongside the code’s definitions also makes the documentation easier to discover and maintain.
 
-谷歌採取了這種方法：一個C++ API應該有它的參考檔案存在標頭檔案中。其他參考文件也直接嵌入到Java、Python和Go原始碼中。因為Google的Code Search瀏覽器（見第17章）非常強大，我們發現提供單獨的通用參考文件沒有什麼好處。使用者在程式碼搜尋中不僅可以很容易地搜尋到程式碼，而且通常可以找到該程式碼的原始定義作為最重要的結果。將文件與程式碼的定義放在一起，也使文件更容易被發現和維護。
+ Google 採取了這種方法：一個C++ API應該有它的參考檔案存在標頭檔案中。其他參考文件也直接嵌入到Java、Python和Go原始碼中。因為Google的Code Search瀏覽器（見第17章）非常強大，我們發現提供單獨的通用參考文件沒有什麼好處。使用者在程式碼搜尋中不僅可以很容易地搜尋到程式碼，而且通常可以找到該程式碼的原始定義作為最重要的結果。將文件與程式碼的定義放在一起，也使文件更容易被發現和維護。
 
 We all know that code comments are essential to a well-documented API. But what precisely is a “good” comment? Earlier in this chapter, we identified two major audiences for reference documentation: seekers and stumblers. Seekers know what they want; stumblers don’t. The key win for seekers is a consistently commented codebase so that they can quickly scan an API and find what they are looking for. The key win for stumblers is clearly identifying the purpose of an API, often at the top of a file header. We’ll walk through some code comments in the subsections that follow. The code commenting guidelines that follow apply to C++, but similar rules are in place at Google for other languages.
 
-我們都知道，程式碼註釋對於一個良好的文件化的API來說是必不可少的。但是什麼才是 "好的 "註釋呢？在本章的前面，我們確定了參考文件的兩個主要受眾：尋求者和瀏覽者。尋求者知道他們想要什麼，而瀏覽者不知道。尋求者的關鍵點是一個一致的註釋程式碼函式庫，這樣他們就可以快速掃描API並找到他們正在尋找的東西。對於瀏覽者來說，關鍵的勝利是明確識別API的用途，通常是在檔案頭的頂部。我們將在下面的小節中介紹一些程式碼註釋。下面的程式碼註釋指南適用於C++，但在谷歌，其他語言也有類似的規則。
+我們都知道，程式碼註釋對於一個良好的文件化的API來說是必不可少的。但是什麼才是 "好的 "註釋呢？在本章的前面，我們確定了參考文件的兩個主要受眾：尋求者和瀏覽者。尋求者知道他們想要什麼，而瀏覽者不知道。尋求者的關鍵點是一個一致的註釋程式碼函式庫，這樣他們就可以快速掃描API並找到他們正在尋找的東西。對於瀏覽者來說，關鍵的勝利是明確識別API的用途，通常是在檔案頭的頂部。我們將在下面的小節中介紹一些程式碼註釋。下面的程式碼註釋指南適用於C++，但在 Google ，其他語言也有類似的規則。
 
 **File comments** **檔案註釋**
 Almost all code files at Google must contain a file comment. (Some header files that contain only one utility function, etc., might deviate from this standard.) File comments should begin with a header of the following form:
 
-在谷歌，幾乎所有的程式碼檔案都必須包含一個檔案註釋。(一些只包含一個實用函式的標頭檔案等，可能會偏離這個標準)。檔案註釋應該以下列形式的標頭檔案開始：
+在 Google ，幾乎所有的程式碼檔案都必須包含一個檔案註釋。(一些只包含一個實用函式的標頭檔案等，可能會偏離這個標準)。檔案註釋應該以下列形式的標頭檔案開始：
 
 ```
 // -----------------------------------------------------------------------------
@@ -283,7 +283,7 @@ Generally, a file comment should begin with an outline of what’s contained in 
 #### Class comments 類別註釋
 Most modern programming languages are object oriented. Class comments are therefore important for defining the API “objects” in use in a codebase. All public classes (and structs) at Google must contain a class comment describing the class/struct, important methods of that class, and the purpose of the class. Generally, class comments should be “nouned” with documentation emphasizing their object aspect. That is, say, “The Foo class contains x, y, z, allows you to do Bar, and has the following Baz aspects,” and so on.
 
-大多數現代程式語言都是面向物件的。因此，類別註釋對於定義程式碼函式庫中使用的API "物件 "非常重要。谷歌的所有公共類別（和結構）必須包含一個類別註釋，描述該類別/結構、該類別的重要方法以及該類別的目的。一般來說，類別的註釋應該是 "名詞化 "的，檔案強調其物件方面。也就是說，"Foo類別包含x、y、z，允許你做Bar，並且有以下Baz方面的內容"，等等。
+大多數現代程式語言都是面向物件的。因此，類別註釋對於定義程式碼函式庫中使用的API "物件 "非常重要。 Google 的所有公共類別（和結構）必須包含一個類別註釋，描述該類別/結構、該類別的重要方法以及該類別的目的。一般來說，類別的註釋應該是 "名詞化 "的，檔案強調其物件方面。也就是說，"Foo類別包含x、y、z，允許你做Bar，並且有以下Baz方面的內容"，等等。
 
 Class comments should generally begin with a comment of the following form:
 
@@ -303,7 +303,7 @@ Class comments should generally begin with a comment of the following form:
 
 All free functions, or public methods of a class, at Google must also contain a function comment describing what the function *does*. Function comments should stress the *active* nature of their use, beginning with an indicative verb describing what the function does and what is returned.
 
-在谷歌的所有公開函式或類別的公共方法也必須包含一個函式註釋，說明函式的功能。函式註釋應該強調其使用的主動性，以一個指示性動詞開始，描述函式的作用和返回的內容。
+在 Google 的所有公開函式或類別的公共方法也必須包含一個函式註釋，說明函式的功能。函式註釋應該強調其使用的主動性，以一個指示性動詞開始，描述函式的作用和返回的內容。
 
 Function comments should generally begin with a comment of the following form:
 
@@ -323,7 +323,7 @@ Note that starting a function comment with a declarative verb introduces consist
 
 Some documentation styles (and some documentation generators) require various forms of boilerplate on function comments, like “Returns:”, “Throws:”, and so forth, but at Google we haven’t found them to be necessary. It is often clearer to present such information in a single prose comment that’s not broken up into artificial section boundaries:
 
-一些文件樣式（和一些文件產生器）要求在函式註釋中加入各種形式的範本，如 "Returns:"，"Throws:"等等，但在谷歌，我們發現它們並不是必須的。在一個鬆散的註釋中呈現這樣的資訊通常更清晰，而不是將其分解為人為的段落邊界：
+一些文件樣式（和一些文件產生器）要求在函式註釋中加入各種形式的範本，如 "Returns:"，"Throws:"等等，但在 Google ，我們發現它們並不是必須的。在一個鬆散的註釋中呈現這樣的資訊通常更清晰，而不是將其分解為人為的段落邊界：
 
 ```
 // Creates a new record for a customer with the given name and address,
@@ -340,11 +340,11 @@ Notice how the postcondition, parameters, return value, and exceptional cases ar
 
 Most teams at Google require an approved design document before starting work on any major project. A software engineer typically writes the proposed design document using a specific design doc template approved by the team. Such documents are designed to be collaborative, so they are often shared in Google Docs, which has good collaboration tools. Some teams require such design documents to be discussed and debated at specific team meetings, where the finer points of the design can be discussed or critiqued by experts. In some respects, these design discussions act as a form of code review before any code is written.
 
-谷歌的大多數團隊在開始任何重大專案之前都需要獲得批准的設計文件。軟體工程師通常使用團隊批准的特定設計文件範本編寫擬定設計檔案。這些文件是為了協作而設計的，所以它們通常在谷歌文件中共享，谷歌文件有很好的協作工具。一些團隊要求在特定的團隊會議上討論和辯論此類別設計檔案，專家可以討論或評論設計的細節。在某些方面，這些設計討論就像是在編寫任何程式碼之前的一種程式碼審查形式。
+ Google 的大多數團隊在開始任何重大專案之前都需要獲得批准的設計文件。軟體工程師通常使用團隊批准的特定設計文件範本編寫擬定設計檔案。這些文件是為了協作而設計的，所以它們通常在 Google 文件中共享， Google 文件有很好的協作工具。一些團隊要求在特定的團隊會議上討論和辯論此類別設計檔案，專家可以討論或評論設計的細節。在某些方面，這些設計討論就像是在編寫任何程式碼之前的一種程式碼審查形式。
 
 Because the development of a design document is one of the first processes an engineer undertakes before deploying a new system, it is also a convenient place to ensure that various concerns are covered. The canonical design document templates at Google require engineers to consider aspects of their design such as security implications, internationalization, storage requirements and privacy concerns, and so on. In most cases, such parts of those design documents are reviewed by experts in those domains.
 
-由於設計文件的開發是工程師在部署新系統之前首先進行的過程之一，因此也是確保涵蓋了各種關切。谷歌的典型設計文件範本要求工程師考慮其設計的各個方面，如安全影響、國際化、儲存要求和隱私問題等等。在大多數情況下，這些設計文件的這類別部分都是由這些領域的專家來審查的。
+由於設計文件的開發是工程師在部署新系統之前首先進行的過程之一，因此也是確保涵蓋了各種關切。 Google 的典型設計文件範本要求工程師考慮其設計的各個方面，如安全影響、國際化、儲存要求和隱私問題等等。在大多數情況下，這些設計文件的這類別部分都是由這些領域的專家來審查的。
 
 A good design document should cover the goals of the design, its implementation strategy, and propose key design decisions with an emphasis on their individual trade-offs. The best design documents suggest design goals and cover alternative designs, denoting their strong and weak points.
 
@@ -466,7 +466,7 @@ Most poorly configured landing pages serve two different purposes: they are the 
 ## Documentation Reviews 文件評審
 At Google, all code needs to be reviewed, and our code review process is well understood and accepted. In general, documentation also needs review (though this is less universally accepted). If you want to “test” whether your documentation works, you should generally have someone else review it.
 
-在谷歌，所有的程式碼都需要評審，我們的程式碼評審是被充分理解和接受的。一般來說，文件也需要評審（儘管這不太被普遍接受）。如果你想 "測試 "你的文件是否有效，你一般應該讓別人來評審。
+在 Google ，所有的程式碼都需要評審，我們的程式碼評審是被充分理解和接受的。一般來說，文件也需要評審（儘管這不太被普遍接受）。如果你想 "測試 "你的文件是否有效，你一般應該讓別人來評審。
 
 A technical document benefits from three different types of reviews, each emphasizing different aspects:
 
@@ -486,17 +486,17 @@ Of course, some of these lines are sometimes blurred, but if your document is hi
 
 Importantly, if documentation is tied into the engineering workflow, it will often improve over time. Most documents at Google now implicitly go through an audience review because at some point, their audience will be using them, and hopefully letting you know when they aren’t working (via bugs or other forms of feedback).
 
-重要的是，如果文件與工程工作流程聯絡在一起，它往往會隨著時間的推移而改進。現在，谷歌的大多數文件都隱式地經過受眾審查，因為在某個時候，他們的讀者會使用這些文件，並希望在它們不起作用時（透過bug或其他形式的反饋）讓你知道。
+重要的是，如果文件與工程工作流程聯絡在一起，它往往會隨著時間的推移而改進。現在， Google 的大多數文件都隱式地經過受眾審查，因為在某個時候，他們的讀者會使用這些文件，並希望在它們不起作用時（透過bug或其他形式的反饋）讓你知道。
 
 -----
 **Case Study: The Developer Guide Library 案例研究：開發者指南函式庫**
 As mentioned earlier, there were problems associated with having most (almost all) engineering documentation contained within a shared wiki: little ownership of important documentation, competing documentation, obsolete information, and difficulty in filing bugs or issues with documentation. But this problem was not seen in some documents: the Google C++ style guide was owned by a select group of senior engineers (style arbiters) who managed it. The document was kept in good shape because certain people cared about it. They implicitly owned that document. The document was also canonical: there was only one C++ style guide.
 
-如前所述，大多數（幾乎所有）工程檔案都包含在一個共享的維基中，這其中存在一些問題：重要的文件沒有所有者、重複的文件、過時資訊，以及難以歸檔的錯誤或檔案問題。但是，這個問題在一些文件中並沒有出現：谷歌C++風格指南是由一組精選的高階工程師（風格仲裁者）管理的。該文件被保持良好的狀態，因為有人關心它。他們隱式地擁有該文件。該文件也是規範的：只有一個C++風格指南。
+如前所述，大多數（幾乎所有）工程檔案都包含在一個共享的維基中，這其中存在一些問題：重要的文件沒有所有者、重複的文件、過時資訊，以及難以歸檔的錯誤或檔案問題。但是，這個問題在一些文件中並沒有出現： Google C++風格指南是由一組精選的高階工程師（風格仲裁者）管理的。該文件被保持良好的狀態，因為有人關心它。他們隱式地擁有該文件。該文件也是規範的：只有一個C++風格指南。
 
 As previously mentioned, documentation that sits directly within source code is one way to promote the establishment of canonical documents; if the documentation sits alongside the source code, it should usually be the most applicable (hopefully). At Google, each API usually has a separate g3doc directory where such documents live (written as Markdown files and readable within our Code Search browser). Having the documentation exist alongside the source code not only establishes de facto ownership, it makes the documentation seem more wholly “part” of the code.
 
-如前所述，直接位於原始碼中的文件是促進規範文件建立的一種方法；如果文件與原始碼放在一起，它通常應該是最適用的（希望如此）。在谷歌，每個API通常都有一個單獨的g3doc目錄，這些文件就在這裡（寫為標記檔案，在我們的程式碼搜尋瀏覽器中可讀）。將文件與原始碼放在一起不僅建立了事實上的所有權，而且使文件看起來更完全是程式碼的“一部分”。
+如前所述，直接位於原始碼中的文件是促進規範文件建立的一種方法；如果文件與原始碼放在一起，它通常應該是最適用的（希望如此）。在 Google ，每個API通常都有一個單獨的g3doc目錄，這些文件就在這裡（寫為標記檔案，在我們的程式碼搜尋瀏覽器中可讀）。將文件與原始碼放在一起不僅建立了事實上的所有權，而且使文件看起來更完全是程式碼的“一部分”。
 
 Some documentation sets, however, cannot exist very logically within source code. A “C++ developer guide” for Googlers, for example, has no obvious place to sit within the source code. There is no master “C++” directory where people will look for such information. In this case (and others that crossed API boundaries), it became useful to create standalone documentation sets in their own depot. Many of these culled together associated existing documents into a common set, with common navigation and look-and-feel. Such documents were noted as “Developer Guides” and, like the code in the codebase, were under source control in a specific documentation depot, with this depot organized by topic rather than API. Often, technical writers managed these developer guides, because they were better at explaining topics across API boundaries.
 
@@ -516,7 +516,7 @@ The introduction of go/links (see Chapter 3) allowed most documents to, in effec
 
 Caveat: the following section is more of a treatise on technical writing best practices (and personal opinion) than of “how Google does it.” Consider it optional for software engineers to fully grasp, though understanding these concepts will likely allow you to more easily write technical information.
 
-注意：以下部分更像是一篇關於技術寫作最佳實踐的論文（和個人觀點），而不是 "谷歌是如何做到的"。對於軟體工程師來說，可以考慮讓他們完全掌握，儘管理解這些概念可能會讓你更容易寫出技術資訊。
+注意：以下部分更像是一篇關於技術寫作最佳實踐的論文（和個人觀點），而不是 " Google 是如何做到的"。對於軟體工程師來說，可以考慮讓他們完全掌握，儘管理解這些概念可能會讓你更容易寫出技術資訊。
 
 ### WHO, WHAT, WHEN, WHERE, and WHY 誰，什麼，何時，何地，為什麼
 Most technical documentation answers a “HOW” question. How does this work? How do I program to this API? How do I set up this server? As a result, there’s a tendency for software engineers to jump straight into the “HOW” on any given document and ignore the other questions associated with it: the WHO, WHAT, WHEN, WHERE, and WHY. It’s true that none of those are generally as important as the HOW—a design document is an exception because an equivalent aspect is often the WHY—but without a proper framing of technical documentation, documents end up confusing. Try to address the other questions in the first two paragraphs of any document:
@@ -568,7 +568,7 @@ Just like old code can cause problems, so can old documents. Over time, document
 
 At Google, we often attach “freshness dates” to documentation. Such documents note the last time a document was reviewed, and metadata in the documentation set will send email reminders when the document hasn’t been touched in, for example, three months. Such freshness dates, as shown in the following example—and tracking your documents as bugs—can help make a documentation set easier to maintain over time, which is the main concern for a document:
 
-在谷歌，我們經常在文件中附加“保鮮日期”。此類別文件會記錄文件最後一次審閱的時間，文件集中的元資料會在文件未被觸及時（例如，三個月）傳送電子郵件提醒。以下示例中所示的這些更新日期以及作為bug追蹤文件有助於使文件集隨著時間的推移更易於維護，這是文件的主要問題：
+在 Google ，我們經常在文件中附加“保鮮日期”。此類別文件會記錄文件最後一次審閱的時間，文件集中的元資料會在文件未被觸及時（例如，三個月）傳送電子郵件提醒。以下示例中所示的這些更新日期以及作為bug追蹤文件有助於使文件集隨著時間的推移更易於維護，這是文件的主要問題：
 
 ```
 <!--*
@@ -580,12 +580,12 @@ At Google, we often attach “freshness dates” to documentation. Such document
 
 Users who own such a document have an incentive to keep that freshness date current (and if the document is under source control, that requires a code review). As a result, it’s a low-cost means to ensure that a document is looked over from time to time. At Google, we found that including the owner of a document in this freshness date within the document itself with a byline of “Last reviewed by...” led to increased adoption as well.
 
-擁有此類別文件的使用者有保持該新鮮度的動力（如果文件受原始碼控制，則需要程式碼審查）。因此，它是一種低成本的方法，可以確保文件不時被檢視。在谷歌，我們發現在這種新鮮感中包括文件的所有者文件中署名為“Last Review by…”的日期也增加了採用。
+擁有此類別文件的使用者有保持該新鮮度的動力（如果文件受原始碼控制，則需要程式碼審查）。因此，它是一種低成本的方法，可以確保文件不時被檢視。在 Google ，我們發現在這種新鮮感中包括文件的所有者文件中署名為“Last Review by…”的日期也增加了採用。
 
 ## When Do You Need Technical Writers? 何時需要技術撰稿人？
 When Google was young and growing, there weren’t enough technical writers in software engineering. (That’s still the case.) Those projects deemed important tended to receive a technical writer, regardless of whether that team really needed one. The idea was that the writer could relieve the team of some of the burden of writing and maintaining documents and (theoretically) allow the important project to achieve greater velocity. This turned out to be a bad assumption.
 
-當谷歌年輕和成長時，軟體工程中沒有足夠的技術撰稿人。(現在仍然如此。）那些被認為是重要的專案往往會得到一個技術撰稿人，不管這個團隊是否真的需要。我們的想法是，技術撰稿人可以減輕團隊編寫和維護文件的一些負擔，（理論上）讓重要的專案取得更快的發展。這被證明是一個錯誤的假設。
+當 Google 年輕和成長時，軟體工程中沒有足夠的技術撰稿人。(現在仍然如此。）那些被認為是重要的專案往往會得到一個技術撰稿人，不管這個團隊是否真的需要。我們的想法是，技術撰稿人可以減輕團隊編寫和維護文件的一些負擔，（理論上）讓重要的專案取得更快的發展。這被證明是一個錯誤的假設。
 
 We learned that most engineering teams can write documentation for themselves (their team) perfectly fine; it’s only when they are writing documents for another audience that they tend to need help because it’s difficult to write to another audience. The feedback loop within your team regarding documents is more immediate, the domain knowledge and assumptions are clearer, and the perceived needs are more obvious. Of course, a technical writer can often do a better job with grammar and organization, but supporting a single team isn’t the best use of a limited and specialized resource; it doesn’t scale. It introduced a perverse incentive: become an important project and your software engineers won’t need to write documents. Discouraging engineers from writing documents turns out to be the opposite of what you want to do.
 
@@ -598,11 +598,11 @@ Because they are a limited resource, technical writers should generally focus on
 ## Conclusion 總結
 Google has made good strides in addressing documentation quality over the past decade, but to be frank, documentation at Google is not yet a first-class citizen. For comparison, engineers have gradually accepted that testing is necessary for any code change, no matter how small. As well, testing tooling is robust, varied and plugged into an engineering workflow at various points. Documentation is not ingrained at nearly the same level.
 
-在過去的十年中，谷歌在解決文件品質方面取得了長足的進步，但坦率地說，谷歌的文件還不是一等公民。相比之下，工程師們已經逐漸接受了測試對於任何程式碼修改都是必要的，無論更改多麼小。同樣，測試工具是健壯的、多樣的，並在不同的點上插入工程工作流程中。文件還達不到在相同的層次上紮根的。
+在過去的十年中， Google 在解決文件品質方面取得了長足的進步，但坦率地說， Google 的文件還不是一等公民。相比之下，工程師們已經逐漸接受了測試對於任何程式碼修改都是必要的，無論更改多麼小。同樣，測試工具是健壯的、多樣的，並在不同的點上插入工程工作流程中。文件還達不到在相同的層次上紮根的。
 
 To be fair, there’s not necessarily the same need to address documentation as with testing. Tests can be made atomic (unit tests) and can follow prescribed form and function. Documents, for the most part, cannot. Tests can be automated, and schemes to automate documentation are often lacking. Documents are necessarily subjective; the quality of the document is measured not by the writer, but by the reader, and often quite asynchronously. That said, there is a recognition that documentation is important, and processes around document development are improving. In this author’s opinion, the quality of documentation at Google is better than in most software engineering shops.
 
-公平地說，解決文件問題的必要性不一定和測試一樣。測試可以是原子化的（單元測試），可以遵循規定的形式和功能。在大多數情況下，文件都做不到。測試可以自動化，而文件自動化的方案通常是缺乏的。文件必然是主觀的；文件的品質不是由作者來衡量的，而是由讀者來衡量的，而且通常是非同步的。儘管如此，人們認識到文件的重要性，圍繞文件開發的過程也在不斷改進。在筆者看來，谷歌公司的文件品質比大多數軟體工程公司的要好。
+公平地說，解決文件問題的必要性不一定和測試一樣。測試可以是原子化的（單元測試），可以遵循規定的形式和功能。在大多數情況下，文件都做不到。測試可以自動化，而文件自動化的方案通常是缺乏的。文件必然是主觀的；文件的品質不是由作者來衡量的，而是由讀者來衡量的，而且通常是非同步的。儘管如此，人們認識到文件的重要性，圍繞文件開發的過程也在不斷改進。在筆者看來， Google 公司的文件品質比大多數軟體工程公司的要好。
 
 To change the quality of engineering documentation, engineers—and the entire engineering organization—need to accept that they are both the problem and the solution. Rather than throw up their hands at the state of documentation, they need to realize that producing quality documentation is part of their job and saves them time and effort in the long run. For any piece of code that you expect to live more than a few months, the extra cycles you put in documenting that code will not only help others, it will help you maintain that code as well.
 

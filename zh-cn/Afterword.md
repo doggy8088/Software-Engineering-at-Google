@@ -1,7 +1,7 @@
 # 後記
 Software engineering at Google has been an extraordinary experiment in how to develop and maintain a large and evolving codebase. I’ve seen engineering teams break ground on this front during my time here, moving Google forward both as a company that touches billions of users and as a leader in the tech industry. This wouldn’t have been possible without the principles outlined in this book, so I’m very excited to see these pages come to life.
 
-谷歌的軟體工程一直是如何開發和維護一個龐大且不斷髮展的程式碼函式庫的一個非凡的實驗。在我任職期間，我看到工程團隊在這方面取得突破，推動谷歌作為一家連線數十億使用者的公司，又成為科技行業的領導者。如果沒有這本書中概述的原則，這是不可能的，所以我很高興看到這些書頁變成了現實。
+Google 的軟體工程一直是如何開發和維護一個龐大且不斷髮展的程式碼函式庫的一個非凡的實驗。在我任職期間，我看到工程團隊在這方面取得突破，推動 Google 作為一家連線數十億使用者的公司，又成為科技行業的領導者。如果沒有這本書中概述的原則，這是不可能的，所以我很高興看到這些書頁變成了現實。
 
 If the past 50 years (or the preceding pages here) have proven anything, it’s that soft‐ ware engineering is far from stagnant. In an environment in which technology is steadily changing, the software engineering function holds a particularly important role within a given organization. Today, software engineering principles aren’t simply about how to effectively run an organization; they’re about how to be a more respon‐ sible company for users and the world at large.
 
@@ -9,7 +9,7 @@ If the past 50 years (or the preceding pages here) have proven anything, it’s 
 
 Solutions to common software engineering problems are not always hidden in plain sight—most require a certain level of resolute agility to identify solutions that will work for current-day problems and also withstand inevitable changes to technical systems. This agility is a common quality of the software engineering teams I’ve had the privilege to work with and learn from since joining Google back in 2008.
 
-常見的軟體工程問題的解決方案並不總是隱藏在顯而易見的地方--大多數問題需要一定程度的果斷敏捷，以確定能夠解決當前問題的解決方案，同時也能承受技術系統不可避免的變化。這種敏捷性是我自2008年加入谷歌以來有幸與之共事並從中學習的軟體工程團隊的共同品質。
+常見的軟體工程問題的解決方案並不總是隱藏在顯而易見的地方--大多數問題需要一定程度的果斷敏捷，以確定能夠解決當前問題的解決方案，同時也能承受技術系統不可避免的變化。這種敏捷性是我自2008年加入 Google 以來有幸與之共事並從中學習的軟體工程團隊的共同品質。
 
 The idea of sustainability is also central to software engineering. Over a codebase’s expected lifespan, we must be able to react and adapt to changes, be that in product direction, technology platforms, underlying libraries, operating systems, and more. Today, we rely on the principles outlined in this book to achieve crucial flexibility in changing pieces of our software ecosystem.
 
@@ -25,7 +25,7 @@ This book outlines some of our key guiding principles as they relate to software
 
 Our responsibility at Google has always been to provide developers, internally and externally, with a well-lit path. With the rise of new technologies like artificial intelli‐ gence, quantum computing, and ambient computing, there’s still plenty for us to learn as a company. I’m particularly excited to see where the industry takes software engi‐ neering in the coming years, and I’m confident that this book will help shape that path.
 
-我們在谷歌的責任一直是為內部和外部的開發者提供一條光明的道路。隨著人工智慧、量子計算和環境計算等新技術的興起，作為一家公司，我們仍有很多東西需要學習。我特別期待看到軟體行業在未來幾年的發展方向，我相信這本書將有助於塑造這條路。
+我們在 Google 的責任一直是為內部和外部的開發者提供一條光明的道路。隨著人工智慧、量子計算和環境計算等新技術的興起，作為一家公司，我們仍有很多東西需要學習。我特別期待看到軟體行業在未來幾年的發展方向，我相信這本書將有助於塑造這條路。
 
 —*Asim* *Husain* 
 
