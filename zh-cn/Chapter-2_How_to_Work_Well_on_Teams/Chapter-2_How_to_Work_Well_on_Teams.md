@@ -329,7 +329,7 @@ All of this preaching about humility, respect, and trust sounds like a sermon. L
 
 OK, this is sort of a simpler way of telling someone without enough humility to lose their ’tude. Nobody wants to work with someone who consistently behaves like they’re the most important person in the room. Even if you know you’re the wisest person in the discussion, don’t wave it in people’s faces. For example, do you always feel like you need to have the first or last word on every subject? Do you feel the need to comment on every detail in a proposal or discussion? Or do you know somebody who does these things?
 
-好吧，這是一種更簡單的方式，告訴那些沒有足夠謙卑的人失去他們的理智。沒有人願意和一個總是表現得像房間裡最重要的人一樣的人一起工作。即使你知道自己是討論中最聰明的人，也不要當眾揮舞。例如，你是否總是覺得你需要對每一個主題都說第一句話或最後一句話？你是否覺得有必要對提案或討論中的每一個細節進行評論？或者你認識做的人嗎？
+好吧，這樣的說法去告訴那些過於自負的人，是一種過於簡單、沒有人性的方式，會讓他們失去理智。沒有人願意和一個總是表現得像房間裡最重要的人一樣的人一起工作。即使你知道自己是討論中最聰明的人，也不要當眾揮舞。例如，你是否總是覺得你需要對每一個主題都說第一句話或最後一句話？你是否覺得有必要對提案或討論中的每一個細節進行評論？或者你認識這麼做的人嗎？
 
 Although it’s important to be humble, that doesn’t mean you need to be a doormat; there’s nothing wrong with self-confidence. Just don’t come off like a know-it-all. Even better, think about going for a “collective” ego, instead; rather than worrying about whether you’re personally awesome, try to build a sense of team accomplishment and group pride. For example, the Apache Software Foundation has a long history of creating communities around software projects. These communities have incredibly strong identities and reject people who are more concerned with self- promotion.
 
