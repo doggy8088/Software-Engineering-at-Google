@@ -81,7 +81,7 @@ Of course, new projects happen, new techniques are introduced, new components ar
 
 We’ve pointed out roughly how the typical code review process works, but the devil is in the details. This section outlines in detail how code review works at Google and how these practices allow it to scale properly over time.
 
-我們已經粗略地指出了典型的程式碼審查過程是如何工作的，但問題在於細節。本節詳細概述了谷歌的程式碼審查工作原理，以及這些實踐如何使其能夠隨時間適當擴充套件。
+我們已經粗略地指出了典型的程式碼審查過程是如何工作的，但問題在於細節。本節詳細概述了谷歌的程式碼審查工作原理，以及這些實踐如何使其能夠隨時間適當擴充。
 
 There are three aspects of review that require “approval” for any given change at Google:  
 -   A correctness and comprehension check from another engineer that the code is appropriate and does what the author claims it does. This is often a team member, though it does not need to be. This is reflected in the LGTM permissions “bit,” which will be set after a peer reviewer agrees that the code “looks good” to them.
@@ -127,7 +127,7 @@ When working on a small team in a dedicated repository, it’s common to grant t
 
 As the team grows larger, this approach can fail to scale. The result is either a messy repository split or a different approach to recording who has what knowledge and responsibilities in different parts of the repository. At Google, we call this set of knowledge and responsibilities *ownership* and the people to exercise them *owners*. This concept is different than possession of a collection of source code, but rather implies a sense of stewardship to act in the company’s best interest with a section of the codebase. (Indeed, “stewards” would almost certainly be a better term if we had it to do over again.)
 
-隨著團隊規模的擴大，這種方法可能無法擴充套件。其結果要麼是混亂的版本函式庫分裂，要麼是用不同的方法來記錄誰在版本函式庫的不同部分擁有哪些知識和職責。在谷歌，我們把這套知識和職責稱為*所有權*，把行使這些知識和職責的人稱為*所有者*。這個概念不同於對原始碼集合的佔有，而是意味著一種管理意識，以公司的最佳利益對程式碼函式庫的某個部分採取行動。(事實上，如果我們重新來過，"管家 "幾乎肯定是一個更好的術語）。
+隨著團隊規模的擴大，這種方法可能無法擴充。其結果要麼是混亂的版本函式庫分裂，要麼是用不同的方法來記錄誰在版本函式庫的不同部分擁有哪些知識和職責。在谷歌，我們把這套知識和職責稱為*所有權*，把行使這些知識和職責的人稱為*所有者*。這個概念不同於對原始碼集合的佔有，而是意味著一種管理意識，以公司的最佳利益對程式碼函式庫的某個部分採取行動。(事實上，如果我們重新來過，"管家 "幾乎肯定是一個更好的術語）。
 
 Specially named OWNERS files list usernames of people who have ownership responsibilities for a directory and its children. These files may also contain references to other OWNERS files or external access control lists, but eventually they resolve to a list of individuals. Each subdirectory may also contain a separate OWNERS file, and the relationship is hierarchically additive: a given file is generally owned by the union of the members of all the OWNERS files above it in the directory tree. OWNERS files may have as many entries as teams like, but we encourage a relatively small and focused list to ensure responsibility is clear.
 
@@ -143,7 +143,7 @@ This distributed ownership structure enables many of the other practices we’ve
 
 This ownership mechanism is simple, yet powerful, and has scaled well over the past two decades. It is one of the ways that Google ensures that tens of thousands of engineers can operate efficiently on billions of lines of code in a single repository.
 
-這種所有權機制簡單而強大，在過去的20年裡得到了良好的擴充套件。這是谷歌確保數以萬計的工程師能夠在單一資源函式庫中有效運算元十億行程式碼的方法之一。
+這種所有權機制簡單而強大，在過去的20年裡得到了良好的擴充。這是谷歌確保數以萬計的工程師能夠在單一資源函式庫中有效運算元十億行程式碼的方法之一。
 
 -----
 
@@ -192,7 +192,7 @@ An obvious benefit of code review is that it allows a reviewer to check the “c
 
 Many reports point to the efficacy of code review in the prevention of future bugs in software. A study at IBM found that discovering defects earlier in a process, unsurprisingly, led to less time required to fix them later on.[5](#_bookmark692) The investment in the time for code review saved time otherwise spent in testing, debugging, and performing regressions, provided that the code review process itself was streamlined to keep it lightweight. This latter point is important; code review processes that are heavyweight, or that don’t scale properly, become unsustainable.[6](#_bookmark693) We will get into some best practices for keeping the process lightweight later in this chapter.
 
-許多報告指出了程式碼審查在防止軟體未來出現錯誤方面的有效性。IBM的一項研究發現，在一個過程的越早發現缺陷，無疑會減少以後修復缺陷所需的時間。對程式碼審查時間的投入節省了原本用於測試、除錯和執行迴歸的時間，前提是程式碼審查過程本身經過了優化，以保持其輕量級。如果程式碼審查過程很重，或者擴充套件不當，那麼這些過程將變得不可持續。我們將在本章後面介紹一些保持過程輕量級的最佳實踐。
+許多報告指出了程式碼審查在防止軟體未來出現錯誤方面的有效性。IBM的一項研究發現，在一個過程的越早發現缺陷，無疑會減少以後修復缺陷所需的時間。對程式碼審查時間的投入節省了原本用於測試、除錯和執行迴歸的時間，前提是程式碼審查過程本身經過了優化，以保持其輕量級。如果程式碼審查過程很重，或者擴充不當，那麼這些過程將變得不可持續。我們將在本章後面介紹一些保持過程輕量級的最佳實踐。
 
 To prevent the evaluation of correctness from becoming more subjective than objective, authors are generally given deference to their particular approach, whether it be in the design or the function of the introduced change. A reviewer shouldn’t propose alternatives because of personal opinion. Reviewers can propose alternatives, but only if they improve comprehension (by being less complex, for example) or functionality (by being more efficient, for example). In general, engineers are encouraged to approve changes that improve the codebase rather than wait for consensus on a more “perfect” solution. This focus tends to speed up code reviews.
 
@@ -208,7 +208,7 @@ That said, checking for defects during the initial code review process is still 
 
 Surprisingly enough, checking for code correctness is not the primary benefit Google accrues from the process of code review. Checking for code correctness generally ensures that a change works, but more importance is attached to ensuring that a code change is understandable and makes sense over time and as the codebase itself scales. To evaluate those aspects, we need to look at factors other than whether the code is simply logically “correct” or understood.
 
-令人驚訝的是，檢查程式碼的正確性並不是谷歌從程式碼審查過程中獲得的最大好處。檢查程式碼正確性通常可以確保更改有效，但更重要的是確保程式碼更改是可以理解的，並且隨著時間的推移和程式碼函式庫本身的擴充套件而變得有意義。為了評估這些方面，我們需要檢視除程式碼在邏輯上是否“正確”或理解之外的其他因素。
+令人驚訝的是，檢查程式碼的正確性並不是谷歌從程式碼審查過程中獲得的最大好處。檢查程式碼正確性通常可以確保更改有效，但更重要的是確保程式碼更改是可以理解的，並且隨著時間的推移和程式碼函式庫本身的擴充而變得有意義。為了評估這些方面，我們需要檢視除程式碼在邏輯上是否“正確”或理解之外的其他因素。
 
 ```
 5	“Advances in Software Inspection,” IEEE Transactions on Software Engineering, SE-12(7): 744–751, July 1986. Granted, this study took place before robust tooling and automated testing had become so important in the software development process, but the results still seem relevant in the modern software age.
@@ -244,7 +244,7 @@ It is for maintainability that the LGTM state of a code review (indicating code 
 
 A readability approver is tasked with reviewing code to ensure that it follows agreedon best practices for that particular programming language, is consistent with the codebase for that language within Google’s code repository, and avoids being overly complex. Code that is consistent and simple is easier to understand and easier for tools to update when it comes time for refactoring, making it more resilient. If a particular pattern is always done in one fashion in the codebase, it’s easier to write a tool to refactor it.
 
-可讀性審查員的任務是審查程式碼，以確保它遵循該特定程式語言的商定的最佳做法，與谷歌程式碼函式庫中該語言的程式碼函式庫一致，並避免過於複雜。一致和簡單的程式碼更容易理解，當需要重構時，工具也更容易更新，使其更有擴充套件性。如果一個特定的模式在程式碼函式庫中總是以一種方式完成，那麼寫一個工具來重構它就會更容易。
+可讀性審查員的任務是審查程式碼，以確保它遵循該特定程式語言的商定的最佳做法，與谷歌程式碼函式庫中該語言的程式碼函式庫一致，並避免過於複雜。一致和簡單的程式碼更容易理解，當需要重構時，工具也更容易更新，使其更有擴充性。如果一個特定的模式在程式碼函式庫中總是以一種方式完成，那麼寫一個工具來重構它就會更容易。
 
 Additionally, code might be written only once, but it will be read dozens, hundreds, or even thousands of times. Having code that is consistent across the codebase improves comprehension for all of engineering, and this consistency even affects the process of code review itself. Consistency sometimes clashes with functionality; a readability reviewer may prefer a less complex change that may not be functionally “better” but is easier to understand.
 
@@ -302,7 +302,7 @@ Moreover, because each change becomes part of the codebase, code review acts as 
 
 Code review can, admittedly, introduce friction and delay to an organization. Most of these issues are not problems with code review per se, but with their chosen implementation of code review. Keeping the code review process running smoothly at Google is no different, and it requires a number of best practices to ensure that code review is worth the effort put into the process. Most of those practices emphasize keeping the process nimble and quick so that code review can scale properly.
 
-誠然，程式碼審查會給一個組織帶來阻力和延遲。這些問題大多不是程式碼審查本身的問題，而是他們選擇的程式碼審查實施的問題。在谷歌保持程式碼審查過程的順利執行也不例外，它需要大量的最佳實踐來確保程式碼審查是值得的。大多數實踐都強調保持流程的敏捷性和快速性，以便程式碼評審能夠適當地擴充套件。
+誠然，程式碼審查會給一個組織帶來阻力和延遲。這些問題大多不是程式碼審查本身的問題，而是他們選擇的程式碼審查實施的問題。在谷歌保持程式碼審查過程的順利執行也不例外，它需要大量的最佳實踐來確保程式碼審查是值得的。大多數實踐都強調保持流程的敏捷性和快速性，以便程式碼評審能夠適當地擴充。
 
 ### Be Polite and Professional  要有禮貌和專業精神
 
@@ -346,7 +346,7 @@ Small” changes should generally be limited to about 200 lines of code. A small
 
 Because code reviews are typically small, it’s common for almost all code reviews at Google to be reviewed by one and only one person. Were that not the case—if a team were expected to weigh in on all changes to a common codebase—there is no way the process itself would scale. By keeping the code reviews small, we enable this optimization. It’s not uncommon for multiple people to comment on any given change— most code reviews are sent to a team member, but also CC’d to appropriate teams— but the primary reviewer is still the one whose LGTM is desired, and only one LGTM is necessary for any given change. Any other comments, though important, are still optional.
 
-因為程式碼審查通常是小規模的，所以在谷歌，幾乎所有的程式碼審查都是由一個人審查，而且只有一個人。如果不是這樣的話——如果一個團隊被期望對一個共同的程式碼函式庫的所有更改進行評估，那麼這個過程本身就沒有辦法擴充套件。透過保持小規模的程式碼審查，我們實現了這種優化。多人對任何給定的更改發表評論的情況並不罕見--大多數程式碼審查被傳送給一個團隊成員，但也被抄送給適當的團隊——但主要的審查員仍然是那個希望得到LGTM的人，而且對於任何給定的更改，只有一個LGTM是必要的。任何其他評論，儘管很重要，但仍然是可選的。
+因為程式碼審查通常是小規模的，所以在谷歌，幾乎所有的程式碼審查都是由一個人審查，而且只有一個人。如果不是這樣的話——如果一個團隊被期望對一個共同的程式碼函式庫的所有更改進行評估，那麼這個過程本身就沒有辦法擴充。透過保持小規模的程式碼審查，我們實現了這種優化。多人對任何給定的更改發表評論的情況並不罕見--大多數程式碼審查被傳送給一個團隊成員，但也被抄送給適當的團隊——但主要的審查員仍然是那個希望得到LGTM的人，而且對於任何給定的更改，只有一個LGTM是必要的。任何其他評論，儘管很重要，但仍然是可選的。
 
 Keeping changes small also allows the “approval” reviewers to more quickly approve any given changes. They can quickly inspect whether the primary code reviewer did due diligence and focus purely on whether this change augments the codebase while maintaining code health over time.
 
@@ -377,7 +377,7 @@ Descriptions aren’t the only opportunity for adding documentation to a change.
 
 Most code reviews at Google are reviewed by precisely one reviewer.[9](#_bookmark726) Because the code review process allows the bits on code correctness, owner acceptance, and language readability to be handled by one individual, the code review process scales quite well across an organization the size of Google.
 
-在谷歌，大多數的程式碼審查都是由一個審查員進行審查的。由於程式碼審查過程允許由一個人處理程式碼正確性、所有者接受度和語言可讀性等方面的問題，程式碼審查過程在谷歌這樣的組織規模中具有相當好的擴充套件性。
+在谷歌，大多數的程式碼審查都是由一個審查員進行審查的。由於程式碼審查過程允許由一個人處理程式碼正確性、所有者接受度和語言可讀性等方面的問題，程式碼審查過程在谷歌這樣的組織規模中具有相當好的擴充性。
 
 There is a tendency within the industry, and within individuals, to try to get additional input (and unanimous consent) from a cross-section of engineers. After all, each additional reviewer can add their own particular insight to the code review in question. But we’ve found that this leads to diminishing returns; the most important LGTM is the first one, and subsequent ones don’t add as much as you might think to the equation. The cost of additional reviewers quickly outweighs their value.
 
@@ -463,7 +463,7 @@ Many changes at Google are automatically generated: the author of the change isn
 
 At first look, a review for an automatically generated change should be handled the same as any other code review: the reviewer should check for correctness and applicability of the change. However, we encourage reviewers to limit comments in the associated change and only flag concerns that are specific to their code, not the underlying tool or LSC generating the changes. While the specific change might be machine generated, the overall process generating these changes has already been reviewed, and individual teams cannot hold a veto over the process, or it would not be possible to scale such changes across the organization. If there is a concern about the underlying tool or process, reviewers can escalate out of band to an LSC oversight group for more information.
 
-乍一看，對自動產生的變更的審查應與任何其他程式碼審查一樣進行處理：審查員應檢查變更的正確性和適用性。但是，我們鼓勵審查員限制相關更改中的註釋，只標記特定於其程式碼的關注點，而不是產生更改的底層工具或LSC。雖然具體的變更可能是機器產生的，但產生這些變更的整個流程已經過審查，單個團隊不能對該流程擁有否決權，否則就不可能在整個組織中擴充套件此類別變更。如果對基礎工具或流程存在擔憂，審查員可以將帶外問題上報給LSC監督小組，以獲取更多資訊。
+乍一看，對自動產生的變更的審查應與任何其他程式碼審查一樣進行處理：審查員應檢查變更的正確性和適用性。但是，我們鼓勵審查員限制相關更改中的註釋，只標記特定於其程式碼的關注點，而不是產生更改的底層工具或LSC。雖然具體的變更可能是機器產生的，但產生這些變更的整個流程已經過審查，單個團隊不能對該流程擁有否決權，否則就不可能在整個組織中擴充此類別變更。如果對基礎工具或流程存在擔憂，審查員可以將帶外問題上報給LSC監督小組，以獲取更多資訊。
 
 We also encourage reviewers of automatic changes to avoid expanding their scope. When reviewing a new feature or a change written by a teammate, it is often reasonable to ask the author to address related concerns within the same change, so long as the request still follows the earlier advice to keep the change small. This does not apply to automatically generated changes because the human running the tool might have hundreds of changes in flight, and even a small percentage of changes with review comments or unrelated questions limits the scale at which the human can effectively operate the tool.
 
@@ -473,7 +473,7 @@ We also encourage reviewers of automatic changes to avoid expanding their scope.
 
 Code review is one of the most important and critical processes at Google. Code review acts as the glue connecting engineers with one another, and the code review process is the primary developer workflow upon which almost all other processes must hang, from testing to static analysis to CI. A code review process must scale appropriately, and for that reason, best practices, including small changes and rapid feedback and iteration, are important to maintain developer satisfaction and appropriate production velocity.
 
-程式碼審查是谷歌最重要、最關鍵的流程之一。程式碼評審充當著工程師之間的粘合劑，程式碼評審過程是開發人員的主要工作流程，幾乎所有其他過程都必須依賴於此，從測試到靜態分析再到CI。程式碼評審過程必須適當擴充套件，因此，最佳實踐（包括小變更、快速反饋和迭代）對於保持開發人員滿意度和適當的生產速度非常重要。
+程式碼審查是谷歌最重要、最關鍵的流程之一。程式碼評審充當著工程師之間的粘合劑，程式碼評審過程是開發人員的主要工作流程，幾乎所有其他過程都必須依賴於此，從測試到靜態分析再到CI。程式碼評審過程必須適當擴充，因此，最佳實踐（包括小變更、快速反饋和迭代）對於保持開發人員滿意度和適當的生產速度非常重要。
 
 ## TL;DRs  內容提要
 
@@ -488,5 +488,5 @@ Code review is one of the most important and critical processes at Google. Code 
 - 總是透過別人來檢查你的假設；為讀者優化。
 - 在保持專業性同時提供關鍵反饋的機會。
 - 程式碼審查對於整個組織的知識共享非常重要。
-- 自動化對於擴充套件這個過程是至關重要的。
+- 自動化對於擴充這個過程是至關重要的。
 - 程式碼審查本身提供了一個歷史記錄。
