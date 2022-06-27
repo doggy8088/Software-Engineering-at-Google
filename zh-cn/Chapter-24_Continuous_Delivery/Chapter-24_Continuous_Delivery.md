@@ -261,7 +261,7 @@ Over the years and across all of our software products, we’ve found that, coun
 
 Simply having the structures in place that *enable* continuous deployment generates the majority of the value, *even if you don’t actually push those releases out to users*. What do we mean? We don’t actually release a wildly different version of Search, Maps, or YouTube every day, but to be able to do so requires a robust, well- documented continuous deployment process, accurate and real-time metrics on user satisfaction and product health, and a coordinated team with clear policies on what makes it in or out and why. In practice, getting this right often also requires binaries that can be configured in production, configuration managed like code (in version control), and a toolchain that allows safety measures like dry-run verification, rollback/rollforward mechanisms, and reliable patching.
 
-僅僅擁有*能夠*持續部署的結構，就能產生大部分的價值，*即使你沒有真正把這些版本推送給使用者*。我們的意思是什麼呢？我們實際上並不是每天都發佈一個完全不同的搜尋、地圖或YouTube的版本，但要做到這一點，就需要一個健壯的、有良好文件記錄的連續部署過程、關於使用者滿意度和產品健康狀況的準確即時指標，以及一個協調一致的團隊，該團隊擁有明確的策略，以確定成功與否以及原因。在實踐中，要做到這一點，往往還需要可以在生產中配置的二進位制套件，像程式碼一樣管理的配置（在版本控制中），以及一個可以採取安全措施的工具鏈，如干執行驗證、回滾/前滾機制和可靠的補丁。
+僅僅擁有*能夠*持續部署的結構，就能產生大部分的價值，*即使你沒有真正把這些版本推送給使用者*。我們的意思是什麼呢？我們實際上並不是每天都發佈一個完全不同的搜尋、地圖或YouTube的版本，但要做到這一點，就需要一個健壯的、有良好文件記錄的連續部署過程、關於使用者滿意度和產品健康狀況的準確即時指標，以及一個協調一致的團隊，該團隊擁有明確的策略，以確定成功與否以及原因。在實踐中，要做到這一點，往往還需要可以在生產中配置的二進位制套件，像程式碼一樣管理的配置（在版本控制中），以及一個可以採取安全措施的工具鏈，如試運行、回滾/前滾機制和可靠的補丁。
 
 ## TL;DRs  內容提要
 
