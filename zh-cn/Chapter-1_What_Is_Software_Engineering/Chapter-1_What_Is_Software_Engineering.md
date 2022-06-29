@@ -12,7 +12,7 @@
 
 We see three critical differences between programming and software engineering: time, scale, and the trade-offs at play. On a software engineering project, engineers need to be more concerned with the passage of time and the eventual need for change. In a software engineering organization, we need to be more concerned about scale and efficiency, both for the software we produce as well as for the organization that is producing it. Finally, as software engineers, we are asked to make more complex decisions with higher-stakes outcomes, often based on imprecise estimates of time and growth.
 
-我們看到，程式設計和軟體工程之間有三個關鍵的區別：時間、規模和權衡取捨。在一個軟體工程專案中，工程師需要更多關注時間成本和需求變更。在軟體工程中，我們需要更加關注規模和效率，無論是對我們生產的軟體，還是對生產軟體的組織。最後，作為軟體工程師，我們被要求做出更復雜的決策，其結果風險更大，而且往往是基於對時間和規模增長的不確定性的預估。
+我們看到，程式設計和軟體工程之間有三個關鍵的區別：時間、規模和權衡取捨。在一個軟體工程專案中，工程師需要更多關注時間成本和需求變更。在軟體工程中，我們需要更加關注規模和效率，無論是對我們生產的軟體，還是對生產軟體的組織。最後，作為軟體工程師，我們被要求做出更複雜的決策，其結果風險更大，而且往往是基於對時間和規模增長的不確定性的預估。
 
 Within Google, we sometimes say, “Software engineering is programming integrated over time.” Programming is certainly a significant part of software engineering: after all, programming is how you generate new software in the first place. If you accept this distinction, it also becomes clear that we might need to delineate between programming tasks (development) and software engineering tasks (development, modification, maintenance). The addition of time adds an important new dimension to programming. Cubes aren’t squares, distance isn’t velocity. Software engineering isn’t programming.
 
