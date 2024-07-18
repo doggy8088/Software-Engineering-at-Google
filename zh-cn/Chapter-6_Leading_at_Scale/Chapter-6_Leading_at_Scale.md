@@ -127,7 +127,7 @@ For years, thousands of Google engineers have worked on the general problem of m
 
 A number of leaders struggled with this issue over the years but failed to address the problem systematically. The blinders everyone wore assumed that the only way to deal with latency was to declare a latency 『code yellow』[^1] every two or three years, during which everyone dropped everything to optimize code and speed up the product. Although this strategy would work temporarily, the latency would begin creeping up again just a month or two later, and soon return to its prior levels.
 
-多年裡，多位領導都嘗試過系統性地解決這個問題然而最終都以失敗告終。每個專家都是隻有一個解法，那就是制定一個延遲的『黃線』，每一到兩年就檢查一次，如果延遲到達了『黃色代號』，每個人都停下來最高優先級最佳化程式碼來給產品提速。儘管這個策略會短時間的生效，但是僅僅一兩個月後，延遲就又會慢慢增加，然後很快就又回到之前的水平。
+多年裡，多位領導都嘗試過系統性地解決這個問題然而最終都以失敗告終。每個專家都是只有一個解法，那就是制定一個延遲的『黃線』，每一到兩年就檢查一次，如果延遲到達了『黃色代號』，每個人都停下來最高優先級最佳化程式碼來給產品提速。儘管這個策略會短時間的生效，但是僅僅一兩個月後，延遲就又會慢慢增加，然後很快就又回到之前的水平。
 
 So what changed? At some point, we took a step back, identified the blinders, and did a full reevaluation of the trade-offs. It turns out that the pursuit of 『quality』 has not one, but two different costs. The first cost is to the user: more quality usually means more data being sent out, which means more latency. The second cost is to Google: more quality means doing more work to generate the data, which costs more CPU time in our servers—what we call 『serving capacity.』 Although leadership had often trodden carefully around the trade-off between quality and capacity, it had never treated latency as a full citizen in the calculus. As the old joke goes, 『Good, Fast, Cheap—pick two.』 A simple way to depict the trade-offs is to draw a triangle of tension between Good (Quality), Fast (Latency), and Cheap (Capacity), as illustrated in Figure 6-1.
 
