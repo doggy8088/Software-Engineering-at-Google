@@ -46,13 +46,13 @@ Throughout the chapters, we have tried to tie back to these themes and point out
 
 在整個章節中，我們都嘗試與這些主題聯絡起來，並指出這些原則如何影響工程實踐並使其可持續。(見[第1章](#_bookmark3)的全面討論)。
 
-### Google」s Perspective 谷歌的視角
+### Google's Perspective 谷歌的視角
 
 Google has a unique perspective on the growth and evolution of a sustainable soft‐ ware ecosystem, stemming from our scale and longevity. We hope that the lessons we have learned will be useful as your organization evolves and embraces more sustainable practices.
 
 谷歌對可持續軟體生態系統的發展和演變有著獨特的視角，這源於我們的規模和壽命。我們希望在你的組織發展和採用更多的可持續發展的做法時，我們學到的經驗將能對你有幫助。
 
-We」ve divided the topics in this book into three main aspects of Google」s software engineering landscape:
+We've divided the topics in this book into three main aspects of Google's software engineering landscape:
 - Culture
 - Processes
 - Tools
@@ -62,11 +62,11 @@ We」ve divided the topics in this book into three main aspects of Google」s so
 - 流程
 - 工具
 
-Google」s culture is unique, but the lessons we have learned in developing our engineering culture are widely applicable. Our chapters on Culture ([Part II](#_bookmark100)) emphasize the collective nature of a software development enterprise, that the development of software is a team effort, and that proper cultural principles are essential for an organization to grow and remain healthy.
+Google's culture is unique, but the lessons we have learned in developing our engineering culture are widely applicable. Our chapters on Culture ([Part II](#_bookmark100)) emphasize the collective nature of a software development enterprise, that the development of software is a team effort, and that proper cultural principles are essential for an organization to grow and remain healthy.
 
 谷歌的文化是獨一無二的，但我們在發展工程文化中所獲得的經驗是廣泛適用的。我們關於文化的章節（[第二部分](#_bookmark100)）強調了軟體開發企業的集體性，軟體開發是一項團隊工作，正確的文化原則對於一個組織的成長和保持健康至關重要。
 
-The techniques outlined in our Processes chapters ([Part III](#_bookmark579)) are familiar to most soft‐ ware engineers, but Google」s large size and long-lived codebase provides a more complete stress test for developing best practices. Within those chapters, we have tried to emphasize what we have found to work over time and at scale as well as identify areas where we don」t yet have satisfying answers.
+The techniques outlined in our Processes chapters ([Part III](#_bookmark579)) are familiar to most soft‐ ware engineers, but Google's large size and long-lived codebase provides a more complete stress test for developing best practices. Within those chapters, we have tried to emphasize what we have found to work over time and at scale as well as identify areas where we don」t yet have satisfying answers.
 
 在我們的流程章節（[第三部分](#_bookmark579)）中概述的技術是大多數軟體工程師所熟悉的，但谷歌的龐大規模和長期的程式碼庫為開發最佳實踐提供了一個更完整的壓力測試。在這些章節中，我們強調我們發現隨著時間的推移和規模的擴大，什麼是有效的，以及確定我們還沒有滿意的答案的領域。
 
