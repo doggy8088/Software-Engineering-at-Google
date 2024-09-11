@@ -6,7 +6,7 @@ This book is titled *Software Engineering at Google*. What precisely do we mean 
 
 The terms 『programming』 and 『software engineering』 have been used interchangeably for quite some time in our industry, although each term has a different emphasis and different implications. University students tend to study computer science and get jobs writing code as 『programmers.』
 
-在我們的業界，"程式設計 "和 "軟體工程 "這兩個術語已經被交替使用了相當長的時間，儘管每個術語都有不同的重點和不同的含義。大學生傾向於學習電腦科學，並以作為"工程師 『的身份進行寫程式碼的工作。
+在我們的業界，"程式設計 "和 "軟體工程 "這兩個術語已經被交替使用了相當長的時間，儘管每個術語都有不同的重點和不同的含義。大學生傾向於學習電腦科學，並以作為"工程師 "的身份進行寫程式碼的工作。
 
 『Software engineering,』 however, sounds more serious, as if it implies the application of some theoretical knowledge to build something real and precise. Mechanical engineers, civil engineers, aeronautical engineers, and those in other engineering disciplines all practice engineering. They all work in the real world and use the application of their theoretical knowledge to create something real. Software engineers also create 『something real,』 though it is less tangible than the things other engineers create.
 
