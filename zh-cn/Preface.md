@@ -18,7 +18,7 @@ Unlike those more established engineering professions, current software engineer
 
 ### Programming Over Time 隨時間變化的程式設計
 
-We propose that 『software engineering』 encompasses not just the act of writing code, but all of the tools and processes an organization uses to build and maintain that code over time. What practices can a software organization introduce that will best keep its code valuable over the long term? How can engineers make a codebase more sustainable and the software engineering discipline itself more rigorous? We don」t have fundamental answers to these questions, but we hope that Google」s collective experience over the past two decades illuminates possible paths toward finding those answers.
+We propose that 『software engineering』 encompasses not just the act of writing code, but all of the tools and processes an organization uses to build and maintain that code over time. What practices can a software organization introduce that will best keep its code valuable over the long term? How can engineers make a codebase more sustainable and the software engineering discipline itself more rigorous? We don't have fundamental answers to these questions, but we hope that Google's collective experience over the past two decades illuminates possible paths toward finding those answers.
 
 我們建議，"軟體工程 "不僅包括編寫程式碼的行為，還包括一個組織用來長期建立和隨時間維護程式碼的所有工具和流程。一個軟體組織可以採用哪些做法來使其程式碼長期保持最佳價值？工程師們如何才能使程式碼庫更具有可持續性，並使軟體工程學科本身更加嚴格？我們沒有這些問題的最終答案，但我們希望谷歌在過去20年的集體經驗能夠為尋找這些答案的提供可能。
 
@@ -66,7 +66,7 @@ Google's culture is unique, but the lessons we have learned in developing our en
 
 谷歌的文化是獨一無二的，但我們在發展工程文化中所獲得的經驗是廣泛適用的。我們關於文化的章節（[第二部分](#_bookmark100)）強調了軟體開發企業的集體性，軟體開發是一項團隊工作，正確的文化原則對於一個組織的成長和保持健康至關重要。
 
-The techniques outlined in our Processes chapters ([Part III](#_bookmark579)) are familiar to most soft‐ ware engineers, but Google's large size and long-lived codebase provides a more complete stress test for developing best practices. Within those chapters, we have tried to emphasize what we have found to work over time and at scale as well as identify areas where we don」t yet have satisfying answers.
+The techniques outlined in our Processes chapters ([Part III](#_bookmark579)) are familiar to most soft‐ ware engineers, but Google's large size and long-lived codebase provides a more complete stress test for developing best practices. Within those chapters, we have tried to emphasize what we have found to work over time and at scale as well as identify areas where we don't yet have satisfying answers.
 
 在我們的流程章節（[第三部分](#_bookmark579)）中概述的技術是大多數軟體工程師所熟悉的，但谷歌的龐大規模和長期的程式碼庫為開發最佳實踐提供了一個更完整的壓力測試。在這些章節中，我們強調我們發現隨著時間的推移和規模的擴大，什麼是有效的，以及確定我們還沒有滿意的答案的領域。
 
@@ -74,17 +74,17 @@ Finally, our Tools chapters ([Part IV](#_bookmark1363)) illustrate how we levera
 
 最後，我們的工具章節（[第四部分](#_bookmark1363)）說明了我們如何利用對工具基礎設施的投入來最佳化程式碼庫，因為它既增長又腐化。在某些情況下，這些工具是谷歌特有的，儘管我們在適當的地方指出了開源或第三方的替代品。我們希望這些基本的見解適用於大多數工程組織。
 
-The culture, processes, and tools outlined in this book describe the lessons that a typical software engineer hopefully learns on the job. Google certainly doesn」t have a monopoly on good advice, and our experiences presented here are not intended to dictate what your organization should do. This book is our perspective, but we hope you will find it useful, either by adopting these lessons directly or by using them as a starting point when considering your own practices, specialized for your own problem domain.
+The culture, processes, and tools outlined in this book describe the lessons that a typical software engineer hopefully learns on the job. Google certainly doesn't have a monopoly on good advice, and our experiences presented here are not intended to dictate what your organization should do. This book is our perspective, but we hope you will find it useful, either by adopting these lessons directly or by using them as a starting point when considering your own practices, specialized for your own problem domain.
 
 本書中描寫的文化、流程和工具是大多數的軟體工程師希望在工作中使用的內容。谷歌當然不會獨斷好建議，我們在這裡介紹的經驗並不是要規定你的組織應當這麼做。本書是我們的觀點，但我們希望你會發現它是有用的，可以直接採用這些經驗，也可以在考慮自己的實踐時把它們作為一個起點，專門用於解決自己的領域問題。
 
-Neither is this book intended to be a sermon. Google itself still imperfectly applies many of the concepts within these pages. The lessons that we have learned, we learned through our failures: we still make mistakes, implement imperfect solutions, and need to iterate toward improvement. Yet the sheer size of Google」s engineering organization ensures that there is a diversity of solutions for every problem. We hope that this book contains the best of that group.
+Neither is this book intended to be a sermon. Google itself still imperfectly applies many of the concepts within these pages. The lessons that we have learned, we learned through our failures: we still make mistakes, implement imperfect solutions, and need to iterate toward improvement. Yet the sheer size of Google's engineering organization ensures that there is a diversity of solutions for every problem. We hope that this book contains the best of that group.
 
 本書也不打算成為一本佈道書。谷歌自身仍在不完善地應用這些書中的許多理念。我們從失敗中吸收了教訓：我們仍然會犯錯誤，採用不完美的解決方案，還需要迭代改進。然而，谷歌工程組織的龐大規模確定了每個問題都有多樣化的解決方案。我們希望這本書包含了這群人中最好的方案。
 
-### What This Book Isn」t 本書不適用於哪些
+### What This Book Isn't 本書不適用於哪些
 
-This book is not meant to cover software design, a discipline that requires its own book (and for which much content already exists). Although there is some code in this book for illustrative purposes, the principles are language neutral, and there is little actual 『programming』 advice within these chapters. As a result, this text doesn」t cover many important issues in software development: project management, API design, security hardening, internationalization, user interface frameworks, or other language-specific concerns. Their omission in this book does not imply their lack of importance. Instead, we choose not to cover them here knowing that we could not provide the treatment they deserve. We have tried to make the discussions in this book more about engineering and less about programming.
+This book is not meant to cover software design, a discipline that requires its own book (and for which much content already exists). Although there is some code in this book for illustrative purposes, the principles are language neutral, and there is little actual 『programming』 advice within these chapters. As a result, this text doesn't cover many important issues in software development: project management, API design, security hardening, internationalization, user interface frameworks, or other language-specific concerns. Their omission in this book does not imply their lack of importance. Instead, we choose not to cover them here knowing that we could not provide the treatment they deserve. We have tried to make the discussions in this book more about engineering and less about programming.
 
 本書並不是要涵蓋軟體設計，這門學科有自己的書（而且已經有很多型別的書）。雖然書中有一些程式碼用於說明問題，但原則是語言無關的，而且這些章節中幾乎沒有實際的 "程式設計 "建議。因此，本書沒有涉及軟體開發中的許多重要問題：專案管理、API設計、安全加固、國際化、使用者介面框架或其他特定程式語言問題。本書對這些問題的忽略並不意味著它們不重要。相反，我們選擇不在這裡涉及它們，因為我們知道我們無法提供它們應有的內容。我們試圖使本書的討論更多的關於工程領域，而不是關於程式設計領域。
 
