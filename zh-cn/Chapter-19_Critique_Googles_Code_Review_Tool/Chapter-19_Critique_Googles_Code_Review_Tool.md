@@ -47,7 +47,7 @@ Across these guiding principles, simplicity has probably had the most impact on 
 
 Simplicity also has an interesting tension with workflow integration. We considered but ultimately decided against creating a 『Code Central』 tool with code editing, reviewing, and searching in one tool. Although Critique has many touchpoints with other tools, we consciously decided to keep code review as the primary focus. Features are linked from Critique but implemented in different subsystems.
 
-簡單與工作流程的整合也有一個有趣的矛盾。我們考慮過，但最終決定不建立一個集程式碼編輯、審查和搜尋於一體的 "程式碼中心"工具。儘管Critique與其他工具有許多接觸點，但我們還是有意識地決定將程式碼審查作為主要關注點。特徵與評論相關，但在不同的子系統中實施。
+簡單與工作流程的整合也有一個有趣的矛盾。我們考慮過，但最終決定不建立一個集程式碼編輯、審查和搜尋於一體的 "程式碼中心"工具。儘管Critique與其他工具有許多接觸點，但我們還是有意識地決定將程式碼審查作為主要關注點。特徵從Critique連結，但在不同的子系統中實施。
 
 ## Code Review Flow 程式碼審查流程
 
@@ -70,9 +70,9 @@ Typical review steps go as follows:
 
 典型的審查步驟如下：
 
-1. **建立一個變更。** 一個使用者對其工作區的程式碼庫進行變更。然後這個*作者*向Critique上傳一個*快照*（顯示某一特定時間點的補丁），這將觸發自動程式碼分析器的執行（見第20章）。
+1. **建立一個變更。** 使用者對其工作區的程式碼庫進行變更。然後這個*作者*向Critique上傳一個*快照*（顯示某一特定時間點的補丁），這將觸發自動程式碼分析器的執行（見第20章）。
 2. **要求審查。** 在作者對修改的差異和Critique中顯示的分析器的結果感到滿意後，他們將修改傳送給一個或多個審查員。
-3. **評論。**評論者在Critique中開啟修改，並對diff起草評論。評論預設標記為*未解決*，意味著它們對作者來說是至關重要的。此外，評論者可以新增*已解決*的評論，這些評論是可選的或訊息性的。自動程式碼分析器的結果，如果存在的話，也可以讓審查者看到。一旦審查者起草了一組評論，他們需要*發布*它們，以便作者看到它們；這樣做的好處是允許審查者在審查了整個修改後，以原子方式提供一個完整的想法。任何人都可以對變更發表評論，並在他們認為必要時提供『驅動式審查』。
+3. **評論。**審查者在Critique中開啟變更，並對diff起草評論。評論預設標記為*未解決*，意味著它們對作者來說是至關重要的。此外，評論者可以新增*已解決*的評論，這些評論是可選的或訊息性的。自動程式碼分析器的結果，如果存在的話，也可以讓審查者看到。一旦審查者起草了一組評論，他們需要*發布*它們，以便作者看到它們；這樣做的好處是允許審查者在審查了整個修改後，以原子方式提供一個完整的想法。任何人都可以對變更發表評論，並在他們認為必要時提供『驅動式審查』。
 4. **修改變更並回複評論。** 作者修改變更，根據反饋上傳新的快照，並回複評論者。作者處理（至少）所有未解決的評論，要麼修改程式碼，要麼直接回覆評論並將評論型別改為*解決*。作者和審稿人可以檢視任何一對快照之間的差異，看看有什麼變化。步驟3和4可能要重複多次。
 5. **變更批准。** 當審查者對修改的最新狀態感到滿意時，他們會批准變更，並將其標記為 『我覺得不錯"（LGTM）。他們可以選擇包含已解決的評論。更改被認為適合送出後，在UI中會清楚地標記為綠色以顯示此狀態。
 6. **送出變更。** 只要變更被批准（我們很快會討論），作者就可以觸發變更的送出過程。如果自動分析器和其他預送出鉤子（稱為 "預送出"）沒有發現任何問題，該變更就被送出到程式碼庫中。
@@ -93,7 +93,7 @@ For example, users can install a Chrome extension that consumes these event noti
 
 Critique also manages emails related to a change; important Critique events trigger email notifications. In addition to being displayed in the Critique UI, some analyzer findings are configured to also send the results out by email. Critique also processes email replies and translates them to comments, supporting users who prefer an email-based flow. Note that for many users, emails are not a key feature of code review; they use Critique」s dashboard view (discussed later) to manage reviews.
 
-Critique還管理與變化有關的電子郵件；重要的Critique事件會觸發電子郵件通知。除了在 Critique UI 中顯示外，一些分析器的結果也被設定為透過電子郵件傳送。Critique 還處理電子郵件回覆並將其轉換為評論，支援喜歡基於電子郵件的流程的使用者。請注意，對許多使用者來說，電子郵件並不是程式碼審查的一個關鍵特徵；他們使用 Critique 的儀表盤檢視（後面會討論）來管理評論。
+Critique還管理與變化有關的電子郵件；重要的Critique事件會觸發電子郵件通知。除了在 Critique UI 中顯示外，一些分析器的結果也被設定為透過電子郵件傳送。Critique 還處理電子郵件回覆並將其轉換為評論，支援喜歡基於電子郵件的流程的使用者。請注意，對許多使用者來說，電子郵件並不是程式碼審查的一個關鍵特徵；他們使用 Critique 的儀表板檢視（後面會討論）來管理評論。
 
 ## Stage 1: Create a Change 階段1：建立一個變更
 
@@ -281,7 +281,7 @@ As mentioned earlier, comments are drafted as-you-go, but then 『published』 a
 
 Critique provides a number of mechanisms to make it clear where in the comment- and-iterate phase a change is currently located. These include a feature for determining who needs to take action next, and a dashboard view of review/author status for all of the changes with which a particular developer is involved.
 
-Critique提供了一些機制，使人們清楚地瞭解到某項修改目前處於評論和迭代階段的什麼位置。這些機制包括確定誰需要採取下一步行動的功能，以及特定開發者參與的所有修改的審查/作者狀態的儀表盤檢視。
+Critique提供了一些機制，使人們清楚地瞭解到某項修改目前處於評論和迭代階段的什麼位置。這些機制包括確定誰需要採取下一步行動的功能，以及特定開發者參與的所有修改的審查/作者狀態的儀表板檢視。
 
 #### 『Whose turn』 feature 『輪到誰』功能
 
@@ -301,7 +301,7 @@ After we implemented this feature, our users had a difficult time imagining the 
 
 Critique」s landing page is the user」s dashboard page, as depicted in Figure 19-8. The dashboard page is divided into user-customizable sections, each of them containing a list of change summaries.
 
-Critique的登入頁面是使用者的儀表盤頁面，如圖19-8所示。儀表盤頁面被分為使用者可定製的部分，每個部分都包含一個變更摘要清單。
+Critique的首頁頁面是使用者的儀表板頁面，如圖19-8所示。儀表板頁面被分為使用者可定製的部分，每個部分都包含一個變更摘要清單。
 
 ![Figure 19-8](./images/Figure%2019-8.png)
 
@@ -313,11 +313,11 @@ The dashboard page is powered by a search system called *Changelist Search*. Cha
 
 To optimize the user experience (UX), Critique」s default dashboard setting is to have the first section display the changes that need a user」s attention, although this is customizable. There is also a search bar for making custom queries over all changes and browsing the results. As a reviewer, you mostly just need the attention set. As an author, you mostly just need to take a look at what is still waiting for review to see if you need to ping any changes. Although we have shied away from customizability in some other parts of the Critique UI, we found that users like to set up their dashboards differently without detracting from the fundamental experience, similar to the way everyone organizes their emails differently.[^1]
 
-為了最佳化使用者體驗（UX），Critique的預設儀表盤設定是在第一部分顯示需要使用者關注的變更，不過這也是可以定製的。還有一個搜尋欄，可以對所有修改進行自定義查詢，並瀏覽結果。作為一個審查員，你主要是需要關注的一組。作為一個作者，你大多數時候只需要看一下哪些東西還在等待審查，看看你是否需要修正。儘管我們在Critique使用者介面的一些其他部分回避了可定製性，但我們發現使用者喜歡以不同的方式設定他們的儀表板，而不影響基本的體驗，就像每個人以不同的方式組織他們的電子郵件一樣。
+為了最佳化使用者體驗（UX），Critique的預設儀表板設定是在第一部分顯示需要使用者關注的變更，不過這也是可以定製的。還有一個搜尋欄，可以對所有修改進行自定義查詢，並瀏覽結果。作為一個審查員，你主要是需要關注的一組。作為一個作者，你大多數時候只需要看一下哪些東西還在等待審查，看看你是否需要修正。儘管我們在Critique使用者介面的一些其他部分回避了可定製性，但我們發現使用者喜歡以不同的方式設定他們的儀表板，而不影響基本的體驗，就像每個人以不同的方式組織他們的電子郵件一樣。
 
 > [^1]: Centralized 『global』 reviewers for large-scale changes (LSCs) are particularly prone to customizing this dashboard to avoid flooding it during an LSC (see Chapter 22).
 >
-> 1 大規模變更（LSCs）的集中式 "全球 "審查員特別容易定製這個儀表盤，以避免在LSC期間淹沒它（見第22章）。
+> 1 大規模變更（LSCs）的集中式 "全球 "審查員特別容易定製這個儀表板，以避免在LSC期間淹沒它（見第22章）。
 
 ## Stage 5: Change Approvals (Scoring a Change) 階段5：變更批准（對變更進行評分）
 
@@ -353,9 +353,9 @@ Critique includes a scoring panel, next to the analysis chips, with the followin
 
 批評包括一個打分板，在分析卡片旁邊，有以下訊息:
 
-- 誰進行了變更
+- 誰對變更給出了'LGTM'
 - 還需要哪些批准，為什麼？
-- 有多少的評論仍未解決
+- 有多少未解決的評論仍然開放
 
 Presenting the scoring information this way helps the author quickly understand what they still need to do to get the change committed.
 
